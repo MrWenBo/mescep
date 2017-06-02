@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RGroup" table="R_GROUP" schema="MES188" optimistic-lock="version">
+        <id name="groupuid" type="string">
+            <column name="GROUPUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="groupname" type="string">
+            <column name="GROUPNAME" length="30">
+                <comment>&#215;&#233;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="30">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="grouptype" type="string">
+            <column name="GROUPTYPE" length="10">
+                <comment>
+                &#215;&#233;&#192;&#224;&#208;&#205;(101&#206;&#170;&#176;&#180;&#201;&#232;&#177;&#184;&#192;&#224;&#208;&#205;&#183;&#214;&#192;&#224;&#163;&#172;&#188;&#180;MPP&#181;&#196;&#208;&#161;&#192;&#224;&#163;&#172;201&#206;&#170;&#176;&#180;dnc&#179;&#204;&#208;&#242;&#183;&#214;&#215;&#233;)</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="30" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="groupid" type="string">
+            <column name="GROUPID">
+                <comment>
+                &#207;&#181;&#205;&#179;&#205;&#226;&#210;&#253;&#200;&#235;&#181;&#196;&#215;&#233;&#186;&#197;(MPP&#201;&#232;&#177;&#184;&#208;&#161;&#192;&#224;&#177;&#224;&#186;&#197;)</comment>
+            </column>
+        </property>
+        <property name="groupdesc" type="string">
+            <column name="GROUPDESC" />
+        </property>
+    </class>
+</hibernate-mapping>

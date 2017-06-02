@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmModuledefinition" table="JBPM_MODULEDEFINITION" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmProcessdefinition" class="com.mes.old.JbpmProcessdefinition" fetch="select">
+            <column name="PROCESSDEFINITION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTask" class="com.mes.old.JbpmTask" fetch="select">
+            <column name="STARTTASK_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="char">
+            <column name="CLASS_" length="1" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" length="4000" />
+        </property>
+        <set name="jbpmTasks" table="JBPM_TASK" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKMGMTDEFINITION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTask" />
+        </set>
+        <set name="jbpmModuleinstances" table="JBPM_MODULEINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKMGMTDEFINITION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmModuleinstance" />
+        </set>
+        <set name="jbpmSwimlanes" table="JBPM_SWIMLANE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKMGMTDEFINITION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmSwimlane" />
+        </set>
+        <set name="jbpmBytearrays" table="JBPM_BYTEARRAY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="FILEDEFINITION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmBytearray" />
+        </set>
+    </class>
+</hibernate-mapping>

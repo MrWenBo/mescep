@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BDeptEquipments" table="B_DEPT_EQUIPMENTS" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BDeptEquipmentsId">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="50" />
+            </key-property>
+            <key-property name="uuid" type="string">
+                <column name="UUID" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="RDept" class="com.mes.old.RDept" update="false" insert="false" fetch="select">
+            <column name="DEPTID" length="50" not-null="true" />
+        </many-to-one>
+        <many-to-one name="REquipmentClass" class="com.mes.old.REquipmentClass" update="false" insert="false" fetch="select">
+            <column name="UUID" length="50" not-null="true">
+                <comment>&#201;&#232;&#177;&#184;&#192;&#224;</comment>
+            </column>
+        </many-to-one>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="100" />
+        </property>
+        <property name="creattime" type="date">
+            <column name="CREATTIME" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

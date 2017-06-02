@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JobshopQualityRate" table="JOBSHOP_QUALITY_RATE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.JobshopQualityRateId">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="submitqty" type="string">
+                <column name="SUBMITQTY" length="7" />
+            </key-property>
+            <key-property name="defectqty" type="string">
+                <column name="DEFECTQTY" length="7" />
+            </key-property>
+            <key-property name="qualityrate" type="string">
+                <column name="QUALITYRATE" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

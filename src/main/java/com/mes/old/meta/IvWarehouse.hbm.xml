@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IvWarehouse" table="IV_WAREHOUSE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IvWarehouseId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="warehousename" type="string">
+                <column name="WAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="parentwarehouseid" type="string">
+                <column name="PARENTWAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="warehousetype" type="string">
+                <column name="WAREHOUSETYPE" length="50" />
+            </key-property>
+            <key-property name="manager" type="string">
+                <column name="MANAGER" length="50" />
+            </key-property>
+            <key-property name="country" type="string">
+                <column name="COUNTRY" length="50" />
+            </key-property>
+            <key-property name="province" type="string">
+                <column name="PROVINCE" length="50" />
+            </key-property>
+            <key-property name="city" type="string">
+                <column name="CITY" length="50" />
+            </key-property>
+            <key-property name="address" type="string">
+                <column name="ADDRESS" length="50" />
+            </key-property>
+            <key-property name="zipcode" type="string">
+                <column name="ZIPCODE" length="50" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="freezed" type="java.lang.Byte">
+                <column name="FREEZED" precision="2" scale="0" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="shortening" type="string">
+                <column name="SHORTENING" length="50" />
+            </key-property>
+            <key-property name="ioPriority" type="java.lang.Long">
+                <column name="IO_PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="50" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="100" />
+            </key-property>
+            <key-property name="managername" type="string">
+                <column name="MANAGERNAME" length="100" />
+            </key-property>
+            <key-property name="employeename" type="string">
+                <column name="EMPLOYEENAME" length="100" />
+            </key-property>
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="warehousetypedesc" type="string">
+                <column name="WAREHOUSETYPEDESC" />
+            </key-property>
+            <key-property name="parentwarehousename" type="string">
+                <column name="PARENTWAREHOUSENAME" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

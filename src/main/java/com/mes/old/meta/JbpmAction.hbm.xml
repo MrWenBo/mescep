@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmAction" table="JBPM_ACTION" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmActionByTimeraction" class="com.mes.old.JbpmAction" fetch="select">
+            <column name="TIMERACTION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmActionByReferencedaction" class="com.mes.old.JbpmAction" fetch="select">
+            <column name="REFERENCEDACTION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmDelegation" class="com.mes.old.JbpmDelegation" fetch="select">
+            <column name="ACTIONDELEGATION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmEvent" class="com.mes.old.JbpmEvent" fetch="select">
+            <column name="EVENT_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmExceptionhandler" class="com.mes.old.JbpmExceptionhandler" fetch="select">
+            <column name="EXCEPTIONHANDLER_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmProcessdefinition" class="com.mes.old.JbpmProcessdefinition" fetch="select">
+            <column name="PROCESSDEFINITION_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="char">
+            <column name="CLASS" length="1" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <property name="ispropagationallowed" type="java.lang.Boolean">
+            <column name="ISPROPAGATIONALLOWED_" precision="1" scale="0" />
+        </property>
+        <property name="actionexpression" type="string">
+            <column name="ACTIONEXPRESSION_" />
+        </property>
+        <property name="isasync" type="java.lang.Boolean">
+            <column name="ISASYNC_" precision="1" scale="0" />
+        </property>
+        <property name="timername" type="string">
+            <column name="TIMERNAME_" />
+        </property>
+        <property name="duedate" type="string">
+            <column name="DUEDATE_" />
+        </property>
+        <property name="repeat" type="string">
+            <column name="REPEAT_" />
+        </property>
+        <property name="transitionname" type="string">
+            <column name="TRANSITIONNAME_" />
+        </property>
+        <property name="expression" type="string">
+            <column name="EXPRESSION_" length="4000" />
+        </property>
+        <property name="eventindex" type="java.lang.Long">
+            <column name="EVENTINDEX_" precision="10" scale="0" />
+        </property>
+        <property name="exceptionhandlerindex" type="java.lang.Long">
+            <column name="EXCEPTIONHANDLERINDEX_" precision="10" scale="0" />
+        </property>
+        <set name="jbpmActionsForTimeraction" table="JBPM_ACTION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TIMERACTION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmAction" />
+        </set>
+        <set name="jbpmLogs" table="JBPM_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACTION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmLog" />
+        </set>
+        <set name="jbpmNodes" table="JBPM_NODE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACTION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmNode" />
+        </set>
+        <set name="jbpmActionsForReferencedaction" table="JBPM_ACTION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="REFERENCEDACTION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmAction" />
+        </set>
+        <set name="jbpmMessages" table="JBPM_MESSAGE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACTION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmMessage" />
+        </set>
+        <set name="jbpmVariableaccesses" table="JBPM_VARIABLEACCESS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SCRIPT_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmVariableaccess" />
+        </set>
+        <set name="jbpmRuntimeactions" table="JBPM_RUNTIMEACTION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACTION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmRuntimeaction" />
+        </set>
+        <set name="jbpmTimers" table="JBPM_TIMER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACTION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTimer" />
+        </set>
+    </class>
+</hibernate-mapping>

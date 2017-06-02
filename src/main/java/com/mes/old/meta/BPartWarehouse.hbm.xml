@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BPartWarehouse" table="B_PART_WAREHOUSE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BPartWarehouseId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+        </composite-id>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="seq" type="java.lang.Byte">
+            <column name="SEQ" precision="2" scale="0" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="10" not-null="true" />
+        </property>
+        <property name="classid" type="string">
+            <column name="CLASSID" />
+        </property>
+        <property name="binid" type="string">
+            <column name="BINID" />
+        </property>
+        <property name="totalNum" type="big_decimal">
+            <column name="TOTAL_NUM" precision="6" />
+        </property>
+        <property name="ableDataNum" type="big_decimal">
+            <column name="ABLE_DATA_NUM" precision="6" />
+        </property>
+        <property name="alreadyDataNum" type="big_decimal">
+            <column name="ALREADY_DATA_NUM" precision="6" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RResourceLog" table="R_RESOURCE_LOG" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" precision="25" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="resuid" type="string">
+            <column name="RESUID" not-null="true" />
+        </property>
+        <property name="resourcestate" type="string">
+            <column name="RESOURCESTATE" length="10" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="effective" type="java.lang.Boolean">
+            <column name="EFFECTIVE" precision="1" scale="0" />
+        </property>
+        <property name="planresumetime" type="date">
+            <column name="PLANRESUMETIME" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

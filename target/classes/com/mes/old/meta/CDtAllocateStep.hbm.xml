@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CDtAllocateStep" table="C_DT_ALLOCATE_STEP" schema="MES188" optimistic-lock="version">
+        <comment>&#183;&#214;&#197;&#228;&#194;&#183;&#190;&#182;</comment>
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CDtCostDriver" class="com.mes.old.CDtCostDriver" fetch="select">
+            <column name="COST_DRIVER_ID" length="100" />
+        </many-to-one>
+        <property name="allocateFrom" type="string">
+            <column name="ALLOCATE_FROM" length="100">
+                <comment>&#183;&#214;&#197;&#228;&#212;&#180;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="allocateFromType" type="java.lang.Long">
+            <column name="ALLOCATE_FROM_TYPE" precision="10" scale="0">
+                <comment>&#183;&#214;&#197;&#228;&#212;&#180;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="allocateToType" type="java.lang.Long">
+            <column name="ALLOCATE_TO_TYPE" precision="10" scale="0">
+                <comment>&#183;&#214;&#197;&#228;&#196;&#191;&#177;&#234;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="allocateTo" type="string">
+            <column name="ALLOCATE_TO" length="100">
+                <comment>&#183;&#214;&#197;&#228;&#196;&#191;&#177;&#234;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="isFixAllocate" type="java.lang.Long">
+            <column name="IS_FIX_ALLOCATE" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#185;&#204;&#182;&#168;&#177;&#200;&#192;&#253;&#183;&#214;&#197;&#228;</comment>
+            </column>
+        </property>
+        <property name="allocateProportion" type="big_decimal">
+            <column name="ALLOCATE_PROPORTION" precision="10">
+                <comment>&#183;&#214;&#197;&#228;&#177;&#200;&#192;&#253;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="100">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="costCenterId" type="string">
+            <column name="COST_CENTER_ID" length="100" />
+        </property>
+        <set name="CRtAllocateSteps" table="C_RT_ALLOCATE_STEP" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DT_UNIQUEID" length="100" />
+            </key>
+            <one-to-many class="com.mes.old.CRtAllocateStep" />
+        </set>
+    </class>
+</hibernate-mapping>

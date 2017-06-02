@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CRtActivity" table="C_RT_ACTIVITY" schema="MES188" optimistic-lock="version">
+        <comment>&#198;&#218;&#188;&#228;&#215;&#247;&#210;&#181;</comment>
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CAccountantPeriod" class="com.mes.old.CAccountantPeriod" fetch="select">
+            <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="CCostCenter" class="com.mes.old.CCostCenter" fetch="select">
+            <column name="COST_CENTER_ID" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <property name="activityId" type="string">
+            <column name="ACTIVITY_ID" length="100">
+                <comment>&#215;&#247;&#210;&#181;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="activityAccountId" type="string">
+            <column name="ACTIVITY_ACCOUNT_ID" length="100">
+                <comment>&#215;&#247;&#210;&#181;&#213;&#202;&#187;&#167;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="actualCost" type="big_decimal">
+            <column name="ACTUAL_COST" precision="10">
+                <comment>&#215;&#247;&#210;&#181;&#215;&#220;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="activityQuantity" type="java.lang.Long">
+            <column name="ACTIVITY_QUANTITY" precision="10" scale="0">
+                <comment>&#215;&#247;&#210;&#181;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="allocateCost" type="big_decimal">
+            <column name="ALLOCATE_COST" precision="10">
+                <comment>&#210;&#209;&#183;&#214;&#197;&#228;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="unallocateCost" type="big_decimal">
+            <column name="UNALLOCATE_COST" precision="10">
+                <comment>&#206;&#180;&#183;&#214;&#197;&#228;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="controlCost" type="big_decimal">
+            <column name="CONTROL_COST" precision="10">
+                <comment>&#191;&#201;&#191;&#216;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="uncontrolCost" type="big_decimal">
+            <column name="UNCONTROL_COST" precision="10">
+                <comment>&#178;&#187;&#191;&#201;&#191;&#216;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="costCapacity" type="big_decimal">
+            <column name="COST_CAPACITY" precision="10">
+                <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;&#215;&#247;&#210;&#181;&#196;&#220;&#193;&#166;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="activityUnitCost" type="string">
+            <column name="ACTIVITY_UNIT_COST" length="100" />
+        </property>
+        <property name="planCost" type="big_decimal">
+            <column name="PLAN_COST" precision="10" />
+        </property>
+        <property name="relationResourceType" type="java.lang.Long">
+            <column name="RELATION_RESOURCE_TYPE" precision="10" scale="0" />
+        </property>
+        <property name="relationResourceId" type="string">
+            <column name="RELATION_RESOURCE_ID" length="100" />
+        </property>
+        <property name="isAllocated" type="java.lang.Long">
+            <column name="IS_ALLOCATED" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

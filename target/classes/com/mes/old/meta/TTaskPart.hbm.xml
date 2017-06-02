@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TTaskPart" table="T_TASK_PART" schema="MES188" optimistic-lock="version">
+        <comment>&#200;&#206;&#206;&#241;&#206;&#239;&#193;&#207;&#185;&#216;&#207;&#181;</comment>
+        <composite-id name="id" class="com.mes.old.TTaskPartId">
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="TTasks" class="com.mes.old.TTasks" update="false" insert="false" fetch="select">
+            <column name="TASKUID" not-null="true">
+                <comment>&#200;&#206;&#206;&#241;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="qtyreq" type="big_decimal">
+            <column name="QTYREQ" precision="25" scale="6">
+                <comment>&#208;&#232;&#199;&#243;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="reqtype" type="java.lang.Long">
+            <column name="REQTYPE" precision="10" scale="0">
+                <comment>
+                &#208;&#232;&#199;&#243;&#192;&#224;&#208;&#205;&#163;&#172;&#163;&#172;0&#177;&#237;&#202;&#190;&#206;&#239;&#193;&#207;&#208;&#232;&#199;&#243;&#163;&#172;1&#177;&#237;&#202;&#190;&#185;&#164;&#215;&#176;&#215;&#202;&#212;&#180;&#208;&#232;&#199;&#243;</comment>
+            </column>
+        </property>
+        <property name="allocatedqty" type="big_decimal">
+            <column name="ALLOCATEDQTY" precision="25" scale="6">
+                <comment>&#210;&#209;&#193;&#236;&#211;&#195;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="isineffect" type="java.lang.Byte">
+            <column name="ISINEFFECT" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#211;&#208;&#208;&#167;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="singlein" type="big_decimal">
+            <column name="SINGLEIN" precision="25" scale="0">
+                <comment>&#181;&#165;&#188;&#254;&#207;&#251;&#186;&#196;</comment>
+            </column>
+        </property>
+        <property name="singleout" type="big_decimal">
+            <column name="SINGLEOUT" precision="25" scale="0">
+                <comment>&#181;&#165;&#188;&#254;&#178;&#250;&#179;&#246;</comment>
+            </column>
+        </property>
+        <property name="uniqueId" type="string">
+            <column name="UNIQUE_ID" length="10" not-null="true" unique="true">
+                <comment>&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="satisfydate" type="date">
+            <column name="SATISFYDATE" length="7">
+                <comment>&#194;&#250;&#215;&#227;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="preassQty" type="big_decimal">
+            <column name="PREASS_QTY" precision="25" scale="6">
+                <comment>&#212;&#164;&#183;&#214;&#197;&#228;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="preassEmp" type="string">
+            <column name="PREASS_EMP" length="50">
+                <comment>&#212;&#164;&#183;&#214;&#197;&#228;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="preassDate" type="date">
+            <column name="PREASS_DATE" length="7">
+                <comment>&#212;&#164;&#183;&#214;&#197;&#228;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID" length="50">
+                <comment>&#212;&#164;&#183;&#214;&#197;&#228;&#191;&#226;&#183;&#191;</comment>
+            </column>
+        </property>
+        <property name="applyQty" type="big_decimal">
+            <column name="APPLY_QTY" precision="25" scale="6">
+                <comment>&#201;&#234;&#199;&#235;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="prepareEmployeeid" type="string">
+            <column name="PREPARE_EMPLOYEEID" length="50" />
+        </property>
+        <property name="prepareWarehouseid" type="string">
+            <column name="PREPARE_WAREHOUSEID" length="50" />
+        </property>
+        <property name="prepareState" type="java.lang.Byte">
+            <column name="PREPARE_STATE" precision="2" scale="0" />
+        </property>
+        <property name="preassLevel" type="long">
+            <column name="PREASS_LEVEL" precision="10" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SGroupRole" table="S_GROUP_ROLE" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#233;&#189;&#199;&#201;&#171;</comment>
+        <composite-id name="id" class="com.mes.old.SGroupRoleId">
+            <key-property name="groupid" type="string">
+                <column name="GROUPID" length="50" />
+            </key-property>
+            <key-property name="roleid" type="string">
+                <column name="ROLEID" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="notes" type="string">
+            <column name="NOTES" length="50">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

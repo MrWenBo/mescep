@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IIodetail" table="I_IODETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IIodetailId">
+            <key-property name="invioid" type="string">
+                <column name="INVIOID" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" />
+        </property>
+        <property name="binid" type="string">
+            <column name="BINID" length="50" />
+        </property>
+        <property name="ioqty" type="big_decimal">
+            <column name="IOQTY" precision="25" scale="6" />
+        </property>
+        <property name="iogrossqty" type="big_decimal">
+            <column name="IOGROSSQTY" precision="25" scale="6" />
+        </property>
+        <property name="amount" type="big_decimal">
+            <column name="AMOUNT" precision="25" scale="6" />
+        </property>
+        <property name="uom" type="string">
+            <column name="UOM" length="50" />
+        </property>
+        <property name="unitprice" type="big_decimal">
+            <column name="UNITPRICE" precision="25" scale="6" />
+        </property>
+        <property name="relationid" type="string">
+            <column name="RELATIONID" length="50" />
+        </property>
+        <property name="relationseq" type="java.lang.Long">
+            <column name="RELATIONSEQ" precision="10" scale="0" />
+        </property>
+        <property name="taxrate" type="big_decimal">
+            <column name="TAXRATE" precision="25" scale="6" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="text1" type="string">
+            <column name="TEXT1" length="50" />
+        </property>
+        <property name="text2" type="string">
+            <column name="TEXT2" length="50" />
+        </property>
+        <property name="text3" type="string">
+            <column name="TEXT3" length="50" />
+        </property>
+        <property name="text4" type="string">
+            <column name="TEXT4" length="50" />
+        </property>
+        <property name="text5" type="string">
+            <column name="TEXT5" length="50" />
+        </property>
+        <property name="text6" type="string">
+            <column name="TEXT6" length="50" />
+        </property>
+        <property name="text7" type="string">
+            <column name="TEXT7" length="50" />
+        </property>
+        <property name="text8" type="string">
+            <column name="TEXT8" length="50" />
+        </property>
+        <property name="text9" type="string">
+            <column name="TEXT9" length="50" />
+        </property>
+        <property name="text10" type="string">
+            <column name="TEXT10" length="50" />
+        </property>
+        <property name="taxunitprice" type="big_decimal">
+            <column name="TAXUNITPRICE" precision="25" scale="0" />
+        </property>
+        <property name="taxamount" type="big_decimal">
+            <column name="TAXAMOUNT" precision="25" scale="0" />
+        </property>
+        <property name="uinvioid" type="string">
+            <column name="UINVIOID" />
+        </property>
+        <property name="uinvioseq" type="java.lang.Long">
+            <column name="UINVIOSEQ" precision="10" scale="0" />
+        </property>
+        <property name="uinvioqty" type="big_decimal">
+            <column name="UINVIOQTY" precision="25" scale="0" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" />
+        </property>
+        <property name="sn" type="string">
+            <column name="SN" />
+        </property>
+        <property name="applyqty" type="big_decimal">
+            <column name="APPLYQTY" precision="25" scale="6" />
+        </property>
+        <property name="newmaterialusn" type="string">
+            <column name="NEWMATERIALUSN" />
+        </property>
+        <property name="newsn" type="string">
+            <column name="NEWSN" />
+        </property>
+        <property name="invalidDate" type="date">
+            <column name="INVALID_DATE" length="7" />
+        </property>
+        <property name="checkupDate" type="date">
+            <column name="CHECKUP_DATE" length="7" />
+        </property>
+        <property name="maintenanceDate" type="date">
+            <column name="MAINTENANCE_DATE" length="7" />
+        </property>
+        <property name="planReturnDate" type="date">
+            <column name="PLAN_RETURN_DATE" length="7" />
+        </property>
+        <property name="returnDate" type="date">
+            <column name="RETURN_DATE" length="7" />
+        </property>
+        <property name="returnQty" type="big_decimal">
+            <column name="RETURN_QTY" precision="25" scale="6" />
+        </property>
+        <property name="isFinishReturning" type="java.lang.Byte">
+            <column name="IS_FINISH_RETURNING" precision="2" scale="0" />
+        </property>
+        <property name="notAllReturnedReason" type="string">
+            <column name="NOT_ALL_RETURNED_REASON" />
+        </property>
+        <property name="consumedQuantity" type="big_decimal">
+            <column name="CONSUMED_QUANTITY" precision="25" scale="6" />
+        </property>
+        <property name="notReturnQty" type="big_decimal">
+            <column name="NOT_RETURN_QTY" precision="25" scale="0" />
+        </property>
+        <property name="lendDeadtime" type="date">
+            <column name="LEND_DEADTIME" length="7" />
+        </property>
+        <property name="qualitynum" type="string">
+            <column name="QUALITYNUM" />
+        </property>
+        <property name="refusetype" type="string">
+            <column name="REFUSETYPE" length="10" />
+        </property>
+        <property name="supplier" type="string">
+            <column name="SUPPLIER" />
+        </property>
+        <property name="itemSortState" type="string">
+            <column name="ITEM_SORT_STATE" length="50">
+                <comment>
+                &#183;&#214;&#188;&#240;&#207;&#238;&#181;&#196;&#215;&#180;&#204;&#172;&#163;&#172;&#182;&#212;&#211;&#166;&#181;&#196;&#202;&#199;B_typesdata&#181;&#196;typesname&#206;&#170;item_sort_state&#163;&#172;&#212;&#221;&#202;&#177;&#178;&#187;&#202;&#185;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="itemDeliveryState" type="string">
+            <column name="ITEM_DELIVERY_STATE" length="50">
+                <comment>
+                &#197;&#228;&#203;&#205;&#207;&#238;&#181;&#196;&#215;&#180;&#204;&#172;&#163;&#172;&#198;&#228;&#214;&#208;&#176;&#252;&#186;&#172;&#211;&#208;&#183;&#214;&#188;&#240;&#207;&#238;&#181;&#196;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="turnBoxId" type="string">
+            <column name="TURN_BOX_ID">
+                <comment>&#206;&#239;&#193;&#207;&#180;&#230;&#183;&#197;&#181;&#196;&#214;&#220;&#215;&#170;&#207;&#228;</comment>
+            </column>
+        </property>
+        <property name="isSendLtk" type="string">
+            <column name="IS_SEND_LTK" length="50" />
+        </property>
+        <property name="needqty" type="big_decimal">
+            <column name="NEEDQTY" precision="25" scale="6" />
+        </property>
+        <property name="sortqty" type="big_decimal">
+            <column name="SORTQTY" precision="25" scale="6" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

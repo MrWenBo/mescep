@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MReworkheader" table="M_REWORKHEADER" schema="MES188">
+        <id name="reworkuid" type="string">
+            <column name="REWORKUID" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="string">
+            <column name="VERSION" length="50" />
+        </version>
+        <many-to-one name="MDefectjudgeheader" class="com.mes.old.MDefectjudgeheader" fetch="select">
+            <column name="DEFECTJUDGEUID" />
+        </many-to-one>
+        <property name="reworkid" type="string">
+            <column name="REWORKID" not-null="true" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" />
+        </property>
+        <property name="rwstate" type="java.lang.Long">
+            <column name="RWSTATE" precision="10" scale="0" />
+        </property>
+        <property name="submitqty" type="big_decimal">
+            <column name="SUBMITQTY" precision="20" />
+        </property>
+        <property name="reworkqty" type="big_decimal">
+            <column name="REWORKQTY" precision="20" />
+        </property>
+        <property name="dutier" type="string">
+            <column name="DUTIER" length="50" />
+        </property>
+        <property name="checkmanager" type="string">
+            <column name="CHECKMANAGER" length="50" />
+        </property>
+        <property name="defectreason" type="string">
+            <column name="DEFECTREASON" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="rwhour" type="big_decimal">
+            <column name="RWHOUR" precision="20" />
+        </property>
+        <property name="rwmoney" type="big_decimal">
+            <column name="RWMONEY" precision="20" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="segementmanager" type="string">
+            <column name="SEGEMENTMANAGER" length="50" />
+        </property>
+        <property name="isinbulk" type="java.lang.Long">
+            <column name="ISINBULK" precision="10" scale="0" />
+        </property>
+        <property name="attatchref" type="string">
+            <column name="ATTATCHREF" />
+        </property>
+        <property name="routier" type="string">
+            <column name="ROUTIER" length="50" />
+        </property>
+        <property name="reworkstate" type="java.lang.Long">
+            <column name="REWORKSTATE" precision="10" scale="0" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="isineffect" type="java.lang.Long">
+            <column name="ISINEFFECT" precision="10" scale="0" />
+        </property>
+        <property name="approvestate" type="java.lang.Long">
+            <column name="APPROVESTATE" precision="10" scale="0" />
+        </property>
+        <property name="approveperson" type="string">
+            <column name="APPROVEPERSON" length="50" />
+        </property>
+        <property name="billnumber" type="string">
+            <column name="BILLNUMBER" length="50" unique="true" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" />
+        </property>
+        <property name="dutydeptid" type="string">
+            <column name="DUTYDEPTID" length="50" />
+        </property>
+        <property name="qtyappearance" type="big_decimal">
+            <column name="QTYAPPEARANCE" precision="20" />
+        </property>
+        <property name="qtydimension" type="big_decimal">
+            <column name="QTYDIMENSION" precision="20" />
+        </property>
+        <property name="qtyneedtorework" type="big_decimal">
+            <column name="QTYNEEDTOREWORK" precision="20" />
+        </property>
+        <property name="accountant" type="string">
+            <column name="ACCOUNTANT" length="50" />
+        </property>
+        <set name="MReworkdetails" table="M_REWORKDETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="REWORKUID" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.MReworkdetail" />
+        </set>
+    </class>
+</hibernate-mapping>

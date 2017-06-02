@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TDemandtasklinks" table="T_DEMANDTASKLINKS" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TDemandtasklinksId">
+            <key-property name="succuid" type="string">
+                <column name="SUCCUID" />
+            </key-property>
+            <key-property name="preduid" type="string">
+                <column name="PREDUID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="TDemand" class="com.mes.old.TDemand" update="false" insert="false" fetch="select">
+            <column name="SUCCUID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="TTasks" class="com.mes.old.TTasks" update="false" insert="false" fetch="select">
+            <column name="PREDUID" not-null="true" />
+        </many-to-one>
+        <property name="linkqty" type="big_decimal">
+            <column name="LINKQTY" precision="25" scale="6" />
+        </property>
+        <property name="linktype" type="java.lang.Long">
+            <column name="LINKTYPE" precision="10" scale="0" />
+        </property>
+        <property name="linklag" type="java.lang.Long">
+            <column name="LINKLAG" precision="10" scale="0" />
+        </property>
+        <property name="isineffect" type="java.lang.Byte">
+            <column name="ISINEFFECT" precision="2" scale="0" />
+        </property>
+        <property name="dependtype" type="string">
+            <column name="DEPENDTYPE" length="10" not-null="true" />
+        </property>
+        <property name="locklevel" type="java.lang.Boolean">
+            <column name="LOCKLEVEL" precision="1" scale="0" />
+        </property>
+        <property name="lockexpiredate" type="date">
+            <column name="LOCKEXPIREDATE" length="7" />
+        </property>
+        <property name="uniqueId" type="string">
+            <column name="UNIQUE_ID" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>

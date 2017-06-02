@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BAlternateMaterial" table="B_ALTERNATE_MATERIAL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BAlternateMaterialId">
+            <key-property name="amUid" type="string">
+                <column name="AM_UID" length="50" />
+            </key-property>
+            <key-property name="bomUid" type="string">
+                <column name="BOM_UID" length="50" />
+            </key-property>
+            <key-property name="alterPartNumber" type="string">
+                <column name="ALTER_PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="alterPriority" type="java.lang.Long">
+                <column name="ALTER_PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

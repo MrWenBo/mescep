@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SFile" table="S_FILE" schema="MES188" optimistic-lock="version">
+        <comment>&#201;&#207;&#180;&#171;&#206;&#196;&#188;&#254;</comment>
+        <id name="id" type="string">
+            <column name="ID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="filename" type="string">
+            <column name="FILENAME">
+                <comment>&#206;&#196;&#188;&#254;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="filelocation" type="string">
+            <column name="FILELOCATION">
+                <comment>&#206;&#196;&#188;&#254;&#181;&#216;&#214;&#183;</comment>
+            </column>
+        </property>
+        <property name="ownerid" type="string">
+            <column name="OWNERID">
+                <comment>&#201;&#207;&#180;&#171;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID">
+                <comment>&#178;&#191;&#195;&#197;ID</comment>
+            </column>
+        </property>
+        <property name="uploaddate" type="date">
+            <column name="UPLOADDATE" length="7">
+                <comment>&#201;&#207;&#180;&#171;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE" length="50">
+                <comment>&#206;&#196;&#188;&#254;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="length" type="string">
+            <column name="LENGTH" length="0">
+                <comment>&#206;&#196;&#188;&#254;&#179;&#164;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="fileField" type="string">
+            <column name="FILE_FIELD" length="10">
+                <comment>&#206;&#196;&#188;&#254;&#203;&#249;&#202;&#244;&#193;&#236;&#211;&#242;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="changer" type="string">
+            <column name="CHANGER" length="50">
+                <comment>&#184;&#252;&#184;&#196;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="changereason" type="string">
+            <column name="CHANGEREASON" length="100">
+                <comment>&#184;&#252;&#184;&#196;&#212;&#173;&#210;&#242;</comment>
+            </column>
+        </property>
+        <property name="changetime" type="date">
+            <column name="CHANGETIME" length="7">
+                <comment>&#184;&#252;&#184;&#196;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

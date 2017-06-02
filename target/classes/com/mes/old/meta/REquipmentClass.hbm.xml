@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.REquipmentClass" table="R_EQUIPMENT_CLASS" schema="MES188" optimistic-lock="version">
+        <id name="uuid" type="string">
+            <column name="UUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="workType" type="big_decimal">
+            <column name="WORK_TYPE" scale="0" />
+        </property>
+        <property name="equipmentClassName" type="string">
+            <column name="EQUIPMENT_CLASS_NAME" length="100" />
+        </property>
+        <property name="parentUid" type="string">
+            <column name="PARENT_UID" />
+        </property>
+        <property name="calendarUid" type="big_decimal">
+            <column name="CALENDAR_UID" scale="0" />
+        </property>
+        <property name="numOfPooledResources" type="java.lang.Long">
+            <column name="NUM_OF_POOLED_RESOURCES" precision="10" scale="0" />
+        </property>
+        <property name="changer" type="big_decimal">
+            <column name="CHANGER" scale="0" />
+        </property>
+        <property name="changeTime" type="date">
+            <column name="CHANGE_TIME" length="7" />
+        </property>
+        <property name="changestate" type="java.lang.Byte">
+            <column name="CHANGESTATE" precision="2" scale="0" />
+        </property>
+        <property name="creator" type="big_decimal">
+            <column name="CREATOR" scale="0" />
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="equipmentClassId" type="string">
+            <column name="EQUIPMENT_CLASS_ID" length="50" />
+        </property>
+        <property name="criticalLevel" type="string">
+            <column name="CRITICAL_LEVEL" length="100" />
+        </property>
+        <property name="ref" type="string">
+            <column name="REF" length="1000" />
+        </property>
+        <property name="modelName" type="string">
+            <column name="MODEL_NAME" length="1000" />
+        </property>
+        <property name="effective" type="java.lang.Byte">
+            <column name="EFFECTIVE" precision="2" scale="0" />
+        </property>
+        <property name="noneneeddispatch" type="java.lang.Byte">
+            <column name="NONENEEDDISPATCH" precision="2" scale="0" />
+        </property>
+        <property name="estiduration" type="big_decimal">
+            <column name="ESTIDURATION" precision="25" scale="6" />
+        </property>
+        <set name="BDeptEquipmentses" table="B_DEPT_EQUIPMENTS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UUID" length="50" not-null="true">
+                    <comment>&#201;&#232;&#177;&#184;&#192;&#224;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.BDeptEquipments" />
+        </set>
+    </class>
+</hibernate-mapping>

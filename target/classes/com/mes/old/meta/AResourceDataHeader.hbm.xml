@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.AResourceDataHeader" table="A_RESOURCE_DATA_HEADER" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#215;&#176;&#212;&#164;&#212;&#188;&#181;&#165;&#177;&#237;&#205;&#183;</comment>
+        <id name="dataId" type="string">
+            <column name="DATA_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="relationid" type="string">
+            <column name="RELATIONID">
+                <comment>&#185;&#216;&#193;&#170;&#200;&#206;&#206;&#241;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="dataState" type="string">
+            <column name="DATA_STATE" length="50">
+                <comment>&#212;&#164;&#212;&#188;&#181;&#165;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50">
+                <comment>&#212;&#164;&#212;&#188;&#178;&#191;&#195;&#197;</comment>
+            </column>
+        </property>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID">
+                <comment>&#212;&#164;&#212;&#188;&#212;&#177;&#185;&#164;</comment>
+            </column>
+        </property>
+        <property name="finalTime" type="date">
+            <column name="FINAL_TIME" length="7">
+                <comment>&#212;&#164;&#212;&#188;&#214;&#213;&#214;&#185;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="nextTime" type="date">
+            <column name="NEXT_TIME" length="7">
+                <comment>&#207;&#194;&#180;&#206;&#212;&#164;&#212;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="binid" type="string">
+            <column name="BINID">
+                <comment>&#212;&#164;&#212;&#188;&#185;&#164;&#206;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="priority" type="java.lang.Integer">
+            <column name="PRIORITY" precision="6" scale="0" />
+        </property>
+        <property name="isValid" type="string">
+            <column name="IS_VALID" length="50" />
+        </property>
+        <set name="AResourceDataDetails" table="A_RESOURCE_DATA_DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DATA_ID" not-null="true">
+                    <comment>&#212;&#164;&#212;&#188;&#181;&#165;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.AResourceDataDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

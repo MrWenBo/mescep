@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvPrecotask" table="TV_PRECOTASK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvPrecotaskId">
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="taskstate" type="big_decimal">
+                <column name="TASKSTATE" precision="20" scale="6" />
+            </key-property>
+            <key-property name="planstart" type="date">
+                <column name="PLANSTART" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="planfinish" type="date">
+                <column name="PLANFINISH" length="7" />
+            </key-property>
+            <key-property name="planqty" type="big_decimal">
+                <column name="PLANQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="actualstart" type="date">
+                <column name="ACTUALSTART" length="7" />
+            </key-property>
+            <key-property name="actualfinish" type="date">
+                <column name="ACTUALFINISH" length="7" />
+            </key-property>
+            <key-property name="completeqty" type="big_decimal">
+                <column name="COMPLETEQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="schedulestart" type="date">
+                <column name="SCHEDULESTART" length="7" />
+            </key-property>
+            <key-property name="schedulefinish" type="date">
+                <column name="SCHEDULEFINISH" length="7" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="10" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="taskname" type="string">
+                <column name="TASKNAME" />
+            </key-property>
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="mastershopname" type="string">
+                <column name="MASTERSHOPNAME" length="50" />
+            </key-property>
+            <key-property name="optypename" type="string">
+                <column name="OPTYPENAME" length="50" />
+            </key-property>
+            <key-property name="tasktype" type="string">
+                <column name="TASKTYPE" length="50" />
+            </key-property>
+            <key-property name="parentuid" type="string">
+                <column name="PARENTUID" />
+            </key-property>
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="optype" type="java.lang.Long">
+                <column name="OPTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="agreestate" type="java.lang.Byte">
+                <column name="AGREESTATE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="priority" type="java.lang.Long">
+                <column name="PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="operationDistance" type="big_decimal">
+                <column name="OPERATION_DISTANCE" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

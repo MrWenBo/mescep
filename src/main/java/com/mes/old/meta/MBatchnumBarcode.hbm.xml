@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MBatchnumBarcode" table="M_BATCHNUM_BARCODE" schema="MES188" optimistic-lock="version">
+        <comment>&#197;&#250;&#180;&#206;&#186;&#197;&#193;&#247;&#203;&#174;&#194;&#235;</comment>
+        <composite-id name="id" class="com.mes.old.MBatchnumBarcodeId">
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="barcode" type="long">
+            <column name="BARCODE" precision="10" scale="0" not-null="true">
+                <comment>&#193;&#247;&#203;&#174;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="maxsn" type="java.lang.Long">
+            <column name="MAXSN" precision="10" scale="0">
+                <comment>&#215;&#238;&#180;&#243;&#193;&#247;&#203;&#174;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

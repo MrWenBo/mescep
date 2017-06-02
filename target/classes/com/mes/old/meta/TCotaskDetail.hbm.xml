@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TCotaskDetail" table="T_COTASK_DETAIL" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="TTasks" class="com.mes.old.TTasks" fetch="select">
+            <column name="TASKUID" not-null="true">
+                <comment>task</comment>
+            </column>
+        </many-to-one>
+        <property name="cotaskuid" type="string">
+            <column name="COTASKUID" not-null="true">
+                <comment>cotask</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+    </class>
+</hibernate-mapping>

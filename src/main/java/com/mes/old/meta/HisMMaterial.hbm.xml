@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisMMaterial" table="HIS_M_MATERIAL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisMMaterialId">
+            <key-property name="materialusn" type="serializable">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="partNumber" type="serializable">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="batchnum" type="serializable">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="sn" type="serializable">
+                <column name="SN" />
+            </key-property>
+            <key-property name="materialspecs" type="serializable">
+                <column name="MATERIALSPECS" />
+            </key-property>
+            <key-property name="materialqty" type="serializable">
+                <column name="MATERIALQTY" />
+            </key-property>
+            <key-property name="qualitynum" type="serializable">
+                <column name="QUALITYNUM" />
+            </key-property>
+            <key-property name="stovenum" type="serializable">
+                <column name="STOVENUM" />
+            </key-property>
+            <key-property name="forgenum" type="serializable">
+                <column name="FORGENUM" />
+            </key-property>
+            <key-property name="materialsource" type="serializable">
+                <column name="MATERIALSOURCE" />
+            </key-property>
+            <key-property name="invdate" type="serializable">
+                <column name="INVDATE" />
+            </key-property>
+            <key-property name="invaliddate" type="serializable">
+                <column name="INVALIDDATE" />
+            </key-property>
+            <key-property name="productdate" type="serializable">
+                <column name="PRODUCTDATE" />
+            </key-property>
+            <key-property name="packageweight" type="serializable">
+                <column name="PACKAGEWEIGHT" />
+            </key-property>
+            <key-property name="deptid" type="serializable">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="employeeid" type="serializable">
+                <column name="EMPLOYEEID" />
+            </key-property>
+            <key-property name="taskuid" type="serializable">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="resuid" type="serializable">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="creator" type="serializable">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="createtime" type="serializable">
+                <column name="CREATETIME" />
+            </key-property>
+            <key-property name="notes" type="serializable">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="text1" type="serializable">
+                <column name="TEXT1" />
+            </key-property>
+            <key-property name="text2" type="serializable">
+                <column name="TEXT2" />
+            </key-property>
+            <key-property name="text3" type="serializable">
+                <column name="TEXT3" />
+            </key-property>
+            <key-property name="text4" type="serializable">
+                <column name="TEXT4" />
+            </key-property>
+            <key-property name="text5" type="serializable">
+                <column name="TEXT5" />
+            </key-property>
+            <key-property name="text6" type="serializable">
+                <column name="TEXT6" />
+            </key-property>
+            <key-property name="text7" type="serializable">
+                <column name="TEXT7" />
+            </key-property>
+            <key-property name="text8" type="serializable">
+                <column name="TEXT8" />
+            </key-property>
+            <key-property name="text9" type="serializable">
+                <column name="TEXT9" />
+            </key-property>
+            <key-property name="text10" type="serializable">
+                <column name="TEXT10" />
+            </key-property>
+            <key-property name="materialstate" type="serializable">
+                <column name="MATERIALSTATE" />
+            </key-property>
+            <key-property name="completepercent" type="serializable">
+                <column name="COMPLETEPERCENT" />
+            </key-property>
+            <key-property name="qualitystate" type="serializable">
+                <column name="QUALITYSTATE" />
+            </key-property>
+            <key-property name="materiallife" type="serializable">
+                <column name="MATERIALLIFE" />
+            </key-property>
+            <key-property name="axisrepair" type="serializable">
+                <column name="AXISREPAIR" />
+            </key-property>
+            <key-property name="radialrepair" type="serializable">
+                <column name="RADIALREPAIR" />
+            </key-property>
+            <key-property name="partner" type="serializable">
+                <column name="PARTNER" />
+            </key-property>
+            <key-property name="radiusrepair" type="serializable">
+                <column name="RADIUSREPAIR" />
+            </key-property>
+            <key-property name="lengthrepair" type="serializable">
+                <column name="LENGTHREPAIR" />
+            </key-property>
+            <key-property name="cutteractlength" type="serializable">
+                <column name="CUTTERACTLENGTH" />
+            </key-property>
+            <key-property name="tineposition" type="serializable">
+                <column name="TINEPOSITION" />
+            </key-property>
+            <key-property name="checkupDate" type="serializable">
+                <column name="CHECKUP_DATE" />
+            </key-property>
+            <key-property name="maintenanceDate" type="serializable">
+                <column name="MAINTENANCE_DATE" />
+            </key-property>
+            <key-property name="barcode" type="serializable">
+                <column name="BARCODE" />
+            </key-property>
+            <key-property name="customerchecker" type="serializable">
+                <column name="CUSTOMERCHECKER" />
+            </key-property>
+            <key-property name="certifyChecker" type="serializable">
+                <column name="CERTIFY_CHECKER" />
+            </key-property>
+            <key-property name="maintenancer" type="serializable">
+                <column name="MAINTENANCER" />
+            </key-property>
+            <key-property name="washer" type="serializable">
+                <column name="WASHER" />
+            </key-property>
+            <key-property name="isCustomcheck" type="serializable">
+                <column name="IS_CUSTOMCHECK" />
+            </key-property>
+            <key-property name="isassembled" type="serializable">
+                <column name="ISASSEMBLED" />
+            </key-property>
+            <key-property name="usetimeCounter" type="serializable">
+                <column name="USETIME_COUNTER" />
+            </key-property>
+            <key-property name="groupusn" type="serializable">
+                <column name="GROUPUSN" />
+            </key-property>
+            <key-property name="isprint" type="serializable">
+                <column name="ISPRINT" />
+            </key-property>
+            <key-property name="relationbillnumber" type="serializable">
+                <column name="RELATIONBILLNUMBER" />
+            </key-property>
+            <key-property name="printdate" type="serializable">
+                <column name="PRINTDATE" />
+            </key-property>
+            <key-property name="model" type="serializable">
+                <column name="MODEL" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

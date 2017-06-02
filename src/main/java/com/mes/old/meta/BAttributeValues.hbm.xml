@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BAttributeValues" table="B_ATTRIBUTE_VALUES" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BAttributeValuesId">
+            <key-property name="uuid" type="big_decimal">
+                <column name="UUID" scale="0" />
+            </key-property>
+            <key-property name="instanceUid" type="big_decimal">
+                <column name="INSTANCE_UID" scale="0" />
+            </key-property>
+            <key-property name="attributeUid" type="big_decimal">
+                <column name="ATTRIBUTE_UID" scale="0" />
+            </key-property>
+            <key-property name="textValue" type="string">
+                <column name="TEXT_VALUE" length="40" />
+            </key-property>
+            <key-property name="dateValue" type="date">
+                <column name="DATE_VALUE" length="7" />
+            </key-property>
+            <key-property name="intValue" type="big_decimal">
+                <column name="INT_VALUE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="floatValue" type="big_decimal">
+                <column name="FLOAT_VALUE" precision="30" scale="5" />
+            </key-property>
+            <key-property name="flagValue" type="big_decimal">
+                <column name="FLAG_VALUE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="500" />
+            </key-property>
+            <key-property name="effective" type="java.lang.Byte">
+                <column name="EFFECTIVE" precision="2" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

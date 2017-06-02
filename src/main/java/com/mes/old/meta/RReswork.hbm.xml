@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RReswork" table="R_RESWORK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.RResworkId">
+            <key-property name="uniqueid" type="big_decimal">
+                <column name="UNIQUEID" precision="20" scale="0" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" length="10" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="10" />
+            </key-property>
+            <key-property name="workdate" type="date">
+                <column name="WORKDATE" length="7" />
+            </key-property>
+            <key-property name="time1" type="big_decimal">
+                <column name="TIME1" precision="10" />
+            </key-property>
+            <key-property name="time2" type="big_decimal">
+                <column name="TIME2" precision="10" />
+            </key-property>
+            <key-property name="time3" type="big_decimal">
+                <column name="TIME3" precision="10" />
+            </key-property>
+            <key-property name="time4" type="big_decimal">
+                <column name="TIME4" precision="10" />
+            </key-property>
+            <key-property name="time5" type="big_decimal">
+                <column name="TIME5" precision="10" />
+            </key-property>
+            <key-property name="time6" type="big_decimal">
+                <column name="TIME6" precision="10" />
+            </key-property>
+            <key-property name="time7" type="big_decimal">
+                <column name="TIME7" precision="10" />
+            </key-property>
+            <key-property name="time8" type="big_decimal">
+                <column name="TIME8" precision="10" />
+            </key-property>
+            <key-property name="time9" type="big_decimal">
+                <column name="TIME9" precision="10" />
+            </key-property>
+            <key-property name="time10" type="big_decimal">
+                <column name="TIME10" precision="10" />
+            </key-property>
+            <key-property name="time11" type="big_decimal">
+                <column name="TIME11" precision="10" />
+            </key-property>
+            <key-property name="time12" type="big_decimal">
+                <column name="TIME12" precision="10" />
+            </key-property>
+            <key-property name="note" type="string">
+                <column name="NOTE" />
+            </key-property>
+            <key-property name="time13" type="big_decimal">
+                <column name="TIME13" precision="10" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="workrecuid" type="string">
+                <column name="WORKRECUID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RvEffectEmployeework" table="RV_EFFECT_EMPLOYEEWORK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.RvEffectEmployeeworkId">
+            <key-property name="uniqueid" type="big_decimal">
+                <column name="UNIQUEID" precision="25" scale="0" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="10" />
+            </key-property>
+            <key-property name="startTime" type="date">
+                <column name="START_TIME" length="7" />
+            </key-property>
+            <key-property name="workreason" type="string">
+                <column name="WORKREASON" />
+            </key-property>
+            <key-property name="endTime" type="date">
+                <column name="END_TIME" length="7" />
+            </key-property>
+            <key-property name="employeework" type="big_decimal">
+                <column name="EMPLOYEEWORK" precision="10" />
+            </key-property>
+            <key-property name="checkstate" type="java.lang.Long">
+                <column name="CHECKSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="10" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="applywork" type="big_decimal">
+                <column name="APPLYWORK" precision="10" />
+            </key-property>
+            <key-property name="leader" type="string">
+                <column name="LEADER" />
+            </key-property>
+            <key-property name="workdate" type="date">
+                <column name="WORKDATE" length="7" />
+            </key-property>
+            <key-property name="manhourtype" type="long">
+                <column name="MANHOURTYPE" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

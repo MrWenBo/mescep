@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MDefectjudgeheader" table="M_DEFECTJUDGEHEADER" schema="MES188">
+        <id name="defectjudgeuid" type="string">
+            <column name="DEFECTJUDGEUID" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="string">
+            <column name="VERSION" length="50" />
+        </version>
+        <property name="defectjudgeid" type="string">
+            <column name="DEFECTJUDGEID" not-null="true" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" length="50" />
+        </property>
+        <property name="submitqty" type="big_decimal">
+            <column name="SUBMITQTY" precision="20" />
+        </property>
+        <property name="defectqty" type="big_decimal">
+            <column name="DEFECTQTY" precision="20" />
+        </property>
+        <property name="judgestate" type="string">
+            <column name="JUDGESTATE" length="50" />
+        </property>
+        <property name="judger" type="string">
+            <column name="JUDGER" length="50" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="attatchref" type="string">
+            <column name="ATTATCHREF" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="isineffect" type="java.lang.Long">
+            <column name="ISINEFFECT" precision="10" scale="0" />
+        </property>
+        <property name="billnumber" type="string">
+            <column name="BILLNUMBER" length="50" />
+        </property>
+        <property name="origindefectjudgeuid" type="string">
+            <column name="ORIGINDEFECTJUDGEUID" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" />
+        </property>
+        <property name="worker" type="string">
+            <column name="WORKER" length="50" />
+        </property>
+        <property name="actualcheckqty" type="big_decimal">
+            <column name="ACTUALCHECKQTY" precision="10" />
+        </property>
+        <property name="submitcheckuid" type="string">
+            <column name="SUBMITCHECKUID" />
+        </property>
+        <property name="checkuids" type="string">
+            <column name="CHECKUIDS" length="2000" />
+        </property>
+        <property name="judgetime" type="date">
+            <column name="JUDGETIME" length="7" />
+        </property>
+        <property name="paraIsmastershop" type="java.lang.Long">
+            <column name="PARA_ISMASTERSHOP" precision="10" scale="0" />
+        </property>
+        <property name="paraIsbatchdefect" type="java.lang.Long">
+            <column name="PARA_ISBATCHDEFECT" precision="10" scale="0" />
+        </property>
+        <property name="text1" type="string">
+            <column name="TEXT1">
+                <comment>&#179;&#163;&#201;&#232;&#187;&#250;&#185;&#185;&#210;&#226;&#188;&#251;&#163;&#172;&#200;&#161;&#214;&#181;1&#177;&#168;&#183;&#207; 2
+                &#183;&#181;&#208;&#222; 3&#200;&#195;&#178;&#189;</comment>
+            </column>
+        </property>
+        <property name="text2" type="string">
+            <column name="TEXT2">
+                <comment>&#179;&#163;&#201;&#232;&#187;&#250;&#185;&#185;&#199;&#169;&#215;&#214;</comment>
+            </column>
+        </property>
+        <property name="date1" type="date">
+            <column name="DATE1" length="7">
+                <comment>&#179;&#163;&#201;&#232;&#187;&#250;&#185;&#185;&#199;&#169;&#215;&#214;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="batchcount" type="java.lang.Long">
+            <column name="BATCHCOUNT" precision="10" scale="0" />
+        </property>
+        <property name="isallbatch" type="java.lang.Long">
+            <column name="ISALLBATCH" precision="10" scale="0" />
+        </property>
+        <property name="planqty" type="big_decimal">
+            <column name="PLANQTY" precision="20" scale="0" />
+        </property>
+        <set name="MRepairheaders" table="M_REPAIRHEADER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEFECTJUDGEUID" />
+            </key>
+            <one-to-many class="com.mes.old.MRepairheader" />
+        </set>
+        <set name="MDefectjudgedetails" table="M_DEFECTJUDGEDETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEFECTJUDGEUID" length="50" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.MDefectjudgedetail" />
+        </set>
+        <set name="MRejectheaders" table="M_REJECTHEADER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEFECTJUDGEUID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.MRejectheader" />
+        </set>
+        <set name="MReworkheaders" table="M_REWORKHEADER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEFECTJUDGEUID" />
+            </key>
+            <one-to-many class="com.mes.old.MReworkheader" />
+        </set>
+        <set name="MReworkheaderMerges" table="M_REWORKHEADER_MERGE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEFECTJUDGEUID" />
+            </key>
+            <one-to-many class="com.mes.old.MReworkheaderMerge" />
+        </set>
+    </class>
+</hibernate-mapping>

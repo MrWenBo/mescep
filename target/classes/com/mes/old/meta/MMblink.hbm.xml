@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MMblink" table="M_MBLINK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MMblinkId">
+            <key-property name="billseq" type="long">
+                <column name="BILLSEQ" precision="10" scale="0" />
+            </key-property>
+            <key-property name="billtype" type="long">
+                <column name="BILLTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="billuid" type="string">
+                <column name="BILLUID" />
+            </key-property>
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

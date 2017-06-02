@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MReworkdetailMerge" table="M_REWORKDETAIL_MERGE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MReworkdetailMergeId">
+            <key-property name="seq" type="big_decimal">
+                <column name="SEQ" precision="22" scale="0" />
+            </key-property>
+            <key-property name="reworkuid" type="string">
+                <column name="REWORKUID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="MReworkheaderMerge" class="com.mes.old.MReworkheaderMerge" update="false" insert="false" fetch="select">
+            <column name="REWORKUID" not-null="true" />
+        </many-to-one>
+        <property name="rwcontents" type="string">
+            <column name="RWCONTENTS" />
+        </property>
+        <property name="materialsns" type="string">
+            <column name="MATERIALSNS" length="2000" />
+        </property>
+        <property name="rwmethord" type="string">
+            <column name="RWMETHORD" />
+        </property>
+        <property name="reworker" type="string">
+            <column name="REWORKER" length="50" />
+        </property>
+        <property name="rwworktime" type="date">
+            <column name="RWWORKTIME" length="7" />
+        </property>
+        <property name="rwresult" type="string">
+            <column name="RWRESULT" />
+        </property>
+        <property name="rwchecker" type="string">
+            <column name="RWCHECKER" length="50" />
+        </property>
+        <property name="rwchecktime" type="date">
+            <column name="RWCHECKTIME" length="7" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="reworkqty" type="big_decimal">
+            <column name="REWORKQTY" precision="20" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="checkpic" type="string">
+            <column name="CHECKPIC" length="2000" />
+        </property>
+        <property name="fieldorder" type="string">
+            <column name="FIELDORDER" length="50" />
+        </property>
+        <property name="defectqty" type="big_decimal">
+            <column name="DEFECTQTY" precision="20" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" length="20" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+        </property>
+        <property name="defectreason" type="string">
+            <column name="DEFECTREASON" length="50" />
+        </property>
+        <property name="dutier" type="string">
+            <column name="DUTIER" length="50" />
+        </property>
+        <property name="dutydeptid" type="string">
+            <column name="DUTYDEPTID" length="50" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" />
+        </property>
+        <property name="relationbillid" type="string">
+            <column name="RELATIONBILLID" />
+        </property>
+    </class>
+</hibernate-mapping>

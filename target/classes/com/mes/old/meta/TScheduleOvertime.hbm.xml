@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TScheduleOvertime" table="T_SCHEDULE_OVERTIME" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="TScheduleHeader" class="com.mes.old.TScheduleHeader" fetch="select">
+            <column name="SCHEDULEUID" length="50" not-null="true" />
+        </many-to-one>
+        <property name="resuid" type="string">
+            <column name="RESUID" length="50" />
+        </property>
+        <property name="overtimestart" type="date">
+            <column name="OVERTIMESTART" length="7" />
+        </property>
+        <property name="overtimefinish" type="date">
+            <column name="OVERTIMEFINISH" length="7" />
+        </property>
+        <property name="overtimework" type="big_decimal">
+            <column name="OVERTIMEWORK" precision="20" scale="0" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" length="50" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+    </class>
+</hibernate-mapping>

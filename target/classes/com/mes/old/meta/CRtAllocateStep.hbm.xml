@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CRtAllocateStep" table="C_RT_ALLOCATE_STEP" schema="MES188" optimistic-lock="version">
+        <comment>&#198;&#218;&#188;&#228;&#183;&#214;&#197;&#228;&#194;&#183;&#190;&#182;</comment>
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CAccountantPeriod" class="com.mes.old.CAccountantPeriod" fetch="select">
+            <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="CDtAllocateStep" class="com.mes.old.CDtAllocateStep" fetch="select">
+            <column name="DT_UNIQUEID" length="100" />
+        </many-to-one>
+        <many-to-one name="CDtCostDriver" class="com.mes.old.CDtCostDriver" fetch="select">
+            <column name="COST_DRIVER_ID" length="100" />
+        </many-to-one>
+        <property name="allocateFrom" type="string">
+            <column name="ALLOCATE_FROM" length="100">
+                <comment>&#183;&#214;&#197;&#228;&#212;&#180;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="allocateFromType" type="java.lang.Long">
+            <column name="ALLOCATE_FROM_TYPE" precision="10" scale="0">
+                <comment>&#183;&#214;&#197;&#228;&#212;&#180;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="allocateTo" type="string">
+            <column name="ALLOCATE_TO" length="100">
+                <comment>&#183;&#214;&#197;&#228;&#196;&#191;&#177;&#234;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="allocateToType" type="java.lang.Long">
+            <column name="ALLOCATE_TO_TYPE" precision="10" scale="0">
+                <comment>&#183;&#214;&#197;&#228;&#196;&#191;&#177;&#234;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="costDriverQuantity" type="big_decimal">
+            <column name="COST_DRIVER_QUANTITY" precision="10">
+                <comment>&#182;&#175;&#210;&#242;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="allocateProportion" type="big_decimal">
+            <column name="ALLOCATE_PROPORTION" precision="10">
+                <comment>&#183;&#214;&#197;&#228;&#177;&#200;&#192;&#253;</comment>
+            </column>
+        </property>
+        <property name="allocateQuantity" type="big_decimal">
+            <column name="ALLOCATE_QUANTITY" precision="10">
+                <comment>&#183;&#214;&#197;&#228;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="allocateAllCost" type="big_decimal">
+            <column name="ALLOCATE_ALL_COST" precision="10">
+                <comment>&#183;&#214;&#197;&#228;&#215;&#220;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="unallocateCost" type="big_decimal">
+            <column name="UNALLOCATE_COST" precision="10">
+                <comment>&#183;&#214;&#197;&#228;&#211;&#224;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="costCenterId" type="string">
+            <column name="COST_CENTER_ID" length="100" />
+        </property>
+        <property name="isAllocated" type="java.lang.Long">
+            <column name="IS_ALLOCATED" precision="10" scale="0" />
+        </property>
+        <property name="groupnum" type="java.lang.Long">
+            <column name="GROUPNUM" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

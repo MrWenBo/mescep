@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4HistVar" table="JBPM4_HIST_VAR" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4HistProcinst" class="com.mes.old.Jbpm4HistProcinst" fetch="select">
+            <column name="HPROCI_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4HistTask" class="com.mes.old.Jbpm4HistTask" fetch="select">
+            <column name="HTASK_" scale="0" />
+        </many-to-one>
+        <property name="dbversion" type="long">
+            <column name="DBVERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="procinstid" type="string">
+            <column name="PROCINSTID_" length="510" />
+        </property>
+        <property name="executionid" type="string">
+            <column name="EXECUTIONID_" length="510" />
+        </property>
+        <property name="varname" type="string">
+            <column name="VARNAME_" length="510" />
+        </property>
+        <property name="value" type="string">
+            <column name="VALUE_" length="510" />
+        </property>
+        <set name="jbpm4HistDetails" table="JBPM4_HIST_DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="HVAR_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.Jbpm4HistDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RSdsTime" table="R_SDS_TIME" schema="MES188" optimistic-lock="version">
+        <comment>&#201;&#232;&#177;&#184;&#176;&#178;&#215;&#176;&#215;&#170;&#187;&#187;&#202;&#177;&#188;&#228;</comment>
+        <composite-id name="id" class="com.mes.old.RSdsTimeId">
+            <key-property name="setupMatrixId" type="string">
+                <column name="SETUP_MATRIX_ID" length="50" />
+            </key-property>
+            <key-property name="seqDepSetupTypeTo" type="string">
+                <column name="SEQ_DEP_SETUP_TYPE_TO" length="50" />
+            </key-property>
+            <key-property name="seqDepSetupTypeFrom" type="string">
+                <column name="SEQ_DEP_SETUP_TYPE_FROM" length="50" />
+            </key-property>
+            <key-property name="setupTime" type="java.lang.Long">
+                <column name="SETUP_TIME" precision="18" scale="0" />
+            </key-property>
+            <key-property name="setupTimeUom" type="string">
+                <column name="SETUP_TIME_UOM" length="50" />
+            </key-property>
+            <key-property name="setupLookAhead" type="java.lang.Long">
+                <column name="SETUP_LOOK_AHEAD" precision="18" scale="0" />
+            </key-property>
+            <key-property name="setupLookAheadUom" type="string">
+                <column name="SETUP_LOOK_AHEAD_UOM" length="50" />
+            </key-property>
+            <key-property name="setupRunLength" type="java.lang.Long">
+                <column name="SETUP_RUN_LENGTH" precision="18" scale="0" />
+            </key-property>
+            <key-property name="setupRunLengthUom" type="string">
+                <column name="SETUP_RUN_LENGTH_UOM" length="50" />
+            </key-property>
+            <key-property name="setupMinRunLength" type="java.lang.Long">
+                <column name="SETUP_MIN_RUN_LENGTH" precision="18" scale="0" />
+            </key-property>
+            <key-property name="setupMinRunLenUom" type="string">
+                <column name="SETUP_MIN_RUN_LEN_UOM" length="50" />
+            </key-property>
+            <key-property name="setupHoldLimit" type="java.lang.Long">
+                <column name="SETUP_HOLD_LIMIT" precision="18" scale="0" />
+            </key-property>
+            <key-property name="setupHoldLimitUom" type="string">
+                <column name="SETUP_HOLD_LIMIT_UOM" length="50" />
+            </key-property>
+            <key-property name="earlyArrivalLimit" type="java.lang.Long">
+                <column name="EARLY_ARRIVAL_LIMIT" precision="18" scale="0" />
+            </key-property>
+            <key-property name="earlyArrLimitUom" type="string">
+                <column name="EARLY_ARR_LIMIT_UOM" length="50" />
+            </key-property>
+            <key-property name="earlyArrivalHorizon" type="java.lang.Long">
+                <column name="EARLY_ARRIVAL_HORIZON" precision="18" scale="0" />
+            </key-property>
+            <key-property name="earlyArrHorizonUom" type="string">
+                <column name="EARLY_ARR_HORIZON_UOM" length="50" />
+            </key-property>
+            <key-property name="outputFlowRateLimit" type="java.lang.Long">
+                <column name="OUTPUT_FLOW_RATE_LIMIT" precision="18" scale="0" />
+            </key-property>
+            <key-property name="outputFrlUom" type="string">
+                <column name="OUTPUT_FRL_UOM" length="50" />
+            </key-property>
+            <key-property name="outputFrlPer" type="string">
+                <column name="OUTPUT_FRL_PER" length="50" />
+            </key-property>
+            <key-property name="expendable" type="java.lang.Byte">
+                <column name="EXPENDABLE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="interruptible" type="byte">
+                <column name="INTERRUPTIBLE" precision="2" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

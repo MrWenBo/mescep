@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IIoboxDetail" table="I_IOBOX_DETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IIoboxDetailId">
+            <key-property name="invioid" type="string">
+                <column name="INVIOID" />
+            </key-property>
+            <key-property name="turnBoxId" type="string">
+                <column name="TURN_BOX_ID" />
+            </key-property>
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" />
+            </key-property>
+            <key-property name="binid" type="string">
+                <column name="BINID" />
+            </key-property>
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="ioqty" type="java.lang.Long">
+                <column name="IOQTY" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

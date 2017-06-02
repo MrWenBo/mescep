@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IIoboxHeader" table="I_IOBOX_HEADER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IIoboxHeaderId">
+            <key-property name="invioid" type="string">
+                <column name="INVIOID" />
+            </key-property>
+            <key-property name="turnBoxId" type="string">
+                <column name="TURN_BOX_ID" />
+            </key-property>
+            <key-property name="isCurrent" type="string">
+                <column name="IS_CURRENT" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

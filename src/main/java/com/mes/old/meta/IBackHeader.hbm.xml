@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IBackHeader" table="I_BACK_HEADER" schema="MES188" optimistic-lock="version">
+        <id name="invbackid" type="string">
+            <column name="INVBACKID" />
+            <generator class="assigned" />
+        </id>
+        <property name="invbacktype" type="string">
+            <column name="INVBACKTYPE" length="50">
+                <comment>&#187;&#216;&#202;&#213;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="invbackstate" type="string">
+            <column name="INVBACKSTATE" length="50">
+                <comment>&#187;&#216;&#202;&#213;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID">
+                <comment>&#201;&#234;&#199;&#235;&#187;&#216;&#202;&#213;&#178;&#191;&#195;&#197;</comment>
+            </column>
+        </property>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID">
+                <comment>&#201;&#234;&#199;&#235;&#187;&#216;&#202;&#213;&#191;&#226;&#183;&#191;</comment>
+            </column>
+        </property>
+        <property name="resuid" type="string">
+            <column name="RESUID">
+                <comment>&#201;&#234;&#199;&#235;&#187;&#216;&#202;&#213;&#185;&#164;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="relationid" type="string">
+            <column name="RELATIONID">
+                <comment>&#185;&#216;&#193;&#170;&#200;&#206;&#206;&#241;&#186;&#197;&#163;&#172;&#212;&#221;&#202;&#177;&#178;&#187;&#187;&#225;&#202;&#185;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID">
+                <comment>&#187;&#216;&#202;&#213;&#212;&#177;&#185;&#164;</comment>
+            </column>
+        </property>
+        <property name="backtime" type="date">
+            <column name="BACKTIME" length="7">
+                <comment>&#187;&#216;&#202;&#213;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="relationOutOrder" type="string">
+            <column name="RELATION_OUT_ORDER">
+                <comment>&#185;&#216;&#193;&#170;&#179;&#246;&#191;&#226;&#181;&#165;</comment>
+            </column>
+        </property>
+        <property name="relationInOrder" type="string">
+            <column name="RELATION_IN_ORDER">
+                <comment>&#185;&#216;&#193;&#170;&#200;&#235;&#191;&#226;&#181;&#165;</comment>
+            </column>
+        </property>
+        <set name="IBackDetails" table="I_BACK_DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="INVBACKID" not-null="true">
+                    <comment>&#187;&#216;&#202;&#213;&#181;&#165;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.IBackDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SLog" table="S_LOG" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="operationId" type="string">
+            <column name="OPERATION_ID" />
+        </property>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID" />
+        </property>
+        <property name="operationTime" type="date">
+            <column name="OPERATION_TIME" length="7" />
+        </property>
+        <property name="paraValue" type="string">
+            <column name="PARA_VALUE" length="2000" />
+        </property>
+        <property name="logtype" type="boolean">
+            <column name="LOGTYPE" precision="1" scale="0" not-null="true" />
+        </property>
+        <property name="remoteIp" type="string">
+            <column name="REMOTE_IP" />
+        </property>
+        <property name="roleid" type="string">
+            <column name="ROLEID" />
+        </property>
+        <property name="PFile" type="clob">
+            <column name="P_FILE" />
+        </property>
+        <property name="updatetable" type="string">
+            <column name="UPDATETABLE" />
+        </property>
+        <property name="sessionKey" type="string">
+            <column name="SESSION_KEY" length="50" />
+        </property>
+        <property name="eigenvalue" type="string">
+            <column name="EIGENVALUE" length="2000" />
+        </property>
+    </class>
+</hibernate-mapping>

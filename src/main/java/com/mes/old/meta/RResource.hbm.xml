@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RResource" table="R_RESOURCE" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#202;&#212;&#180;</comment>
+        <id name="resuid" type="string">
+            <column name="RESUID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="RDept" class="com.mes.old.RDept" fetch="select">
+            <column name="DEPTID" not-null="true">
+                <comment>&#178;&#191;&#195;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="resname" type="string">
+            <column name="RESNAME">
+                <comment>&#215;&#202;&#212;&#180;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="calUid" type="string">
+            <column name="CAL_UID" length="50">
+                <comment>&#200;&#213;&#192;&#250;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="resourcetype" type="java.lang.Long">
+            <column name="RESOURCETYPE" precision="10" scale="0">
+                <comment>&#215;&#202;&#212;&#180;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="location" type="string">
+            <column name="LOCATION" length="50">
+                <comment>&#206;&#187;&#214;&#195;</comment>
+            </column>
+        </property>
+        <property name="numOfPooledResources" type="java.lang.Long">
+            <column name="NUM_OF_POOLED_RESOURCES" precision="10" scale="0">
+                <comment>&#215;&#202;&#212;&#180;&#179;&#216;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="estimatedQueueTime" type="java.lang.Long">
+            <column name="ESTIMATED_QUEUE_TIME" precision="18" scale="0">
+                <comment>&#185;&#192;&#188;&#198;&#197;&#197;&#182;&#211;&#181;&#200;&#180;&#253;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="estimatedQueueTimeUom" type="string">
+            <column name="ESTIMATED_QUEUE_TIME_UOM" length="50">
+                <comment>&#185;&#192;&#188;&#198;&#197;&#197;&#182;&#211;&#181;&#200;&#180;&#253;&#202;&#177;&#188;&#228;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="defaultSetupTime" type="java.lang.Long">
+            <column name="DEFAULT_SETUP_TIME" precision="10" scale="0">
+                <comment>&#196;&#172;&#200;&#207;&#176;&#178;&#215;&#176;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="defaultTimeUom" type="string">
+            <column name="DEFAULT_TIME_UOM" length="50">
+                <comment>&#196;&#172;&#200;&#207;&#176;&#178;&#215;&#176;&#202;&#177;&#188;&#228;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="idealUtilizationLevel" type="big_decimal">
+            <column name="IDEAL_UTILIZATION_LEVEL" precision="18" scale="4">
+                <comment>&#192;&#237;&#207;&#235;&#192;&#251;&#211;&#195;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="idealUtilCalName" type="string">
+            <column name="IDEAL_UTIL_CAL_NAME" length="50">
+                <comment>&#196;&#172;&#200;&#207;&#200;&#213;&#192;&#250;</comment>
+            </column>
+        </property>
+        <property name="wageRatePer" type="string">
+            <column name="WAGE_RATE_PER" length="50">
+                <comment>&#183;&#209;&#211;&#195;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="wageRatePerTime" type="big_decimal">
+            <column name="WAGE_RATE_PER_TIME" scale="4">
+                <comment>&#195;&#191;&#180;&#206;&#185;&#164;&#215;&#202;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="setupMatrixId" type="string">
+            <column name="SETUP_MATRIX_ID">
+                <comment>&#176;&#178;&#215;&#176;&#190;&#216;&#213;&#243;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="setupSequenceId" type="string">
+            <column name="SETUP_SEQUENCE_ID" length="50">
+                <comment>&#176;&#178;&#215;&#176;&#182;&#211;&#193;&#208;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="setupSequenceGoback" type="java.lang.Byte">
+            <column name="SETUP_SEQUENCE_GOBACK" precision="2" scale="0">
+                <comment>&#212;&#202;&#208;&#237;&#183;&#180;&#207;&#242;&#176;&#178;&#215;&#176;&#208;&#242;&#193;&#208;</comment>
+            </column>
+        </property>
+        <property name="minimumQueueTime" type="java.lang.Long">
+            <column name="MINIMUM_QUEUE_TIME" precision="10" scale="0">
+                <comment>&#215;&#238;&#208;&#161;&#182;&#211;&#193;&#208;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="minimumQueueTimeUom" type="string">
+            <column name="MINIMUM_QUEUE_TIME_UOM" length="50">
+                <comment>&#215;&#238;&#208;&#161;&#182;&#211;&#193;&#208;&#202;&#177;&#188;&#228;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="modelName" type="string">
+            <column name="MODEL_NAME" length="50">
+                <comment>&#208;&#205;&#186;&#197;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="scheduleFreezeHorizon" type="java.lang.Long">
+            <column name="SCHEDULE_FREEZE_HORIZON" precision="18" scale="0">
+                <comment>&#181;&#247;&#182;&#200;&#182;&#179;&#189;&#225;&#203;&#174;&#198;&#189;</comment>
+            </column>
+        </property>
+        <property name="sfhUom" type="string">
+            <column name="SFH_UOM" length="50">
+                <comment>&#181;&#247;&#182;&#200;&#182;&#179;&#189;&#225;&#203;&#174;&#198;&#189;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="batchingHorizon" type="java.lang.Long">
+            <column name="BATCHING_HORIZON" precision="18" scale="0">
+                <comment>&#183;&#214;&#197;&#250;&#203;&#174;&#198;&#189;</comment>
+            </column>
+        </property>
+        <property name="batchingHorizonUom" type="string">
+            <column name="BATCHING_HORIZON_UOM" length="50">
+                <comment>&#183;&#214;&#197;&#250;&#203;&#174;&#198;&#189;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="batchingLookahead" type="java.lang.Long">
+            <column name="BATCHING_LOOKAHEAD" precision="18" scale="0">
+                <comment>&#183;&#214;&#197;&#250;&#204;&#225;&#199;&#176;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="batchingLookaheadUom" type="string">
+            <column name="BATCHING_LOOKAHEAD_UOM" length="50">
+                <comment>&#186;&#207;&#197;&#250;&#191;&#188;&#194;&#199;&#204;&#225;&#199;&#176;&#202;&#177;&#188;&#228;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="latenessTolerance" type="java.lang.Long">
+            <column name="LATENESS_TOLERANCE" precision="18" scale="0">
+                <comment>&#205;&#207;&#198;&#218;&#200;&#221;&#178;&#238;</comment>
+            </column>
+        </property>
+        <property name="latenessToleranceUom" type="string">
+            <column name="LATENESS_TOLERANCE_UOM" length="50">
+                <comment>&#205;&#207;&#198;&#218;&#200;&#221;&#178;&#238;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="earlinessTolerance" type="java.lang.Long">
+            <column name="EARLINESS_TOLERANCE" precision="18" scale="0">
+                <comment>&#204;&#225;&#199;&#176;&#200;&#221;&#178;&#238;</comment>
+            </column>
+        </property>
+        <property name="earlinessToleranceUom" type="string">
+            <column name="EARLINESS_TOLERANCE_UOM" length="50">
+                <comment>&#204;&#225;&#199;&#176;&#200;&#221;&#178;&#238;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="queueSizeMode" type="string">
+            <column name="QUEUE_SIZE_MODE" length="50">
+                <comment>&#182;&#211;&#193;&#208;&#180;&#243;&#208;&#161;&#196;&#163;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="maxQueueSize" type="string">
+            <column name="MAX_QUEUE_SIZE" length="50">
+                <comment>&#215;&#238;&#180;&#243;&#182;&#211;&#193;&#208;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="queueConformanceMode" type="string">
+            <column name="QUEUE_CONFORMANCE_MODE" length="50">
+                <comment>&#182;&#211;&#193;&#208;&#210;&#187;&#214;&#194;&#196;&#163;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="outputRateLimit" type="java.lang.Long">
+            <column name="OUTPUT_RATE_LIMIT" precision="10" scale="0">
+                <comment>&#178;&#250;&#179;&#246;&#194;&#202;&#207;&#222;&#214;&#198;</comment>
+            </column>
+        </property>
+        <property name="outputRateLimitPer" type="string">
+            <column name="OUTPUT_RATE_LIMIT_PER" length="50">
+                <comment>&#195;&#191;&#204;&#168;&#178;&#250;&#179;&#246;&#194;&#202;&#207;&#222;&#214;&#198;</comment>
+            </column>
+        </property>
+        <property name="outputRateLimitUom" type="string">
+            <column name="OUTPUT_RATE_LIMIT_UOM" length="50">
+                <comment>&#195;&#191;&#204;&#168;&#178;&#250;&#179;&#246;&#194;&#202;&#207;&#222;&#214;&#198;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="lowRwt" type="java.lang.Long">
+            <column name="LOW_RWT" precision="18" scale="0">
+                <comment>&#215;&#238;&#208;&#161;&#193;&#247;&#193;&#191;&#190;&#175;&#184;&#230;&#183;&#182;&#206;&#167;</comment>
+            </column>
+        </property>
+        <property name="lowRwtPer" type="string">
+            <column name="LOW_RWT_PER" length="50">
+                <comment>&#195;&#191;&#204;&#168;&#215;&#238;&#208;&#161;&#193;&#247;&#193;&#191;&#183;&#182;&#206;&#167;</comment>
+            </column>
+        </property>
+        <property name="lowRwtUom" type="string">
+            <column name="LOW_RWT_UOM" length="50">
+                <comment>&#215;&#238;&#208;&#161;&#193;&#247;&#193;&#191;&#183;&#182;&#206;&#167;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="highRwtUom" type="string">
+            <column name="HIGH_RWT_UOM" length="50">
+                <comment>&#215;&#238;&#184;&#223;&#193;&#247;&#193;&#191;&#183;&#182;&#206;&#167;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="highRwtPer" type="string">
+            <column name="HIGH_RWT_PER" length="50">
+                <comment>&#195;&#191;&#204;&#168;&#215;&#238;&#184;&#223;&#193;&#247;&#193;&#191;&#183;&#182;&#206;&#167;</comment>
+            </column>
+        </property>
+        <property name="highRwt" type="java.lang.Long">
+            <column name="HIGH_RWT" precision="18" scale="0">
+                <comment>&#215;&#238;&#184;&#223;&#193;&#247;&#193;&#191;&#183;&#182;&#206;&#167;</comment>
+            </column>
+        </property>
+        <property name="acmFlag" type="string">
+            <column name="ACM_FLAG" length="50">
+                <comment>&#212;&#246;&#188;&#211;&#200;&#161;&#207;&#251;&#208;&#222;&#184;&#196;&#177;&#234;&#214;&#190;,&#211;&#166;&#183;&#207;&#198;&#250;</comment>
+            </column>
+        </property>
+        <property name="incOvertimeCostPer" type="string">
+            <column name="INC_OVERTIME_COST_PER" length="50">
+                <comment>&#195;&#191;&#204;&#168;&#212;&#246;&#193;&#191;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="incOvertimeCostPerT" type="string">
+            <column name="INC_OVERTIME_COST_PER_T" length="50">
+                <comment>&#195;&#191;&#180;&#206;&#212;&#246;&#193;&#191;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="lastMaintDate" type="java.lang.Long">
+            <column name="LAST_MAINT_DATE" precision="10" scale="0">
+                <comment>&#201;&#207;&#180;&#206;&#206;&#172;&#208;&#222;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="lastMaintDateFormat" type="string">
+            <column name="LAST_MAINT_DATE_FORMAT" length="50">
+                <comment>&#201;&#207;&#180;&#206;&#206;&#172;&#208;&#222;&#200;&#213;&#198;&#218;&#184;&#241;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="lastMaintSeqNumber" type="string">
+            <column name="LAST_MAINT_SEQ_NUMBER" length="50">
+                <comment>&#201;&#207;&#180;&#206;&#206;&#172;&#208;&#222;&#208;&#242;&#193;&#208;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="lastMaintTime" type="java.lang.Long">
+            <column name="LAST_MAINT_TIME" precision="10" scale="0">
+                <comment>&#201;&#207;&#180;&#206;&#206;&#172;&#208;&#222;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="lastMaintTimeUom" type="string">
+            <column name="LAST_MAINT_TIME_UOM" length="50">
+                <comment>&#201;&#207;&#180;&#206;&#206;&#172;&#208;&#222;&#202;&#177;&#188;&#228;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="loadSinceLastMaint" type="java.lang.Long">
+            <column name="LOAD_SINCE_LAST_MAINT" precision="10" scale="0">
+                <comment>&#180;&#211;&#201;&#207;&#180;&#206;&#206;&#172;&#208;&#222;&#186;&#243;&#184;&#186;&#212;&#216;&#180;&#243;&#208;&#161;</comment>
+            </column>
+        </property>
+        <property name="loadSinceUom" type="string">
+            <column name="LOAD_SINCE_UOM" length="50">
+                <comment>&#184;&#186;&#212;&#216;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="maximumUtilLevel" type="java.lang.Long">
+            <column name="MAXIMUM_UTIL_LEVEL" precision="18" scale="0">
+                <comment>&#215;&#238;&#180;&#243;&#192;&#251;&#211;&#195;&#181;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <property name="minOpTimeCalName" type="string">
+            <column name="MIN_OP_TIME_CAL_NAME" length="50">
+                <comment>&#215;&#238;&#208;&#161;&#211;&#197;&#187;&#175;&#200;&#213;&#192;&#250;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="minQueueConfLength" type="date">
+            <column name="MIN_QUEUE_CONF_LENGTH" length="7">
+                <comment>&#215;&#238;&#208;&#161;&#181;&#200;&#180;&#253; &#197;&#228;&#214;&#195;&#179;&#164;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="minQueueConfUom" type="string">
+            <column name="MIN_QUEUE_CONF_UOM" length="50">
+                <comment>&#197;&#228;&#214;&#195;&#179;&#164;&#182;&#200;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="minimumUtilLevel" type="java.lang.Long">
+            <column name="MINIMUM_UTIL_LEVEL" precision="18" scale="0">
+                <comment>&#215;&#238;&#208;&#161;&#192;&#251;&#211;&#195;&#181;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <property name="offloadableFrom" type="java.lang.Byte">
+            <column name="OFFLOADABLE_FROM" precision="2" scale="0">
+                <comment>&#213;&#226;&#184;&#246;&#215;&#202;&#212;&#180;&#215;&#212;&#182;&#175;&#208;&#182;&#212;&#216;</comment>
+            </column>
+        </property>
+        <property name="offloadableTo" type="java.lang.Byte">
+            <column name="OFFLOADABLE_TO" precision="2" scale="0">
+                <comment>
+                &#198;&#228;&#203;&#252;&#215;&#202;&#212;&#180;&#181;&#189;&#213;&#226;&#184;&#246;&#215;&#202;&#212;&#180;&#215;&#212;&#182;&#175;&#208;&#182;&#212;&#216;</comment>
+            </column>
+        </property>
+        <property name="overtimeBasis" type="java.lang.Long">
+            <column name="OVERTIME_BASIS" precision="18" scale="0">
+                <comment>&#179;&#172;&#198;&#218;&#187;&#249;&#215;&#188;</comment>
+            </column>
+        </property>
+        <property name="obertimeBasisUom" type="string">
+            <column name="OBERTIME_BASIS_UOM" length="50">
+                <comment>&#179;&#172;&#198;&#218;&#187;&#249;&#215;&#188;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="overtimeThreshold" type="java.lang.Long">
+            <column name="OVERTIME_THRESHOLD" precision="18" scale="0">
+                <comment>&#179;&#172;&#198;&#218;&#183;&#182;&#206;&#167;</comment>
+            </column>
+        </property>
+        <property name="overtimeThresholdUom" type="string">
+            <column name="OVERTIME_THRESHOLD_UOM" length="50">
+                <comment>&#179;&#172;&#198;&#218;&#183;&#182;&#206;&#167;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="processedMaterialTypes" type="string">
+            <column name="PROCESSED_MATERIAL_TYPES" length="50">
+                <comment>&#206;&#239;&#193;&#207;&#180;&#166;&#192;&#237;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="queueSizeUom" type="string">
+            <column name="QUEUE_SIZE_UOM" length="50">
+                <comment>&#197;&#197;&#182;&#211;&#180;&#243;&#208;&#161;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="schedulingCriticality" type="java.lang.Long">
+            <column name="SCHEDULING_CRITICALITY" precision="10" scale="0">
+                <comment>&#181;&#247;&#182;&#200;&#185;&#216;&#188;&#252;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="unitSetupCostPer" type="string">
+            <column name="UNIT_SETUP_COST_PER" length="50">
+                <comment>&#181;&#165;&#204;&#168;&#176;&#178;&#215;&#176;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="unitSetupCostPerTime" type="big_decimal">
+            <column name="UNIT_SETUP_COST_PER_TIME" scale="4">
+                <comment>&#181;&#165;&#180;&#206;&#176;&#178;&#215;&#176;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="caoPostProcDownstream" type="java.lang.Long">
+            <column name="CAO_POST_PROC_DOWNSTREAM" precision="18" scale="0">
+                <comment>CAO&#207;&#224;&#185;&#216;</comment>
+            </column>
+        </property>
+        <property name="keepRelatedTasksTog" type="java.lang.Byte">
+            <column name="KEEP_RELATED_TASKS_TOG" precision="2" scale="0">
+                <comment>&#177;&#163;&#179;&#214;&#207;&#224;&#185;&#216;&#200;&#206;&#206;&#241;&#212;&#218;&#210;&#187;&#198;&#240;</comment>
+            </column>
+        </property>
+        <property name="preIcpOlRuntimeRatio" type="java.lang.Long">
+            <column name="PRE_ICP_OL_RUNTIME_RATIO" precision="18" scale="0">
+                <comment>&#215;&#238;&#208;&#161;&#184;&#186;&#212;&#216;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="simulHierSetups" type="java.lang.Byte">
+            <column name="SIMUL_HIER_SETUPS" precision="2" scale="0">
+                <comment>&#205;&#172;&#178;&#189;&#178;&#227;&#180;&#206;&#187;&#175;&#176;&#178;&#215;&#176;</comment>
+            </column>
+        </property>
+        <property name="ignoreForCapPlan" type="java.lang.Byte">
+            <column name="IGNORE_FOR_CAP_PLAN" precision="2" scale="0">
+                <comment>&#187;&#164;&#194;&#204;&#196;&#220;&#193;&#166;&#188;&#198;&#187;&#174;</comment>
+            </column>
+        </property>
+        <property name="noneneeddispatch" type="java.lang.Boolean">
+            <column name="NONENEEDDISPATCH" precision="1" scale="0">
+                <comment>&#178;&#187;&#208;&#232;&#210;&#170;&#197;&#201;&#185;&#164;&#177;&#234;&#188;&#199;</comment>
+            </column>
+        </property>
+        <property name="resourceref" type="string">
+            <column name="RESOURCEREF">
+                <comment>&#215;&#202;&#212;&#180;&#178;&#206;&#191;&#188;&#206;&#196;&#181;&#181;</comment>
+            </column>
+        </property>
+        <property name="criticalLevel" type="java.lang.Byte">
+            <column name="CRITICAL_LEVEL" precision="2" scale="0">
+                <comment>&#215;&#202;&#212;&#180;&#185;&#216;&#188;&#252;&#181;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <property name="needNc" type="big_decimal">
+            <column name="NEED_NC" precision="10" scale="3" />
+        </property>
+        <property name="restype" type="string">
+            <column name="RESTYPE" />
+        </property>
+        <property name="monthplanwork" type="big_decimal">
+            <column name="MONTHPLANWORK" precision="10" scale="1">
+                <comment>&#212;&#194;&#188;&#198;&#187;&#174;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="optype" type="java.lang.Long">
+            <column name="OPTYPE" precision="10" scale="0">
+                <comment>&#185;&#164;&#214;&#214;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="RResourceOutUid" type="string">
+            <column name="R_RESOURCE_OUT_UID" />
+        </property>
+        <property name="resstate" type="java.lang.Long">
+            <column name="RESSTATE" precision="10" scale="0" />
+        </property>
+        <property name="customerResuid" type="string">
+            <column name="CUSTOMER_RESUID" />
+        </property>
+        <property name="toolShankSpec" type="string">
+            <column name="TOOL_SHANK_SPEC" />
+        </property>
+        <property name="ncSysModel" type="string">
+            <column name="NC_SYS_MODEL">
+                <comment>&#187;&#250;&#180;&#178;&#178;&#217;&#215;&#247;&#207;&#181;&#205;&#179;</comment>
+            </column>
+        </property>
+        <property name="deviceTableCount" type="java.lang.Long">
+            <column name="DEVICE_TABLE_COUNT" precision="10" scale="0">
+                <comment>&#185;&#164;&#215;&#247;&#204;&#168;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="currentEmployeeid" type="string">
+            <column name="CURRENT_EMPLOYEEID" length="50" />
+        </property>
+        <property name="bottleneckLevel" type="string">
+            <column name="BOTTLENECK_LEVEL" length="10" />
+        </property>
+        <set name="RResourceReplacersForRepresuid" table="R_RESOURCE_REPLACER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="REPRESUID" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.RResourceReplacer" />
+        </set>
+        <set name="RResourceReplacersForResuid" table="R_RESOURCE_REPLACER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RESUID" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.RResourceReplacer" />
+        </set>
+        <set name="RResourcesForSubResource" table="R_AGGREGATE_RESOURCE" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="AGGREGATE_RESOURCE" not-null="true">
+                    <comment>&#190;&#219;&#186;&#207;&#215;&#202;&#212;&#180;</comment>
+                </column>
+            </key>
+            <many-to-many entity-name="com.mes.old.RResource">
+                <column name="SUB_RESOURCE" not-null="true" unique="true">
+                    <comment>&#215;&#211;&#215;&#202;&#212;&#180;</comment>
+                </column>
+            </many-to-many>
+        </set>
+        <set name="BRoutines" table="B_ROUTINE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="MACHINE_NUMBER">
+                    <comment>&#185;&#164;&#215;&#247;&#214;&#208;&#208;&#196;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.BRoutine" />
+        </set>
+        <set name="REmployeeResources" table="R_EMPLOYEE_RESOURCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RESUID" not-null="true">
+                    <comment>&#201;&#232;&#177;&#184;&#177;&#224;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.REmployeeResource" />
+        </set>
+        <set name="TWorkrecs" table="T_WORKREC" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RESUID">
+                    <comment>&#215;&#202;&#212;&#180;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.TWorkrec" />
+        </set>
+        <set name="RResourcesForAggregateResource" table="R_AGGREGATE_RESOURCE" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="SUB_RESOURCE" not-null="true" unique="true">
+                    <comment>&#215;&#211;&#215;&#202;&#212;&#180;</comment>
+                </column>
+            </key>
+            <many-to-many entity-name="com.mes.old.RResource">
+                <column name="AGGREGATE_RESOURCE" not-null="true">
+                    <comment>&#190;&#219;&#186;&#207;&#215;&#202;&#212;&#180;</comment>
+                </column>
+            </many-to-many>
+        </set>
+        <set name="TAssignmentses" table="T_ASSIGNMENTS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RESUID" />
+            </key>
+            <one-to-many class="com.mes.old.TAssignments" />
+        </set>
+    </class>
+</hibernate-mapping>

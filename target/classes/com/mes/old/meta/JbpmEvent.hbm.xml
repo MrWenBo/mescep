@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmEvent" table="JBPM_EVENT" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmNode" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="NODE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmProcessdefinition" class="com.mes.old.JbpmProcessdefinition" fetch="select">
+            <column name="PROCESSDEFINITION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTask" class="com.mes.old.JbpmTask" fetch="select">
+            <column name="TASK_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTransition" class="com.mes.old.JbpmTransition" fetch="select">
+            <column name="TRANSITION_" scale="0" />
+        </many-to-one>
+        <property name="eventtype" type="string">
+            <column name="EVENTTYPE_" />
+        </property>
+        <property name="type" type="java.lang.Character">
+            <column name="TYPE_" length="1" />
+        </property>
+        <property name="graphelement" type="big_decimal">
+            <column name="GRAPHELEMENT_" scale="0" />
+        </property>
+        <set name="jbpmActions" table="JBPM_ACTION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="EVENT_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmAction" />
+        </set>
+    </class>
+</hibernate-mapping>

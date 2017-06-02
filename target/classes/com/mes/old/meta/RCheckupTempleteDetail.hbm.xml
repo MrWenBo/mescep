@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RCheckupTempleteDetail" table="R_CHECKUP_TEMPLETE_DETAIL" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="RCheckupTemplete" class="com.mes.old.RCheckupTemplete" fetch="select">
+            <column name="TEMPLETE_UID">
+                <comment>&#181;&#227;&#188;&#236;&#196;&#163;&#176;&#229;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="seq" type="java.lang.Short">
+            <column name="SEQ" precision="3" scale="0">
+                <comment>&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="checkupContent" type="string">
+            <column name="CHECKUP_CONTENT">
+                <comment>&#181;&#227;&#188;&#236;&#196;&#218;&#200;&#221;</comment>
+            </column>
+        </property>
+        <property name="checkupMethod" type="string">
+            <column name="CHECKUP_METHOD">
+                <comment>&#181;&#227;&#188;&#236;&#183;&#189;&#183;&#168;</comment>
+            </column>
+        </property>
+        <property name="mustToCheckup" type="java.lang.Boolean">
+            <column name="MUST_TO_CHECKUP" precision="1" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#177;&#216;&#208;&#235;&#181;&#227;&#188;&#236;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

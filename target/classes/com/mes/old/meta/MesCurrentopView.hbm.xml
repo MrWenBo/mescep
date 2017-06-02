@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MesCurrentopView" table="MES_CURRENTOP_VIEW" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MesCurrentopViewId">
+            <key-property name="drawingid" type="serializable">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="batchnum" type="serializable">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="deptname" type="serializable">
+                <column name="DEPTNAME" />
+            </key-property>
+            <key-property name="parentdept" type="serializable">
+                <column name="PARENTDEPT" />
+            </key-property>
+            <key-property name="currentop" type="serializable">
+                <column name="CURRENTOP" />
+            </key-property>
+            <key-property name="currentopIddesc" type="serializable">
+                <column name="CURRENTOP_IDDESC" />
+            </key-property>
+            <key-property name="currentopId" type="serializable">
+                <column name="CURRENTOP_ID" />
+            </key-property>
+            <key-property name="currentopName" type="serializable">
+                <column name="CURRENTOP_NAME" />
+            </key-property>
+            <key-property name="iddesc" type="serializable">
+                <column name="IDDESC" />
+            </key-property>
+            <key-property name="planqty" type="serializable">
+                <column name="PLANQTY" />
+            </key-property>
+            <key-property name="lastop" type="serializable">
+                <column name="LASTOP" />
+            </key-property>
+            <key-property name="lastopId" type="serializable">
+                <column name="LASTOP_ID" />
+            </key-property>
+            <key-property name="lastopName" type="serializable">
+                <column name="LASTOP_NAME" />
+            </key-property>
+            <key-property name="versionid" type="serializable">
+                <column name="VERSIONID" />
+            </key-property>
+            <key-property name="operationIddesc" type="serializable">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="taskname" type="serializable">
+                <column name="TASKNAME" />
+            </key-property>
+            <key-property name="operationId" type="serializable">
+                <column name="OPERATION_ID" />
+            </key-property>
+            <key-property name="taskstate" type="serializable">
+                <column name="TASKSTATE" />
+            </key-property>
+            <key-property name="actualfinish" type="serializable">
+                <column name="ACTUALFINISH" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

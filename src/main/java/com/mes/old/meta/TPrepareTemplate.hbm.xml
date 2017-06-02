@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TPrepareTemplate" table="T_PREPARE_TEMPLATE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TPrepareTemplateId">
+            <key-property name="prepareTasktype" type="string">
+                <column name="PREPARE_TASKTYPE" />
+            </key-property>
+            <key-property name="itemid" type="int">
+                <column name="ITEMID" precision="6" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="itemiddesc" type="string">
+            <column name="ITEMIDDESC">
+                <comment>&#215;&#188;&#177;&#184;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#215;&#188;&#177;&#184;&#207;&#234;&#199;&#233;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SCheckagain" table="S_CHECKAGAIN" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SCheckagainId">
+            <key-property name="roleid" type="string">
+                <column name="ROLEID" length="50" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="50" />
+            </key-property>
+            <key-property name="function" type="string">
+                <column name="FUNCTION" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="ip" type="string">
+            <column name="IP" length="1000" not-null="true" />
+        </property>
+        <property name="password" type="binary">
+            <column name="PASSWORD" />
+        </property>
+        <property name="amount" type="short">
+            <column name="AMOUNT" precision="3" scale="0" not-null="true" />
+        </property>
+        <property name="needcheck" type="java.lang.Byte">
+            <column name="NEEDCHECK" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#208;&#232;&#210;&#170;&#195;&#220;&#194;&#235;&#209;&#233;&#214;&#164;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

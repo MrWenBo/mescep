@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TScheduleDemandtasklink" table="T_SCHEDULE_DEMANDTASKLINK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TScheduleDemandtasklinkId">
+            <key-property name="demanduid" type="string">
+                <column name="DEMANDUID" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="linkqty" type="big_decimal">
+                <column name="LINKQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="linktype" type="java.lang.Long">
+                <column name="LINKTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="linklag" type="java.lang.Long">
+                <column name="LINKLAG" precision="10" scale="0" />
+            </key-property>
+            <key-property name="isineffect" type="java.lang.Byte">
+                <column name="ISINEFFECT" precision="2" scale="0" />
+            </key-property>
+            <key-property name="dependtype" type="string">
+                <column name="DEPENDTYPE" length="10" />
+            </key-property>
+            <key-property name="locklevel" type="java.lang.Boolean">
+                <column name="LOCKLEVEL" precision="1" scale="0" />
+            </key-property>
+            <key-property name="lockexpiredate" type="date">
+                <column name="LOCKEXPIREDATE" length="7" />
+            </key-property>
+            <key-property name="uniqueId" type="string">
+                <column name="UNIQUE_ID" />
+            </key-property>
+            <key-property name="scheduleuid" type="string">
+                <column name="SCHEDULEUID" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

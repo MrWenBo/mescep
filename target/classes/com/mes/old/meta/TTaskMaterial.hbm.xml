@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TTaskMaterial" table="T_TASK_MATERIAL" schema="MES188" optimistic-lock="version">
+        <comment>&#200;&#206;&#206;&#241;&#206;&#239;&#193;&#207;</comment>
+        <composite-id name="id" class="com.mes.old.TTaskMaterialId">
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="inmaterialusn" type="string">
+                <column name="INMATERIALUSN" />
+            </key-property>
+            <key-property name="outmaterialusn" type="string">
+                <column name="OUTMATERIALUSN" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="MMaterialByOutmaterialusn" class="com.mes.old.MMaterial" update="false" insert="false" fetch="select">
+            <column name="OUTMATERIALUSN" not-null="true">
+                <comment>&#179;&#246;&#193;&#207;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="MMaterialByInmaterialusn" class="com.mes.old.MMaterial" update="false" insert="false" fetch="select">
+            <column name="INMATERIALUSN" not-null="true">
+                <comment>&#202;&#213;&#193;&#207;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="changetype" type="java.lang.Integer">
+            <column name="CHANGETYPE" precision="5" scale="0">
+                <comment>&#177;&#228;&#187;&#175;&#192;&#224;&#208;&#205;&#163;&#172;1&#161;&#162;&#215;&#176;&#197;&#228;&#163;&#172;2&#161;&#162;&#178;&#240;&#183;&#214;
+                3&#161;&#162;&#207;&#251;&#186;&#196; 4&#161;&#162;&#214;&#202;&#193;&#191;&#183;&#214;&#197;&#250;
+                5&#161;&#162;&#214;&#202;&#193;&#191;&#186;&#207;&#197;&#250;</comment>
+            </column>
+        </property>
+        <property name="inmaterialqty" type="big_decimal">
+            <column name="INMATERIALQTY" precision="25" scale="6">
+                <comment>&#202;&#213;&#193;&#207;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="outmaterialqty" type="big_decimal">
+            <column name="OUTMATERIALQTY" precision="25" scale="6">
+                <comment>&#179;&#246;&#193;&#207;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" not-null="true" unique="true">
+                <comment>&#206;&#239;&#193;&#207;&#209;&#221;&#210;&#239;&#185;&#216;&#207;&#181;&#181;&#196;&#206;&#168;&#210;&#187;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="invioid" type="string">
+            <column name="INVIOID" length="50">
+                <comment>&#179;&#246;&#200;&#235;&#191;&#226;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="changestate" type="java.lang.Byte">
+            <column name="CHANGESTATE" precision="2" scale="0">
+                <comment>
+                &#183;&#214;&#197;&#250;&#215;&#180;&#204;&#172;&#163;&#172;0&#177;&#237;&#202;&#190;&#206;&#180;&#205;&#234;&#179;&#201;&#200;&#206;&#206;&#241;&#183;&#214;&#197;&#250;&#163;&#172;1&#177;&#237;&#202;&#190;&#210;&#209;&#190;&#173;&#205;&#234;&#179;&#201;&#200;&#206;&#206;&#241;&#183;&#214;&#197;&#250;</comment>
+            </column>
+        </property>
+        <property name="location" type="string">
+            <column name="LOCATION" />
+        </property>
+        <property name="rmuid" type="string">
+            <column name="RMUID" />
+        </property>
+        <property name="sn" type="string">
+            <column name="SN">
+                <comment>
+                &#208;&#242;&#186;&#197;,&#214;&#184;&#211;&#161;&#212;&#218;&#206;&#239;&#193;&#207;&#201;&#207;&#181;&#196;&#184;&#214;&#211;&#161;&#186;&#197;&#163;&#172;&#211;&#235;&#200;&#206;&#206;&#241;&#210;&#187;&#210;&#187;&#182;&#212;&#211;&#166;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RResourceGroup" table="R_RESOURCE_GROUP" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#202;&#212;&#180;&#183;&#214;&#215;&#233;</comment>
+        <composite-id name="id" class="com.mes.old.RResourceGroupId">
+            <key-property name="groupuid" type="string">
+                <column name="GROUPUID" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

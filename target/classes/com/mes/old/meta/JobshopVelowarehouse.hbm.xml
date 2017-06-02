@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JobshopVelowarehouse" table="JOBSHOP_VELOWAREHOUSE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.JobshopVelowarehouseId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="velowarehouse" type="string">
+                <column name="VELOWAREHOUSE" length="12" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SAuthorizeFunction" table="S_AUTHORIZE_FUNCTION" schema="MES188" optimistic-lock="version">
+        <id name="authorizid" type="long">
+            <column name="AUTHORIZID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="fromemployeeid" type="string">
+            <column name="FROMEMPLOYEEID" length="20" not-null="true" />
+        </property>
+        <property name="toemployeeid" type="string">
+            <column name="TOEMPLOYEEID" length="20" not-null="true" />
+        </property>
+        <property name="fromtime" type="date">
+            <column name="FROMTIME" length="7" not-null="true" />
+        </property>
+        <property name="totime" type="date">
+            <column name="TOTIME" length="7" not-null="true" />
+        </property>
+        <property name="functionunitid" type="string">
+            <column name="FUNCTIONUNITID" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

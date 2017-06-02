@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MWaixieCheckReport" table="M_WAIXIE_CHECK_REPORT" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="bigModel" type="string">
+            <column name="BIG_MODEL" length="50">
+                <comment>&#187;&#250;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL" length="50">
+                <comment>&#208;&#205;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="drawingid" type="string">
+            <column name="DRAWINGID" length="50">
+                <comment>&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="partName" type="string">
+            <column name="PART_NAME" length="50">
+                <comment>&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" length="50">
+                <comment>&#197;&#250;&#180;&#206;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="deptname" type="string">
+            <column name="DEPTNAME" length="50">
+                <comment>&#178;&#191;&#195;&#197;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="coDeptid" type="string">
+            <column name="CO_DEPTID" length="50">
+                <comment>&#205;&#226;&#208;&#173;&#181;&#165;&#206;&#187;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="coDeptname" type="string">
+            <column name="CO_DEPTNAME" length="50">
+                <comment>&#205;&#226;&#208;&#173;&#181;&#165;&#206;&#187;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="operationIddescs" type="string">
+            <column name="OPERATION_IDDESCS">
+                <comment>&#188;&#211;&#185;&#164;&#185;&#164;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="sendQty" type="big_decimal">
+            <column name="SEND_QTY" precision="10">
+                <comment>&#183;&#162;&#179;&#246;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="beforCheckDefectQty" type="big_decimal">
+            <column name="BEFOR_CHECK_DEFECT_QTY" precision="10">
+                <comment>&#215;&#212;&#201;&#237;&#183;&#162;&#207;&#214;&#178;&#187;&#186;&#207;&#184;&#241;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="submitCheckQty" type="big_decimal">
+            <column name="SUBMIT_CHECK_QTY" precision="10">
+                <comment>&#189;&#187;&#188;&#236;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="actBackTime" type="date">
+            <column name="ACT_BACK_TIME" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#183;&#181;&#179;&#167;&#202;&#181;&#188;&#202;</comment>
+            </column>
+        </property>
+        <property name="defectjudgeBillnumber" type="string">
+            <column name="DEFECTJUDGE_BILLNUMBER" length="50">
+                <comment>&#201;&#243;&#192;&#237;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="rejectQty" type="big_decimal">
+            <column name="REJECT_QTY" precision="10">
+                <comment>&#177;&#168;&#183;&#207;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="reworkQty" type="big_decimal">
+            <column name="REWORK_QTY" precision="10">
+                <comment>&#183;&#181;&#185;&#164;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="repairQty" type="big_decimal">
+            <column name="REPAIR_QTY" precision="10">
+                <comment>&#200;&#195;&#178;&#189;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="firstCheckPassQty" type="big_decimal">
+            <column name="FIRST_CHECK_PASS_QTY" precision="10">
+                <comment>&#210;&#187;&#180;&#206;&#189;&#187;&#188;&#236;&#186;&#207;&#184;&#241;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="passQty" type="big_decimal">
+            <column name="PASS_QTY" precision="10">
+                <comment>&#186;&#207;&#184;&#241;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50">
+                <comment>&#188;&#236;&#209;&#233;&#212;&#177;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="checkerName" type="string">
+            <column name="CHECKER_NAME" length="50">
+                <comment>&#188;&#236;&#209;&#233;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="parttaskuid" type="string">
+            <column name="PARTTASKUID" length="50">
+                <comment>&#203;&#249;&#202;&#244;&#193;&#227;&#188;&#254;&#200;&#206;&#206;&#241;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

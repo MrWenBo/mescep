@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BOptionalRes" table="B_OPTIONAL_RES" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BOptionalResId">
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="preopTime" type="big_decimal">
+                <column name="PREOP_TIME" precision="12" />
+            </key-property>
+            <key-property name="unitRuntime" type="big_decimal">
+                <column name="UNIT_RUNTIME" precision="12" />
+            </key-property>
+            <key-property name="postopTime" type="big_decimal">
+                <column name="POSTOP_TIME" precision="12" />
+            </key-property>
+            <key-property name="estipretime" type="big_decimal">
+                <column name="ESTIPRETIME" precision="12" />
+            </key-property>
+            <key-property name="estiruntime" type="big_decimal">
+                <column name="ESTIRUNTIME" precision="12" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="locktype" type="java.lang.Long">
+                <column name="LOCKTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="repcost" type="big_decimal">
+                <column name="REPCOST" precision="10" />
+            </key-property>
+            <key-property name="priority" type="java.lang.Long">
+                <column name="PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="50" />
+            </key-property>
+            <key-property name="applyTaskuid" type="string">
+                <column name="APPLY_TASKUID" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

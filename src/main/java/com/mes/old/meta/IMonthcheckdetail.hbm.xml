@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IMonthcheckdetail" table="I_MONTHCHECKDETAIL" schema="MES188" optimistic-lock="version">
+        <comment>&#212;&#194;&#197;&#204;&#180;&#230;&#195;&#247;&#207;&#184;</comment>
+        <composite-id name="id" class="com.mes.old.IMonthcheckdetailId">
+            <key-property name="invmonthcheckid" type="string">
+                <column name="INVMONTHCHECKID" length="50" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN">
+                <comment>&#206;&#239;&#193;&#207;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="uom" type="string">
+            <column name="UOM" length="50">
+                <comment>&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="unitprice" type="big_decimal">
+            <column name="UNITPRICE" precision="10" scale="4">
+                <comment>&#181;&#165;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="binid" type="string">
+            <column name="BINID" length="50">
+                <comment>&#185;&#241;&#206;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="lastinvqty" type="big_decimal">
+            <column name="LASTINVQTY" precision="10" scale="4">
+                <comment>&#201;&#207;&#212;&#194;&#189;&#225;&#180;&#230;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="lasttotalamount" type="big_decimal">
+            <column name="LASTTOTALAMOUNT" precision="10" scale="4">
+                <comment>&#201;&#207;&#212;&#194;&#189;&#225;&#180;&#230;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="thisinvqtyin" type="big_decimal">
+            <column name="THISINVQTYIN" precision="10" scale="4">
+                <comment>&#177;&#190;&#212;&#194;&#200;&#235;&#191;&#226;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="thistotalamountin" type="big_decimal">
+            <column name="THISTOTALAMOUNTIN" precision="10" scale="4">
+                <comment>&#177;&#190;&#212;&#194;&#200;&#235;&#191;&#226;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="thisinvqtyout" type="big_decimal">
+            <column name="THISINVQTYOUT" precision="10" scale="4">
+                <comment>&#177;&#190;&#212;&#194;&#179;&#246;&#191;&#226;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="thistotalamountout" type="big_decimal">
+            <column name="THISTOTALAMOUNTOUT" precision="10" scale="4">
+                <comment>&#177;&#190;&#212;&#194;&#179;&#246;&#191;&#226;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="thisinvqty" type="big_decimal">
+            <column name="THISINVQTY" precision="10" scale="4">
+                <comment>&#177;&#190;&#212;&#194;&#189;&#225;&#180;&#230;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="thistotalamount" type="big_decimal">
+            <column name="THISTOTALAMOUNT" precision="10" scale="4">
+                <comment>&#177;&#190;&#212;&#194;&#189;&#225;&#180;&#230;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="string">
+            <column name="CREATETIME" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="0">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#202;&#174;</comment>
+            </column>
+        </property>
+        <property name="text1" type="string">
+            <column name="TEXT1" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#210;&#187;</comment>
+            </column>
+        </property>
+        <property name="text2" type="string">
+            <column name="TEXT2" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#182;&#254;</comment>
+            </column>
+        </property>
+        <property name="text3" type="string">
+            <column name="TEXT3" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#200;&#253;</comment>
+            </column>
+        </property>
+        <property name="text4" type="string">
+            <column name="TEXT4" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#203;&#196;</comment>
+            </column>
+        </property>
+        <property name="text5" type="string">
+            <column name="TEXT5" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#206;&#229;</comment>
+            </column>
+        </property>
+        <property name="text6" type="string">
+            <column name="TEXT6" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#193;&#249;</comment>
+            </column>
+        </property>
+        <property name="text7" type="string">
+            <column name="TEXT7" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#198;&#223;</comment>
+            </column>
+        </property>
+        <property name="text8" type="string">
+            <column name="TEXT8" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#176;&#203;</comment>
+            </column>
+        </property>
+        <property name="text9" type="string">
+            <column name="TEXT9" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#190;&#197;</comment>
+            </column>
+        </property>
+        <property name="text10" type="string">
+            <column name="TEXT10" length="50">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER">
+                <comment>&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM">
+                <comment>&#197;&#250;&#180;&#206;</comment>
+            </column>
+        </property>
+        <property name="sn" type="string">
+            <column name="SN">
+                <comment>&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BOperationcheck" table="B_OPERATIONCHECK" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#208;&#242;&#188;&#236;&#209;&#233;</comment>
+        <composite-id name="id" class="com.mes.old.BOperationcheckId">
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="fieldid" type="string">
+                <column name="FIELDID" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="routing" type="string">
+            <column name="ROUTING">
+                <comment>&#185;&#164;&#210;&#213;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="operationId" type="big_decimal">
+            <column name="OPERATION_ID" precision="10">
+                <comment>&#185;&#164;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="flaginput" type="java.lang.Byte">
+            <column name="FLAGINPUT" precision="2" scale="0">
+                <comment>&#202;&#228;&#200;&#235;&#177;&#234;&#214;&#190;</comment>
+            </column>
+        </property>
+        <property name="checkinfotype" type="java.lang.Long">
+            <column name="CHECKINFOTYPE" precision="10" scale="0">
+                <comment>&#188;&#236;&#209;&#233;&#208;&#197;&#207;&#162;&#183;&#214;&#192;&#224;</comment>
+            </column>
+        </property>
+        <property name="fieldorder" type="java.lang.Long">
+            <column name="FIELDORDER" precision="10" scale="0">
+                <comment>&#215;&#214;&#182;&#206;&#203;&#179;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="uom" type="string">
+            <column name="UOM" length="50">
+                <comment>&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="ubound" type="big_decimal">
+            <column name="UBOUND" precision="25" scale="3">
+                <comment>&#201;&#207;&#189;&#231;</comment>
+            </column>
+        </property>
+        <property name="lbound" type="big_decimal">
+            <column name="LBOUND" precision="25" scale="3">
+                <comment>&#207;&#194;&#189;&#231;</comment>
+            </column>
+        </property>
+        <property name="fieldtype" type="string">
+            <column name="FIELDTYPE" />
+        </property>
+        <property name="issubmitcheck" type="java.lang.Byte">
+            <column name="ISSUBMITCHECK" precision="2" scale="0" />
+        </property>
+        <property name="iskeyfield" type="java.lang.Byte">
+            <column name="ISKEYFIELD" precision="2" scale="0" />
+        </property>
+        <property name="measurebase" type="string">
+            <column name="MEASUREBASE">
+                <comment>&#178;&#226;&#193;&#191;&#187;&#249;&#215;&#188;</comment>
+            </column>
+        </property>
+        <property name="standardvalue" type="string">
+            <column name="STANDARDVALUE" length="50" />
+        </property>
+        <property name="bounduom" type="string">
+            <column name="BOUNDUOM" length="50" />
+        </property>
+        <property name="cutteruid" type="string">
+            <column name="CUTTERUID" length="50" />
+        </property>
+        <property name="measureuid" type="string">
+            <column name="MEASUREUID" length="50" />
+        </property>
+        <property name="a" type="big_decimal">
+            <column name="A" precision="25" scale="5" />
+        </property>
+        <property name="spcstandardvalue" type="big_decimal">
+            <column name="SPCSTANDARDVALUE" precision="25" scale="5" />
+        </property>
+        <property name="BOperationcheckOutUid" type="string">
+            <column name="B_OPERATIONCHECK_OUT_UID" />
+        </property>
+        <property name="fitPartNumber" type="string">
+            <column name="FIT_PART_NUMBER" />
+        </property>
+        <property name="fitOpuid" type="big_decimal">
+            <column name="FIT_OPUID" precision="20" scale="0" />
+        </property>
+        <property name="fitFieldid" type="string">
+            <column name="FIT_FIELDID" length="50" />
+        </property>
+        <property name="fitFormula" type="string">
+            <column name="FIT_FORMULA" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+        </property>
+        <property name="precision" type="string">
+            <column name="PRECISION" length="20" />
+        </property>
+        <property name="sfpmiuid" type="string">
+            <column name="SFPMIUID" />
+        </property>
+        <property name="sfmarkupxml" type="string">
+            <column name="SFMARKUPXML" length="2000" />
+        </property>
+        <property name="sfcheckview" type="string">
+            <column name="SFCHECKVIEW" />
+        </property>
+        <property name="checkPic" type="string">
+            <column name="CHECK_PIC" />
+        </property>
+        <property name="checkContent" type="string">
+            <column name="CHECK_CONTENT" />
+        </property>
+        <property name="isneedcollect" type="java.lang.Boolean">
+            <column name="ISNEEDCOLLECT" precision="1" scale="0" />
+        </property>
+        <property name="tool" type="string">
+            <column name="TOOL" length="50">
+                <comment>&#178;&#226;&#193;&#191;&#185;&#164;&#190;&#223;</comment>
+            </column>
+        </property>
+        <property name="feature" type="string">
+            <column name="FEATURE" length="50">
+                <comment>&#188;&#211;&#185;&#164;&#204;&#216;&#213;&#247;</comment>
+            </column>
+        </property>
+        <property name="dmistollabel" type="string">
+            <column name="DMISTOLLABEL">
+                <comment>DMIS&#179;&#223;&#180;&#231;&#177;&#234;&#199;&#169;</comment>
+            </column>
+        </property>
+        <property name="dmisfeatlabel" type="string">
+            <column name="DMISFEATLABEL">
+                <comment>DMIS&#204;&#216;&#213;&#247;&#177;&#234;&#199;&#169;</comment>
+            </column>
+        </property>
+        <property name="manufactureopuid" type="big_decimal">
+            <column name="MANUFACTUREOPUID" precision="30" scale="0">
+                <comment>&#184;&#195;&#179;&#223;&#180;&#231;&#203;&#249;&#202;&#244;&#181;&#196;&#201;&#250;&#178;&#250;&#214;&#198;&#212;&#236;&#185;&#164;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="tolerancerule" type="string">
+            <column name="TOLERANCERULE">
+                <comment>&#192;&#237;&#194;&#219;&#185;&#171;&#178;&#238;&#212;&#173;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="dmisfileversion" type="string">
+            <column name="DMISFILEVERSION">
+                <comment>DMIS&#206;&#196;&#188;&#254;&#176;&#230;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="operationcheckorder" type="java.lang.Long">
+            <column name="OPERATIONCHECKORDER" precision="10" scale="0">
+                <comment>
+                &#185;&#164;&#208;&#242;&#188;&#236;&#209;&#233;&#179;&#223;&#180;&#231;&#203;&#179;&#208;&#242;&#186;&#197;&#163;&#168;&#188;&#236;&#209;&#233;&#185;&#164;&#208;&#242;&#203;&#249;&#188;&#236;&#179;&#223;&#180;&#231;&#181;&#196;&#203;&#179;&#208;&#242;&#177;&#224;&#186;&#197;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="sfannotationplaneuid" type="string">
+            <column name="SFANNOTATIONPLANEUID">
+                <comment>PMI&#203;&#249;&#212;&#218;&#177;&#234;&#215;&#162;&#198;&#189;&#195;&#230;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="sfannotationplanename" type="string">
+            <column name="SFANNOTATIONPLANENAME" length="2000">
+                <comment>PMI&#203;&#249;&#212;&#218;&#177;&#234;&#215;&#162;&#198;&#189;&#195;&#230;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="genre" type="string">
+            <column name="GENRE">
+                <comment>&#179;&#223;&#180;&#231;&#215;&#220;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="sfmarkupxmlreplace" type="string">
+            <column name="SFMARKUPXMLREPLACE" length="2000">
+                <comment>
+                &#211;&#195;&#211;&#218;&#184;&#178;&#184;&#199;SF&#200;&#253;&#206;&#172;&#177;&#234;&#215;&#162;&#181;&#196;XML&#215;&#214;&#183;&#251;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="sfmarkupxmlactual" type="string">
+            <column name="SFMARKUPXMLACTUAL" length="2000">
+                <comment>&#176;&#252;&#186;&#172;&#202;&#181;&#178;&#226;&#214;&#181;&#181;&#196;XML&#215;&#214;&#183;&#251;</comment>
+            </column>
+        </property>
+        <property name="measurebase1" type="string">
+            <column name="MEASUREBASE1" />
+        </property>
+        <property name="measurebase2" type="string">
+            <column name="MEASUREBASE2" />
+        </property>
+        <property name="toolid" type="string">
+            <column name="TOOLID">
+                <comment>&#185;&#164;&#190;&#223;ID</comment>
+            </column>
+        </property>
+        <property name="tolerid" type="big_decimal">
+            <column name="TOLERID" precision="30" scale="0" />
+        </property>
+        <property name="tolerview" type="string">
+            <column name="TOLERVIEW" />
+        </property>
+        <property name="toolbarcode" type="string">
+            <column name="TOOLBARCODE" />
+        </property>
+        <property name="tolername" type="string">
+            <column name="TOLERNAME">
+                <comment>CATIA&#214;&#208;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

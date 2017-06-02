@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MRepairdetail" table="M_REPAIRDETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MRepairdetailId">
+            <key-property name="repairuid" type="string">
+                <column name="REPAIRUID" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="MRepairheader" class="com.mes.old.MRepairheader" update="false" insert="false" fetch="select">
+            <column name="REPAIRUID" not-null="true" />
+        </many-to-one>
+        <property name="defectdesc" type="string">
+            <column name="DEFECTDESC" />
+        </property>
+        <property name="materialsns" type="string">
+            <column name="MATERIALSNS" length="2000" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="defectreason" type="string">
+            <column name="DEFECTREASON" length="50">
+                <comment>&#212;&#173;&#210;&#242;&#180;&#250;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="repairmethod" type="string">
+            <column name="REPAIRMETHOD" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="repairqty" type="big_decimal">
+            <column name="REPAIRQTY" precision="20" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="checkpic" type="string">
+            <column name="CHECKPIC" length="2000" />
+        </property>
+        <property name="fieldorder" type="string">
+            <column name="FIELDORDER" length="50" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" length="20" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+        </property>
+        <property name="relationbilluid" type="string">
+            <column name="RELATIONBILLUID" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

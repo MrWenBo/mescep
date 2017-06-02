@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TYearDemand" table="T_YEAR_DEMAND" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TYearDemandId">
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="currentYear" type="long">
+                <column name="CURRENT_YEAR" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" not-null="true" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" not-null="true" />
+        </property>
+        <property name="lastremain" type="java.lang.Long">
+            <column name="LASTREMAIN" precision="10" scale="0" />
+        </property>
+        <property name="oneqty" type="java.lang.Long">
+            <column name="ONEQTY" precision="10" scale="0" />
+        </property>
+        <property name="twoqty" type="java.lang.Long">
+            <column name="TWOQTY" precision="10" scale="0" />
+        </property>
+        <property name="threeqty" type="java.lang.Long">
+            <column name="THREEQTY" precision="10" scale="0" />
+        </property>
+        <property name="fourqty" type="java.lang.Long">
+            <column name="FOURQTY" precision="10" scale="0" />
+        </property>
+        <property name="fiveqty" type="java.lang.Long">
+            <column name="FIVEQTY" precision="10" scale="0" />
+        </property>
+        <property name="sixqty" type="java.lang.Long">
+            <column name="SIXQTY" precision="10" scale="0" />
+        </property>
+        <property name="sevenqty" type="java.lang.Long">
+            <column name="SEVENQTY" precision="10" scale="0" />
+        </property>
+        <property name="eightqty" type="java.lang.Long">
+            <column name="EIGHTQTY" precision="10" scale="0" />
+        </property>
+        <property name="nineqty" type="java.lang.Long">
+            <column name="NINEQTY" precision="10" scale="0" />
+        </property>
+        <property name="tenqty" type="java.lang.Long">
+            <column name="TENQTY" precision="10" scale="0" />
+        </property>
+        <property name="elevenqty" type="java.lang.Long">
+            <column name="ELEVENQTY" precision="10" scale="0" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="twelveqty" type="java.lang.Long">
+            <column name="TWELVEQTY" precision="10" scale="0" />
+        </property>
+        <property name="currentyearqty" type="java.lang.Long">
+            <column name="CURRENTYEARQTY" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

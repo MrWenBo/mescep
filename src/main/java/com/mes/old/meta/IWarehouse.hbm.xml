@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IWarehouse" table="I_WAREHOUSE" schema="MES188" optimistic-lock="version">
+        <comment>&#191;&#226;&#183;&#191;</comment>
+        <id name="warehouseid" type="string">
+            <column name="WAREHOUSEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="warehousename" type="string">
+            <column name="WAREHOUSENAME" length="50">
+                <comment>&#191;&#226;&#183;&#191;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="parentwarehouseid" type="string">
+            <column name="PARENTWAREHOUSEID" length="50">
+                <comment>&#184;&#184;&#191;&#226;&#183;&#191;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="warehousetype" type="string">
+            <column name="WAREHOUSETYPE" length="50">
+                <comment>&#191;&#226;&#183;&#191;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="manager" type="string">
+            <column name="MANAGER" length="50">
+                <comment>&#185;&#220;&#192;&#237;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="country" type="string">
+            <column name="COUNTRY" length="50">
+                <comment>&#185;&#250;&#188;&#210;</comment>
+            </column>
+        </property>
+        <property name="province" type="string">
+            <column name="PROVINCE" length="50">
+                <comment>&#202;&#161;&#202;&#208;&#215;&#212;&#214;&#206;&#199;&#248;</comment>
+            </column>
+        </property>
+        <property name="city" type="string">
+            <column name="CITY" length="50">
+                <comment>&#179;&#199;&#202;&#208;</comment>
+            </column>
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="50">
+                <comment>&#181;&#216;&#214;&#183;</comment>
+            </column>
+        </property>
+        <property name="zipcode" type="string">
+            <column name="ZIPCODE" length="50">
+                <comment>&#211;&#202;&#213;&#254;&#177;&#224;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="freezed" type="java.lang.Byte">
+            <column name="FREEZED" precision="2" scale="0">
+                <comment>&#182;&#179;&#189;&#225;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="shortening" type="string">
+            <column name="SHORTENING" length="50">
+                <comment>&#188;&#242;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="ioPriority" type="java.lang.Long">
+            <column name="IO_PRIORITY" precision="10" scale="0">
+                <comment>
+                &#191;&#226;&#183;&#191;&#206;&#239;&#193;&#207;&#179;&#246;&#200;&#235;&#191;&#226;&#211;&#197;&#207;&#200;&#188;&#182;&#163;&#186;0&#177;&#237;&#202;&#190;&#207;&#200;&#189;&#248;&#207;&#200;&#179;&#246;&#163;&#172;1&#177;&#237;&#202;&#190;&#186;&#243;&#189;&#248;&#207;&#200;&#179;&#246;&#163;&#172;2&#177;&#237;&#202;&#190;&#203;&#230;&#187;&#250;,&#196;&#172;&#200;&#207;&#206;&#170;&#203;&#230;&#187;&#250;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

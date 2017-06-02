@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MmaLagdaysZongjian" table="MMA_LAGDAYS_ZONGJIAN" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MmaLagdaysZongjianId">
+            <key-property name="&#215;&#238;&#179;&#164;&#209;&#211;&#179;&#217;&#202;&#177;&#188;&#228;" type="big_decimal">
+                <column name="&#215;&#238;&#179;&#164;&#209;&#211;&#179;&#217;&#202;&#177;&#188;&#228;" precision="22" scale="0" />
+            </key-property>
+            <key-property name="&#215;&#238;&#182;&#204;&#209;&#211;&#179;&#217;&#202;&#177;&#188;&#228;" type="big_decimal">
+                <column name="&#215;&#238;&#182;&#204;&#209;&#211;&#179;&#217;&#202;&#177;&#188;&#228;" precision="22" scale="0" />
+            </key-property>
+            <key-property name="&#198;&#189;&#190;&#249;&#209;&#211;&#179;&#217;&#202;&#177;&#188;&#228;" type="big_decimal">
+                <column name="&#198;&#189;&#190;&#249;&#209;&#211;&#179;&#217;&#202;&#177;&#188;&#228;" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

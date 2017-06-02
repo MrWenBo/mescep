@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SFunction" table="S_FUNCTION" schema="MES188" optimistic-lock="version">
+        <id name="functionunitid" type="string">
+            <column name="FUNCTIONUNITID" length="60" />
+            <generator class="assigned" />
+        </id>
+        <property name="functionunitname" type="string">
+            <column name="FUNCTIONUNITNAME" length="100" />
+        </property>
+        <property name="parentfunctionid" type="string">
+            <column name="PARENTFUNCTIONID" length="60" />
+        </property>
+        <property name="functionunitpath" type="string">
+            <column name="FUNCTIONUNITPATH" length="100" />
+        </property>
+        <property name="sequence" type="java.lang.Long">
+            <column name="SEQUENCE" precision="10" scale="0" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="200" />
+        </property>
+    </class>
+</hibernate-mapping>

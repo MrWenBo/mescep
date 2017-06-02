@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BAttribute" table="B_ATTRIBUTE" schema="MES188" optimistic-lock="version">
+        <id name="uuid" type="string">
+            <column name="UUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="attributeId" type="string">
+            <column name="ATTRIBUTE_ID" length="100" />
+        </property>
+        <property name="attributeName" type="string">
+            <column name="ATTRIBUTE_NAME" length="100" />
+        </property>
+        <property name="attributeNameChinese" type="string">
+            <column name="ATTRIBUTE_NAME_CHINESE" length="100" />
+        </property>
+        <property name="attributeDataType" type="string">
+            <column name="ATTRIBUTE_DATA_TYPE" length="20" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="500" />
+        </property>
+        <property name="effective" type="java.lang.Byte">
+            <column name="EFFECTIVE" precision="2" scale="0" />
+        </property>
+        <property name="valueClassuid" type="string">
+            <column name="VALUE_CLASSUID" length="50" />
+        </property>
+        <property name="domainModelAttributeName" type="string">
+            <column name="DOMAIN_MODEL_ATTRIBUTE_NAME" length="100" />
+        </property>
+        <set name="BClassAttributeRelations" table="B_CLASS_ATTRIBUTE_RELATION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ATTRIBUTE_UID" length="50" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.BClassAttributeRelation" />
+        </set>
+        <set name="CCoderules" table="C_CODERULE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ATTRIBUTE_UID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.CCoderule" />
+        </set>
+        <set name="CSnfeatures" table="C_SNFEATURE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ATTRIBUTE_UID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.CSnfeature" />
+        </set>
+    </class>
+</hibernate-mapping>

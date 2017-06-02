@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SfAssembly" table="SF_ASSEMBLY" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SfAssemblyId">
+            <key-property name="sfAssemblyUid" type="string">
+                <column name="SF_ASSEMBLY_UID" />
+            </key-property>
+            <key-property name="sfAssemblyName" type="string">
+                <column name="SF_ASSEMBLY_NAME" />
+            </key-property>
+            <key-property name="sfAssemblyPath" type="string">
+                <column name="SF_ASSEMBLY_PATH" />
+            </key-property>
+            <key-property name="sfParentUid" type="string">
+                <column name="SF_PARENT_UID" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="sfId" type="string">
+                <column name="SF_ID" />
+            </key-property>
+            <key-property name="partuid" type="string">
+                <column name="PARTUID" />
+            </key-property>
+            <key-property name="versionid" type="string">
+                <column name="VERSIONID" />
+            </key-property>
+            <key-property name="partname" type="string">
+                <column name="PARTNAME" />
+            </key-property>
+            <key-property name="beginday" type="date">
+                <column name="BEGINDAY" length="7" />
+            </key-property>
+            <key-property name="endday" type="date">
+                <column name="ENDDAY" length="7" />
+            </key-property>
+            <key-property name="bomnumber" type="string">
+                <column name="BOMNUMBER" />
+            </key-property>
+            <key-property name="operatordate" type="date">
+                <column name="OPERATORDATE" length="7" />
+            </key-property>
+            <key-property name="operatorid" type="string">
+                <column name="OPERATORID" />
+            </key-property>
+            <key-property name="checkerdate" type="date">
+                <column name="CHECKERDATE" length="7" />
+            </key-property>
+            <key-property name="checkerid" type="string">
+                <column name="CHECKERID" />
+            </key-property>
+            <key-property name="checkdate" type="date">
+                <column name="CHECKDATE" length="7" />
+            </key-property>
+            <key-property name="checkid" type="string">
+                <column name="CHECKID" />
+            </key-property>
+            <key-property name="machinepos" type="string">
+                <column name="MACHINEPOS" />
+            </key-property>
+            <key-property name="usestatus" type="string">
+                <column name="USESTATUS" />
+            </key-property>
+            <key-property name="qty" type="java.lang.Long">
+                <column name="QTY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="parttype" type="string">
+                <column name="PARTTYPE" />
+            </key-property>
+            <key-property name="status" type="string">
+                <column name="STATUS" />
+            </key-property>
+            <key-property name="MMethod" type="string">
+                <column name="M_METHOD" />
+            </key-property>
+            <key-property name="subareaCode" type="string">
+                <column name="SUBAREA_CODE" />
+            </key-property>
+            <key-property name="PCode" type="string">
+                <column name="P_CODE" />
+            </key-property>
+            <key-property name="cost" type="string">
+                <column name="COST" length="10" />
+            </key-property>
+            <key-property name="keylevel" type="string">
+                <column name="KEYLEVEL" />
+            </key-property>
+            <key-property name="checktype" type="string">
+                <column name="CHECKTYPE" />
+            </key-property>
+            <key-property name="secrecylevel" type="string">
+                <column name="SECRECYLEVEL" />
+            </key-property>
+            <key-property name="maturelevel" type="string">
+                <column name="MATURELEVEL" />
+            </key-property>
+            <key-property name="blanksize" type="string">
+                <column name="BLANKSIZE" />
+            </key-property>
+            <key-property name="materialname" type="string">
+                <column name="MATERIALNAME" />
+            </key-property>
+            <key-property name="materialtrademark" type="string">
+                <column name="MATERIALTRADEMARK" />
+            </key-property>
+            <key-property name="materialspecification" type="string">
+                <column name="MATERIALSPECIFICATION" />
+            </key-property>
+            <key-property name="materialstandard" type="string">
+                <column name="MATERIALSTANDARD" />
+            </key-property>
+            <key-property name="weight" type="string">
+                <column name="WEIGHT" />
+            </key-property>
+            <key-property name="validity" type="string">
+                <column name="VALIDITY" />
+            </key-property>
+            <key-property name="note" type="string">
+                <column name="NOTE" />
+            </key-property>
+            <key-property name="deviser" type="string">
+                <column name="DEVISER" />
+            </key-property>
+            <key-property name="designdept" type="string">
+                <column name="DESIGNDEPT" />
+            </key-property>
+            <key-property name="designtime" type="date">
+                <column name="DESIGNTIME" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

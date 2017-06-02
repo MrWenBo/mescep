@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.J4SpringBean" table="J4_SPRING_BEAN" schema="MES188" optimistic-lock="version">
+        <id name="beanid" type="string">
+            <column name="BEANID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="beanname" type="string">
+            <column name="BEANNAME" length="50">
+                <comment>bean&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="beandesc" type="string">
+            <column name="BEANDESC">
+                <comment>bean&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="serializable">
+            <column name="CREATETIME">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="beantype" type="string">
+            <column name="BEANTYPE" length="50">
+                <comment>bean&#181;&#196;&#192;&#224;&#208;&#205;,&#200;&#231;event&#163;&#172;assignment</comment>
+            </column>
+        </property>
+        <property name="beanapplytype" type="string">
+            <column name="BEANAPPLYTYPE" length="50">
+                <comment>
+                bean&#181;&#196;&#211;&#166;&#211;&#195;&#192;&#224;&#208;&#205;&#163;&#172;&#200;&#231;&#214;&#202;&#193;&#191;&#161;&#162;&#188;&#236;&#209;&#233;&#161;&#162;&#188;&#198;&#187;&#174;&#181;&#200;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TMrpHistory" table="T_MRP_HISTORY" schema="MES188" optimistic-lock="version">
+        <comment>MRP&#212;&#203;&#203;&#227;&#192;&#250;&#202;&#183;</comment>
+        <composite-id name="id" class="com.mes.old.TMrpHistoryId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="50" />
+            </key-property>
+            <key-property name="mrppre" type="string">
+                <column name="MRPPRE" length="50" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="taskuids" type="string">
+                <column name="TASKUIDS" length="4000" />
+            </key-property>
+            <key-property name="isstop" type="java.lang.Byte">
+                <column name="ISSTOP" precision="2" scale="0" />
+            </key-property>
+            <key-property name="isfinished" type="java.lang.Byte">
+                <column name="ISFINISHED" precision="2" scale="0" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="50" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="20" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="partBatchType" type="java.lang.Long">
+                <column name="PART_BATCH_TYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partBatchQuantity" type="big_decimal">
+                <column name="PART_BATCH_QUANTITY" precision="30" scale="0" />
+            </key-property>
+            <key-property name="leadTime" type="java.lang.Long">
+                <column name="LEAD_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="islink" type="java.lang.Byte">
+                <column name="ISLINK" precision="2" scale="0" />
+            </key-property>
+            <key-property name="isbatch" type="java.lang.Byte">
+                <column name="ISBATCH" precision="2" scale="0" />
+            </key-property>
+            <key-property name="rule1" type="java.lang.Long">
+                <column name="RULE1" precision="10" scale="0" />
+            </key-property>
+            <key-property name="rule2" type="java.lang.Long">
+                <column name="RULE2" precision="10" scale="0" />
+            </key-property>
+            <key-property name="rule3" type="java.lang.Long">
+                <column name="RULE3" precision="10" scale="0" />
+            </key-property>
+            <key-property name="rule4" type="java.lang.Long">
+                <column name="RULE4" precision="10" scale="0" />
+            </key-property>
+            <key-property name="rule5" type="java.lang.Long">
+                <column name="RULE5" precision="10" scale="0" />
+            </key-property>
+            <key-property name="iscombined" type="java.lang.Byte">
+                <column name="ISCOMBINED" precision="2" scale="0" />
+            </key-property>
+            <key-property name="isassembled" type="java.lang.Byte">
+                <column name="ISASSEMBLED" precision="2" scale="0" />
+            </key-property>
+            <key-property name="iscreatetask" type="java.lang.Long">
+                <column name="ISCREATETASK" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

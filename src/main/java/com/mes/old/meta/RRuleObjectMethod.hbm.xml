@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RRuleObjectMethod" table="R_RULE_OBJECT_METHOD" schema="MES188" optimistic-lock="version">
+        <comment>&#182;&#212;&#207;&#243;&#181;&#196;&#183;&#189;&#183;&#168;&#193;&#208;&#177;&#237;</comment>
+        <composite-id name="id" class="com.mes.old.RRuleObjectMethodId">
+            <key-property name="objectuid" type="string">
+                <column name="OBJECTUID" />
+            </key-property>
+            <key-property name="methoduid" type="string">
+                <column name="METHODUID" />
+            </key-property>
+        </composite-id>
+        <property name="methodid" type="string">
+            <column name="METHODID">
+                <comment>&#183;&#189;&#183;&#168;&#180;&#250;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="methodalias" type="string">
+            <column name="METHODALIAS">
+                <comment>&#183;&#189;&#183;&#168;&#188;&#242;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="methodname" type="string">
+            <column name="METHODNAME">
+                <comment>&#183;&#189;&#183;&#168;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="paramname" type="string">
+            <column name="PARAMNAME">
+                <comment>&#183;&#189;&#183;&#168;&#178;&#206;&#202;&#253;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="paramvaluetype" type="string">
+            <column name="PARAMVALUETYPE">
+                <comment>&#183;&#189;&#183;&#168;&#178;&#206;&#202;&#253;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="paramprefix" type="string">
+            <column name="PARAMPREFIX" length="50">
+                <comment>&#183;&#189;&#183;&#168;&#178;&#206;&#202;&#253;&#199;&#176;&#215;&#186;</comment>
+            </column>
+        </property>
+        <property name="paramsuffix" type="string">
+            <column name="PARAMSUFFIX" length="50">
+                <comment>&#183;&#189;&#183;&#168;&#178;&#206;&#202;&#253;&#186;&#243;&#215;&#186;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID">
+                <comment>&#212;&#221;&#202;&#177;&#202;&#185;&#211;&#195;&#181;&#196;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

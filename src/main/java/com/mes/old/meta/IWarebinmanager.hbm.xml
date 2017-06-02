@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IWarebinmanager" table="I_WAREBINMANAGER" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#241;&#206;&#187;&#200;&#203;&#212;&#177;&#185;&#216;&#207;&#181;</comment>
+        <composite-id name="id" class="com.mes.old.IWarebinmanagerId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="binid" type="string">
+                <column name="BINID" length="50" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="100" />
+            </key-property>
+        </composite-id>
+        <property name="duty" type="string">
+            <column name="DUTY" length="50">
+                <comment>&#214;&#176;&#212;&#240;</comment>
+            </column>
+        </property>
+        <property name="isdefault" type="java.lang.Byte">
+            <column name="ISDEFAULT" precision="2" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

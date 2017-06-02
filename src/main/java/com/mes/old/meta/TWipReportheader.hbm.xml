@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TWipReportheader" table="T_WIP_REPORTHEADER" schema="MES188" optimistic-lock="version">
+        <id name="wipreportid" type="string">
+            <column name="WIPREPORTID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="mastershop" type="string">
+            <column name="MASTERSHOP" length="50" not-null="true" />
+        </property>
+        <property name="startdate" type="date">
+            <column name="STARTDATE" length="7" not-null="true" />
+        </property>
+        <property name="enddate" type="date">
+            <column name="ENDDATE" length="7" not-null="true" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="1000" />
+        </property>
+        <property name="accountantYear" type="java.lang.Short">
+            <column name="ACCOUNTANT_YEAR" precision="4" scale="0" />
+        </property>
+        <property name="accountantMonth" type="java.lang.Byte">
+            <column name="ACCOUNTANT_MONTH" precision="2" scale="0" />
+        </property>
+        <property name="reportname" type="string">
+            <column name="REPORTNAME" length="50" />
+        </property>
+        <set name="TWipReportdetails" table="T_WIP_REPORTDETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="WIPREPORTID" length="50" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.TWipReportdetail" />
+        </set>
+    </class>
+</hibernate-mapping>

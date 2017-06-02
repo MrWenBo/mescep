@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RExchangeShiftRecord" table="R_EXCHANGE_SHIFT_RECORD" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="shiftId" type="string">
+            <column name="SHIFT_ID" length="10">
+                <comment>&#176;&#224;&#180;&#206;ID</comment>
+            </column>
+        </property>
+        <property name="shiftName" type="string">
+            <column name="SHIFT_NAME" length="10">
+                <comment>&#176;&#224;&#180;&#206;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="lastShiftTime" type="date">
+            <column name="LAST_SHIFT_TIME" length="7">
+                <comment>&#201;&#207;&#210;&#187;&#176;&#224;&#180;&#206;&#189;&#187;&#176;&#224;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="shiftTime" type="date">
+            <column name="SHIFT_TIME" length="7">
+                <comment>&#189;&#187;&#176;&#224;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="deviceUid" type="string">
+            <column name="DEVICE_UID" length="50">
+                <comment>&#201;&#232;&#177;&#184;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="handoverEmployeeUid" type="string">
+            <column name="HANDOVER_EMPLOYEE_UID" length="50">
+                <comment>&#189;&#187;&#176;&#224;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="takeoverEmployeeUid" type="string">
+            <column name="TAKEOVER_EMPLOYEE_UID" length="50">
+                <comment>&#189;&#211;&#176;&#224;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="shiftContent" type="string">
+            <column name="SHIFT_CONTENT">
+                <comment>&#189;&#187;&#176;&#224;&#203;&#181;&#195;&#247;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

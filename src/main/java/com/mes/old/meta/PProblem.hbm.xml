@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.PProblem" table="P_PROBLEM" schema="MES188" optimistic-lock="version">
+        <comment>&#183;&#162;&#178;&#188;&#181;&#196;&#206;&#202;&#204;&#226;</comment>
+        <composite-id name="id" class="com.mes.old.PProblemId">
+            <key-property name="prmuid" type="string">
+                <column name="PRMUID" length="50" />
+            </key-property>
+            <key-property name="pemoloyeeid" type="string">
+                <column name="PEMOLOYEEID" length="100" />
+            </key-property>
+            <key-property name="ptime" type="date">
+                <column name="PTIME" length="7" />
+            </key-property>
+            <key-property name="demandfbtime" type="date">
+                <column name="DEMANDFBTIME" length="7" />
+            </key-property>
+            <key-property name="ptopic" type="string">
+                <column name="PTOPIC" length="200" />
+            </key-property>
+            <key-property name="pcontent" type="string">
+                <column name="PCONTENT" length="2000" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvEffectWorkrec" table="TV_EFFECT_WORKREC" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvEffectWorkrecId">
+            <key-property name="uniqueid" type="big_decimal">
+                <column name="UNIQUEID" scale="0" />
+            </key-property>
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="50" />
+            </key-property>
+            <key-property name="worktype" type="java.lang.Long">
+                <column name="WORKTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="workdate" type="date">
+                <column name="WORKDATE" length="7" />
+            </key-property>
+            <key-property name="shiftid" type="string">
+                <column name="SHIFTID" length="50" />
+            </key-property>
+            <key-property name="completepercent" type="big_decimal">
+                <column name="COMPLETEPERCENT" precision="25" scale="6" />
+            </key-property>
+            <key-property name="completeqty" type="big_decimal">
+                <column name="COMPLETEQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="completework" type="big_decimal">
+                <column name="COMPLETEWORK" precision="25" scale="6" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="check1qty" type="big_decimal">
+                <column name="CHECK1QTY" precision="25" />
+            </key-property>
+            <key-property name="check2qty" type="big_decimal">
+                <column name="CHECK2QTY" precision="25" />
+            </key-property>
+            <key-property name="check8qty" type="big_decimal">
+                <column name="CHECK8QTY" precision="25" scale="0" />
+            </key-property>
+            <key-property name="checker" type="string">
+                <column name="CHECKER" length="50" />
+            </key-property>
+            <key-property name="checkdate" type="date">
+                <column name="CHECKDATE" length="7" />
+            </key-property>
+            <key-property name="checknotes" type="string">
+                <column name="CHECKNOTES" />
+            </key-property>
+            <key-property name="ECheck1qty" type="big_decimal">
+                <column name="E_CHECK1QTY" precision="25" scale="1" />
+            </key-property>
+            <key-property name="ECheck2qty" type="big_decimal">
+                <column name="E_CHECK2QTY" precision="25" scale="1" />
+            </key-property>
+            <key-property name="ECheck8qty" type="big_decimal">
+                <column name="E_CHECK8QTY" precision="25" scale="1" />
+            </key-property>
+            <key-property name="assnuid" type="big_decimal">
+                <column name="ASSNUID" precision="20" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="completestate" type="java.lang.Long">
+                <column name="COMPLETESTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="optype" type="java.lang.Long">
+                <column name="OPTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="manhourtype" type="java.lang.Long">
+                <column name="MANHOURTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="actualwork" type="big_decimal">
+                <column name="ACTUALWORK" precision="10" />
+            </key-property>
+            <key-property name="normalwork" type="big_decimal">
+                <column name="NORMALWORK" precision="10" />
+            </key-property>
+            <key-property name="overtimework" type="big_decimal">
+                <column name="OVERTIMEWORK" precision="10" />
+            </key-property>
+            <key-property name="vacationwork" type="big_decimal">
+                <column name="VACATIONWORK" precision="10" />
+            </key-property>
+            <key-property name="preoptime" type="big_decimal">
+                <column name="PREOPTIME" precision="10" />
+            </key-property>
+            <key-property name="runtime" type="big_decimal">
+                <column name="RUNTIME" precision="10" />
+            </key-property>
+            <key-property name="dispatchtype" type="java.lang.Long">
+                <column name="DISPATCHTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="applywork" type="big_decimal">
+                <column name="APPLYWORK" precision="10" />
+            </key-property>
+            <key-property name="leader" type="string">
+                <column name="LEADER" length="50" />
+            </key-property>
+            <key-property name="shopmanager" type="string">
+                <column name="SHOPMANAGER" length="50" />
+            </key-property>
+            <key-property name="isprint" type="java.lang.Boolean">
+                <column name="ISPRINT" precision="1" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

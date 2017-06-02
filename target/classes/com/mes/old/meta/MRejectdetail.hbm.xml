@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MRejectdetail" table="M_REJECTDETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MRejectdetailId">
+            <key-property name="rejectuid" type="string">
+                <column name="REJECTUID" />
+            </key-property>
+            <key-property name="seq" type="big_decimal">
+                <column name="SEQ" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="MRejectheader" class="com.mes.old.MRejectheader" update="false" insert="false" fetch="select">
+            <column name="REJECTUID" not-null="true" />
+        </many-to-one>
+        <property name="defectdesc" type="string">
+            <column name="DEFECTDESC" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="materialsns" type="string">
+            <column name="MATERIALSNS" length="2000" />
+        </property>
+        <property name="rejectqty" type="big_decimal">
+            <column name="REJECTQTY" precision="20" scale="0" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="checkpic" type="string">
+            <column name="CHECKPIC" length="2000" />
+        </property>
+        <property name="fieldorder" type="string">
+            <column name="FIELDORDER" length="50" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+        </property>
+        <property name="dutier" type="string">
+            <column name="DUTIER" length="50">
+                <comment>&#212;&#240;&#200;&#206;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="dutydeptid" type="string">
+            <column name="DUTYDEPTID" length="50" />
+        </property>
+        <property name="dutydeptdelegate" type="string">
+            <column name="DUTYDEPTDELEGATE" length="50">
+                <comment>&#212;&#240;&#200;&#206;&#181;&#165;&#206;&#187;&#180;&#250;&#177;&#237;</comment>
+            </column>
+        </property>
+        <property name="defectreason" type="string">
+            <column name="DEFECTREASON" length="50">
+                <comment>&#212;&#173;&#210;&#242;&#180;&#250;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

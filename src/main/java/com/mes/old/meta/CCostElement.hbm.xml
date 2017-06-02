@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CCostElement" table="C_COST_ELEMENT" schema="MES188" optimistic-lock="version">
+        <id name="costElementId" type="string">
+            <column name="COST_ELEMENT_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="costElementName" type="string">
+            <column name="COST_ELEMENT_NAME" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="25" />
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <set name="CDtResources" table="C_DT_RESOURCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_ELEMENT_ID" length="100" />
+            </key>
+            <one-to-many class="com.mes.old.CDtResource" />
+        </set>
+    </class>
+</hibernate-mapping>

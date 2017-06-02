@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KReportRole" table="K_REPORT_ROLE" schema="MES188" optimistic-lock="version">
+        <comment>&#189;&#199;&#201;&#171;&#177;&#168;&#177;&#237;</comment>
+        <composite-id name="id" class="com.mes.old.KReportRoleId">
+            <key-property name="roleid" type="string">
+                <column name="ROLEID" length="50" />
+            </key-property>
+            <key-property name="reportid" type="string">
+                <column name="REPORTID" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="SRole" class="com.mes.old.SRole" update="false" insert="false" fetch="select">
+            <column name="ROLEID" length="50" not-null="true">
+                <comment>&#189;&#199;&#201;&#171;ID</comment>
+            </column>
+        </many-to-one>
+        <property name="notes" type="string">
+            <column name="NOTES" length="50">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

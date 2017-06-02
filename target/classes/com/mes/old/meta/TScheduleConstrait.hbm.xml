@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TScheduleConstrait" table="T_SCHEDULE_CONSTRAIT" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TScheduleConstraitId">
+            <key-property name="scheduleuid" type="string">
+                <column name="SCHEDULEUID" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="constrainttype" type="long">
+                <column name="CONSTRAINTTYPE" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" unique="true" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID">
+                <comment>&#183;&#214;&#197;&#250;&#206;&#170;&#183;&#214;&#197;&#250;&#199;&#176;&#181;&#196;&#200;&#206;&#206;&#241;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="startOperationid" type="big_decimal">
+            <column name="START_OPERATIONID" precision="10" />
+        </property>
+        <property name="startOperationiddesc" type="big_decimal">
+            <column name="START_OPERATIONIDDESC" precision="10" />
+        </property>
+        <property name="endOperationid" type="string">
+            <column name="END_OPERATIONID" />
+        </property>
+        <property name="endOperationiddesc" type="string">
+            <column name="END_OPERATIONIDDESC" />
+        </property>
+        <property name="transferCount" type="big_decimal">
+            <column name="TRANSFER_COUNT" precision="10" />
+        </property>
+        <property name="planqty" type="java.lang.Long">
+            <column name="PLANQTY" precision="10" scale="0" />
+        </property>
+        <property name="completeqty" type="java.lang.Long">
+            <column name="COMPLETEQTY" precision="10" scale="0" />
+        </property>
+        <property name="latefinish" type="date">
+            <column name="LATEFINISH" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

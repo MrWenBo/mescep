@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvCheckTask" table="TV_CHECK_TASK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvCheckTaskId">
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="taskid" type="string">
+                <column name="TASKID" />
+            </key-property>
+            <key-property name="priority" type="java.lang.Long">
+                <column name="PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="tasktype" type="string">
+                <column name="TASKTYPE" length="50" />
+            </key-property>
+            <key-property name="taskstate" type="big_decimal">
+                <column name="TASKSTATE" precision="20" scale="6" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="10" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="taskname" type="string">
+                <column name="TASKNAME" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="operationDistance" type="java.lang.Long">
+                <column name="OPERATION_DISTANCE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="planstart" type="date">
+                <column name="PLANSTART" length="7" />
+            </key-property>
+            <key-property name="planfinish" type="date">
+                <column name="PLANFINISH" length="7" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="mastershopName" type="string">
+                <column name="MASTERSHOP_NAME" length="50" />
+            </key-property>
+            <key-property name="routing" type="string">
+                <column name="ROUTING" />
+            </key-property>
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="checkToolState" type="string">
+                <column name="CHECK_TOOL_STATE" />
+            </key-property>
+            <key-property name="invdemandstate" type="string">
+                <column name="INVDEMANDSTATE" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

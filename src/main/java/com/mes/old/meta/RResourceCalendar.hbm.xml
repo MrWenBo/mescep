@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RResourceCalendar" table="R_RESOURCE_CALENDAR" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.RResourceCalendarId">
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="calUid" type="long">
+                <column name="CAL_UID" precision="10" scale="0" />
+            </key-property>
+            <key-property name="usableability" type="big_decimal">
+                <column name="USABLEABILITY" precision="10" />
+            </key-property>
+            <key-property name="groupid" type="long">
+                <column name="GROUPID" precision="10" scale="0" />
+            </key-property>
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" />
+            </key-property>
+            <key-property name="RResourceCalendarOutUid" type="string">
+                <column name="R_RESOURCE_CALENDAR_OUT_UID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

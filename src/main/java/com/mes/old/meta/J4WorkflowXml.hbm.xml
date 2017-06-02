@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.J4WorkflowXml" table="J4_WORKFLOW_XML" schema="MES188" optimistic-lock="version">
+        <id name="wfname" type="string">
+            <column name="WFNAME" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="serializable">
+            <column name="CREATETIME" />
+        </property>
+        <property name="jpdl" type="clob">
+            <column name="JPDL" />
+        </property>
+        <property name="mxgraph" type="clob">
+            <column name="MXGRAPH" />
+        </property>
+    </class>
+</hibernate-mapping>

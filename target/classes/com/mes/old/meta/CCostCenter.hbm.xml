@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CCostCenter" table="C_COST_CENTER" schema="MES188" optimistic-lock="version">
+        <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;</comment>
+        <id name="costCenterId" type="string">
+            <column name="COST_CENTER_ID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="100">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="costCenterName" type="string">
+            <column name="COST_CENTER_NAME" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="leaderid" type="string">
+            <column name="LEADERID" length="100">
+                <comment>&#212;&#240;&#200;&#206;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="100">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <set name="CRtActivities" table="C_RT_ACTIVITY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_CENTER_ID" length="100">
+                    <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CRtActivity" />
+        </set>
+        <set name="CCostObjectAccounts" table="C_COST_OBJECT_ACCOUNT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_CENTER_ID" length="100">
+                    <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CCostObjectAccount" />
+        </set>
+        <set name="CDtCostDrivers" table="C_DT_COST_DRIVER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_CENTER_ID" length="100" />
+            </key>
+            <one-to-many class="com.mes.old.CDtCostDriver" />
+        </set>
+        <set name="CRtCostObjects" table="C_RT_COST_OBJECT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_CENTER_ID" length="100">
+                    <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CRtCostObject" />
+        </set>
+        <set name="CRtCostDrivers" table="C_RT_COST_DRIVER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_CENTER_ID" length="100" />
+            </key>
+            <one-to-many class="com.mes.old.CRtCostDriver" />
+        </set>
+        <set name="CDtActivities" table="C_DT_ACTIVITY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_CENTER_ID" length="100">
+                    <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CDtActivity" />
+        </set>
+        <set name="CDtResources" table="C_DT_RESOURCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_CENTER_ID" length="100">
+                    <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CDtResource" />
+        </set>
+        <set name="CDtCostObjects" table="C_DT_COST_OBJECT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_CENTER_ID" length="100">
+                    <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CDtCostObject" />
+        </set>
+        <set name="CDtResourceAccounts" table="C_DT_RESOURCE_ACCOUNT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_CENTER_ID" length="100">
+                    <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CDtResourceAccount" />
+        </set>
+    </class>
+</hibernate-mapping>

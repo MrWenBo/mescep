@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BUom" table="B_UOM" schema="MES188" optimistic-lock="version">
+        <comment>&#181;&#165;&#206;&#187;</comment>
+        <id name="uom" type="string">
+            <column name="UOM" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="uomdesc" type="string">
+            <column name="UOMDESC" length="50">
+                <comment>&#181;&#165;&#206;&#187;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="groupid" type="string">
+            <column name="GROUPID" length="50">
+                <comment>&#181;&#165;&#206;&#187;&#215;&#233;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="ismain" type="java.lang.Byte">
+            <column name="ISMAIN" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#214;&#247;&#188;&#198;</comment>
+            </column>
+        </property>
+        <property name="changerate" type="java.lang.Double">
+            <column name="CHANGERATE" precision="126" scale="0">
+                <comment>&#187;&#187;&#203;&#227;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="200">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IWarehousePrepare" table="I_WAREHOUSE_PREPARE" schema="MES188" optimistic-lock="version">
+        <comment>&#201;&#250;&#178;&#250;&#215;&#188;&#177;&#184;&#214;&#176;&#196;&#220;&#181;&#196;&#200;&#168;&#207;&#222;&#191;&#226;&#183;&#191;</comment>
+        <composite-id name="id" class="com.mes.old.IWarehousePrepareId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" />
+            </key-property>
+        </composite-id>
+        <property name="isdefault" type="string">
+            <column name="ISDEFAULT" length="50" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SOperation" table="S_OPERATION" schema="MES188" optimistic-lock="version">
+        <id name="operationId" type="string">
+            <column name="OPERATION_ID" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="operationType" type="string">
+            <column name="OPERATION_TYPE" length="10" />
+        </property>
+        <property name="operationName" type="string">
+            <column name="OPERATION_NAME" />
+        </property>
+        <property name="requestUrl" type="string">
+            <column name="REQUEST_URL" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" />
+        </property>
+        <property name="operationFunc" type="string">
+            <column name="OPERATION_FUNC" length="2000" />
+        </property>
+        <property name="logLevel" type="java.lang.Byte">
+            <column name="LOG_LEVEL" precision="2" scale="0" />
+        </property>
+        <property name="operationKey" type="string">
+            <column name="OPERATION_KEY" />
+        </property>
+        <property name="operationKeysql" type="string">
+            <column name="OPERATION_KEYSQL" length="2000" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="moduleName" type="string">
+            <column name="MODULE_NAME" length="50" />
+        </property>
+        <property name="operationUbound" type="java.lang.Long">
+            <column name="OPERATION_UBOUND" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

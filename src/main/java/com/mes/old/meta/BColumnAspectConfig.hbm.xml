@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BColumnAspectConfig" table="B_COLUMN_ASPECT_CONFIG" schema="MES188" optimistic-lock="version">
+        <id name="tableViewName" type="string">
+            <column name="TABLE_VIEW_NAME" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="variable1Name" type="string">
+            <column name="VARIABLE1_NAME" length="50" not-null="true">
+                <comment>&#197;&#228;&#214;&#195;&#177;&#228;&#193;&#191;1&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="variable2Name" type="string">
+            <column name="VARIABLE2_NAME" length="50">
+                <comment>&#197;&#228;&#214;&#195;&#177;&#228;&#193;&#191;2&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="variable3Name" type="string">
+            <column name="VARIABLE3_NAME" length="50">
+                <comment>&#197;&#228;&#214;&#195;&#177;&#228;&#193;&#191;3&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="200">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

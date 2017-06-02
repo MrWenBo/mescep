@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TWipReportdetail" table="T_WIP_REPORTDETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TWipReportdetailId">
+            <key-property name="wipreportid" type="string">
+                <column name="WIPREPORTID" length="50" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="TWipReportheader" class="com.mes.old.TWipReportheader" update="false" insert="false" fetch="select">
+            <column name="WIPREPORTID" length="50" not-null="true" />
+        </many-to-one>
+        <property name="notes" type="string">
+            <column name="NOTES" length="1000" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" />
+        </property>
+        <property name="carryover" type="big_decimal">
+            <column name="CARRYOVER" precision="25" scale="6" />
+        </property>
+        <property name="recieve" type="big_decimal">
+            <column name="RECIEVE" precision="25" scale="6" />
+        </property>
+        <property name="deliver" type="big_decimal">
+            <column name="DELIVER" precision="25" scale="6" />
+        </property>
+        <property name="final_" type="big_decimal">
+            <column name="FINAL" precision="25" scale="6" />
+        </property>
+        <property name="waster" type="big_decimal">
+            <column name="WASTER" precision="25" scale="6" />
+        </property>
+        <property name="opuid" type="big_decimal">
+            <column name="OPUID" precision="30" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

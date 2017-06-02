@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmBytearray" table="JBPM_BYTEARRAY" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmModuledefinition" class="com.mes.old.JbpmModuledefinition" fetch="select">
+            <column name="FILEDEFINITION_" scale="0" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <set name="jbpmLogsForOldbytearray" table="JBPM_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="OLDBYTEARRAY_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmLog" />
+        </set>
+        <set name="jbpmVariableinstances" table="JBPM_VARIABLEINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="BYTEARRAYVALUE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmVariableinstance" />
+        </set>
+        <set name="jbpmLogsForNewbytearray" table="JBPM_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NEWBYTEARRAY_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmLog" />
+        </set>
+        <set name="jbpmByteblocks" table="JBPM_BYTEBLOCK" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PROCESSFILE_" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmByteblock" />
+        </set>
+    </class>
+</hibernate-mapping>

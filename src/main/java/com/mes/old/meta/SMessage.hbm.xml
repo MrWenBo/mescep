@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SMessage" table="S_MESSAGE" schema="MES188" optimistic-lock="version">
+        <id name="messageuid" type="string">
+            <column name="MESSAGEUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="parentMessageuid" type="string">
+            <column name="PARENT_MESSAGEUID" length="50" />
+        </property>
+        <property name="fromEmployeeid" type="string">
+            <column name="FROM_EMPLOYEEID" length="50" />
+        </property>
+        <property name="toEmployeeid" type="string">
+            <column name="TO_EMPLOYEEID" length="2000" />
+        </property>
+        <property name="messageContentuid" type="string">
+            <column name="MESSAGE_CONTENTUID" length="50" />
+        </property>
+        <property name="messagestate" type="java.lang.Long">
+            <column name="MESSAGESTATE" precision="10" scale="0" />
+        </property>
+        <property name="messagetype" type="java.lang.Long">
+            <column name="MESSAGETYPE" precision="10" scale="0" />
+        </property>
+        <property name="messagepriority" type="java.lang.Long">
+            <column name="MESSAGEPRIORITY" precision="10" scale="0" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="sendtime" type="date">
+            <column name="SENDTIME" length="7" />
+        </property>
+        <property name="receivetime" type="date">
+            <column name="RECEIVETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+    </class>
+</hibernate-mapping>

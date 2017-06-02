@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.STopicTab" table="S_TOPIC_TAB" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="long">
+            <column name="UNIQUEID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="mainid" type="big_decimal">
+            <column name="MAINID" precision="22" scale="0" />
+        </property>
+        <property name="orderid" type="big_decimal">
+            <column name="ORDERID" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="tabname" type="string">
+            <column name="TABNAME" length="50" />
+        </property>
+        <property name="tablabel" type="string">
+            <column name="TABLABEL" length="50" />
+        </property>
+        <property name="tabvisible" type="big_decimal">
+            <column name="TABVISIBLE" precision="22" scale="0" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="100" />
+        </property>
+        <property name="topicid" type="java.lang.Long">
+            <column name="TOPICID" precision="10" scale="0" />
+        </property>
+        <property name="company" type="string">
+            <column name="COMPANY" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

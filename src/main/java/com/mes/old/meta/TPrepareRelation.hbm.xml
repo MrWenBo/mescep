@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TPrepareRelation" table="T_PREPARE_RELATION" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TPrepareRelationId">
+            <key-property name="prepareTaskuid" type="string">
+                <column name="PREPARE_TASKUID" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="TPrepareTask" class="com.mes.old.TPrepareTask" update="false" insert="false" fetch="select">
+            <column name="PREPARE_TASKUID" not-null="true">
+                <comment>&#201;&#250;&#178;&#250;&#215;&#188;&#177;&#184;&#200;&#206;&#206;&#241;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="relationid" type="string">
+            <column name="RELATIONID">
+                <comment>&#200;&#206;&#206;&#241;&#181;&#196;&#185;&#216;&#193;&#170;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

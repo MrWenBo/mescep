@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.PJudgeHeader" table="P_JUDGE_HEADER" schema="MES188" optimistic-lock="version">
+        <comment>&#201;&#250;&#178;&#250;&#215;&#188;&#177;&#184;&#200;&#206;&#206;&#241;&#181;&#196;&#198;&#192;&#201;&#243;&#181;&#165;&#177;&#237;&#205;&#183;</comment>
+        <id name="judgeid" type="string">
+            <column name="JUDGEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="judgestate" type="string">
+            <column name="JUDGESTATE" length="50">
+                <comment>&#198;&#192;&#201;&#243;&#181;&#165;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID">
+                <comment>&#198;&#192;&#201;&#243;&#181;&#165;&#185;&#216;&#193;&#170;&#181;&#196;&#200;&#206;&#206;&#241;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="prepareTaskuid" type="string">
+            <column name="PREPARE_TASKUID">
+                <comment>&#201;&#250;&#178;&#250;&#215;&#188;&#177;&#184;&#200;&#206;&#206;&#241;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID">
+                <comment>&#214;&#180;&#208;&#208;&#178;&#191;&#195;&#197;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID">
+                <comment>&#214;&#180;&#208;&#208;&#212;&#177;&#185;&#164;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="finalTime" type="date">
+            <column name="FINAL_TIME" length="7">
+                <comment>&#198;&#192;&#201;&#243;&#214;&#213;&#214;&#185;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="nextTime" type="date">
+            <column name="NEXT_TIME" length="7">
+                <comment>&#207;&#194;&#180;&#206;&#198;&#192;&#201;&#243;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="isValid" type="string">
+            <column name="IS_VALID" length="50">
+                <comment>&#202;&#199;&#183;&#241;&#211;&#208;&#208;&#167;</comment>
+            </column>
+        </property>
+        <property name="priority" type="java.lang.Integer">
+            <column name="PRIORITY" precision="6" scale="0">
+                <comment>&#211;&#197;&#207;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="relationid" type="string">
+            <column name="RELATIONID">
+                <comment>&#185;&#216;&#193;&#170;&#186;&#197;&#163;&#172;&#212;&#221;&#202;&#177;&#178;&#187;&#189;&#248;&#208;&#208;&#202;&#185;&#211;&#195;</comment>
+            </column>
+        </property>
+        <set name="PJudgeDetails" table="P_JUDGE_DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="JUDGEID" not-null="true">
+                    <comment>&#198;&#192;&#201;&#243;&#181;&#165;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.PJudgeDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

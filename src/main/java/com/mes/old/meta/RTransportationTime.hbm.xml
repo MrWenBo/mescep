@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RTransportationTime" table="R_TRANSPORTATION_TIME" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#202;&#212;&#180;&#215;&#170;&#187;&#187;&#202;&#177;&#188;&#228;</comment>
+        <composite-id name="id" class="com.mes.old.RTransportationTimeId">
+            <key-property name="fromLocation" type="string">
+                <column name="FROM_LOCATION" length="50" />
+            </key-property>
+            <key-property name="toLocation" type="string">
+                <column name="TO_LOCATION" length="50" />
+            </key-property>
+            <key-property name="transportationTime" type="java.lang.Long">
+                <column name="TRANSPORTATION_TIME" precision="18" scale="0" />
+            </key-property>
+            <key-property name="transportationTimeUom" type="string">
+                <column name="TRANSPORTATION_TIME_UOM" length="50" />
+            </key-property>
+            <key-property name="formatStretchedRuntime" type="java.lang.Long">
+                <column name="FORMAT_STRETCHED_RUNTIME" precision="18" scale="0" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="transportationTimeFo" type="string">
+                <column name="TRANSPORTATION_TIME_FO" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

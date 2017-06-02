@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisTWorkrec" table="HIS_T_WORKREC" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisTWorkrecId">
+            <key-property name="uniqueid" type="serializable">
+                <column name="UNIQUEID" />
+            </key-property>
+            <key-property name="materialusn" type="serializable">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="taskuid" type="serializable">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="resuid" type="serializable">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="employeeid" type="serializable">
+                <column name="EMPLOYEEID" />
+            </key-property>
+            <key-property name="worktype" type="serializable">
+                <column name="WORKTYPE" />
+            </key-property>
+            <key-property name="workdate" type="serializable">
+                <column name="WORKDATE" />
+            </key-property>
+            <key-property name="shiftid" type="serializable">
+                <column name="SHIFTID" />
+            </key-property>
+            <key-property name="completepercent" type="serializable">
+                <column name="COMPLETEPERCENT" />
+            </key-property>
+            <key-property name="completeqty" type="serializable">
+                <column name="COMPLETEQTY" />
+            </key-property>
+            <key-property name="completework" type="serializable">
+                <column name="COMPLETEWORK" />
+            </key-property>
+            <key-property name="notes" type="serializable">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="check1qty" type="serializable">
+                <column name="CHECK1QTY" />
+            </key-property>
+            <key-property name="check2qty" type="serializable">
+                <column name="CHECK2QTY" />
+            </key-property>
+            <key-property name="check8qty" type="serializable">
+                <column name="CHECK8QTY" />
+            </key-property>
+            <key-property name="checker" type="serializable">
+                <column name="CHECKER" />
+            </key-property>
+            <key-property name="checkdate" type="serializable">
+                <column name="CHECKDATE" />
+            </key-property>
+            <key-property name="checknotes" type="serializable">
+                <column name="CHECKNOTES" />
+            </key-property>
+            <key-property name="ECheck1qty" type="serializable">
+                <column name="E_CHECK1QTY" />
+            </key-property>
+            <key-property name="ECheck2qty" type="serializable">
+                <column name="E_CHECK2QTY" />
+            </key-property>
+            <key-property name="ECheck8qty" type="serializable">
+                <column name="E_CHECK8QTY" />
+            </key-property>
+            <key-property name="assnuid" type="serializable">
+                <column name="ASSNUID" />
+            </key-property>
+            <key-property name="creator" type="serializable">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="createtime" type="serializable">
+                <column name="CREATETIME" />
+            </key-property>
+            <key-property name="completestate" type="serializable">
+                <column name="COMPLETESTATE" />
+            </key-property>
+            <key-property name="optype" type="serializable">
+                <column name="OPTYPE" />
+            </key-property>
+            <key-property name="manhourtype" type="serializable">
+                <column name="MANHOURTYPE" />
+            </key-property>
+            <key-property name="actualwork" type="serializable">
+                <column name="ACTUALWORK" />
+            </key-property>
+            <key-property name="normalwork" type="serializable">
+                <column name="NORMALWORK" />
+            </key-property>
+            <key-property name="overtimework" type="serializable">
+                <column name="OVERTIMEWORK" />
+            </key-property>
+            <key-property name="vacationwork" type="serializable">
+                <column name="VACATIONWORK" />
+            </key-property>
+            <key-property name="preoptime" type="serializable">
+                <column name="PREOPTIME" />
+            </key-property>
+            <key-property name="runtime" type="serializable">
+                <column name="RUNTIME" />
+            </key-property>
+            <key-property name="dispatchtype" type="serializable">
+                <column name="DISPATCHTYPE" />
+            </key-property>
+            <key-property name="applywork" type="serializable">
+                <column name="APPLYWORK" />
+            </key-property>
+            <key-property name="leader" type="serializable">
+                <column name="LEADER" />
+            </key-property>
+            <key-property name="shopmanager" type="serializable">
+                <column name="SHOPMANAGER" />
+            </key-property>
+            <key-property name="isprint" type="serializable">
+                <column name="ISPRINT" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

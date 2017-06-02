@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RRuleGroup" table="R_RULE_GROUP" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#230;&#212;&#242;&#215;&#233;&#185;&#220;&#192;&#237;</comment>
+        <composite-id name="id" class="com.mes.old.RRuleGroupId">
+            <key-property name="rulegroup" type="string">
+                <column name="RULEGROUP" />
+            </key-property>
+            <key-property name="rulegroupname" type="string">
+                <column name="RULEGROUPNAME" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

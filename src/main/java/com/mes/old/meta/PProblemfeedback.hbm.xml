@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.PProblemfeedback" table="P_PROBLEMFEEDBACK" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" precision="20" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="pdeptid" type="string">
+            <column name="PDEPTID" length="50" />
+        </property>
+        <property name="pemployeeid" type="string">
+            <column name="PEMPLOYEEID" length="100" />
+        </property>
+        <property name="ptime" type="date">
+            <column name="PTIME" length="7" />
+        </property>
+        <property name="demandfbtime" type="date">
+            <column name="DEMANDFBTIME" length="7" />
+        </property>
+        <property name="ptopic" type="string">
+            <column name="PTOPIC" length="200" />
+        </property>
+        <property name="pcontent" type="string">
+            <column name="PCONTENT" length="2000" />
+        </property>
+        <property name="dutydeptid" type="string">
+            <column name="DUTYDEPTID" length="50" />
+        </property>
+        <property name="dutyemployeeid" type="string">
+            <column name="DUTYEMPLOYEEID" length="100" />
+        </property>
+        <property name="fbresult" type="string">
+            <column name="FBRESULT" length="2000" />
+        </property>
+        <property name="fbemployeeid" type="string">
+            <column name="FBEMPLOYEEID" length="100" />
+        </property>
+        <property name="fbtime" type="date">
+            <column name="FBTIME" length="7" />
+        </property>
+        <property name="attachid" type="string">
+            <column name="ATTACHID" length="200" />
+        </property>
+        <property name="fbstate" type="java.lang.Long">
+            <column name="FBSTATE" precision="10" scale="0" />
+        </property>
+        <property name="fbtype" type="string">
+            <column name="FBTYPE" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

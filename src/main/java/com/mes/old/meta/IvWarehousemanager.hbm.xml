@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IvWarehousemanager" table="IV_WAREHOUSEMANAGER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IvWarehousemanagerId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="100" />
+            </key-property>
+            <key-property name="duty" type="string">
+                <column name="DUTY" length="50" />
+            </key-property>
+            <key-property name="isdefault" type="byte">
+                <column name="ISDEFAULT" precision="2" scale="0" />
+            </key-property>
+            <key-property name="warehousename" type="string">
+                <column name="WAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="employeename" type="string">
+                <column name="EMPLOYEENAME" length="100" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="dutydesc" type="string">
+                <column name="DUTYDESC" length="100" />
+            </key-property>
+            <key-property name="shortening" type="string">
+                <column name="SHORTENING" length="50" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="warehousetype" type="string">
+                <column name="WAREHOUSETYPE" length="50" />
+            </key-property>
+            <key-property name="address" type="string">
+                <column name="ADDRESS" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

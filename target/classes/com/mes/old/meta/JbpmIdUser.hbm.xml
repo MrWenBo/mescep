@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmIdUser" table="JBPM_ID_USER" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="class_" type="char">
+            <column name="CLASS_" length="1" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL_" />
+        </property>
+        <property name="password" type="string">
+            <column name="PASSWORD_" />
+        </property>
+        <set name="jbpmIdMemberships" table="JBPM_ID_MEMBERSHIP" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="USER_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmIdMembership" />
+        </set>
+    </class>
+</hibernate-mapping>

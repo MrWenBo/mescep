@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KCheckSum" table="K_CHECK_SUM" schema="MES188" optimistic-lock="version">
+        <comment>&#210;&#187;&#180;&#206;&#189;&#187;&#188;&#236;&#186;&#207;&#184;&#241;&#194;&#202;&#163;&#168;&#215;&#220;&#163;&#169;</comment>
+        <composite-id name="id" class="com.mes.old.KCheckSumId">
+            <key-property name="model" type="string">
+                <column name="MODEL" length="32" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" length="32" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" length="32" />
+            </key-property>
+            <key-property name="iddesc" type="string">
+                <column name="IDDESC" length="32" />
+            </key-property>
+            <key-property name="zx" type="string">
+                <column name="ZX" length="32" />
+            </key-property>
+            <key-property name="subcontract" type="string">
+                <column name="SUBCONTRACT" length="32" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" length="32" />
+            </key-property>
+            <key-property name="sumkeycount" type="string">
+                <column name="SUMKEYCOUNT" length="32" />
+            </key-property>
+            <key-property name="submitqty" type="string">
+                <column name="SUBMITQTY" length="32" />
+            </key-property>
+            <key-property name="qualifyqty" type="string">
+                <column name="QUALIFYQTY" length="32" />
+            </key-property>
+            <key-property name="t1de" type="string">
+                <column name="T1DE" length="32" />
+            </key-property>
+            <key-property name="t1ke" type="string">
+                <column name="T1KE" length="32" />
+            </key-property>
+            <key-property name="t2de" type="string">
+                <column name="T2DE" length="32" />
+            </key-property>
+            <key-property name="t2ke" type="string">
+                <column name="T2KE" length="32" />
+            </key-property>
+            <key-property name="t3de" type="string">
+                <column name="T3DE" length="32" />
+            </key-property>
+            <key-property name="t3ke" type="string">
+                <column name="T3KE" length="32" />
+            </key-property>
+            <key-property name="checksum" type="string">
+                <column name="CHECKSUM" length="32" />
+            </key-property>
+            <key-property name="qtyappearance" type="string">
+                <column name="QTYAPPEARANCE" length="32" />
+            </key-property>
+            <key-property name="qtydimension" type="string">
+                <column name="QTYDIMENSION" length="32" />
+            </key-property>
+            <key-property name="refuse" type="string">
+                <column name="REFUSE" length="32" />
+            </key-property>
+            <key-property name="reworkqty" type="string">
+                <column name="REWORKQTY" length="32" />
+            </key-property>
+            <key-property name="rejectqty" type="string">
+                <column name="REJECTQTY" length="32" />
+            </key-property>
+            <key-property name="repairqty" type="string">
+                <column name="REPAIRQTY" length="32" />
+            </key-property>
+            <key-property name="day" type="date">
+                <column name="DAY" length="7" />
+            </key-property>
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" length="32" />
+            </key-property>
+            <key-property name="statictype" type="string">
+                <column name="STATICTYPE" length="32" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

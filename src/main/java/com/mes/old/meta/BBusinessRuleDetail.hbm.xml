@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BBusinessRuleDetail" table="B_BUSINESS_RULE_DETAIL" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="fieldName" type="string">
+            <column name="FIELD_NAME" length="50" not-null="true">
+                <comment>&#178;&#206;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="fieldValue" type="string">
+            <column name="FIELD_VALUE" length="500">
+                <comment>&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="businessRuleId" type="string">
+            <column name="BUSINESS_RULE_ID" length="50" not-null="true">
+                <comment>&#210;&#181;&#206;&#241;&#185;&#230;&#212;&#242;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="primarykeyValue" type="string">
+            <column name="PRIMARYKEY_VALUE" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

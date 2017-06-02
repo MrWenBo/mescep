@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RCheckupRecord" table="R_CHECKUP_RECORD" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="seq" type="java.lang.Short">
+            <column name="SEQ" precision="3" scale="0">
+                <comment>&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="checkupContent" type="string">
+            <column name="CHECKUP_CONTENT">
+                <comment>&#181;&#227;&#188;&#236;&#196;&#218;&#200;&#221;</comment>
+            </column>
+        </property>
+        <property name="checkupMethod" type="string">
+            <column name="CHECKUP_METHOD">
+                <comment>&#181;&#227;&#188;&#236;&#183;&#189;&#183;&#168;</comment>
+            </column>
+        </property>
+        <property name="mustToCheckup" type="java.lang.Boolean">
+            <column name="MUST_TO_CHECKUP" precision="1" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#177;&#216;&#208;&#235;&#181;&#227;&#188;&#236;</comment>
+            </column>
+        </property>
+        <property name="checkupTempleteDetailUid" type="string">
+            <column name="CHECKUP_TEMPLETE_DETAIL_UID">
+                <comment>&#181;&#227;&#188;&#236;&#196;&#163;&#176;&#229;&#195;&#247;&#207;&#184;&#182;&#212;&#211;&#166;&#181;&#196;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="deviceUid" type="string">
+            <column name="DEVICE_UID">
+                <comment>&#201;&#232;&#177;&#184;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="employeeUid" type="string">
+            <column name="EMPLOYEE_UID" length="50">
+                <comment>&#178;&#217;&#215;&#247;&#213;&#223;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="checkupResult" type="java.lang.Boolean">
+            <column name="CHECKUP_RESULT" precision="1" scale="0">
+                <comment>&#181;&#227;&#188;&#236;&#189;&#225;&#185;&#251;</comment>
+            </column>
+        </property>
+        <property name="checkupTime" type="date">
+            <column name="CHECKUP_TIME" length="7">
+                <comment>&#181;&#227;&#188;&#236;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

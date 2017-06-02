@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.FFile" table="F_FILE" schema="MES188">
+        <comment>&#206;&#196;&#181;&#181;&#185;&#220;&#192;&#237;</comment>
+        <id name="fileuid" type="string">
+            <column name="FILEUID" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="string">
+            <column name="VERSION" length="10" />
+        </version>
+        <property name="filetype" type="string">
+            <column name="FILETYPE" length="20">
+                <comment>&#206;&#196;&#181;&#181;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="filepath" type="string">
+            <column name="FILEPATH">
+                <comment>&#206;&#196;&#181;&#181;&#194;&#183;&#190;&#182;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="changer" type="string">
+            <column name="CHANGER" length="50" />
+        </property>
+        <property name="changetime" type="date">
+            <column name="CHANGETIME" length="7" />
+        </property>
+        <property name="changereason" type="string">
+            <column name="CHANGEREASON" length="50" />
+        </property>
+        <property name="filename" type="string">
+            <column name="FILENAME">
+                <comment>&#206;&#196;&#181;&#181;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="fileformat" type="string">
+            <column name="FILEFORMAT" length="50">
+                <comment>&#206;&#196;&#188;&#254;&#184;&#241;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="length" type="string">
+            <column name="LENGTH" length="0">
+                <comment>&#196;&#163;&#208;&#205;&#177;&#228;&#184;&#252;&#215;&#168;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="filebinary" type="blob">
+            <column name="FILEBINARY" />
+        </property>
+        <property name="FFileOutUid" type="string">
+            <column name="F_FILE_OUT_UID">
+                <comment>&#206;&#196;&#188;&#254;&#179;&#164;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="filecreator" type="string">
+            <column name="FILECREATOR" length="50">
+                <comment>&#206;&#196;&#188;&#254;&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="premodel" type="java.lang.Byte">
+            <column name="PREMODEL" precision="2" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

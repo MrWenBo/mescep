@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RCustomer" table="R_CUSTOMER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.RCustomerId">
+            <key-property name="customerid" type="string">
+                <column name="CUSTOMERID" length="50" />
+            </key-property>
+            <key-property name="customername" type="string">
+                <column name="CUSTOMERNAME" />
+            </key-property>
+            <key-property name="customertype" type="string">
+                <column name="CUSTOMERTYPE" length="50" />
+            </key-property>
+            <key-property name="property" type="string">
+                <column name="PROPERTY" length="50" />
+            </key-property>
+            <key-property name="runscope" type="string">
+                <column name="RUNSCOPE" />
+            </key-property>
+            <key-property name="capacity" type="string">
+                <column name="CAPACITY" />
+            </key-property>
+            <key-property name="contacter" type="string">
+                <column name="CONTACTER" />
+            </key-property>
+            <key-property name="address" type="string">
+                <column name="ADDRESS" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="1000" />
+            </key-property>
+            <key-property name="alias" type="string">
+                <column name="ALIAS" />
+            </key-property>
+            <key-property name="telephone" type="string">
+                <column name="TELEPHONE" length="50" />
+            </key-property>
+            <key-property name="customeruid" type="string">
+                <column name="CUSTOMERUID" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

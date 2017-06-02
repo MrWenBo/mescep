@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KReportUser" table="K_REPORT_USER" schema="MES188" optimistic-lock="version">
+        <comment>&#211;&#195;&#187;&#167;&#177;&#168;&#177;&#237;</comment>
+        <composite-id name="id" class="com.mes.old.KReportUserId">
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="50" />
+            </key-property>
+            <key-property name="reportid" type="string">
+                <column name="REPORTID" length="50" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="50" />
+            </key-property>
+            <key-property name="isdefault" type="java.lang.Long">
+                <column name="ISDEFAULT" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="REmployee" class="com.mes.old.REmployee" update="false" insert="false" fetch="select">
+            <column name="EMPLOYEEID" length="50" not-null="true">
+                <comment>&#211;&#195;&#187;&#167;ID</comment>
+            </column>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

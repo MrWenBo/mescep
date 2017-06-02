@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KReportOrderPara" table="K_REPORT_ORDER_PARA" schema="MES188" optimistic-lock="version">
+        <comment>
+        &#177;&#168;&#177;&#237;&#182;&#169;&#212;&#196;&#214;&#174;&#177;&#228;&#193;&#191;&#163;&#168;&#212;&#218;&#202;&#253;&#190;&#221;&#191;&#226;&#182;&#203;&#205;&#234;&#200;&#171;&#205;&#172;&#210;&#226;&#163;&#172;&#212;&#218;&#178;&#217;&#215;&#247;&#202;&#177;&#183;&#214;&#177;&#168;&#177;&#237;&#192;&#224;&#208;&#205;&#180;&#166;&#192;&#237;&#163;&#169;</comment>
+        <composite-id name="id" class="com.mes.old.KReportOrderParaId">
+            <key-property name="SKey" type="string">
+                <column name="S_KEY" length="32" />
+            </key-property>
+            <key-property name="paraname" type="string">
+                <column name="PARANAME" length="32" />
+            </key-property>
+            <key-property name="paratype" type="string">
+                <column name="PARATYPE" length="10" />
+            </key-property>
+            <key-property name="paravalue" type="string">
+                <column name="PARAVALUE" length="32" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="KReportOrder" class="com.mes.old.KReportOrder" update="false" insert="false" fetch="select">
+            <column name="S_KEY" length="32" not-null="true">
+                <comment>&#184;&#180;&#214;&#198;K_REPORT_ORDER&#214;&#247;&#188;&#252;</comment>
+            </column>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

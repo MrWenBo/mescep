@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KReportOrder" table="K_REPORT_ORDER" schema="MES188" optimistic-lock="version">
+        <comment>&#177;&#168;&#177;&#237;&#182;&#169;&#212;&#196;</comment>
+        <id name="SKey" type="string">
+            <column name="S_KEY" length="32" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="REmployee" class="com.mes.old.REmployee" fetch="select">
+            <column name="EMPLOYEEID" length="50" not-null="true">
+                <comment>&#211;&#195;&#187;&#167;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="reportid" type="string">
+            <column name="REPORTID" length="50" not-null="true">
+                <comment>&#177;&#168;&#177;&#237;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="timetype" type="string">
+            <column name="TIMETYPE" length="50">
+                <comment>&#202;&#177;&#188;&#228;&#192;&#224;&#208;&#205;&#163;&#168;&#200;&#213;&#163;&#172;&#214;&#220;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="hour" type="string">
+            <column name="HOUR" length="50">
+                <comment>&#208;&#161;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="minute" type="string">
+            <column name="MINUTE" length="50">
+                <comment>&#183;&#214;&#214;&#211;</comment>
+            </column>
+        </property>
+        <property name="dayofweek" type="string">
+            <column name="DAYOFWEEK" length="50">
+                <comment>&#208;&#199;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="weekday" type="string">
+            <column name="WEEKDAY" length="50">
+                <comment>&#214;&#220;&#196;&#169;&#202;&#199;&#183;&#241;&#182;&#169;&#212;&#196;</comment>
+            </column>
+        </property>
+        <property name="format" type="string">
+            <column name="FORMAT" length="50">
+                <comment>&#184;&#189;&#188;&#254;&#184;&#241;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="interval" type="string">
+            <column name="INTERVAL" length="50">
+                <comment>&#202;&#177;&#188;&#228;&#188;&#228;&#184;&#244;</comment>
+            </column>
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="50">
+                <comment>&#211;&#202;&#207;&#228;&#181;&#216;&#214;&#183;</comment>
+            </column>
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE" length="32">
+                <comment>&#177;&#168;&#177;&#237;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="viewsheet" type="string">
+            <column name="VIEWSHEET" length="100">
+                <comment>VIEWSHEET&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="replet" type="string">
+            <column name="REPLET" length="100">
+                <comment>REPLET&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="dayofmonth" type="string">
+            <column name="DAYOFMONTH" length="50">
+                <comment>&#195;&#191;&#212;&#194;&#181;&#218;&#188;&#184;&#204;&#236;</comment>
+            </column>
+        </property>
+        <property name="monthofyear" type="string">
+            <column name="MONTHOFYEAR" length="50">
+                <comment>&#195;&#191;&#196;&#234;&#181;&#218;&#188;&#184;&#212;&#194;</comment>
+            </column>
+        </property>
+        <set name="KReportOrderParas" table="K_REPORT_ORDER_PARA" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="S_KEY" length="32" not-null="true">
+                    <comment>&#184;&#180;&#214;&#198;K_REPORT_ORDER&#214;&#247;&#188;&#252;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.KReportOrderPara" />
+        </set>
+    </class>
+</hibernate-mapping>

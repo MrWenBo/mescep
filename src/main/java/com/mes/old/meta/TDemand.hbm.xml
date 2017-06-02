@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TDemand" table="T_DEMAND" schema="MES188" optimistic-lock="version">
+        <comment>&#200;&#206;&#206;&#241;&#208;&#232;&#199;&#243;</comment>
+        <id name="demanduid" type="string">
+            <column name="DEMANDUID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="BPartNumber" class="com.mes.old.BPartNumber" fetch="select">
+            <column name="PART_NUMBER" not-null="true">
+                <comment>&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="demandid" type="string">
+            <column name="DEMANDID">
+                <comment>&#200;&#206;&#206;&#241;&#208;&#232;&#199;&#243;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="demandname" type="string">
+            <column name="DEMANDNAME">
+                <comment>&#200;&#206;&#206;&#241;&#208;&#232;&#199;&#243;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL">
+                <comment>&#208;&#205;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM">
+                <comment>&#197;&#250;&#180;&#206;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="dueqty" type="big_decimal">
+            <column name="DUEQTY" precision="25" scale="6">
+                <comment>&#208;&#232;&#199;&#243;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="earlystart" type="date">
+            <column name="EARLYSTART" length="7">
+                <comment>&#215;&#238;&#212;&#231;&#191;&#170;&#202;&#188;</comment>
+            </column>
+        </property>
+        <property name="earlyfinish" type="date">
+            <column name="EARLYFINISH" length="7">
+                <comment>&#215;&#238;&#212;&#231;&#189;&#225;&#202;&#248;</comment>
+            </column>
+        </property>
+        <property name="latestart" type="date">
+            <column name="LATESTART" length="7">
+                <comment>&#215;&#238;&#205;&#237;&#191;&#170;&#202;&#188;</comment>
+            </column>
+        </property>
+        <property name="latefinish" type="date">
+            <column name="LATEFINISH" length="7">
+                <comment>&#215;&#238;&#205;&#237;&#189;&#225;&#202;&#248;</comment>
+            </column>
+        </property>
+        <property name="actualstart" type="date">
+            <column name="ACTUALSTART" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#191;&#170;&#202;&#188;</comment>
+            </column>
+        </property>
+        <property name="actualfinish" type="date">
+            <column name="ACTUALFINISH" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#189;&#225;&#202;&#248;</comment>
+            </column>
+        </property>
+        <property name="demandstart" type="date">
+            <column name="DEMANDSTART" length="7">
+                <comment>&#208;&#232;&#199;&#243;&#191;&#170;&#202;&#188;</comment>
+            </column>
+        </property>
+        <property name="demandfinish" type="date">
+            <column name="DEMANDFINISH" length="7">
+                <comment>&#208;&#232;&#199;&#243;&#189;&#225;&#202;&#248;,&#188;&#180;&#189;&#187;&#187;&#245;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="priority" type="java.lang.Long">
+            <column name="PRIORITY" precision="10" scale="0">
+                <comment>&#211;&#197;&#207;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <property name="completepercent" type="big_decimal">
+            <column name="COMPLETEPERCENT" precision="25" scale="6">
+                <comment>&#205;&#234;&#179;&#201;&#176;&#217;&#183;&#214;&#177;&#200;</comment>
+            </column>
+        </property>
+        <property name="runtime" type="big_decimal">
+            <column name="RUNTIME" precision="25" scale="6">
+                <comment>&#181;&#165;&#188;&#254;&#212;&#203;&#208;&#208;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="shrinkqty" type="big_decimal">
+            <column name="SHRINKQTY" precision="25" scale="6">
+                <comment>&#212;&#164;&#188;&#198;&#203;&#240;&#186;&#196;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="suspended" type="java.lang.Byte">
+            <column name="SUSPENDED" precision="2" scale="0">
+                <comment>&#208;&#252;&#185;&#210;&#177;&#234;&#214;&#190;</comment>
+            </column>
+        </property>
+        <property name="deliveryqty" type="big_decimal">
+            <column name="DELIVERYQTY" precision="25" scale="6">
+                <comment>&#210;&#209;&#189;&#187;&#184;&#182;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="demandstate" type="java.lang.Byte">
+            <column name="DEMANDSTATE" precision="2" scale="0">
+                <comment>&#208;&#232;&#199;&#243;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" not-null="true">
+                <comment>&#199;&#235;&#214;&#198;&#178;&#191;&#195;&#197;</comment>
+            </column>
+        </property>
+        <property name="mastershop" type="string">
+            <column name="MASTERSHOP">
+                <comment>&#214;&#247;&#214;&#198;&#179;&#181;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="routinestate" type="java.lang.Integer">
+            <column name="ROUTINESTATE" precision="5" scale="0">
+                <comment>&#185;&#164;&#210;&#213;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="materialstate" type="java.lang.Integer">
+            <column name="MATERIALSTATE" precision="5" scale="0">
+                <comment>&#206;&#239;&#193;&#207;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="resourcestate" type="java.lang.Integer">
+            <column name="RESOURCESTATE" precision="5" scale="0">
+                <comment>&#215;&#202;&#212;&#180;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID" length="50">
+                <comment>&#210;&#170;&#189;&#187;&#184;&#182;&#181;&#196;&#191;&#226;&#183;&#191;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="responsetime" type="java.lang.Long">
+            <column name="RESPONSETIME" precision="10" scale="0">
+                <comment>&#207;&#236;&#211;&#166;&#202;&#177;&#207;&#222;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="demandtype" type="java.lang.Long">
+            <column name="DEMANDTYPE" precision="10" scale="0">
+                <comment>&#214;&#184;&#193;&#238;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="isbreak" type="byte">
+            <column name="ISBREAK" precision="2" scale="0" not-null="true" />
+        </property>
+        <property name="ismps" type="java.lang.Byte">
+            <column name="ISMPS" precision="2" scale="0" />
+        </property>
+        <property name="parentuid" type="string">
+            <column name="PARENTUID">
+                <comment>&#184;&#184;&#214;&#184;&#193;&#238;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="planqty" type="big_decimal">
+            <column name="PLANQTY" precision="25" scale="6">
+                <comment>&#188;&#198;&#187;&#174;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="iscritical" type="java.lang.Byte">
+            <column name="ISCRITICAL" precision="2" scale="0">
+                <comment>&#214;&#184;&#193;&#238;&#202;&#199;&#183;&#241;&#185;&#216;&#188;&#252;</comment>
+            </column>
+        </property>
+        <property name="readypoint" type="java.lang.Long">
+            <column name="READYPOINT" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#206;&#170;&#198;&#235;&#204;&#215;&#181;&#227;</comment>
+            </column>
+        </property>
+        <set name="TDemandtasklinkses" table="T_DEMANDTASKLINKS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SUCCUID" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.TDemandtasklinks" />
+        </set>
+        <set name="TDemandlinksesForSuccuid" table="T_DEMANDLINKS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SUCCUID" not-null="true">
+                    <comment>&#186;&#243;&#188;&#204;&#200;&#206;&#206;&#241;&#177;&#224;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.TDemandlinks" />
+        </set>
+        <set name="TDemandlinksesForPreduid" table="T_DEMANDLINKS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PREDUID" not-null="true">
+                    <comment>&#199;&#176;&#200;&#206;&#206;&#241;&#177;&#224;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.TDemandlinks" />
+        </set>
+        <set name="TDemandChanges" table="T_DEMAND_CHANGE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEMANDUID" not-null="true">
+                    <comment>&#183;&#214;&#198;&#218;&#189;&#187;&#184;&#182;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.TDemandChange" />
+        </set>
+    </class>
+</hibernate-mapping>

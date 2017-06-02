@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TCotask" table="T_COTASK" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#220;&#192;&#237;&#208;&#173;&#215;&#247;&#200;&#206;&#206;&#241;</comment>
+        <id name="cotaskuid" type="string">
+            <column name="COTASKUID" length="500" />
+            <generator class="assigned" />
+        </id>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" length="2550" not-null="true">
+                <comment>&#200;&#206;&#206;&#241;&#177;&#224;&#186;&#197;&#163;&#172;&#203;&#205;&#179;&#246;&#185;&#164;&#208;&#242;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="cofeedback" type="string">
+            <column name="COFEEDBACK" length="2000">
+                <comment>&#208;&#173;&#215;&#247;&#179;&#181;&#188;&#228;&#210;&#226;&#188;&#251;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID">
+                <comment>&#199;&#235;&#214;&#198;&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="mastershop" type="string">
+            <column name="MASTERSHOP">
+                <comment>&#214;&#247;&#214;&#198;&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="planner" type="string">
+            <column name="PLANNER">
+                <comment>&#208;&#173;&#215;&#247;&#188;&#198;&#187;&#174;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="plantime" type="date">
+            <column name="PLANTIME" length="7">
+                <comment>&#208;&#173;&#215;&#247;&#188;&#198;&#187;&#174;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cotaskstate" type="java.lang.Long">
+            <column name="COTASKSTATE" precision="10" scale="0">
+                <comment>&#208;&#173;&#215;&#247;&#200;&#206;&#206;&#241;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" />
+        </property>
+        <property name="opuid" type="string">
+            <column name="OPUID" length="500" />
+        </property>
+        <property name="agreestate" type="java.lang.Long">
+            <column name="AGREESTATE" precision="10" scale="0" />
+        </property>
+        <property name="priority" type="java.lang.Long">
+            <column name="PRIORITY" precision="10" scale="0" />
+        </property>
+        <property name="suspended" type="java.lang.Boolean">
+            <column name="SUSPENDED" precision="1" scale="0" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" />
+        </property>
+        <property name="schedulestart" type="date">
+            <column name="SCHEDULESTART" length="7" />
+        </property>
+        <property name="schedulefinish" type="date">
+            <column name="SCHEDULEFINISH" length="7" />
+        </property>
+        <property name="completeqty" type="big_decimal">
+            <column name="COMPLETEQTY" precision="20" />
+        </property>
+        <property name="actualstart" type="date">
+            <column name="ACTUALSTART" length="7" />
+        </property>
+        <property name="actualfinish" type="date">
+            <column name="ACTUALFINISH" length="7" />
+        </property>
+        <property name="planqty" type="big_decimal">
+            <column name="PLANQTY" precision="20" scale="0" />
+        </property>
+        <property name="planstart" type="date">
+            <column name="PLANSTART" length="7">
+                <comment>&#188;&#198;&#187;&#174;&#203;&#205;&#179;&#246;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="planfinish" type="date">
+            <column name="PLANFINISH" length="7">
+                <comment>&#210;&#170;&#199;&#243;&#183;&#180;&#187;&#216;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="operationIddesc" type="string">
+            <column name="OPERATION_IDDESC" length="500">
+                <comment>&#185;&#164;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="taskname" type="string">
+            <column name="TASKNAME" length="2000" />
+        </property>
+        <property name="sender" type="string">
+            <column name="SENDER">
+                <comment>&#203;&#205;&#179;&#246;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="receiver" type="string">
+            <column name="RECEIVER">
+                <comment>&#189;&#211;&#202;&#213;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="fetcher" type="string">
+            <column name="FETCHER">
+                <comment>&#200;&#161;&#187;&#216;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="accepter" type="string">
+            <column name="ACCEPTER">
+                <comment>&#200;&#183;&#200;&#207;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="sendqty" type="big_decimal">
+            <column name="SENDQTY" precision="20">
+                <comment>&#203;&#205;&#179;&#246;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="receiveqty" type="big_decimal">
+            <column name="RECEIVEQTY" precision="20">
+                <comment>&#202;&#213;&#181;&#189;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="fetchqty" type="big_decimal">
+            <column name="FETCHQTY" precision="20">
+                <comment>&#200;&#161;&#187;&#216;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="acceptqty" type="big_decimal">
+            <column name="ACCEPTQTY" precision="20">
+                <comment>&#189;&#211;&#202;&#213;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="actualsend" type="date">
+            <column name="ACTUALSEND" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#203;&#205;&#179;&#246;</comment>
+            </column>
+        </property>
+        <property name="actualaccept" type="date">
+            <column name="ACTUALACCEPT" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#183;&#181;&#187;&#216;</comment>
+            </column>
+        </property>
+        <property name="actualreceive" type="date">
+            <column name="ACTUALRECEIVE" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#189;&#211;&#202;&#213;</comment>
+            </column>
+        </property>
+        <property name="actualfetch" type="date">
+            <column name="ACTUALFETCH" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#200;&#161;&#187;&#216;</comment>
+            </column>
+        </property>
+        <property name="sendwarehouseid" type="string">
+            <column name="SENDWAREHOUSEID" length="50" />
+        </property>
+        <property name="receivewarehouseid" type="string">
+            <column name="RECEIVEWAREHOUSEID" length="50" />
+        </property>
+        <property name="fetchwarehouseid" type="string">
+            <column name="FETCHWAREHOUSEID" length="50" />
+        </property>
+        <property name="acceptwarehouseid" type="string">
+            <column name="ACCEPTWAREHOUSEID" length="50" />
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL">
+                <comment>&#208;&#205;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="expirenum" type="java.lang.Long">
+            <column name="EXPIRENUM" precision="10" scale="0">
+                <comment>&#177;&#168;&#183;&#207;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="lostnum" type="java.lang.Long">
+            <column name="LOSTNUM" precision="10" scale="0">
+                <comment>&#182;&#170;&#202;&#167;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="parentuid" type="string">
+            <column name="PARENTUID">
+                <comment>&#193;&#227;&#188;&#254;&#200;&#206;&#206;&#241;</comment>
+            </column>
+        </property>
+        <property name="estiduration" type="big_decimal">
+            <column name="ESTIDURATION" precision="10">
+                <comment>&#185;&#164;&#208;&#242;&#198;&#218;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="consultCount" type="java.lang.Long">
+            <column name="CONSULT_COUNT" precision="10" scale="0" />
+        </property>
+        <property name="suspendedstart" type="date">
+            <column name="SUSPENDEDSTART" length="7">
+                <comment>&#208;&#252;&#185;&#210;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="suspendedfinish" type="date">
+            <column name="SUSPENDEDFINISH" length="7">
+                <comment>&#189;&#226;&#208;&#252;&#185;&#210;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="suspendedTip" type="java.lang.Long">
+            <column name="SUSPENDED_TIP" precision="10" scale="0" />
+        </property>
+        <property name="agreecount" type="java.lang.Byte">
+            <column name="AGREECOUNT" precision="2" scale="0" />
+        </property>
+        <property name="autostate" type="java.lang.Byte">
+            <column name="AUTOSTATE" precision="2" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

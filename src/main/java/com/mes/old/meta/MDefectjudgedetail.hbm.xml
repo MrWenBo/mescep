@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MDefectjudgedetail" table="M_DEFECTJUDGEDETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MDefectjudgedetailId">
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+            <key-property name="defectjudgeuid" type="string">
+                <column name="DEFECTJUDGEUID" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="MDefectjudgeheader" class="com.mes.old.MDefectjudgeheader" update="false" insert="false" fetch="select">
+            <column name="DEFECTJUDGEUID" length="50" not-null="true" />
+        </many-to-one>
+        <property name="defectqty" type="big_decimal">
+            <column name="DEFECTQTY" precision="20" />
+        </property>
+        <property name="judgeresult" type="string">
+            <column name="JUDGERESULT" length="50" />
+        </property>
+        <property name="defectlevel" type="java.lang.Long">
+            <column name="DEFECTLEVEL" precision="10" scale="0" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="defectdesc" type="string">
+            <column name="DEFECTDESC" />
+        </property>
+        <property name="materialsns" type="string">
+            <column name="MATERIALSNS" length="2000" />
+        </property>
+        <property name="relationbilluid" type="string">
+            <column name="RELATIONBILLUID" length="50" />
+        </property>
+        <property name="checkpic" type="string">
+            <column name="CHECKPIC" length="2000" />
+        </property>
+        <property name="relationbillid" type="string">
+            <column name="RELATIONBILLID" length="50" />
+        </property>
+        <property name="fieldorder" type="string">
+            <column name="FIELDORDER" length="50" />
+        </property>
+        <property name="dutytaskuid" type="string">
+            <column name="DUTYTASKUID" length="50" />
+        </property>
+        <property name="dutier" type="string">
+            <column name="DUTIER" length="50" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" />
+        </property>
+        <property name="checkdetailuid" type="string">
+            <column name="CHECKDETAILUID" />
+        </property>
+        <property name="defectreason" type="string">
+            <column name="DEFECTREASON" length="2000" />
+        </property>
+        <property name="djmarkupxml" type="string">
+            <column name="DJMARKUPXML" length="2000" />
+        </property>
+        <property name="positionx" type="string">
+            <column name="POSITIONX" length="2000" />
+        </property>
+        <property name="positiony" type="string">
+            <column name="POSITIONY" length="2000" />
+        </property>
+        <property name="dutydeptid" type="string">
+            <column name="DUTYDEPTID" length="50">
+                <comment>&#212;&#240;&#200;&#206;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="drawingtype" type="string">
+            <column name="DRAWINGTYPE" length="50">
+                <comment>&#205;&#188;&#214;&#189;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="dutydeptdelegate" type="string">
+            <column name="DUTYDEPTDELEGATE" length="50">
+                <comment>&#212;&#240;&#200;&#206;&#181;&#165;&#206;&#187;&#180;&#250;&#177;&#237;</comment>
+            </column>
+        </property>
+        <property name="judger" type="string">
+            <column name="JUDGER" length="50" />
+        </property>
+        <property name="judgetime" type="date">
+            <column name="JUDGETIME" length="7" />
+        </property>
+        <property name="deviation" type="string">
+            <column name="DEVIATION" length="50" />
+        </property>
+        <property name="opcheckuid" type="string">
+            <column name="OPCHECKUID" length="50">
+                <comment>
+                &#182;&#212;&#211;&#166;operationcheck&#181;&#196;uniqueid&#163;&#172;&#211;&#195;&#192;&#180;&#185;&#216;&#193;&#170;&#188;&#236;&#209;&#233;&#207;&#238;</comment>
+            </column>
+        </property>
+        <property name="actualsize" type="string">
+            <column name="ACTUALSIZE">
+                <comment>&#202;&#181;&#188;&#202;&#178;&#226;&#193;&#191;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="ratio" type="string">
+            <column name="RATIO" length="50" />
+        </property>
+        <property name="isallbatch" type="java.lang.Long">
+            <column name="ISALLBATCH" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

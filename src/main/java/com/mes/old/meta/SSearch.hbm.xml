@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SSearch" table="S_SEARCH" schema="MES188" optimistic-lock="version">
+        <comment>&#203;&#209;&#203;&#247;</comment>
+        <composite-id name="id" class="com.mes.old.SSearchId">
+            <key-property name="fieldname" type="string">
+                <column name="FIELDNAME" length="510" />
+            </key-property>
+            <key-property name="topicname" type="string">
+                <column name="TOPICNAME" length="510" />
+            </key-property>
+        </composite-id>
+        <property name="url" type="string">
+            <column name="URL" length="510">
+                <comment>URL</comment>
+            </column>
+        </property>
+        <property name="accesstype" type="java.lang.Long">
+            <column name="ACCESSTYPE" precision="10" scale="0">
+                <comment>&#189;&#199;&#201;&#171;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="paramname" type="string">
+            <column name="PARAMNAME" />
+        </property>
+    </class>
+</hibernate-mapping>

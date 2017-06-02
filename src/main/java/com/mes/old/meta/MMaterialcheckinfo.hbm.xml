@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MMaterialcheckinfo" table="M_MATERIALCHECKINFO" schema="MES188" optimistic-lock="version">
+        <comment>&#188;&#236;&#209;&#233;&#208;&#197;&#207;&#162;&#177;&#224;&#186;&#197;</comment>
+        <composite-id name="id" class="com.mes.old.MMaterialcheckinfoId">
+            <key-property name="checkuid" type="string">
+                <column name="CHECKUID" />
+            </key-property>
+            <key-property name="fieldid" type="string">
+                <column name="FIELDID" />
+            </key-property>
+        </composite-id>
+        <property name="textvalue" type="string">
+            <column name="TEXTVALUE">
+                <comment>&#206;&#196;&#177;&#190;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="checkinfotype" type="java.lang.Long">
+            <column name="CHECKINFOTYPE" precision="10" scale="0">
+                <comment>&#188;&#236;&#209;&#233;&#208;&#197;&#207;&#162;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="attatchref" type="string">
+            <column name="ATTATCHREF">
+                <comment>&#178;&#206;&#213;&#213;&#206;&#196;&#181;&#181;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" not-null="true">
+                <comment>&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

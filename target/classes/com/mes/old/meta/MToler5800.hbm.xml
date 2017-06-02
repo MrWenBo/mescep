@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MToler5800" table="M_TOLER5800" schema="MES188">
+        <id name="seq" type="big_decimal">
+            <column name="SEQ" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="string">
+            <column name="VERSION" length="20">
+                <comment>&#176;&#230;&#177;&#190;</comment>
+            </column>
+        </version>
+        <property name="manutype" type="string">
+            <column name="MANUTYPE" length="20">
+                <comment>&#188;&#211;&#185;&#164;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="tolerclass" type="string">
+            <column name="TOLERCLASS" length="20">
+                <comment>&#185;&#171;&#178;&#238;&#181;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <property name="tolertype" type="string">
+            <column name="TOLERTYPE" length="20">
+                <comment>&#206;&#180;&#215;&#162;&#185;&#171;&#178;&#238;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="lowstd" type="big_decimal">
+            <column name="LOWSTD" precision="25" scale="1">
+                <comment>&#207;&#194;&#177;&#234;&#215;&#188;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="upstd" type="big_decimal">
+            <column name="UPSTD" precision="25" scale="1">
+                <comment>&#201;&#207;&#177;&#234;&#215;&#188;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="lbound" type="big_decimal">
+            <column name="LBOUND" precision="25">
+                <comment>&#185;&#171;&#178;&#238;&#207;&#194;&#207;&#222;</comment>
+            </column>
+        </property>
+        <property name="ubound" type="big_decimal">
+            <column name="UBOUND" precision="25">
+                <comment>&#185;&#171;&#178;&#238;&#201;&#207;&#207;&#222;</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="NOTE" length="50" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="20" />
+        </property>
+        <property name="edittime" type="date">
+            <column name="EDITTIME" length="7" />
+        </property>
+        <property name="standard" type="string">
+            <column name="STANDARD" length="20">
+                <comment>&#177;&#234;&#215;&#188;</comment>
+            </column>
+        </property>
+        <property name="standardname" type="string">
+            <column name="STANDARDNAME" length="20">
+                <comment>&#177;&#234;&#215;&#188;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KPreparetaskSum" table="K_PREPARETASK_SUM" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.KPreparetaskSumId">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="day" type="date">
+                <column name="DAY" length="7" />
+            </key-property>
+            <key-property name="prepareTaskType" type="string">
+                <column name="PREPARE_TASK_TYPE" length="50" />
+            </key-property>
+            <key-property name="sendPrepareCount" type="big_decimal">
+                <column name="SEND_PREPARE_COUNT" precision="20" scale="0" />
+            </key-property>
+            <key-property name="waitPrepareCount" type="big_decimal">
+                <column name="WAIT_PREPARE_COUNT" precision="20" scale="0" />
+            </key-property>
+            <key-property name="finishPrepareCount" type="big_decimal">
+                <column name="FINISH_PREPARE_COUNT" precision="20" scale="0" />
+            </key-property>
+            <key-property name="waitPrepareDelay" type="big_decimal">
+                <column name="WAIT_PREPARE_DELAY" precision="20" scale="0" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

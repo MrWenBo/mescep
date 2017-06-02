@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CAccountantPeriod" table="C_ACCOUNTANT_PERIOD" schema="MES188" optimistic-lock="version">
+        <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+        <id name="accountantPeriodId" type="string">
+            <column name="ACCOUNTANT_PERIOD_ID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="accountantPeriodName" type="string">
+            <column name="ACCOUNTANT_PERIOD_NAME" length="100">
+                <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="isBasicAccountantPeriod" type="java.lang.Long">
+            <column name="IS_BASIC_ACCOUNTANT_PERIOD" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#187;&#249;&#177;&#190;&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="superAccountantPeriodId" type="string">
+            <column name="SUPER_ACCOUNTANT_PERIOD_ID" length="100">
+                <comment>&#184;&#184;&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="startDate" type="date">
+            <column name="START_DATE" length="7">
+                <comment>&#191;&#170;&#202;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="endDate" type="date">
+            <column name="END_DATE" length="7">
+                <comment>&#189;&#225;&#202;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="isCalculate" type="java.lang.Long">
+            <column name="IS_CALCULATE" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#186;&#203;&#203;&#227;&#205;&#234;&#177;&#207;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="100" />
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="100" />
+        </property>
+        <property name="accountantPeriodType" type="java.lang.Long">
+            <column name="ACCOUNTANT_PERIOD_TYPE" precision="10" scale="0" />
+        </property>
+        <set name="CRtActivities" table="C_RT_ACTIVITY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                    <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CRtActivity" />
+        </set>
+        <set name="CRtAllocateSteps" table="C_RT_ALLOCATE_STEP" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                    <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CRtAllocateStep" />
+        </set>
+        <set name="CRtCostDrivers" table="C_RT_COST_DRIVER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                    <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CRtCostDriver" />
+        </set>
+        <set name="CRtResources" table="C_RT_RESOURCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                    <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CRtResource" />
+        </set>
+        <set name="CRtResourceAccounts" table="C_RT_RESOURCE_ACCOUNT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                    <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CRtResourceAccount" />
+        </set>
+        <set name="CRtCostObjects" table="C_RT_COST_OBJECT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                    <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CRtCostObject" />
+        </set>
+    </class>
+</hibernate-mapping>

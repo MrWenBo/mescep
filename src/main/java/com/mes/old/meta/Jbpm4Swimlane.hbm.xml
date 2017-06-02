@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4Swimlane" table="JBPM4_SWIMLANE" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4Execution" class="com.mes.old.Jbpm4Execution" fetch="select">
+            <column name="EXECUTION_" scale="0" />
+        </many-to-one>
+        <property name="dbversion" type="long">
+            <column name="DBVERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" length="510" />
+        </property>
+        <property name="assignee" type="string">
+            <column name="ASSIGNEE_" length="510" />
+        </property>
+        <set name="jbpm4Participations" table="JBPM4_PARTICIPATION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SWIMLANE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.Jbpm4Participation" />
+        </set>
+        <set name="jbpm4Tasks" table="JBPM4_TASK" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SWIMLANE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.Jbpm4Task" />
+        </set>
+    </class>
+</hibernate-mapping>

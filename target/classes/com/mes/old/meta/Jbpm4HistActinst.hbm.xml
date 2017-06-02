@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4HistActinst" table="JBPM4_HIST_ACTINST" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4HistProcinst" class="com.mes.old.Jbpm4HistProcinst" fetch="select">
+            <column name="HPROCI_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4HistTask" class="com.mes.old.Jbpm4HistTask" fetch="select">
+            <column name="HTASK_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="string">
+            <column name="CLASS_" length="510" not-null="true" />
+        </property>
+        <property name="dbversion" type="long">
+            <column name="DBVERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE_" length="510" />
+        </property>
+        <property name="execution" type="string">
+            <column name="EXECUTION_" length="510" />
+        </property>
+        <property name="activityName" type="string">
+            <column name="ACTIVITY_NAME_" length="510" />
+        </property>
+        <property name="start" type="serializable">
+            <column name="START_" />
+        </property>
+        <property name="end" type="serializable">
+            <column name="END_" />
+        </property>
+        <property name="duration" type="big_decimal">
+            <column name="DURATION_" scale="0" />
+        </property>
+        <property name="transition" type="string">
+            <column name="TRANSITION_" length="510" />
+        </property>
+        <property name="nextidx" type="java.lang.Long">
+            <column name="NEXTIDX_" precision="10" scale="0" />
+        </property>
+        <set name="jbpm4HistDetails" table="JBPM4_HIST_DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="HACTI_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.Jbpm4HistDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

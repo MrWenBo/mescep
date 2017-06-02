@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.AResourceCalendar" table="A_RESOURCE_CALENDAR" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#215;&#176;&#212;&#164;&#212;&#188;&#188;&#199;&#194;&#188;</comment>
+        <composite-id name="id" class="com.mes.old.AResourceCalendarId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" />
+            </key-property>
+            <key-property name="binid" type="string">
+                <column name="BINID" />
+            </key-property>
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="relationId" type="string">
+                <column name="RELATION_ID" />
+            </key-property>
+        </composite-id>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+        </property>
+        <property name="dataType" type="string">
+            <column name="DATA_TYPE" length="50" />
+        </property>
+        <property name="resourceUid" type="string">
+            <column name="RESOURCE_UID" />
+        </property>
+        <property name="dataEmp" type="string">
+            <column name="DATA_EMP" length="50" />
+        </property>
+        <property name="isValid" type="string">
+            <column name="IS_VALID" length="50">
+                <comment>
+                &#212;&#164;&#212;&#188;&#202;&#199;&#183;&#241;&#211;&#208;&#208;&#167;&#163;&#172;0&#177;&#237;&#202;&#190;&#206;&#222;&#208;&#167;&#163;&#172;1&#177;&#237;&#202;&#190;&#211;&#208;&#208;&#167;</comment>
+            </column>
+        </property>
+        <property name="startTime" type="date">
+            <column name="START_TIME" length="7" />
+        </property>
+        <property name="finishTime" type="date">
+            <column name="FINISH_TIME" length="7" />
+        </property>
+        <property name="duringTime" type="java.lang.Integer">
+            <column name="DURING_TIME" precision="6" scale="0">
+                <comment>&#179;&#214;&#208;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="dataState" type="string">
+            <column name="DATA_STATE" length="50" />
+        </property>
+        <property name="dataNum" type="java.lang.Integer">
+            <column name="DATA_NUM" precision="9" scale="0">
+                <comment>&#212;&#164;&#212;&#188;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

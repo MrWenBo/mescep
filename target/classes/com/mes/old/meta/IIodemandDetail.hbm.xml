@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IIodemandDetail" table="I_IODEMAND_DETAIL" schema="MES188" optimistic-lock="version">
+        <comment>&#208;&#232;&#199;&#243;&#199;&#229;&#181;&#165;&#181;&#196;&#190;&#223;&#204;&#229;&#208;&#197;&#207;&#162;</comment>
+        <composite-id name="id" class="com.mes.old.IIodemandDetailId">
+            <key-property name="invdemandid" type="string">
+                <column name="INVDEMANDID" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="IIodemandHeader" class="com.mes.old.IIodemandHeader" update="false" insert="false" fetch="select">
+            <column name="INVDEMANDID" not-null="true">
+                <comment>&#208;&#232;&#199;&#243;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER">
+                <comment>&#206;&#239;&#193;&#207;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="drawingid" type="string">
+            <column name="DRAWINGID">
+                <comment>&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="partDescription" type="string">
+            <column name="PART_DESCRIPTION">
+                <comment>&#185;&#230;&#184;&#241;</comment>
+            </column>
+        </property>
+        <property name="routingqty" type="big_decimal">
+            <column name="ROUTINGQTY" precision="10">
+                <comment>&#185;&#164;&#210;&#213;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="dispatchedqty" type="big_decimal">
+            <column name="DISPATCHEDQTY" precision="10">
+                <comment>&#181;&#165;&#196;&#218;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID">
+                <comment>&#212;&#164;&#183;&#214;&#197;&#228;&#191;&#226;&#183;&#191;</comment>
+            </column>
+        </property>
+        <property name="binid" type="string">
+            <column name="BINID">
+                <comment>&#212;&#164;&#183;&#214;&#197;&#228;&#185;&#241;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="needqty" type="big_decimal">
+            <column name="NEEDQTY" precision="10">
+                <comment>&#183;&#214;&#197;&#228;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="sortqty" type="big_decimal">
+            <column name="SORTQTY" precision="10">
+                <comment>&#183;&#214;&#188;&#240;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="useType" type="string">
+            <column name="USE_TYPE" length="50">
+                <comment>&#185;&#164;&#190;&#223;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="isSendLtk" type="string">
+            <column name="IS_SEND_LTK" length="50">
+                <comment>&#202;&#199;&#183;&#241;&#183;&#162;&#203;&#205;&#214;&#193;&#193;&#162;&#204;&#229;&#191;&#226;</comment>
+            </column>
+        </property>
+        <property name="isFinishSort" type="string">
+            <column name="IS_FINISH_SORT" length="50">
+                <comment>&#202;&#199;&#183;&#241;&#205;&#234;&#179;&#201;&#183;&#214;&#188;&#240;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID">
+                <comment>&#206;&#170;&#193;&#203;Hibernate&#182;&#248;&#202;&#185;&#211;&#195;&#181;&#196;</comment>
+            </column>
+        </property>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID" />
+        </property>
+        <property name="finishtime" type="date">
+            <column name="FINISHTIME" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

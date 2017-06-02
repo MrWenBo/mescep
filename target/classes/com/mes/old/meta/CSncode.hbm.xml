@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CSncode" table="C_SNCODE" schema="MES188" optimistic-lock="version">
+        <id name="snuid" type="string">
+            <column name="SNUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CCoderule" class="com.mes.old.CCoderule" fetch="select">
+            <column name="CRUID" length="50" />
+        </many-to-one>
+        <property name="last" type="big_decimal">
+            <column name="LAST" precision="38" scale="0" />
+        </property>
+        <property name="min" type="big_decimal">
+            <column name="MIN" precision="38" scale="0" />
+        </property>
+        <property name="max" type="string">
+            <column name="MAX" length="38" />
+        </property>
+        <property name="interval" type="big_decimal">
+            <column name="INTERVAL" precision="38" scale="0" />
+        </property>
+        <property name="features" type="string">
+            <column name="FEATURES" length="500" />
+        </property>
+        <property name="snuidtype" type="string">
+            <column name="SNUIDTYPE" length="10" />
+        </property>
+        <property name="featuresFormat" type="string">
+            <column name="FEATURES_FORMAT" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

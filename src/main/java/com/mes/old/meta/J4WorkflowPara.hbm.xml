@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.J4WorkflowPara" table="J4_WORKFLOW_PARA" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.J4WorkflowParaId">
+            <key-property name="id" type="big_decimal">
+                <column name="ID_" scale="0" />
+            </key-property>
+            <key-property name="processname" type="string">
+                <column name="PROCESSNAME_" />
+            </key-property>
+            <key-property name="taskname" type="string">
+                <column name="TASKNAME_" />
+            </key-property>
+            <key-property name="paraName" type="string">
+                <column name="PARA_NAME_" />
+            </key-property>
+            <key-property name="paraValue" type="string">
+                <column name="PARA_VALUE_" />
+            </key-property>
+            <key-property name="objectName" type="string">
+                <column name="OBJECT_NAME_" />
+            </key-property>
+            <key-property name="objectType" type="string">
+                <column name="OBJECT_TYPE_" length="10" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

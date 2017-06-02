@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SfOperview" table="SF_OPERVIEW" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SfOperviewId">
+            <key-property name="uuid" type="string">
+                <column name="UUID" />
+            </key-property>
+            <key-property name="opuid" type="string">
+                <column name="OPUID" />
+            </key-property>
+            <key-property name="consumedpart" type="string">
+                <column name="CONSUMEDPART" />
+            </key-property>
+            <key-property name="viewname" type="string">
+                <column name="VIEWNAME" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

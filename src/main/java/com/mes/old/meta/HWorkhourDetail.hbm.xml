@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HWorkhourDetail" table="H_WORKHOUR_DETAIL" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="HWorkhourHeader" class="com.mes.old.HWorkhourHeader" fetch="select">
+            <column name="ACCOUNT_UID" length="50">
+                <comment>&#213;&#202;&#204;&#215;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID" length="50">
+                <comment>&#200;&#203;&#212;&#177;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="resuid" type="string">
+            <column name="RESUID" length="50">
+                <comment>&#201;&#232;&#177;&#184;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="worktype" type="string">
+            <column name="WORKTYPE" length="50">
+                <comment>&#185;&#164;&#215;&#247;&#192;&#224;&#208;&#205; 0-&#213;&#253;&#179;&#163;</comment>
+            </column>
+        </property>
+        <property name="workdate" type="date">
+            <column name="WORKDATE" length="7">
+                <comment>&#188;&#211;&#185;&#164;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="shiftid" type="string">
+            <column name="SHIFTID" length="50">
+                <comment>&#188;&#211;&#185;&#164;&#176;&#224;&#180;&#206;</comment>
+            </column>
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID">
+                <comment>&#200;&#206;&#206;&#241;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="assnuid" type="string">
+            <column name="ASSNUID">
+                <comment>&#197;&#201;&#185;&#164;&#181;&#165;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER">
+                <comment>&#206;&#239;&#193;&#207;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="drawingid" type="string">
+            <column name="DRAWINGID">
+                <comment>&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM">
+                <comment>&#197;&#250;&#180;&#206;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="operationIddesc" type="string">
+            <column name="OPERATION_IDDESC" length="100">
+                <comment>&#185;&#164;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="preoptime" type="big_decimal">
+            <column name="PREOPTIME" precision="10">
+                <comment>&#215;&#188;&#177;&#184;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="runtime" type="big_decimal">
+            <column name="RUNTIME" precision="10">
+                <comment>&#181;&#165;&#188;&#254;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="completeqty" type="big_decimal">
+            <column name="COMPLETEQTY" precision="10">
+                <comment>&#205;&#234;&#179;&#201;&#202;&#253;&#193;&#191;&#163;&#168;&#190;&#187;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="completework" type="big_decimal">
+            <column name="COMPLETEWORK" precision="10">
+                <comment>&#205;&#234;&#179;&#201;&#185;&#164;&#202;&#177;&#163;&#168;&#190;&#187;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="actualwork" type="big_decimal">
+            <column name="ACTUALWORK" precision="10">
+                <comment>&#202;&#181;&#215;&#247;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="optype" type="big_decimal">
+            <column name="OPTYPE" precision="20" scale="0">
+                <comment>&#185;&#164;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="sourceType" type="string">
+            <column name="SOURCE_TYPE" length="50">
+                <comment>
+                &#185;&#164;&#202;&#177;&#192;&#180;&#212;&#180;&#192;&#224;&#208;&#205;&#163;&#168;0-&#181;&#188;&#200;&#235;&#163;&#187;1-&#202;&#214;&#185;&#164;&#194;&#188;&#200;&#235;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="verifyState" type="java.lang.Long">
+            <column name="VERIFY_STATE" precision="10" scale="0">
+                <comment>
+                &#201;&#243;&#186;&#203;&#192;&#224;&#208;&#205;&#163;&#168;1-&#180;&#253;&#201;&#243;&#186;&#203;&#163;&#187;2-&#178;&#187;&#205;&#168;&#185;&#253;&#163;&#187;3-&#205;&#168;&#185;&#253;&#163;&#187;4-&#188;&#236;&#209;&#233;&#183;&#180;&#192;&#161;&#180;&#237;&#206;&#243;&#163;&#172;&#206;&#222;&#208;&#167;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="overtimework" type="big_decimal">
+            <column name="OVERTIMEWORK" precision="10">
+                <comment>&#188;&#211;&#176;&#224;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="vacationwork" type="big_decimal">
+            <column name="VACATIONWORK" precision="10">
+                <comment>&#185;&#171;&#188;&#217;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="opuid" type="string">
+            <column name="OPUID" length="50">
+                <comment>&#187;&#249;&#180;&#161;&#185;&#164;&#208;&#242;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="deptname" type="string">
+            <column name="DEPTNAME" length="50">
+                <comment>&#178;&#191;&#195;&#197;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="verifyReason" type="string">
+            <column name="VERIFY_REASON" length="50">
+                <comment>
+                &#178;&#187;&#205;&#168;&#185;&#253;&#212;&#173;&#210;&#242;&#163;&#168;0-&#185;&#164;&#202;&#177;&#206;&#180;&#182;&#168;&#163;&#187;1-&#185;&#164;&#202;&#177;&#178;&#187;&#215;&#188;&#163;&#187;2-&#215;&#188;&#177;&#184;&#178;&#187;&#215;&#188;&#163;&#187;3-&#181;&#165;&#188;&#254;&#178;&#187;&#215;&#188;&#163;&#187;4-&#200;&#171;&#178;&#191;&#178;&#187;&#215;&#188;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="verifyEmployee" type="string">
+            <column name="VERIFY_EMPLOYEE" length="50">
+                <comment>&#201;&#243;&#186;&#203;&#213;&#223;&#163;&#168;&#215;&#238;&#189;&#252;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="verifyTime" type="date">
+            <column name="VERIFY_TIME" length="7">
+                <comment>&#201;&#243;&#186;&#203;&#202;&#177;&#188;&#228;&#163;&#168;&#215;&#238;&#189;&#252;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="partname" type="string">
+            <column name="PARTNAME">
+                <comment>&#206;&#239;&#193;&#207;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="versionid" type="string">
+            <column name="VERSIONID" length="50">
+                <comment>&#176;&#230;&#177;&#190;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="operationname" type="string">
+            <column name="OPERATIONNAME">
+                <comment>&#185;&#164;&#208;&#242;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

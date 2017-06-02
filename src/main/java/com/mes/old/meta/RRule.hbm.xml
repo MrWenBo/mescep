@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RRule" table="R_RULE" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#230;&#212;&#242;&#215;&#220;&#206;&#196;&#188;&#254;&#177;&#237;</comment>
+        <id name="ruleid" type="string">
+            <column name="RULEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="rulename" type="string">
+            <column name="RULENAME">
+                <comment>&#185;&#230;&#212;&#242;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="rulealias" type="string">
+            <column name="RULEALIAS">
+                <comment>&#185;&#230;&#212;&#242;&#188;&#242;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="ruletype" type="string">
+            <column name="RULETYPE" length="50">
+                <comment>
+                &#185;&#230;&#212;&#242;&#192;&#224;&#208;&#205;&#163;&#172;&#202;&#199;&#202;&#185;&#211;&#195;&#181;&#196;&#185;&#230;&#212;&#242;&#163;&#172;&#187;&#185;&#202;&#199;&#185;&#230;&#212;&#242;&#196;&#163;&#176;&#229;</comment>
+            </column>
+        </property>
+        <property name="rulestate" type="string">
+            <column name="RULESTATE" length="50">
+                <comment>&#185;&#230;&#212;&#242;&#215;&#180;&#204;&#172;&#163;&#172;&#196;&#172;&#200;&#207;&#202;&#199;&#178;&#221;&#184;&#229;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="rulegroup" type="string">
+            <column name="RULEGROUP">
+                <comment>&#185;&#230;&#212;&#242;&#203;&#249;&#212;&#218;&#215;&#233;&#177;&#240;</comment>
+            </column>
+        </property>
+        <property name="rulefile" type="string">
+            <column name="RULEFILE" not-null="true">
+                <comment>&#185;&#230;&#212;&#242;&#206;&#196;&#188;&#254;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="modifier" type="string">
+            <column name="MODIFIER">
+                <comment>&#208;&#222;&#184;&#196;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="modifytime" type="date">
+            <column name="MODIFYTIME" length="7">
+                <comment>&#208;&#222;&#184;&#196;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="attributelist" type="string">
+            <column name="ATTRIBUTELIST">
+                <comment>&#185;&#230;&#212;&#242;&#202;&#244;&#208;&#212;&#193;&#208;&#177;&#237;</comment>
+            </column>
+        </property>
+        <property name="patternlist" type="string">
+            <column name="PATTERNLIST">
+                <comment>&#185;&#230;&#212;&#242;&#204;&#245;&#188;&#254;&#193;&#208;&#177;&#237;</comment>
+            </column>
+        </property>
+        <property name="actionlist" type="string">
+            <column name="ACTIONLIST">
+                <comment>&#185;&#230;&#212;&#242;&#208;&#208;&#206;&#170;&#193;&#208;&#177;&#237;</comment>
+            </column>
+        </property>
+        <property name="ruledomain" type="string">
+            <column name="RULEDOMAIN">
+                <comment>
+                &#185;&#230;&#212;&#242;&#193;&#236;&#211;&#242;&#163;&#172;&#188;&#180;&#185;&#230;&#212;&#242;&#202;&#199;&#201;&#230;&#188;&#176;&#181;&#189;&#196;&#196;&#208;&#169;&#178;&#227;&#195;&#230;&#181;&#196;</comment>
+            </column>
+        </property>
+        <property name="frequency" type="java.lang.Integer">
+            <column name="FREQUENCY" precision="6" scale="0">
+                <comment>
+                &#185;&#230;&#212;&#242;&#177;&#187;&#181;&#247;&#211;&#195;&#181;&#196;&#180;&#206;&#202;&#253;&#163;&#172;&#187;&#225;&#214;&#177;&#189;&#211;&#211;&#176;&#207;&#236;&#181;&#189;&#185;&#230;&#212;&#242;&#181;&#196;&#211;&#197;&#207;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <set name="RRuleActions" table="R_RULE_ACTION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RULEID">
+                    <comment>&#185;&#230;&#212;&#242;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.RRuleAction" />
+        </set>
+        <set name="RRulePatterns" table="R_RULE_PATTERN" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RULEID" not-null="true">
+                    <comment>&#185;&#230;&#212;&#242;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.RRulePattern" />
+        </set>
+    </class>
+</hibernate-mapping>

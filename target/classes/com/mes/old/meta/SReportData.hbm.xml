@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SReportData" table="S_REPORT_DATA" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SReportDataId">
+            <key-property name="uniqueid" type="big_decimal">
+                <column name="UNIQUEID" precision="20" scale="0" />
+            </key-property>
+            <key-property name="reportname" type="string">
+                <column name="REPORTNAME" />
+            </key-property>
+            <key-property name="key1" type="string">
+                <column name="KEY1" />
+            </key-property>
+            <key-property name="key2" type="string">
+                <column name="KEY2" />
+            </key-property>
+            <key-property name="key3" type="string">
+                <column name="KEY3" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="string">
+                <column name="CREATETIME" length="50" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

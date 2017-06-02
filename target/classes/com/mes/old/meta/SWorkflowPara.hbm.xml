@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SWorkflowPara" table="S_WORKFLOW_PARA" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SWorkflowParaId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" />
+            </key-property>
+            <key-property name="flowName" type="string">
+                <column name="FLOW_NAME" />
+            </key-property>
+            <key-property name="flowVersion" type="string">
+                <column name="FLOW_VERSION" />
+            </key-property>
+            <key-property name="nodeName" type="string">
+                <column name="NODE_NAME" />
+            </key-property>
+            <key-property name="paraName" type="string">
+                <column name="PARA_NAME" />
+            </key-property>
+            <key-property name="paraValue" type="string">
+                <column name="PARA_VALUE" />
+            </key-property>
+            <key-property name="objectName" type="string">
+                <column name="OBJECT_NAME" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

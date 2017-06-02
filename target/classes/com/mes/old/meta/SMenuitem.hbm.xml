@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SMenuitem" table="S_MENUITEM" schema="MES188" optimistic-lock="version">
+        <comment>&#178;&#203;&#181;&#165;&#207;&#238;</comment>
+        <composite-id name="id" class="com.mes.old.SMenuitemId">
+            <key-property name="company" type="string">
+                <column name="COMPANY" length="50" />
+            </key-property>
+            <key-property name="roleid" type="string">
+                <column name="ROLEID" length="50" />
+            </key-property>
+            <key-property name="menuid" type="big_decimal">
+                <column name="MENUID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="menuitemname" type="string">
+                <column name="MENUITEMNAME" length="60" />
+            </key-property>
+        </composite-id>
+        <property name="treeid" type="big_decimal">
+            <column name="TREEID" precision="22" scale="0" not-null="true">
+                <comment>&#202;&#247;ID</comment>
+            </column>
+        </property>
+        <property name="menuitemlabel" type="string">
+            <column name="MENUITEMLABEL" length="50">
+                <comment>&#178;&#203;&#181;&#165;&#207;&#238;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="defaultmenuitem" type="big_decimal">
+            <column name="DEFAULTMENUITEM" precision="22" scale="0">
+                <comment>&#196;&#172;&#200;&#207;&#178;&#203;&#181;&#165;&#207;&#238;</comment>
+            </column>
+        </property>
+        <property name="menuitemvisible" type="big_decimal">
+            <column name="MENUITEMVISIBLE" precision="22" scale="0">
+                <comment>&#178;&#203;&#181;&#165;&#207;&#238;&#202;&#199;&#183;&#241;&#191;&#201;&#188;&#251;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

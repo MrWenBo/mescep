@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmTransition" table="JBPM_TRANSITION" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmNodeByFrom" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="FROM_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmNodeByTo" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="TO_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmProcessdefinition" class="com.mes.old.JbpmProcessdefinition" fetch="select">
+            <column name="PROCESSDEFINITION_" scale="0" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <property name="fromindex" type="java.lang.Long">
+            <column name="FROMINDEX_" precision="10" scale="0" />
+        </property>
+        <set name="jbpmLogs" table="JBPM_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TRANSITION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmLog" />
+        </set>
+        <set name="jbpmEvents" table="JBPM_EVENT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TRANSITION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmEvent" />
+        </set>
+    </class>
+</hibernate-mapping>

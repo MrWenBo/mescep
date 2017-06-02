@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmVariableaccess" table="JBPM_VARIABLEACCESS" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmAction" class="com.mes.old.JbpmAction" fetch="select">
+            <column name="SCRIPT_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmNode" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="PROCESSSTATE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTaskcontroller" class="com.mes.old.JbpmTaskcontroller" fetch="select">
+            <column name="TASKCONTROLLER_" scale="0" />
+        </many-to-one>
+        <property name="variablename" type="string">
+            <column name="VARIABLENAME_" />
+        </property>
+        <property name="access" type="string">
+            <column name="ACCESS_" />
+        </property>
+        <property name="mappedname" type="string">
+            <column name="MAPPEDNAME_" />
+        </property>
+        <property name="index" type="java.lang.Long">
+            <column name="INDEX_" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

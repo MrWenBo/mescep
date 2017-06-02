@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TRule" table="T_RULE" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="TRuleByCompositeruleuid" class="com.mes.old.TRule" fetch="select">
+            <column name="COMPOSITERULEUID">
+                <comment>
+                &#189;&#246;&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#207;&#242;&#215;&#233;&#186;&#207;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="TRuleByBaseruleuid" class="com.mes.old.TRule" fetch="select">
+            <column name="BASERULEUID" length="10">
+                <comment>
+                &#189;&#246;&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#207;&#242;&#187;&#249;&#177;&#190;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </many-to-one>
+        <property name="rulename" type="string">
+            <column name="RULENAME" length="50" />
+        </property>
+        <property name="ruleabbr" type="string">
+            <column name="RULEABBR" length="50" />
+        </property>
+        <property name="ruledesc" type="string">
+            <column name="RULEDESC" />
+        </property>
+        <property name="ruletype" type="string">
+            <column name="RULETYPE" length="10">
+                <comment>
+                100,200--&#187;&#249;&#177;&#190;&#185;&#230;&#212;&#242;&#163;&#172;&#182;&#212;&#211;&#166;&#211;&#208;BaseRuleBean&#161;&#162;UnitType&#163;&#172;&#198;&#228;&#203;&#251;&#181;&#196;&#182;&#188;&#195;&#187;&#211;&#208;&#161;&#163;
+                1&#191;&#170;&#205;&#183;&#206;&#170;&#214;&#216;&#181;&#227;&#201;&#232;&#177;&#184;/&#185;&#164;&#182;&#206;&#185;&#230;&#212;&#242;&#163;&#172;2&#191;&#170;&#205;&#183;&#206;&#170;&#183;&#199;&#214;&#216;&#181;&#227;&#201;&#232;&#177;&#184;/&#185;&#164;&#182;&#206;&#185;&#230;&#212;&#242;
+                &#161;&#163;101,201--&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;&#163;&#172;&#210;&#212;&#187;&#249;&#177;&#190;&#185;&#230;&#212;&#242;&#206;&#170;&#187;&#249;&#180;&#161;&#163;&#172;&#184;&#248;&#179;&#246;SortType
+                &#161;&#163;102,202--&#215;&#233;&#186;&#207;&#185;&#230;&#212;&#242;&#163;&#172;&#215;&#233;&#186;&#207;&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="resolution" type="big_decimal">
+            <column name="RESOLUTION" precision="25" scale="6">
+                <comment>
+                &#189;&#246;&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#197;&#197;&#193;&#208;&#202;&#177;&#181;&#196;&#183;&#214;&#177;&#230;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="priority" type="string">
+            <column name="PRIORITY" length="10">
+                <comment>
+                &#189;&#246;&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#185;&#230;&#212;&#242;&#181;&#196;&#211;&#197;&#207;&#200;&#191;&#188;&#194;&#199;&#203;&#179;&#208;&#242;&#163;&#172;0&#206;&#170;&#202;&#215;&#210;&#170;&#185;&#230;&#212;&#242;&#163;&#172;1&#206;&#170;&#184;&#168;&#214;&#250;&#185;&#230;&#212;&#242;</comment>
+            </column>
+        </property>
+        <property name="limittype" type="string">
+            <column name="LIMITTYPE" length="10">
+                <comment>
+                &#189;&#246;&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#207;&#222;&#214;&#198;&#181;&#196;&#192;&#224;&#208;&#205;&#163;&#172;0&#206;&#170;&#202;&#253;&#214;&#181;&#207;&#222;&#214;&#198;&#163;&#172;1&#206;&#170;&#202;&#253;&#193;&#191;&#207;&#222;&#214;&#198;</comment>
+            </column>
+        </property>
+        <property name="limitvalue" type="big_decimal">
+            <column name="LIMITVALUE" precision="25" scale="6">
+                <comment>
+                &#189;&#246;&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#182;&#212;&#197;&#197;&#193;&#208;&#200;&#206;&#206;&#241;&#181;&#196;&#207;&#222;&#214;&#198;&#163;&#172;&#211;&#195;&#211;&#218;&#185;&#253;&#194;&#203;</comment>
+            </column>
+        </property>
+        <property name="baserulebean" type="string">
+            <column name="BASERULEBEAN" length="50">
+                <comment>
+                &#189;&#246;&#187;&#249;&#177;&#190;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#185;&#230;&#212;&#242;&#202;&#181;&#207;&#214;&#181;&#196;&#192;&#224;</comment>
+            </column>
+        </property>
+        <property name="unitdesc" type="string">
+            <column name="UNITDESC" length="50">
+                <comment>
+                &#189;&#246;&#187;&#249;&#177;&#190;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#211;&#197;&#207;&#200;&#188;&#182;&#181;&#196;&#181;&#165;&#206;&#187;&#181;&#196;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="sortreverse" type="java.lang.Integer">
+            <column name="SORTREVERSE" precision="5" scale="0">
+                <comment>
+                &#189;&#246;&#187;&#249;&#177;&#190;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#202;&#199;&#183;&#241;&#183;&#180;&#207;&#242;&#197;&#197;&#193;&#208;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" />
+        </property>
+        <set name="TRulesForCompositeruleuid" table="T_RULE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COMPOSITERULEUID">
+                    <comment>
+                    &#189;&#246;&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#207;&#242;&#215;&#233;&#186;&#207;&#185;&#230;&#212;&#242;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.TRule" />
+        </set>
+        <set name="TRuleResources" table="T_RULE_RESOURCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RULEUID" />
+            </key>
+            <one-to-many class="com.mes.old.TRuleResource" />
+        </set>
+        <set name="TRulesForBaseruleuid" table="T_RULE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="BASERULEUID" length="10">
+                    <comment>
+                    &#189;&#246;&#197;&#197;&#193;&#208;&#185;&#230;&#212;&#242;&#211;&#208;&#163;&#172;&#214;&#184;&#207;&#242;&#187;&#249;&#177;&#190;&#185;&#230;&#212;&#242;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.TRule" />
+        </set>
+    </class>
+</hibernate-mapping>

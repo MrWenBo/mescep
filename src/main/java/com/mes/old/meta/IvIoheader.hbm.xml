@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IvIoheader" table="IV_IOHEADER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IvIoheaderId">
+            <key-property name="invioid" type="string">
+                <column name="INVIOID" length="50" />
+            </key-property>
+            <key-property name="iotype" type="java.lang.Long">
+                <column name="IOTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="iostate" type="java.lang.Long">
+                <column name="IOSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="reasoncode" type="string">
+                <column name="REASONCODE" length="50" />
+            </key-property>
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="warehousemanager" type="string">
+                <column name="WAREHOUSEMANAGER" length="50" />
+            </key-property>
+            <key-property name="iodate" type="date">
+                <column name="IODATE" length="7" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="50" />
+            </key-property>
+            <key-property name="deptemp" type="string">
+                <column name="DEPTEMP" length="50" />
+            </key-property>
+            <key-property name="totalamount" type="big_decimal">
+                <column name="TOTALAMOUNT" precision="10" scale="4" />
+            </key-property>
+            <key-property name="invoiceid" type="string">
+                <column name="INVOICEID" length="50" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="partnerid" type="string">
+                <column name="PARTNERID" length="50" />
+            </key-property>
+            <key-property name="vouno" type="string">
+                <column name="VOUNO" length="50" />
+            </key-property>
+            <key-property name="billchecker" type="string">
+                <column name="BILLCHECKER" length="50" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="text1" type="string">
+                <column name="TEXT1" length="50" />
+            </key-property>
+            <key-property name="text2" type="string">
+                <column name="TEXT2" length="50" />
+            </key-property>
+            <key-property name="text3" type="string">
+                <column name="TEXT3" length="50" />
+            </key-property>
+            <key-property name="text4" type="string">
+                <column name="TEXT4" length="50" />
+            </key-property>
+            <key-property name="text5" type="string">
+                <column name="TEXT5" length="50" />
+            </key-property>
+            <key-property name="text6" type="string">
+                <column name="TEXT6" length="50" />
+            </key-property>
+            <key-property name="text7" type="string">
+                <column name="TEXT7" length="50" />
+            </key-property>
+            <key-property name="text8" type="string">
+                <column name="TEXT8" length="50" />
+            </key-property>
+            <key-property name="text9" type="string">
+                <column name="TEXT9" length="50" />
+            </key-property>
+            <key-property name="text10" type="string">
+                <column name="TEXT10" length="50" />
+            </key-property>
+            <key-property name="loader" type="string">
+                <column name="LOADER" length="50" />
+            </key-property>
+            <key-property name="relationid" type="string">
+                <column name="RELATIONID" length="50" />
+            </key-property>
+            <key-property name="lastModificator" type="string">
+                <column name="LAST_MODIFICATOR" length="50" />
+            </key-property>
+            <key-property name="lastModifyTime" type="date">
+                <column name="LAST_MODIFY_TIME" length="7" />
+            </key-property>
+            <key-property name="routing" type="string">
+                <column name="ROUTING" length="50" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="producedQuantity" type="big_decimal">
+                <column name="PRODUCED_QUANTITY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" length="50" />
+            </key-property>
+            <key-property name="sn" type="string">
+                <column name="SN" length="50" />
+            </key-property>
+            <key-property name="turnBoxId" type="string">
+                <column name="TURN_BOX_ID" />
+            </key-property>
+            <key-property name="currentBoxId" type="string">
+                <column name="CURRENT_BOX_ID" />
+            </key-property>
+            <key-property name="dutyemp" type="string">
+                <column name="DUTYEMP" />
+            </key-property>
+            <key-property name="warning" type="string">
+                <column name="WARNING" length="50" />
+            </key-property>
+            <key-property name="tobinid" type="string">
+                <column name="TOBINID" length="50" />
+            </key-property>
+            <key-property name="towarehouse" type="string">
+                <column name="TOWAREHOUSE" length="50" />
+            </key-property>
+            <key-property name="signer" type="string">
+                <column name="SIGNER" length="50" />
+            </key-property>
+            <key-property name="signdate" type="date">
+                <column name="SIGNDATE" length="7" />
+            </key-property>
+            <key-property name="iotypedesc" type="string">
+                <column name="IOTYPEDESC" length="100" />
+            </key-property>
+            <key-property name="iostatedesc" type="string">
+                <column name="IOSTATEDESC" length="100" />
+            </key-property>
+            <key-property name="warehousename" type="string">
+                <column name="WAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="deptempname" type="string">
+                <column name="DEPTEMPNAME" length="100" />
+            </key-property>
+            <key-property name="creatorname" type="string">
+                <column name="CREATORNAME" length="100" />
+            </key-property>
+            <key-property name="warehousemanagername" type="string">
+                <column name="WAREHOUSEMANAGERNAME" length="100" />
+            </key-property>
+            <key-property name="billcheckername" type="string">
+                <column name="BILLCHECKERNAME" length="100" />
+            </key-property>
+            <key-property name="abstract_" type="string">
+                <column name="ABSTRACT" length="258" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

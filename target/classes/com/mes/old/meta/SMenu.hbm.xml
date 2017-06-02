@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SMenu" table="S_MENU" schema="MES188" optimistic-lock="version">
+        <comment>&#178;&#203;&#181;&#165;</comment>
+        <id name="menuid" type="big_decimal">
+            <column name="MENUID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="menutooltip" type="string">
+            <column name="MENUTOOLTIP" length="50">
+                <comment>&#178;&#203;&#181;&#165;&#204;&#225;&#202;&#190;</comment>
+            </column>
+        </property>
+        <property name="menupopupholder" type="string">
+            <column name="MENUPOPUPHOLDER" length="50">
+                <comment>&#211;&#210;&#188;&#252;&#178;&#203;&#181;&#165;&#181;&#175;&#179;&#246;&#190;&#228;&#177;&#250;</comment>
+            </column>
+        </property>
+        <property name="menutargetframe" type="string">
+            <column name="MENUTARGETFRAME" length="50">
+                <comment>&#178;&#203;&#181;&#165;&#193;&#180;&#189;&#211;&#181;&#196;&#196;&#191;&#177;&#234;&#191;&#242;&#188;&#220;</comment>
+            </column>
+        </property>
+        <property name="menuautocreate" type="string">
+            <column name="MENUAUTOCREATE" length="50">
+                <comment>&#212;&#221;&#202;&#177;&#195;&#187;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="menuxmlfileurl" type="string">
+            <column name="MENUXMLFILEURL" length="70">
+                <comment>&#178;&#203;&#181;&#165;XML&#206;&#196;&#188;&#254;&#194;&#183;&#190;&#182;</comment>
+            </column>
+        </property>
+        <property name="menulabel" type="string">
+            <column name="MENULABEL" length="100">
+                <comment>&#178;&#203;&#181;&#165;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="menutag" type="string">
+            <column name="MENUTAG" length="100">
+                <comment>&#178;&#203;&#181;&#165;&#215;&#212;&#182;&#168;&#210;&#229;&#208;&#197;&#207;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

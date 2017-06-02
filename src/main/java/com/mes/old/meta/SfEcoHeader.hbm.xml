@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SfEcoHeader" table="SF_ECO_HEADER" schema="MES188" optimistic-lock="version">
+        <id name="changeuid" type="string">
+            <column name="CHANGEUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="changeid" type="string">
+            <column name="CHANGEID">
+                <comment>&#177;&#228;&#184;&#252;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="ecotype" type="string">
+            <column name="ECOTYPE" length="50">
+                <comment>&#177;&#228;&#184;&#252;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="frommodel" type="string">
+            <column name="FROMMODEL">
+                <comment>&#212;&#180;&#196;&#163;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="tomodel" type="string">
+            <column name="TOMODEL">
+                <comment>&#181;&#177;&#199;&#176;&#196;&#163;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="ecostate" type="string">
+            <column name="ECOSTATE" length="50">
+                <comment>&#177;&#228;&#184;&#252;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="validdate" type="date">
+            <column name="VALIDDATE" length="7">
+                <comment>&#211;&#208;&#208;&#167;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" not-null="true">
+                <comment>&#193;&#227;&#188;&#254;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CDtResourceAccount" table="C_DT_RESOURCE_ACCOUNT" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#202;&#212;&#180;&#213;&#202;&#187;&#167;&#187;&#249;&#180;&#161;&#202;&#253;&#190;&#221;</comment>
+        <id name="resourceAccountId" type="string">
+            <column name="RESOURCE_ACCOUNT_ID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CCostCenter" class="com.mes.old.CCostCenter" fetch="select">
+            <column name="COST_CENTER_ID" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="CDtCostDriver" class="com.mes.old.CDtCostDriver" fetch="select">
+            <column name="COST_DRIVER_ID" length="100">
+                <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <property name="superResourceAccountId" type="string">
+            <column name="SUPER_RESOURCE_ACCOUNT_ID" length="100">
+                <comment>&#184;&#184;&#207;&#238;&#213;&#202;&#187;&#167;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="resourceAccountName" type="string">
+            <column name="RESOURCE_ACCOUNT_NAME" length="100">
+                <comment>&#215;&#202;&#212;&#180;&#213;&#202;&#187;&#167;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="10">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="isBasicResourceAccount" type="java.lang.Long">
+            <column name="IS_BASIC_RESOURCE_ACCOUNT" precision="10" scale="0" />
+        </property>
+        <property name="relationResourceId" type="string">
+            <column name="RELATION_RESOURCE_ID" length="100" />
+        </property>
+        <property name="cost" type="big_decimal">
+            <column name="COST" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

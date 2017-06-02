@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.STree" table="S_TREE" schema="MES188" optimistic-lock="version">
+        <comment>&#202;&#247;</comment>
+        <id name="treeid" type="big_decimal">
+            <column name="TREEID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="treelabel" type="string">
+            <column name="TREELABEL" length="80">
+                <comment>&#202;&#247;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="treetargetframe" type="string">
+            <column name="TREETARGETFRAME" length="50">
+                <comment>&#202;&#247;&#189;&#218;&#181;&#227;&#193;&#180;&#189;&#211;&#181;&#196;&#196;&#191;&#177;&#234;&#191;&#242;&#188;&#220;</comment>
+            </column>
+        </property>
+        <property name="treeallrightclick" type="big_decimal">
+            <column name="TREEALLRIGHTCLICK" precision="22" scale="0">
+                <comment>&#212;&#221;&#202;&#177;&#195;&#187;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="treexmlfileurl" type="string">
+            <column name="TREEXMLFILEURL" length="80">
+                <comment>&#202;&#247;XML&#206;&#196;&#188;&#254;&#194;&#183;&#190;&#182;</comment>
+            </column>
+        </property>
+        <property name="treewidth" type="big_decimal">
+            <column name="TREEWIDTH" precision="22" scale="0">
+                <comment>&#202;&#247;&#191;&#237;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="treetag" type="string">
+            <column name="TREETAG" length="100">
+                <comment>&#202;&#247;&#215;&#212;&#182;&#168;&#210;&#229;&#208;&#197;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="custom" type="string">
+            <column name="CUSTOM" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

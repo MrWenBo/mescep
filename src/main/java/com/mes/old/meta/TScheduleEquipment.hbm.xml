@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TScheduleEquipment" table="T_SCHEDULE_EQUIPMENT" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TScheduleEquipmentId">
+            <key-property name="scheduleuid" type="string">
+                <column name="SCHEDULEUID" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+        </composite-id>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+        </property>
+        <property name="starttime" type="date">
+            <column name="STARTTIME" length="7" />
+        </property>
+        <property name="finishtime" type="date">
+            <column name="FINISHTIME" length="7" />
+        </property>
+        <property name="shift1Worker" type="string">
+            <column name="SHIFT1_WORKER" length="50" />
+        </property>
+        <property name="shift2Worker" type="string">
+            <column name="SHIFT2_WORKER" length="50" />
+        </property>
+        <property name="shift3Worker" type="string">
+            <column name="SHIFT3_WORKER" length="50" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+    </class>
+</hibernate-mapping>

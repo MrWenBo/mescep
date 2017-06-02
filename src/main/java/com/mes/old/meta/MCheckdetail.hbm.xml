@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MCheckdetail" table="M_CHECKDETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MCheckdetailId">
+            <key-property name="checkuid" type="string">
+                <column name="CHECKUID" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="MCheckheader" class="com.mes.old.MCheckheader" update="false" insert="false" fetch="select">
+            <column name="CHECKUID" not-null="true" />
+        </many-to-one>
+        <property name="actualsize" type="string">
+            <column name="ACTUALSIZE" />
+        </property>
+        <property name="fieldtype" type="string">
+            <column name="FIELDTYPE" length="50" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="fieldid" type="string">
+            <column name="FIELDID" />
+        </property>
+        <property name="tooluid" type="string">
+            <column name="TOOLUID" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="refcheckseq" type="java.lang.Long">
+            <column name="REFCHECKSEQ" precision="10" scale="0" />
+        </property>
+        <property name="defectqty" type="big_decimal">
+            <column name="DEFECTQTY" precision="20" scale="0" />
+        </property>
+        <property name="qualitystate" type="java.lang.Long">
+            <column name="QUALITYSTATE" precision="10" scale="0" />
+        </property>
+        <property name="checkposition" type="string">
+            <column name="CHECKPOSITION" />
+        </property>
+        <property name="measurebase" type="string">
+            <column name="MEASUREBASE" />
+        </property>
+        <property name="lbound" type="big_decimal">
+            <column name="LBOUND" precision="25" scale="3" />
+        </property>
+        <property name="ubound" type="big_decimal">
+            <column name="UBOUND" precision="25" scale="3" />
+        </property>
+        <property name="standardvalue" type="string">
+            <column name="STANDARDVALUE" length="50" />
+        </property>
+        <property name="submitcheckuid" type="string">
+            <column name="SUBMITCHECKUID" />
+        </property>
+        <property name="spcstandardvalue" type="big_decimal">
+            <column name="SPCSTANDARDVALUE" precision="25" />
+        </property>
+        <property name="fieldorder" type="string">
+            <column name="FIELDORDER" length="50" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" />
+        </property>
+        <property name="checkPic" type="string">
+            <column name="CHECK_PIC" />
+        </property>
+        <property name="checkContent" type="string">
+            <column name="CHECK_CONTENT" />
+        </property>
+        <property name="isneedcollect" type="java.lang.Boolean">
+            <column name="ISNEEDCOLLECT" precision="1" scale="0" />
+        </property>
+        <property name="issubmitcheck" type="java.lang.Byte">
+            <column name="ISSUBMITCHECK" precision="2" scale="0" />
+        </property>
+        <property name="checkpic" type="string">
+            <column name="CHECKPIC" />
+        </property>
+        <property name="uom" type="string">
+            <column name="UOM" />
+        </property>
+        <property name="opuid" type="big_decimal">
+            <column name="OPUID" precision="30" scale="0" />
+        </property>
+        <property name="dmistollabel" type="string">
+            <column name="DMISTOLLABEL" />
+        </property>
+        <property name="dmisfeatlabel" type="string">
+            <column name="DMISFEATLABEL" />
+        </property>
+        <property name="manufactureopuid" type="big_decimal">
+            <column name="MANUFACTUREOPUID" precision="30" scale="0" />
+        </property>
+        <property name="dmisfileversion" type="string">
+            <column name="DMISFILEVERSION" />
+        </property>
+        <property name="operationcheckorder" type="big_decimal">
+            <column name="OPERATIONCHECKORDER" precision="30" scale="0" />
+        </property>
+        <property name="barcode" type="string">
+            <column name="BARCODE" />
+        </property>
+        <property name="deviation" type="string">
+            <column name="DEVIATION" />
+        </property>
+        <property name="checkresult" type="string">
+            <column name="CHECKRESULT" />
+        </property>
+        <property name="defectdesc" type="string">
+            <column name="DEFECTDESC">
+                <comment>&#178;&#187;&#186;&#207;&#184;&#241;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="checker1" type="string">
+            <column name="CHECKER1" length="50">
+                <comment>&#215;&#212;&#188;&#236;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="checktime1" type="date">
+            <column name="CHECKTIME1" length="7">
+                <comment>&#215;&#212;&#188;&#236;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="checker2" type="string">
+            <column name="CHECKER2" length="50">
+                <comment>&#187;&#165;&#188;&#236;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="checktime2" type="date">
+            <column name="CHECKTIME2" length="7">
+                <comment>&#187;&#165;&#188;&#236;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="actualsize1" type="string">
+            <column name="ACTUALSIZE1">
+                <comment>&#215;&#212;&#188;&#236;&#202;&#181;&#178;&#226;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="actualsize2" type="string">
+            <column name="ACTUALSIZE2">
+                <comment>&#187;&#165;&#188;&#236;&#202;&#181;&#178;&#226;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="tooluid1" type="string">
+            <column name="TOOLUID1">
+                <comment>&#215;&#212;&#188;&#236;&#193;&#191;&#190;&#223;</comment>
+            </column>
+        </property>
+        <property name="tooluid2" type="string">
+            <column name="TOOLUID2">
+                <comment>&#187;&#165;&#188;&#236;&#193;&#191;&#190;&#223;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

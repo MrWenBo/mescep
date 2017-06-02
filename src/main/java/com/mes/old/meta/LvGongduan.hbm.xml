@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.LvGongduan" table="LV_GONGDUAN" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.LvGongduanId">
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="allitems" type="big_decimal">
+                <column name="ALLITEMS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="allqty" type="big_decimal">
+                <column name="ALLQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="complteitems" type="big_decimal">
+                <column name="COMPLTEITEMS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="complteqty" type="big_decimal">
+                <column name="COMPLTEQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="remainitems" type="big_decimal">
+                <column name="REMAINITEMS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="completepercent" type="big_decimal">
+                <column name="COMPLETEPERCENT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="rank" type="big_decimal">
+                <column name="RANK" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

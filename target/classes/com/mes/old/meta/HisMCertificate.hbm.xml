@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisMCertificate" table="HIS_M_CERTIFICATE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisMCertificateId">
+            <key-property name="certificateuid" type="serializable">
+                <column name="CERTIFICATEUID" />
+            </key-property>
+            <key-property name="repairuid" type="serializable">
+                <column name="REPAIRUID" />
+            </key-property>
+            <key-property name="materialrepuid" type="serializable">
+                <column name="MATERIALREPUID" />
+            </key-property>
+            <key-property name="sourcebatchnum" type="serializable">
+                <column name="SOURCEBATCHNUM" />
+            </key-property>
+            <key-property name="washer" type="serializable">
+                <column name="WASHER" />
+            </key-property>
+            <key-property name="attatchref" type="serializable">
+                <column name="ATTATCHREF" />
+            </key-property>
+            <key-property name="oiler" type="serializable">
+                <column name="OILER" />
+            </key-property>
+            <key-property name="oildate" type="serializable">
+                <column name="OILDATE" />
+            </key-property>
+            <key-property name="oilchecker" type="serializable">
+                <column name="OILCHECKER" />
+            </key-property>
+            <key-property name="certificateid" type="serializable">
+                <column name="CERTIFICATEID" />
+            </key-property>
+            <key-property name="certificatestate" type="serializable">
+                <column name="CERTIFICATESTATE" />
+            </key-property>
+            <key-property name="customerchecked" type="serializable">
+                <column name="CUSTOMERCHECKED" />
+            </key-property>
+            <key-property name="checker" type="serializable">
+                <column name="CHECKER" />
+            </key-property>
+            <key-property name="checktime" type="serializable">
+                <column name="CHECKTIME" />
+            </key-property>
+            <key-property name="creator" type="serializable">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="createtime" type="serializable">
+                <column name="CREATETIME" />
+            </key-property>
+            <key-property name="notes" type="serializable">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="taskuid" type="serializable">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="certificateqty" type="serializable">
+                <column name="CERTIFICATEQTY" />
+            </key-property>
+            <key-property name="materialsns" type="serializable">
+                <column name="MATERIALSNS" />
+            </key-property>
+            <key-property name="deptid" type="serializable">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="checkerprint" type="serializable">
+                <column name="CHECKERPRINT" />
+            </key-property>
+            <key-property name="intowarehousedate" type="serializable">
+                <column name="INTOWAREHOUSEDATE" />
+            </key-property>
+            <key-property name="partstyle" type="serializable">
+                <column name="PARTSTYLE" />
+            </key-property>
+            <key-property name="version" type="serializable">
+                <column name="VERSION" />
+            </key-property>
+            <key-property name="productPhase" type="serializable">
+                <column name="PRODUCT_PHASE" />
+            </key-property>
+            <key-property name="model" type="serializable">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="drawingid" type="serializable">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="batchnum" type="serializable">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="partName" type="serializable">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="deptname" type="serializable">
+                <column name="DEPTNAME" />
+            </key-property>
+            <key-property name="changereason" type="serializable">
+                <column name="CHANGEREASON" />
+            </key-property>
+            <key-property name="reprintAllow" type="serializable">
+                <column name="REPRINT_ALLOW" />
+            </key-property>
+            <key-property name="productVersion" type="serializable">
+                <column name="PRODUCT_VERSION" />
+            </key-property>
+            <key-property name="customer" type="serializable">
+                <column name="CUSTOMER" />
+            </key-property>
+            <key-property name="materialBatchnum" type="serializable">
+                <column name="MATERIAL_BATCHNUM" />
+            </key-property>
+            <key-property name="technicalbillid" type="serializable">
+                <column name="TECHNICALBILLID" />
+            </key-property>
+            <key-property name="supplystate" type="serializable">
+                <column name="SUPPLYSTATE" />
+            </key-property>
+            <key-property name="checkdeptname" type="serializable">
+                <column name="CHECKDEPTNAME" />
+            </key-property>
+            <key-property name="checkdeptid" type="serializable">
+                <column name="CHECKDEPTID" />
+            </key-property>
+            <key-property name="techstandardid" type="serializable">
+                <column name="TECHSTANDARDID" />
+            </key-property>
+            <key-property name="pccheckresult" type="serializable">
+                <column name="PCCHECKRESULT" />
+            </key-property>
+            <key-property name="certificatetype" type="serializable">
+                <column name="CERTIFICATETYPE" />
+            </key-property>
+            <key-property name="replacematerial" type="serializable">
+                <column name="REPLACEMATERIAL" />
+            </key-property>
+            <key-property name="checkername" type="serializable">
+                <column name="CHECKERNAME" />
+            </key-property>
+            <key-property name="productIssue" type="serializable">
+                <column name="PRODUCT_ISSUE" />
+            </key-property>
+            <key-property name="techCondition" type="serializable">
+                <column name="TECH_CONDITION" />
+            </key-property>
+            <key-property name="customerRepresent" type="serializable">
+                <column name="CUSTOMER_REPRESENT" />
+            </key-property>
+            <key-property name="lastprint" type="serializable">
+                <column name="LASTPRINT" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

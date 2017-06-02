@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmLog" table="JBPM_LOG" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmAction" class="com.mes.old.JbpmAction" fetch="select">
+            <column name="ACTION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmBytearrayByOldbytearray" class="com.mes.old.JbpmBytearray" fetch="select">
+            <column name="OLDBYTEARRAY_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmBytearrayByNewbytearray" class="com.mes.old.JbpmBytearray" fetch="select">
+            <column name="NEWBYTEARRAY_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmLog" class="com.mes.old.JbpmLog" fetch="select">
+            <column name="PARENT_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmNodeByNode" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="NODE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmNodeByDestinationnode" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="DESTINATIONNODE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmNodeBySourcenode" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="SOURCENODE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmSwimlaneinstance" class="com.mes.old.JbpmSwimlaneinstance" fetch="select">
+            <column name="SWIMLANEINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTaskinstance" class="com.mes.old.JbpmTaskinstance" fetch="select">
+            <column name="TASKINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTokenByChild" class="com.mes.old.JbpmToken" fetch="select">
+            <column name="CHILD_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTokenByToken" class="com.mes.old.JbpmToken" fetch="select">
+            <column name="TOKEN_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTransition" class="com.mes.old.JbpmTransition" fetch="select">
+            <column name="TRANSITION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmVariableinstance" class="com.mes.old.JbpmVariableinstance" fetch="select">
+            <column name="VARIABLEINSTANCE_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="char">
+            <column name="CLASS_" length="1" not-null="true" />
+        </property>
+        <property name="index" type="java.lang.Long">
+            <column name="INDEX_" precision="10" scale="0" />
+        </property>
+        <property name="date" type="date">
+            <column name="DATE_" length="7" />
+        </property>
+        <property name="message" type="string">
+            <column name="MESSAGE_" length="4000" />
+        </property>
+        <property name="exception" type="string">
+            <column name="EXCEPTION_" length="4000" />
+        </property>
+        <property name="enter" type="date">
+            <column name="ENTER_" length="7" />
+        </property>
+        <property name="leave" type="date">
+            <column name="LEAVE_" length="7" />
+        </property>
+        <property name="duration" type="big_decimal">
+            <column name="DURATION_" scale="0" />
+        </property>
+        <property name="newlongvalue" type="big_decimal">
+            <column name="NEWLONGVALUE_" scale="0" />
+        </property>
+        <property name="olddatevalue" type="date">
+            <column name="OLDDATEVALUE_" length="7" />
+        </property>
+        <property name="newdatevalue" type="date">
+            <column name="NEWDATEVALUE_" length="7" />
+        </property>
+        <property name="olddoublevalue" type="java.lang.Double">
+            <column name="OLDDOUBLEVALUE_" precision="126" scale="0" />
+        </property>
+        <property name="newdoublevalue" type="java.lang.Double">
+            <column name="NEWDOUBLEVALUE_" precision="126" scale="0" />
+        </property>
+        <property name="oldlongidclass" type="string">
+            <column name="OLDLONGIDCLASS_" />
+        </property>
+        <property name="oldlongidvalue" type="big_decimal">
+            <column name="OLDLONGIDVALUE_" scale="0" />
+        </property>
+        <property name="newlongidclass" type="string">
+            <column name="NEWLONGIDCLASS_" />
+        </property>
+        <property name="newlongidvalue" type="big_decimal">
+            <column name="NEWLONGIDVALUE_" scale="0" />
+        </property>
+        <property name="oldstringidclass" type="string">
+            <column name="OLDSTRINGIDCLASS_" />
+        </property>
+        <property name="oldstringidvalue" type="string">
+            <column name="OLDSTRINGIDVALUE_" />
+        </property>
+        <property name="newstringidclass" type="string">
+            <column name="NEWSTRINGIDCLASS_" />
+        </property>
+        <property name="newstringidvalue" type="string">
+            <column name="NEWSTRINGIDVALUE_" />
+        </property>
+        <property name="oldlongvalue" type="big_decimal">
+            <column name="OLDLONGVALUE_" scale="0" />
+        </property>
+        <property name="oldstringvalue" type="string">
+            <column name="OLDSTRINGVALUE_" length="4000" />
+        </property>
+        <property name="newstringvalue" type="string">
+            <column name="NEWSTRINGVALUE_" length="4000" />
+        </property>
+        <property name="taskactorid" type="string">
+            <column name="TASKACTORID_" />
+        </property>
+        <property name="taskoldactorid" type="string">
+            <column name="TASKOLDACTORID_" />
+        </property>
+        <set name="jbpmLogs" table="JBPM_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PARENT_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmLog" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RvEmployee" table="RV_EMPLOYEE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.RvEmployeeId">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="20" />
+            </key-property>
+            <key-property name="groupid" type="string">
+                <column name="GROUPID" length="20" />
+            </key-property>
+            <key-property name="sex" type="big_decimal">
+                <column name="SEX" precision="22" scale="0" />
+            </key-property>
+            <key-property name="employeename" type="string">
+                <column name="EMPLOYEENAME" length="100" />
+            </key-property>
+            <key-property name="password" type="binary">
+                <column name="PASSWORD" />
+            </key-property>
+            <key-property name="positionid" type="string">
+                <column name="POSITIONID" length="20" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="100" />
+            </key-property>
+            <key-property name="web" type="string">
+                <column name="WEB" length="20" />
+            </key-property>
+            <key-property name="married" type="big_decimal">
+                <column name="MARRIED" precision="22" scale="0" />
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="EMAIL" />
+            </key-property>
+            <key-property name="cellphone" type="string">
+                <column name="CELLPHONE" length="20" />
+            </key-property>
+            <key-property name="employeetype" type="string">
+                <column name="EMPLOYEETYPE" length="20" />
+            </key-property>
+            <key-property name="degree" type="string">
+                <column name="DEGREE" length="20" />
+            </key-property>
+            <key-property name="birth" type="date">
+                <column name="BIRTH" length="7" />
+            </key-property>
+            <key-property name="employeeid1" type="string">
+                <column name="EMPLOYEEID1" length="100" />
+            </key-property>
+            <key-property name="job" type="string">
+                <column name="JOB" length="510" />
+            </key-property>
+            <key-property name="REmployeeOutUid" type="string">
+                <column name="R_EMPLOYEE_OUT_UID" />
+            </key-property>
+            <key-property name="employeestate" type="java.lang.Long">
+                <column name="EMPLOYEESTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="confirmtype" type="java.lang.Long">
+                <column name="CONFIRMTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="cardid" type="string">
+                <column name="CARDID" length="50" />
+            </key-property>
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

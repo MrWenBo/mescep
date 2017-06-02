@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CCoderule" table="C_CODERULE" schema="MES188" optimistic-lock="version">
+        <id name="cruid" type="string">
+            <column name="CRUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="BAttribute" class="com.mes.old.BAttribute" fetch="select">
+            <column name="ATTRIBUTE_UID" length="50" />
+        </many-to-one>
+        <many-to-one name="BClassinfo" class="com.mes.old.BClassinfo" fetch="select">
+            <column name="CLASS_UID" length="50" />
+        </many-to-one>
+        <property name="crname" type="string">
+            <column name="CRNAME" length="100" />
+        </property>
+        <property name="codetype" type="string">
+            <column name="CODETYPE" length="50" />
+        </property>
+        <property name="sequence" type="string">
+            <column name="SEQUENCE" length="50" />
+        </property>
+        <property name="codelength" type="string">
+            <column name="CODELENGTH" length="50" />
+        </property>
+        <property name="codereplacer" type="string">
+            <column name="CODEREPLACER" length="50" />
+        </property>
+        <property name="codestring" type="string">
+            <column name="CODESTRING" length="50" />
+        </property>
+        <property name="codeformat" type="string">
+            <column name="CODEFORMAT" length="50" />
+        </property>
+        <property name="snuid" type="string">
+            <column name="SNUID" length="50" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="creattime" type="date">
+            <column name="CREATTIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="500" />
+        </property>
+        <set name="CSncodes" table="C_SNCODE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CRUID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.CSncode" />
+        </set>
+        <set name="CSnfeatures" table="C_SNFEATURE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CRUID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.CSnfeature" />
+        </set>
+    </class>
+</hibernate-mapping>

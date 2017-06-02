@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CRtCostDriver" table="C_RT_COST_DRIVER" schema="MES188" optimistic-lock="version">
+        <comment>&#198;&#218;&#188;&#228;&#179;&#201;&#177;&#190;&#182;&#175;&#210;&#242;</comment>
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CAccountantPeriod" class="com.mes.old.CAccountantPeriod" fetch="select">
+            <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="CCostCenter" class="com.mes.old.CCostCenter" fetch="select">
+            <column name="COST_CENTER_ID" length="100" />
+        </many-to-one>
+        <many-to-one name="CDtCostDriver" class="com.mes.old.CDtCostDriver" fetch="select">
+            <column name="COST_DRIVER_ID" length="100">
+                <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <property name="costDriverQuantity" type="big_decimal">
+            <column name="COST_DRIVER_QUANTITY" precision="10">
+                <comment>&#182;&#175;&#210;&#242;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

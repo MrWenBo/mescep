@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TTasksBc" table="T_TASKS_BC" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="taskType" type="string">
+            <column name="TASK_TYPE" length="50">
+                <comment>&#176;&#224;&#178;&#250;&#200;&#206;&#206;&#241;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="taskState" type="string">
+            <column name="TASK_STATE" length="50">
+                <comment>&#176;&#224;&#178;&#250;&#200;&#206;&#206;&#241;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creatorId" type="string">
+            <column name="CREATOR_ID" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;ID</comment>
+            </column>
+        </property>
+        <property name="dispatchTime" type="date">
+            <column name="DISPATCH_TIME" length="7">
+                <comment>&#197;&#201;&#185;&#164;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="dispatcherId" type="string">
+            <column name="DISPATCHER_ID" length="50">
+                <comment>&#197;&#201;&#185;&#164;&#213;&#223;ID</comment>
+            </column>
+        </property>
+        <property name="shift" type="string">
+            <column name="SHIFT" length="10">
+                <comment>&#176;&#224;&#180;&#206;</comment>
+            </column>
+        </property>
+        <property name="employeeId" type="string">
+            <column name="EMPLOYEE_ID" length="50">
+                <comment>&#178;&#217;&#215;&#247;&#213;&#223;ID</comment>
+            </column>
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID">
+                <comment>
+                &#185;&#216;&#193;&#170;&#185;&#164;&#208;&#242;&#200;&#206;&#206;&#241;&#181;&#196;&#206;&#168;&#210;&#187;&#186;&#197;&#163;&#168;&#211;&#235;t_tasks&#181;&#196;taskuid&#185;&#216;&#193;&#170;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="qtyShift" type="big_decimal">
+            <column name="QTY_SHIFT" precision="10">
+                <comment>&#176;&#224;&#178;&#250;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="qtyComplete" type="big_decimal">
+            <column name="QTY_COMPLETE" precision="10">
+                <comment>&#205;&#234;&#179;&#201;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="qtyConfirm" type="big_decimal">
+            <column name="QTY_CONFIRM" precision="10">
+                <comment>&#201;&#243;&#186;&#203;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="reason" type="string">
+            <column name="REASON" length="2000">
+                <comment>&#206;&#180;&#205;&#234;&#212;&#173;&#210;&#242;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="finishRate" type="big_decimal">
+            <column name="FINISH_RATE" precision="10">
+                <comment>&#205;&#234;&#179;&#201;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="ratio" type="big_decimal">
+            <column name="RATIO" precision="10">
+                <comment>&#177;&#200;&#214;&#216;</comment>
+            </column>
+        </property>
+        <property name="shiftTime" type="date">
+            <column name="SHIFT_TIME" length="7">
+                <comment>&#176;&#224;&#178;&#250;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="actualStartTime" type="date">
+            <column name="ACTUAL_START_TIME" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#191;&#170;&#202;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="actualFinishTime" type="date">
+            <column name="ACTUAL_FINISH_TIME" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#205;&#234;&#179;&#201;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RResourceReplacer" table="R_RESOURCE_REPLACER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.RResourceReplacerId">
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="represuid" type="string">
+                <column name="REPRESUID" />
+            </key-property>
+            <key-property name="reptype" type="java.lang.Long">
+                <column name="REPTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="repcost" type="java.lang.Long">
+                <column name="REPCOST" precision="10" scale="0" />
+            </key-property>
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="10" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="RResourceReplacerOutUid" type="string">
+                <column name="R_RESOURCE_REPLACER_OUT_UID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="RResourceByRepresuid" class="com.mes.old.RResource" update="false" insert="false" fetch="select">
+            <column name="REPRESUID" not-null="true" />
+        </many-to-one>
+        <many-to-one name="RResourceByResuid" class="com.mes.old.RResource" update="false" insert="false" fetch="select">
+            <column name="RESUID" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

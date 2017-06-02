@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BXbomHeader" table="B_XBOM_HEADER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BXbomHeaderId">
+            <key-property name="xbomuid" type="string">
+                <column name="XBOMUID" length="50" />
+            </key-property>
+            <key-property name="xbomName" type="string">
+                <column name="XBOM_NAME" length="50" />
+            </key-property>
+            <key-property name="xbomType" type="string">
+                <column name="XBOM_TYPE" length="50" />
+            </key-property>
+            <key-property name="xbomState" type="string">
+                <column name="XBOM_STATE" length="50" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="paraExpr" type="string">
+                <column name="PARA_EXPR" length="2000" />
+            </key-property>
+            <key-property name="paraDeptuid" type="string">
+                <column name="PARA_DEPTUID" />
+            </key-property>
+            <key-property name="paraPartType" type="string">
+                <column name="PARA_PART_TYPE" />
+            </key-property>
+            <key-property name="paraWorkPos" type="string">
+                <column name="PARA_WORK_POS" />
+            </key-property>
+            <key-property name="paraOpuid" type="string">
+                <column name="PARA_OPUID" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="xbomCreateType" type="java.lang.Byte">
+                <column name="XBOM_CREATE_TYPE" precision="2" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

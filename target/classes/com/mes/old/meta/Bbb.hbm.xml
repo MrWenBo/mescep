@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Bbb" table="BBB" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BbbId">
+            <key-property name="parentUid" type="string">
+                <column name="PARENT_UID" length="50" />
+            </key-property>
+            <key-property name="childUid" type="string">
+                <column name="CHILD_UID" length="50" />
+            </key-property>
+            <key-property name="childQty" type="java.lang.Long">
+                <column name="CHILD_QTY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="childDept" type="string">
+                <column name="CHILD_DEPT" length="50" />
+            </key-property>
+            <key-property name="isok" type="java.lang.Long">
+                <column name="ISOK" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

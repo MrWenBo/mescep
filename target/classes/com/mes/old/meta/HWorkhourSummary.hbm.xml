@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HWorkhourSummary" table="H_WORKHOUR_SUMMARY" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="HWorkhourHeader" class="com.mes.old.HWorkhourHeader" fetch="select">
+            <column name="ACCOUNT_UID" length="50" not-null="true">
+                <comment>&#213;&#202;&#204;&#215;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID" length="50">
+                <comment>&#212;&#177;&#185;&#164;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="totalCompletework" type="big_decimal">
+            <column name="TOTAL_COMPLETEWORK" precision="10">
+                <comment>&#205;&#234;&#179;&#201;&#185;&#164;&#202;&#177;&#163;&#168;&#190;&#187;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="totalActualwork" type="big_decimal">
+            <column name="TOTAL_ACTUALWORK" precision="10">
+                <comment>&#202;&#181;&#215;&#247;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="totalOvertimework" type="big_decimal">
+            <column name="TOTAL_OVERTIMEWORK" precision="10">
+                <comment>&#188;&#211;&#176;&#224;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="totalVacationwork" type="big_decimal">
+            <column name="TOTAL_VACATIONWORK" precision="10">
+                <comment>&#185;&#171;&#188;&#217;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

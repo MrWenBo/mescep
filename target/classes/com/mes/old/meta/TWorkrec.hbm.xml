@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TWorkrec" table="T_WORKREC" schema="MES188" optimistic-lock="version">
+        <comment>&#188;&#211;&#185;&#164;&#188;&#199;&#194;&#188;</comment>
+        <id name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="REmployee" class="com.mes.old.REmployee" fetch="select">
+            <column name="EMPLOYEEID" length="50" not-null="true">
+                <comment>&#200;&#203;&#212;&#177;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="RResource" class="com.mes.old.RResource" fetch="select">
+            <column name="RESUID">
+                <comment>&#215;&#202;&#212;&#180;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="TTasks" class="com.mes.old.TTasks" fetch="select">
+            <column name="TASKUID">
+                <comment>&#200;&#206;&#206;&#241;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN">
+                <comment>&#206;&#239;&#193;&#207;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="worktype" type="java.lang.Long">
+            <column name="WORKTYPE" precision="10" scale="0">
+                <comment>&#185;&#164;&#215;&#247;&#192;&#224;&#208;&#205; 0-&#213;&#253;&#179;&#163;</comment>
+            </column>
+        </property>
+        <property name="workdate" type="date">
+            <column name="WORKDATE" length="7" not-null="true">
+                <comment>&#188;&#211;&#185;&#164;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="shiftid" type="string">
+            <column name="SHIFTID" length="50">
+                <comment>&#188;&#211;&#185;&#164;&#176;&#224;&#180;&#206;</comment>
+            </column>
+        </property>
+        <property name="completepercent" type="big_decimal">
+            <column name="COMPLETEPERCENT" precision="25" scale="6">
+                <comment>&#205;&#234;&#179;&#201;&#176;&#217;&#183;&#214;&#177;&#200;&#163;&#168;&#190;&#187;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="completeqty" type="big_decimal">
+            <column name="COMPLETEQTY" precision="25" scale="6">
+                <comment>&#205;&#234;&#179;&#201;&#202;&#253;&#193;&#191;&#163;&#168;&#190;&#187;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="completework" type="big_decimal">
+            <column name="COMPLETEWORK" precision="25" scale="6">
+                <comment>&#205;&#234;&#179;&#201;&#185;&#164;&#202;&#177;&#163;&#168;&#190;&#187;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="check1qty" type="big_decimal">
+            <column name="CHECK1QTY" precision="25">
+                <comment>&#214;&#202;&#193;&#191;&#186;&#207;&#184;&#241;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="check2qty" type="big_decimal">
+            <column name="CHECK2QTY" precision="25">
+                <comment>&#214;&#202;&#193;&#191;&#178;&#187;&#186;&#207;&#184;&#241;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="check8qty" type="big_decimal">
+            <column name="CHECK8QTY" precision="25" scale="0">
+                <comment>&#214;&#202;&#193;&#191;&#177;&#168;&#183;&#207;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50">
+                <comment>&#188;&#236;&#209;&#233;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="checkdate" type="date">
+            <column name="CHECKDATE" length="7">
+                <comment>&#188;&#236;&#209;&#233;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="checknotes" type="string">
+            <column name="CHECKNOTES">
+                <comment>&#188;&#236;&#209;&#233;&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="ECheck1qty" type="big_decimal">
+            <column name="E_CHECK1QTY" precision="25" scale="1">
+                <comment>&#185;&#164;&#200;&#203;&#188;&#236;&#209;&#233;&#214;&#202;&#193;&#191;&#186;&#207;&#184;&#241;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="ECheck2qty" type="big_decimal">
+            <column name="E_CHECK2QTY" precision="25" scale="1">
+                <comment>&#185;&#164;&#200;&#203;&#188;&#236;&#209;&#233;&#214;&#202;&#193;&#191;&#178;&#187;&#186;&#207;&#184;&#241;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="ECheck8qty" type="big_decimal">
+            <column name="E_CHECK8QTY" precision="25" scale="1">
+                <comment>&#185;&#164;&#200;&#203;&#188;&#236;&#209;&#233;&#214;&#202;&#193;&#191;&#177;&#168;&#183;&#207;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="assnuid" type="big_decimal">
+            <column name="ASSNUID" precision="20" scale="0">
+                <comment>&#215;&#202;&#212;&#180;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="completestate" type="java.lang.Long">
+            <column name="COMPLETESTATE" precision="10" scale="0">
+                <comment>&#205;&#234;&#179;&#201;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="optype" type="java.lang.Long">
+            <column name="OPTYPE" precision="10" scale="0" />
+        </property>
+        <property name="manhourtype" type="java.lang.Long">
+            <column name="MANHOURTYPE" precision="10" scale="0" />
+        </property>
+        <property name="actualwork" type="big_decimal">
+            <column name="ACTUALWORK" precision="10">
+                <comment>&#202;&#181;&#215;&#247;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="normalwork" type="big_decimal">
+            <column name="NORMALWORK" precision="10">
+                <comment>&#213;&#253;&#179;&#163;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="overtimework" type="big_decimal">
+            <column name="OVERTIMEWORK" precision="10">
+                <comment>&#185;&#171;&#188;&#217;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="vacationwork" type="big_decimal">
+            <column name="VACATIONWORK" precision="10">
+                <comment>&#188;&#211;&#176;&#224;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="preoptime" type="big_decimal">
+            <column name="PREOPTIME" precision="10" />
+        </property>
+        <property name="runtime" type="big_decimal">
+            <column name="RUNTIME" precision="10">
+                <comment>&#187;&#250;&#198;&#247;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="dispatchtype" type="java.lang.Long">
+            <column name="DISPATCHTYPE" precision="10" scale="0" />
+        </property>
+        <property name="applywork" type="big_decimal">
+            <column name="APPLYWORK" precision="10" />
+        </property>
+        <property name="leader" type="string">
+            <column name="LEADER" length="50" />
+        </property>
+        <property name="shopmanager" type="string">
+            <column name="SHOPMANAGER" length="50" />
+        </property>
+        <property name="isprint" type="java.lang.Boolean">
+            <column name="ISPRINT" precision="1" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

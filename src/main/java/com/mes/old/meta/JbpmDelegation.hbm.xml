@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmDelegation" table="JBPM_DELEGATION" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmProcessdefinition" class="com.mes.old.JbpmProcessdefinition" fetch="select">
+            <column name="PROCESSDEFINITION_" scale="0" />
+        </many-to-one>
+        <property name="classname" type="string">
+            <column name="CLASSNAME_" length="4000" />
+        </property>
+        <property name="configuration" type="string">
+            <column name="CONFIGURATION_" length="4000" />
+        </property>
+        <property name="configtype" type="string">
+            <column name="CONFIGTYPE_" />
+        </property>
+        <set name="jbpmSwimlanes" table="JBPM_SWIMLANE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ASSIGNMENTDELEGATION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmSwimlane" />
+        </set>
+        <set name="jbpmActions" table="JBPM_ACTION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACTIONDELEGATION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmAction" />
+        </set>
+        <set name="jbpmNodes" table="JBPM_NODE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DECISIONDELEGATION" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmNode" />
+        </set>
+        <set name="jbpmTasks" table="JBPM_TASK" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ASSIGNMENTDELEGATION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTask" />
+        </set>
+        <set name="jbpmTaskcontrollers" table="JBPM_TASKCONTROLLER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKCONTROLLERDELEGATION_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTaskcontroller" />
+        </set>
+    </class>
+</hibernate-mapping>

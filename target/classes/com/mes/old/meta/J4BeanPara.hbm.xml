@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.J4BeanPara" table="J4_BEAN_PARA" schema="MES188" optimistic-lock="version">
+        <id name="beanparaid" type="string">
+            <column name="BEANPARAID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="beanid" type="string">
+            <column name="BEANID" length="50">
+                <comment>&#182;&#212;&#211;&#166;&#181;&#196;bean&#181;&#196;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="seq" type="big_decimal">
+            <column name="SEQ" precision="22" scale="0">
+                <comment>&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="paraname" type="string">
+            <column name="PARANAME" length="50">
+                <comment>&#178;&#206;&#202;&#253;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="paradesc" type="string">
+            <column name="PARADESC">
+                <comment>&#178;&#206;&#202;&#253;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="paratype" type="string">
+            <column name="PARATYPE" length="50">
+                <comment>&#178;&#206;&#202;&#253;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="serializable">
+            <column name="CREATETIME" />
+        </property>
+    </class>
+</hibernate-mapping>

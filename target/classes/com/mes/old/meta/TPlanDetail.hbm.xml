@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TPlanDetail" table="T_PLAN_DETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TPlanDetailId">
+            <key-property name="planuid" type="string">
+                <column name="PLANUID" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="TPlanHeader" class="com.mes.old.TPlanHeader" update="false" insert="false" fetch="select">
+            <column name="PLANUID" not-null="true">
+                <comment>&#188;&#198;&#187;&#174;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="dueqty" type="big_decimal">
+            <column name="DUEQTY" precision="20" scale="0">
+                <comment>&#188;&#198;&#187;&#174;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="demandstart" type="date">
+            <column name="DEMANDSTART" length="7">
+                <comment>&#200;&#206;&#206;&#241;&#187;&#249;&#207;&#223;&#191;&#170;&#202;&#188;</comment>
+            </column>
+        </property>
+        <property name="demandfinish" type="date">
+            <column name="DEMANDFINISH" length="7">
+                <comment>&#200;&#206;&#206;&#241;&#187;&#249;&#207;&#223;&#189;&#225;&#202;&#248;</comment>
+            </column>
+        </property>
+        <property name="isturned" type="java.lang.Boolean">
+            <column name="ISTURNED" precision="1" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#189;&#225;&#215;&#170;</comment>
+            </column>
+        </property>
+        <property name="needadjust" type="java.lang.Boolean">
+            <column name="NEEDADJUST" precision="1" scale="0" />
+        </property>
+        <property name="addjustdueqty" type="big_decimal">
+            <column name="ADDJUSTDUEQTY" precision="20" scale="0" />
+        </property>
+        <property name="addjustdemandfinish" type="date">
+            <column name="ADDJUSTDEMANDFINISH" length="7" />
+        </property>
+        <property name="lagreasontype" type="string">
+            <column name="LAGREASONTYPE" />
+        </property>
+        <property name="lagreason" type="string">
+            <column name="LAGREASON" length="10" />
+        </property>
+        <property name="dutydeptid" type="string">
+            <column name="DUTYDEPTID" />
+        </property>
+        <property name="addjustnotes" type="string">
+            <column name="ADDJUSTNOTES" />
+        </property>
+        <property name="approver" type="string">
+            <column name="APPROVER" />
+        </property>
+        <property name="addjustreason" type="string">
+            <column name="ADDJUSTREASON" />
+        </property>
+        <property name="deliveryqty" type="big_decimal">
+            <column name="DELIVERYQTY" precision="20">
+                <comment>&#189;&#187;&#184;&#182;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="demandstate" type="java.lang.Long">
+            <column name="DEMANDSTATE" precision="10" scale="0">
+                <comment>&#214;&#184;&#193;&#238;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="actualfinish" type="date">
+            <column name="ACTUALFINISH" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#205;&#234;&#179;&#201;</comment>
+            </column>
+        </property>
+        <property name="iseffect" type="big_decimal">
+            <column name="ISEFFECT" precision="22" scale="0" />
+        </property>
+        <property name="latefinish" type="date">
+            <column name="LATEFINISH" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

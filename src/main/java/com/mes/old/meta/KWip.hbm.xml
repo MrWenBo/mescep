@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KWip" table="K_WIP" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.KWipId">
+            <key-property name="bigmodel" type="string">
+                <column name="BIGMODEL" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="currentOperation" type="string">
+                <column name="CURRENT_OPERATION" />
+            </key-property>
+            <key-property name="maxOperation" type="string">
+                <column name="MAX_OPERATION" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="wipqty" type="big_decimal">
+                <column name="WIPQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="day" type="date">
+                <column name="DAY" length="7" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="32" />
+            </key-property>
+            <key-property name="slackfactor" type="string">
+                <column name="SLACKFACTOR" length="40" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

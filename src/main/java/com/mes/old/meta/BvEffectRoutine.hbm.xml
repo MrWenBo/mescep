@@ -1,0 +1,301 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BvEffectRoutine" table="BV_EFFECT_ROUTINE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BvEffectRoutineId">
+            <key-property name="operationName" type="string">
+                <column name="OPERATION_NAME" />
+            </key-property>
+            <key-property name="operationGroup" type="string">
+                <column name="OPERATION_GROUP" />
+            </key-property>
+            <key-property name="preopTime" type="big_decimal">
+                <column name="PREOP_TIME" precision="12" />
+            </key-property>
+            <key-property name="unitRuntime" type="big_decimal">
+                <column name="UNIT_RUNTIME" precision="12" />
+            </key-property>
+            <key-property name="postopTime" type="big_decimal">
+                <column name="POSTOP_TIME" precision="12" />
+            </key-property>
+            <key-property name="baseMachineResource" type="string">
+                <column name="BASE_MACHINE_RESOURCE" />
+            </key-property>
+            <key-property name="machineNumber" type="string">
+                <column name="MACHINE_NUMBER" />
+            </key-property>
+            <key-property name="numOperators" type="java.lang.Long">
+                <column name="NUM_OPERATORS" precision="10" scale="0" />
+            </key-property>
+            <key-property name="parallel" type="java.lang.Long">
+                <column name="PARALLEL" precision="10" scale="0" />
+            </key-property>
+            <key-property name="parallelThreshold" type="string">
+                <column name="PARALLEL_THRESHOLD" length="10" />
+            </key-property>
+            <key-property name="minimumParallelSubtask" type="string">
+                <column name="MINIMUM_PARALLEL_SUBTASK" length="10" />
+            </key-property>
+            <key-property name="useMprsIfNotLate" type="java.lang.Long">
+                <column name="USE_MPRS_IF_NOT_LATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="minOperationTime" type="java.lang.Long">
+                <column name="MIN_OPERATION_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="opEstimatedQueneTime" type="big_decimal">
+                <column name="OP_ESTIMATED_QUENE_TIME" precision="12" />
+            </key-property>
+            <key-property name="opMininumQueneTime" type="big_decimal">
+                <column name="OP_MININUM_QUENE_TIME" precision="12" />
+            </key-property>
+            <key-property name="baseYield" type="big_decimal">
+                <column name="BASE_YIELD" precision="10" scale="5" />
+            </key-property>
+            <key-property name="interruptible" type="java.lang.Long">
+                <column name="INTERRUPTIBLE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="operationType" type="java.lang.Long">
+                <column name="OPERATION_TYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="priority" type="java.lang.Long">
+                <column name="PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="queueCalendarName" type="string">
+                <column name="QUEUE_CALENDAR_NAME" />
+            </key-property>
+            <key-property name="rampupCalendarName" type="string">
+                <column name="RAMPUP_CALENDAR_NAME" />
+            </key-property>
+            <key-property name="transferBatchQuantity" type="java.lang.Long">
+                <column name="TRANSFER_BATCH_QUANTITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="isCrossOperation" type="java.lang.Long">
+                <column name="IS_CROSS_OPERATION" precision="10" scale="0" />
+            </key-property>
+            <key-property name="needCheck" type="java.lang.Long">
+                <column name="NEED_CHECK" precision="10" scale="0" />
+            </key-property>
+            <key-property name="isCriticalOperation" type="java.lang.Long">
+                <column name="IS_CRITICAL_OPERATION" precision="10" scale="0" />
+            </key-property>
+            <key-property name="operationSpecification" type="string">
+                <column name="OPERATION_SPECIFICATION" />
+            </key-property>
+            <key-property name="materialCheckIn" type="java.lang.Long">
+                <column name="MATERIAL_CHECK_IN" precision="10" scale="0" />
+            </key-property>
+            <key-property name="materialCheckOut" type="java.lang.Long">
+                <column name="MATERIAL_CHECK_OUT" precision="10" scale="0" />
+            </key-property>
+            <key-property name="operationCostSum" type="java.lang.Long">
+                <column name="OPERATION_COST_SUM" precision="10" scale="0" />
+            </key-property>
+            <key-property name="laborCost" type="java.lang.Long">
+                <column name="LABOR_COST" precision="10" scale="0" />
+            </key-property>
+            <key-property name="machineCost" type="java.lang.Long">
+                <column name="MACHINE_COST" precision="10" scale="0" />
+            </key-property>
+            <key-property name="linkDownstreamP" type="java.lang.Long">
+                <column name="LINK_DOWNSTREAM_P" precision="10" scale="0" />
+            </key-property>
+            <key-property name="linkDownstreamMinWip" type="java.lang.Long">
+                <column name="LINK_DOWNSTREAM_MIN_WIP" precision="10" scale="0" />
+            </key-property>
+            <key-property name="linkDownstreamMaxWip" type="java.lang.Long">
+                <column name="LINK_DOWNSTREAM_MAX_WIP" precision="10" scale="0" />
+            </key-property>
+            <key-property name="unitRuntimeCostPer" type="string">
+                <column name="UNIT_RUNTIME_COST_PER" />
+            </key-property>
+            <key-property name="unitRuntimeCostPerTime" type="java.lang.Long">
+                <column name="UNIT_RUNTIME_COST_PER_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="unitWipCarryCostPer" type="string">
+                <column name="UNIT_WIP_CARRY_COST_PER" />
+            </key-property>
+            <key-property name="unitWipCarryCostPerTime" type="java.lang.Long">
+                <column name="UNIT_WIP_CARRY_COST_PER_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="sequenceDependentSetupType" type="string">
+                <column name="SEQUENCE_DEPENDENT_SETUP_TYPE" />
+            </key-property>
+            <key-property name="sequenceDependentSetupType2" type="string">
+                <column name="SEQUENCE_DEPENDENT_SETUP_TYPE2" />
+            </key-property>
+            <key-property name="sequenceDependentSetupType3" type="string">
+                <column name="SEQUENCE_DEPENDENT_SETUP_TYPE3" />
+            </key-property>
+            <key-property name="note" type="string">
+                <column name="NOTE" length="2000" />
+            </key-property>
+            <key-property name="routingType" type="string">
+                <column name="ROUTING_TYPE" />
+            </key-property>
+            <key-property name="operationNote" type="string">
+                <column name="OPERATION_NOTE" />
+            </key-property>
+            <key-property name="workcoefficient" type="big_decimal">
+                <column name="WORKCOEFFICIENT" precision="25" scale="6" />
+            </key-property>
+            <key-property name="changetime" type="date">
+                <column name="CHANGETIME" length="7" />
+            </key-property>
+            <key-property name="changer" type="string">
+                <column name="CHANGER" length="50" />
+            </key-property>
+            <key-property name="changereason" type="string">
+                <column name="CHANGEREASON" length="100" />
+            </key-property>
+            <key-property name="changestate" type="big_decimal">
+                <column name="CHANGESTATE" precision="10" />
+            </key-property>
+            <key-property name="effective" type="java.lang.Byte">
+                <column name="EFFECTIVE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="100" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="uniqueid" type="big_decimal">
+                <column name="UNIQUEID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="dispatchgrade" type="java.lang.Long">
+                <column name="DISPATCHGRADE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="sampleqty" type="java.lang.Integer">
+                <column name="SAMPLEQTY" precision="5" scale="0" />
+            </key-property>
+            <key-property name="samplepercent" type="big_decimal">
+                <column name="SAMPLEPERCENT" precision="5" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="estipretime" type="string">
+                <column name="ESTIPRETIME" />
+            </key-property>
+            <key-property name="estiruntime" type="string">
+                <column name="ESTIRUNTIME" />
+            </key-property>
+            <key-property name="sampleOpid" type="string">
+                <column name="SAMPLE_OPID" length="50" />
+            </key-property>
+            <key-property name="needSample" type="java.lang.Byte">
+                <column name="NEED_SAMPLE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="checkstate" type="java.lang.Boolean">
+                <column name="CHECKSTATE" precision="1" scale="0" />
+            </key-property>
+            <key-property name="groupuid" type="string">
+                <column name="GROUPUID" />
+            </key-property>
+            <key-property name="opid" type="string">
+                <column name="OPID" />
+            </key-property>
+            <key-property name="optype" type="java.lang.Long">
+                <column name="OPTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="versionid" type="string">
+                <column name="VERSIONID" length="10" />
+            </key-property>
+            <key-property name="routingNote" type="string">
+                <column name="ROUTING_NOTE" />
+            </key-property>
+            <key-property name="sampleRuntime" type="big_decimal">
+                <column name="SAMPLE_RUNTIME" precision="12" />
+            </key-property>
+            <key-property name="needFirstcheck" type="java.lang.Boolean">
+                <column name="NEED_FIRSTCHECK" precision="1" scale="0" />
+            </key-property>
+            <key-property name="checkpercent" type="big_decimal">
+                <column name="CHECKPERCENT" precision="10" />
+            </key-property>
+            <key-property name="refrouting" type="string">
+                <column name="REFROUTING" />
+            </key-property>
+            <key-property name="BRoutineOutUid" type="string">
+                <column name="B_ROUTINE_OUT_UID" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="deviceuid" type="string">
+                <column name="DEVICEUID" />
+            </key-property>
+            <key-property name="operationContentTt" type="string">
+                <column name="OPERATION_CONTENT_TT" length="3000" />
+            </key-property>
+            <key-property name="parentopuid" type="big_decimal">
+                <column name="PARENTOPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="ncNumber" type="string">
+                <column name="NC_NUMBER" />
+            </key-property>
+            <key-property name="ncVersionid" type="string">
+                <column name="NC_VERSIONID" />
+            </key-property>
+            <key-property name="isSpecialOperation" type="string">
+                <column name="IS_SPECIAL_OPERATION" />
+            </key-property>
+            <key-property name="preparegrade" type="java.lang.Byte">
+                <column name="PREPAREGRADE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="needPhoto" type="java.lang.Boolean">
+                <column name="NEED_PHOTO" precision="1" scale="0" />
+            </key-property>
+            <key-property name="operationSimpleContent" type="clob">
+                <column name="OPERATION_SIMPLE_CONTENT" />
+            </key-property>
+            <key-property name="operationContent" type="clob">
+                <column name="OPERATION_CONTENT" />
+            </key-property>
+            <key-property name="isStatisticCheck" type="java.lang.Long">
+                <column name="IS_STATISTIC_CHECK" precision="10" scale="0" />
+            </key-property>
+            <key-property name="keycount" type="java.lang.Boolean">
+                <column name="KEYCOUNT" precision="1" scale="0" />
+            </key-property>
+            <key-property name="routing" type="string">
+                <column name="ROUTING" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="10" />
+            </key-property>
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="resnameiddes" type="string">
+                <column name="RESNAMEIDDES" />
+            </key-property>
+            <key-property name="groupname" type="string">
+                <column name="GROUPNAME" length="30" />
+            </key-property>
+            <key-property name="groupid" type="string">
+                <column name="GROUPID" />
+            </key-property>
+            <key-property name="optypedesc" type="string">
+                <column name="OPTYPEDESC" length="100" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" length="50" />
+            </key-property>
+            <key-property name="useeffective" type="java.lang.Byte">
+                <column name="USEEFFECTIVE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="versionidRouting" type="string">
+                <column name="VERSIONID_ROUTING" length="50" />
+            </key-property>
+            <key-property name="routingtypeiddes" type="string">
+                <column name="ROUTINGTYPEIDDES" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

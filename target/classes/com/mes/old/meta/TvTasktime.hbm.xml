@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvTasktime" table="TV_TASKTIME" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvTasktimeId">
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="taskname" type="string">
+                <column name="TASKNAME" />
+            </key-property>
+            <key-property name="opdesc" type="string">
+                <column name="OPDESC" />
+            </key-property>
+            <key-property name="opqty" type="big_decimal">
+                <column name="OPQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="opdate" type="date">
+                <column name="OPDATE" length="7" />
+            </key-property>
+            <key-property name="opdeptname" type="string">
+                <column name="OPDEPTNAME" length="50" />
+            </key-property>
+            <key-property name="opemployeename" type="string">
+                <column name="OPEMPLOYEENAME" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

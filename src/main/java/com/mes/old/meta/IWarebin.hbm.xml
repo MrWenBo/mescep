@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IWarebin" table="I_WAREBIN" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#241;&#206;&#187;</comment>
+        <composite-id name="id" class="com.mes.old.IWarebinId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="binid" type="string">
+                <column name="BINID" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="binname" type="string">
+            <column name="BINNAME" length="50">
+                <comment>&#185;&#241;&#206;&#187;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="maxbinqty" type="big_decimal">
+            <column name="MAXBINQTY" precision="10" scale="4">
+                <comment>&#185;&#241;&#206;&#187;&#215;&#238;&#180;&#243;&#180;&#230;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="binmanager" type="string">
+            <column name="BINMANAGER" length="50">
+                <comment>&#185;&#241;&#206;&#187;&#185;&#220;&#192;&#237;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="bintype" type="string">
+            <column name="BINTYPE" length="50">
+                <comment>&#185;&#241;&#206;&#187;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="parentbinid" type="string">
+            <column name="PARENTBINID" length="50">
+                <comment>&#184;&#184;&#185;&#241;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="binposition" type="string">
+            <column name="BINPOSITION" length="50">
+                <comment>&#185;&#241;&#206;&#187;&#206;&#187;&#214;&#195;</comment>
+            </column>
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" length="50">
+                <comment>&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="freezed" type="java.lang.Byte">
+            <column name="FREEZED" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#182;&#179;&#189;&#225;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="ipAddress" type="string">
+            <column name="IP_ADDRESS" length="50">
+                <comment>&#201;&#232;&#177;&#184;&#176;&#243;&#182;&#168;&#181;&#196;IP&#181;&#216;&#214;&#183;</comment>
+            </column>
+        </property>
+        <property name="binstate" type="java.lang.Byte">
+            <column name="BINSTATE" precision="2" scale="0">
+                <comment>&#185;&#241;&#206;&#187;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IvSeqlastio" table="IV_SEQLASTIO" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IvSeqlastioId">
+            <key-property name="relationid" type="string">
+                <column name="RELATIONID" length="50" />
+            </key-property>
+            <key-property name="createtime" type="string">
+                <column name="CREATETIME" length="14" />
+            </key-property>
+            <key-property name="iotype" type="java.lang.Long">
+                <column name="IOTYPE" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

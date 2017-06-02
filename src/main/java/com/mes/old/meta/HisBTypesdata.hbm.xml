@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisBTypesdata" table="HIS_B_TYPESDATA" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisBTypesdataId">
+            <key-property name="typesname" type="serializable">
+                <column name="TYPESNAME" />
+            </key-property>
+            <key-property name="id" type="serializable">
+                <column name="ID" />
+            </key-property>
+            <key-property name="iddesc" type="serializable">
+                <column name="IDDESC" />
+            </key-property>
+            <key-property name="min" type="serializable">
+                <column name="MIN" />
+            </key-property>
+            <key-property name="max" type="serializable">
+                <column name="MAX" />
+            </key-property>
+            <key-property name="createtime" type="serializable">
+                <column name="CREATETIME" />
+            </key-property>
+            <key-property name="notes" type="serializable">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="creator" type="serializable">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="BTypesdataOutUid" type="serializable">
+                <column name="B_TYPESDATA_OUT_UID" />
+            </key-property>
+            <key-property name="value" type="serializable">
+                <column name="VALUE" />
+            </key-property>
+            <key-property name="iconpath" type="serializable">
+                <column name="ICONPATH" />
+            </key-property>
+            <key-property name="iconuid" type="serializable">
+                <column name="ICONUID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IMoveheader" table="I_MOVEHEADER" schema="MES188" optimistic-lock="version">
+        <comment>&#191;&#226;&#183;&#191;&#181;&#247;&#178;&#166;&#188;&#242;&#195;&#247;</comment>
+        <id name="invmoveid" type="string">
+            <column name="INVMOVEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="invmovetype" type="java.lang.Long">
+            <column name="INVMOVETYPE" precision="10" scale="0">
+                <comment>&#181;&#247;&#178;&#166;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="invmovestate" type="java.lang.Long">
+            <column name="INVMOVESTATE" precision="10" scale="0">
+                <comment>&#181;&#247;&#178;&#166;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="reasoncode" type="string">
+            <column name="REASONCODE" length="50">
+                <comment>&#212;&#173;&#210;&#242;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="totalamount" type="big_decimal">
+            <column name="TOTALAMOUNT" precision="10" scale="4">
+                <comment>&#215;&#220;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="fromwarehouse" type="string">
+            <column name="FROMWAREHOUSE" length="50">
+                <comment>&#181;&#247;&#178;&#166;&#212;&#180;&#191;&#226;&#183;&#191;</comment>
+            </column>
+        </property>
+        <property name="towarehouse" type="string">
+            <column name="TOWAREHOUSE" length="50">
+                <comment>&#181;&#247;&#178;&#166;&#196;&#191;&#181;&#196;&#191;&#226;&#183;&#191;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000">
+                <comment>&#191;&#226;&#183;&#191;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="text1" type="string">
+            <column name="TEXT1" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#210;&#187;</comment>
+            </column>
+        </property>
+        <property name="text2" type="string">
+            <column name="TEXT2" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#182;&#254;</comment>
+            </column>
+        </property>
+        <property name="text3" type="string">
+            <column name="TEXT3" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#200;&#253;</comment>
+            </column>
+        </property>
+        <property name="text4" type="string">
+            <column name="TEXT4" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#203;&#196;</comment>
+            </column>
+        </property>
+        <property name="text5" type="string">
+            <column name="TEXT5" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#206;&#229;</comment>
+            </column>
+        </property>
+        <property name="text6" type="string">
+            <column name="TEXT6" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#193;&#249;</comment>
+            </column>
+        </property>
+        <property name="text7" type="string">
+            <column name="TEXT7" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#198;&#223;</comment>
+            </column>
+        </property>
+        <property name="text8" type="string">
+            <column name="TEXT8" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#176;&#203;</comment>
+            </column>
+        </property>
+        <property name="text9" type="string">
+            <column name="TEXT9" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#190;&#197;</comment>
+            </column>
+        </property>
+        <property name="text10" type="string">
+            <column name="TEXT10" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#202;&#174;</comment>
+            </column>
+        </property>
+        <property name="frominvioid" type="string">
+            <column name="FROMINVIOID" length="50" />
+        </property>
+        <property name="toinvioid" type="string">
+            <column name="TOINVIOID" length="50" />
+        </property>
+        <property name="lastModificator" type="string">
+            <column name="LAST_MODIFICATOR" length="50">
+                <comment>&#201;&#207;&#180;&#206;&#208;&#222;&#184;&#196;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="lastModifyTime" type="date">
+            <column name="LAST_MODIFY_TIME" length="7">
+                <comment>&#201;&#207;&#180;&#206;&#208;&#222;&#184;&#196;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="billchecker" type="string">
+            <column name="BILLCHECKER" length="50">
+                <comment>&#201;&#243;&#186;&#203;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="transactor" type="string">
+            <column name="TRANSACTOR" length="50">
+                <comment>&#190;&#173;&#176;&#236;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="invmovedate" type="date">
+            <column name="INVMOVEDATE" length="7">
+                <comment>&#181;&#247;&#178;&#166;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="fromemp" type="string">
+            <column name="FROMEMP" length="50" />
+        </property>
+        <property name="toemp" type="string">
+            <column name="TOEMP" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RCalendar" table="R_CALENDAR" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#202;&#212;&#180;&#200;&#213;&#192;&#250;</comment>
+        <id name="calUid" type="string">
+            <column name="CAL_UID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="RCalendar" class="com.mes.old.RCalendar" fetch="select">
+            <column name="CAL_BASE_UID" length="50" />
+        </many-to-one>
+        <property name="calName" type="string">
+            <column name="CAL_NAME" length="50">
+                <comment>&#200;&#213;&#192;&#250;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="calIsBaseCal" type="java.lang.Byte">
+            <column name="CAL_IS_BASE_CAL" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#206;&#170;&#187;&#249;&#215;&#188;&#200;&#213;&#192;&#250;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="groupid" type="java.lang.Long">
+            <column name="GROUPID" precision="10" scale="0" />
+        </property>
+        <property name="groupname" type="string">
+            <column name="GROUPNAME" length="50" />
+        </property>
+        <property name="RCalendarOutUid" type="string">
+            <column name="R_CALENDAR_OUT_UID" />
+        </property>
+        <set name="RCalendars" table="R_CALENDAR" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CAL_BASE_UID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.RCalendar" />
+        </set>
+    </class>
+</hibernate-mapping>

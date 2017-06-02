@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CDtActivity" table="C_DT_ACTIVITY" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#247;&#210;&#181;&#187;&#249;&#180;&#161;&#202;&#253;&#190;&#221;</comment>
+        <id name="activityId" type="string">
+            <column name="ACTIVITY_ID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CCostCenter" class="com.mes.old.CCostCenter" fetch="select">
+            <column name="COST_CENTER_ID" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="CDtCostDriver" class="com.mes.old.CDtCostDriver" fetch="select">
+            <column name="COST_DRIVER_ID" length="100">
+                <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <property name="activityName" type="string">
+            <column name="ACTIVITY_NAME" length="100">
+                <comment>&#215;&#247;&#210;&#181;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="isIncreaseActivity" type="java.lang.Long">
+            <column name="IS_INCREASE_ACTIVITY" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#212;&#246;&#214;&#181;&#215;&#247;&#210;&#181;</comment>
+            </column>
+        </property>
+        <property name="isKeyActivity" type="java.lang.Long">
+            <column name="IS_KEY_ACTIVITY" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#185;&#216;&#188;&#252;&#215;&#247;&#210;&#181;</comment>
+            </column>
+        </property>
+        <property name="uom" type="string">
+            <column name="UOM" length="100">
+                <comment>&#188;&#198;&#193;&#191;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="activityType" type="java.lang.Long">
+            <column name="ACTIVITY_TYPE" precision="10" scale="0">
+                <comment>&#215;&#247;&#210;&#181;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="activityUnitCost" type="string">
+            <column name="ACTIVITY_UNIT_COST" length="100">
+                <comment>&#181;&#165;&#206;&#187;&#215;&#247;&#210;&#181;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="activityAccountId" type="string">
+            <column name="ACTIVITY_ACCOUNT_ID" length="100">
+                <comment>&#215;&#247;&#210;&#181;&#213;&#202;&#187;&#167;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="100">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

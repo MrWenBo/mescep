@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IIoheader" table="I_IOHEADER" schema="MES188" optimistic-lock="version">
+        <comment>&#179;&#246;&#200;&#235;&#191;&#226;&#188;&#242;&#195;&#247;</comment>
+        <id name="invioid" type="string">
+            <column name="INVIOID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="iotype" type="java.lang.Long">
+            <column name="IOTYPE" precision="10" scale="0">
+                <comment>&#179;&#246;&#200;&#235;&#191;&#226;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="iostate" type="java.lang.Long">
+            <column name="IOSTATE" precision="10" scale="0">
+                <comment>&#179;&#246;&#200;&#235;&#191;&#226;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="reasoncode" type="string">
+            <column name="REASONCODE" length="50">
+                <comment>&#179;&#246;&#200;&#235;&#191;&#226;&#212;&#173;&#210;&#242;</comment>
+            </column>
+        </property>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID" length="50">
+                <comment>&#191;&#226;&#183;&#191;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="warehousemanager" type="string">
+            <column name="WAREHOUSEMANAGER" length="50">
+                <comment>&#191;&#226;&#185;&#220;&#212;&#177;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="iodate" type="date">
+            <column name="IODATE" length="7">
+                <comment>&#179;&#246;&#200;&#235;&#191;&#226;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="deptemp" type="string">
+            <column name="DEPTEMP" length="50">
+                <comment>&#179;&#246;&#200;&#235;&#191;&#226;&#212;&#177;&#185;&#164;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="totalamount" type="big_decimal">
+            <column name="TOTALAMOUNT" precision="10" scale="4">
+                <comment>&#215;&#220;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="invoiceid" type="string">
+            <column name="INVOICEID" length="50">
+                <comment>&#183;&#162;&#198;&#177;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="partnerid" type="string">
+            <column name="PARTNERID" length="50">
+                <comment>&#191;&#205;&#187;&#167;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="vouno" type="string">
+            <column name="VOUNO" length="50">
+                <comment>&#198;&#190;&#214;&#164;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="billchecker" type="string">
+            <column name="BILLCHECKER" length="50">
+                <comment>&#181;&#165;&#190;&#221;&#201;&#243;&#186;&#203;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#202;&#174;</comment>
+            </column>
+        </property>
+        <property name="text1" type="string">
+            <column name="TEXT1" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#210;&#187;</comment>
+            </column>
+        </property>
+        <property name="text2" type="string">
+            <column name="TEXT2" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#182;&#254;</comment>
+            </column>
+        </property>
+        <property name="text3" type="string">
+            <column name="TEXT3" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#200;&#253;</comment>
+            </column>
+        </property>
+        <property name="text4" type="string">
+            <column name="TEXT4" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#203;&#196;</comment>
+            </column>
+        </property>
+        <property name="text5" type="string">
+            <column name="TEXT5" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#206;&#229;</comment>
+            </column>
+        </property>
+        <property name="text6" type="string">
+            <column name="TEXT6" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#193;&#249;</comment>
+            </column>
+        </property>
+        <property name="text7" type="string">
+            <column name="TEXT7" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#198;&#223;</comment>
+            </column>
+        </property>
+        <property name="text8" type="string">
+            <column name="TEXT8" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#176;&#203;</comment>
+            </column>
+        </property>
+        <property name="text9" type="string">
+            <column name="TEXT9" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#190;&#197;</comment>
+            </column>
+        </property>
+        <property name="text10" type="string">
+            <column name="TEXT10" length="50">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="loader" type="string">
+            <column name="LOADER" length="50">
+                <comment>&#212;&#203;&#202;&#228;&#208;&#161;&#179;&#181;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="relationid" type="string">
+            <column name="RELATIONID" length="50">
+                <comment>&#185;&#216;&#193;&#170;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="lastModificator" type="string">
+            <column name="LAST_MODIFICATOR" length="50">
+                <comment>&#201;&#207;&#180;&#206;&#208;&#222;&#184;&#196;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="lastModifyTime" type="date">
+            <column name="LAST_MODIFY_TIME" length="7">
+                <comment>&#201;&#207;&#180;&#206;&#208;&#222;&#184;&#196;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="routing" type="string">
+            <column name="ROUTING" length="50" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" length="50" />
+        </property>
+        <property name="producedQuantity" type="big_decimal">
+            <column name="PRODUCED_QUANTITY" precision="25" scale="6" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" length="50">
+                <comment>&#197;&#250;&#180;&#206;</comment>
+            </column>
+        </property>
+        <property name="sn" type="string">
+            <column name="SN" length="50">
+                <comment>&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="turnBoxId" type="string">
+            <column name="TURN_BOX_ID">
+                <comment>&#214;&#220;&#215;&#170;&#207;&#228;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="currentBoxId" type="string">
+            <column name="CURRENT_BOX_ID">
+                <comment>&#181;&#177;&#199;&#176;&#214;&#220;&#215;&#170;&#207;&#228;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="dutyemp" type="string">
+            <column name="DUTYEMP">
+                <comment>&#212;&#240;&#200;&#206;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="warning" type="string">
+            <column name="WARNING" length="50">
+                <comment>&#201;&#232;&#214;&#195;&#190;&#175;&#184;&#230;</comment>
+            </column>
+        </property>
+        <property name="tobinid" type="string">
+            <column name="TOBINID" length="50" />
+        </property>
+        <property name="towarehouse" type="string">
+            <column name="TOWAREHOUSE" length="50" />
+        </property>
+        <property name="signer" type="string">
+            <column name="SIGNER" length="50" />
+        </property>
+        <property name="signdate" type="date">
+            <column name="SIGNDATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

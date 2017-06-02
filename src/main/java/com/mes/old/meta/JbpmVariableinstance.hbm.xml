@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmVariableinstance" table="JBPM_VARIABLEINSTANCE" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmBytearray" class="com.mes.old.JbpmBytearray" fetch="select">
+            <column name="BYTEARRAYVALUE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmProcessinstance" class="com.mes.old.JbpmProcessinstance" fetch="select">
+            <column name="PROCESSINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTaskinstance" class="com.mes.old.JbpmTaskinstance" fetch="select">
+            <column name="TASKINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmToken" class="com.mes.old.JbpmToken" fetch="select">
+            <column name="TOKEN_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTokenvariablemap" class="com.mes.old.JbpmTokenvariablemap" fetch="select">
+            <column name="TOKENVARIABLEMAP_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="char">
+            <column name="CLASS_" length="1" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <property name="converter" type="java.lang.Character">
+            <column name="CONVERTER_" length="1" />
+        </property>
+        <property name="datevalue" type="date">
+            <column name="DATEVALUE_" length="7" />
+        </property>
+        <property name="doublevalue" type="java.lang.Double">
+            <column name="DOUBLEVALUE_" precision="126" scale="0" />
+        </property>
+        <property name="longidclass" type="string">
+            <column name="LONGIDCLASS_" />
+        </property>
+        <property name="longvalue" type="big_decimal">
+            <column name="LONGVALUE_" scale="0" />
+        </property>
+        <property name="stringidclass" type="string">
+            <column name="STRINGIDCLASS_" />
+        </property>
+        <property name="stringvalue" type="string">
+            <column name="STRINGVALUE_" />
+        </property>
+        <set name="jbpmLogs" table="JBPM_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="VARIABLEINSTANCE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmLog" />
+        </set>
+    </class>
+</hibernate-mapping>

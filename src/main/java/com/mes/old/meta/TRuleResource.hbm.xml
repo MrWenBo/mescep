@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TRuleResource" table="T_RULE_RESOURCE" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="TRule" class="com.mes.old.TRule" fetch="select">
+            <column name="RULEUID" />
+        </many-to-one>
+        <property name="resourceuid" type="string">
+            <column name="RESOURCEUID" />
+        </property>
+        <property name="ruleassntype" type="string">
+            <column name="RULEASSNTYPE" length="10">
+                <comment>
+                100&#163;&#172;200&#163;&#172;101&#163;&#172;201--&#181;&#218;&#210;&#187;&#206;&#187;&#163;&#186;1&#206;&#170;&#178;&#191;&#195;&#197;&#214;&#184;&#182;&#168;&#163;&#172;2&#206;&#170;&#215;&#202;&#212;&#180;&#214;&#184;&#182;&#168;&#163;&#187;&#181;&#218;&#200;&#253;&#206;&#187;&#163;&#186;0&#206;&#170;&#206;&#222;&#211;&#208;&#208;&#167;&#198;&#218;&#207;&#222;&#214;&#198;&#181;&#196;&#185;&#230;&#212;&#242;&#214;&#184;&#182;&#168;&#163;&#172;1&#206;&#170;&#211;&#208;&#211;&#208;&#208;&#167;&#198;&#218;&#207;&#222;&#214;&#198;&#181;&#196;&#185;&#230;&#212;&#242;&#214;&#184;&#182;&#168;</comment>
+            </column>
+        </property>
+        <property name="activetime" type="date">
+            <column name="ACTIVETIME" length="7" />
+        </property>
+        <property name="expiretime" type="date">
+            <column name="EXPIRETIME" length="7" />
+        </property>
+        <property name="isdefault" type="java.lang.Integer">
+            <column name="ISDEFAULT" precision="5" scale="0" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="10" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

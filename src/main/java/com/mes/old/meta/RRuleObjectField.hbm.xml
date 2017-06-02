@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RRuleObjectField" table="R_RULE_OBJECT_FIELD" schema="MES188" optimistic-lock="version">
+        <comment>&#182;&#212;&#207;&#243;&#181;&#196;&#202;&#244;&#208;&#212;&#177;&#237;</comment>
+        <composite-id name="id" class="com.mes.old.RRuleObjectFieldId">
+            <key-property name="objectuid" type="string">
+                <column name="OBJECTUID" />
+            </key-property>
+            <key-property name="fielduid" type="string">
+                <column name="FIELDUID" />
+            </key-property>
+        </composite-id>
+        <property name="fieldid" type="string">
+            <column name="FIELDID">
+                <comment>&#202;&#244;&#208;&#212;&#180;&#250;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="fieldalias" type="string">
+            <column name="FIELDALIAS">
+                <comment>&#202;&#244;&#208;&#212;&#188;&#242;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="fieldname" type="string">
+            <column name="FIELDNAME">
+                <comment>&#202;&#244;&#208;&#212;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="fieldgetter" type="string">
+            <column name="FIELDGETTER">
+                <comment>
+                &#202;&#244;&#208;&#212;&#187;&#241;&#200;&#161;&#183;&#189;&#202;&#189;&#163;&#172;&#183;&#214;&#206;&#170;field&#186;&#205;getter&#193;&#189;&#214;&#214;&#163;&#172;field&#214;&#177;&#189;&#211;&#205;&#168;&#185;&#253;&#202;&#244;&#208;&#212;&#187;&#241;&#200;&#161;&#163;&#172;getter&#205;&#168;&#185;&#253;get&#186;&#175;&#202;&#253;&#187;&#241;&#200;&#161;</comment>
+            </column>
+        </property>
+        <property name="fieldmethod" type="string">
+            <column name="FIELDMETHOD">
+                <comment>&#202;&#244;&#208;&#212;&#187;&#241;&#200;&#161;&#186;&#175;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="fieldvaluetype" type="string">
+            <column name="FIELDVALUETYPE">
+                <comment>&#202;&#244;&#208;&#212;&#214;&#181;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="fieldprefix" type="string">
+            <column name="FIELDPREFIX">
+                <comment>&#202;&#244;&#208;&#212;&#214;&#181;&#199;&#176;&#215;&#186;</comment>
+            </column>
+        </property>
+        <property name="fieldsuffix" type="string">
+            <column name="FIELDSUFFIX">
+                <comment>&#202;&#244;&#208;&#212;&#214;&#181;&#186;&#243;&#215;&#186;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" unique="true">
+                <comment>&#212;&#221;&#202;&#177;&#202;&#185;&#211;&#195;&#181;&#196;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

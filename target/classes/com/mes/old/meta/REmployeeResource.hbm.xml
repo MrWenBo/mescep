@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.REmployeeResource" table="R_EMPLOYEE_RESOURCE" schema="MES188" optimistic-lock="version">
+        <comment>&#212;&#177;&#185;&#164;&#215;&#202;&#212;&#180;&#185;&#216;&#207;&#181;</comment>
+        <composite-id name="id" class="com.mes.old.REmployeeResourceId">
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="50" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="REmployee" class="com.mes.old.REmployee" update="false" insert="false" fetch="select">
+            <column name="EMPLOYEEID" length="50" not-null="true">
+                <comment>&#178;&#217;&#215;&#247;&#213;&#223;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="RResource" class="com.mes.old.RResource" update="false" insert="false" fetch="select">
+            <column name="RESUID" not-null="true">
+                <comment>&#201;&#232;&#177;&#184;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="licensetype" type="java.lang.Long">
+            <column name="LICENSETYPE" precision="10" scale="0">
+                <comment>&#208;&#237;&#191;&#201;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="REmployeeResourceOutUid" type="string">
+            <column name="R_EMPLOYEE_RESOURCE_OUT_UID" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

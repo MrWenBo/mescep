@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KvChecksum" table="KV_CHECKSUM" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.KvChecksumId">
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="iddesc" type="string">
+                <column name="IDDESC" length="100" />
+            </key-property>
+            <key-property name="zx" type="java.lang.Character">
+                <column name="ZX" length="1" />
+            </key-property>
+            <key-property name="subcontract" type="java.lang.Character">
+                <column name="SUBCONTRACT" length="1" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="sumkeycount" type="big_decimal">
+                <column name="SUMKEYCOUNT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="submitqty" type="big_decimal">
+                <column name="SUBMITQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="qualifyqty" type="big_decimal">
+                <column name="QUALIFYQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="t1de" type="big_decimal">
+                <column name="T1DE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="t1ke" type="big_decimal">
+                <column name="T1KE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="t2de" type="big_decimal">
+                <column name="T2DE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="t2ke" type="big_decimal">
+                <column name="T2KE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="t3de" type="big_decimal">
+                <column name="T3DE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="t3ke" type="big_decimal">
+                <column name="T3KE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="checksum" type="big_decimal">
+                <column name="CHECKSUM" precision="22" scale="0" />
+            </key-property>
+            <key-property name="qtyappearance" type="big_decimal">
+                <column name="QTYAPPEARANCE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="qtydimension" type="big_decimal">
+                <column name="QTYDIMENSION" precision="22" scale="0" />
+            </key-property>
+            <key-property name="refuse" type="big_decimal">
+                <column name="REFUSE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="reworkqty" type="big_decimal">
+                <column name="REWORKQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="repairqty" type="big_decimal">
+                <column name="REPAIRQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="rejectqty" type="big_decimal">
+                <column name="REJECTQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="day" type="date">
+                <column name="DAY" length="8" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

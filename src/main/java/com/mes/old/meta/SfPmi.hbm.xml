@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SfPmi" table="SF_PMI" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SfPmiId">
+            <key-property name="uuid" type="string">
+                <column name="UUID" />
+            </key-property>
+            <key-property name="sfPmiId" type="string">
+                <column name="SF_PMI_ID" />
+            </key-property>
+            <key-property name="sfPmiVisible" type="string">
+                <column name="SF_PMI_VISIBLE" />
+            </key-property>
+            <key-property name="sfPmiType" type="string">
+                <column name="SF_PMI_TYPE" />
+            </key-property>
+            <key-property name="opcheckFieldid" type="string">
+                <column name="OPCHECK_FIELDID" />
+            </key-property>
+            <key-property name="opcheckOpuid" type="string">
+                <column name="OPCHECK_OPUID" />
+            </key-property>
+            <key-property name="sfPositionx" type="string">
+                <column name="SF_POSITIONX" />
+            </key-property>
+            <key-property name="sfPositiony" type="string">
+                <column name="SF_POSITIONY" />
+            </key-property>
+            <key-property name="sfPositionz" type="string">
+                <column name="SF_POSITIONZ" />
+            </key-property>
+            <key-property name="sfFileUid" type="string">
+                <column name="SF_FILE_UID" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="changetime" type="date">
+                <column name="CHANGETIME" length="7" />
+            </key-property>
+            <key-property name="standardvalue" type="string">
+                <column name="STANDARDVALUE" length="50" />
+            </key-property>
+            <key-property name="ubound" type="big_decimal">
+                <column name="UBOUND" precision="25" scale="5" />
+            </key-property>
+            <key-property name="lbound" type="big_decimal">
+                <column name="LBOUND" precision="25" scale="5" />
+            </key-property>
+            <key-property name="measurebase" type="string">
+                <column name="MEASUREBASE" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="sfPmiDetailtype" type="string">
+                <column name="SF_PMI_DETAILTYPE" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

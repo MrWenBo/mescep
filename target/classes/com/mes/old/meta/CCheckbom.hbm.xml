@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CCheckbom" table="C_CHECKBOM" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.CCheckbomId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="inmaterialusn" type="string">
+                <column name="INMATERIALUSN" />
+            </key-property>
+            <key-property name="inmaterialqty" type="big_decimal">
+                <column name="INMATERIALQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="outmaterialusn" type="string">
+                <column name="OUTMATERIALUSN" />
+            </key-property>
+            <key-property name="outmaterialqty" type="big_decimal">
+                <column name="OUTMATERIALQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" length="50" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" length="50" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" length="50" />
+            </key-property>
+            <key-property name="sourcebatchnum" type="string">
+                <column name="SOURCEBATCHNUM" length="50" />
+            </key-property>
+            <key-property name="castcertificateid" type="string">
+                <column name="CASTCERTIFICATEID" length="50" />
+            </key-property>
+            <key-property name="materialsns" type="string">
+                <column name="MATERIALSNS" length="500" />
+            </key-property>
+            <key-property name="seq" type="string">
+                <column name="SEQ" length="50" />
+            </key-property>
+            <key-property name="indrawingid" type="string">
+                <column name="INDRAWINGID" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RRuleAttribute" table="R_RULE_ATTRIBUTE" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#230;&#212;&#242;&#202;&#244;&#208;&#212;&#193;&#208;&#177;&#237;</comment>
+        <composite-id name="id" class="com.mes.old.RRuleAttributeId">
+            <key-property name="ruleid" type="string">
+                <column name="RULEID" />
+            </key-property>
+            <key-property name="dialect" type="string">
+                <column name="DIALECT" />
+            </key-property>
+            <key-property name="salience" type="java.lang.Long">
+                <column name="SALIENCE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="activationGroup" type="string">
+                <column name="ACTIVATION_GROUP" />
+            </key-property>
+            <key-property name="noLoop" type="string">
+                <column name="NO_LOOP" length="50" />
+            </key-property>
+            <key-property name="enabled" type="string">
+                <column name="ENABLED" length="50" />
+            </key-property>
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

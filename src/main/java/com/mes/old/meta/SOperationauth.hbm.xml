@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SOperationauth" table="S_OPERATIONAUTH" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SOperationauthId">
+            <key-property name="authUid" type="string">
+                <column name="AUTH_UID" length="50" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="50" />
+            </key-property>
+            <key-property name="operationId" type="string">
+                <column name="OPERATION_ID" length="50" />
+            </key-property>
+            <key-property name="bwflag" type="string">
+                <column name="BWFLAG" length="50" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

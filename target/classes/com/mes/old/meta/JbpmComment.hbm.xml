@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmComment" table="JBPM_COMMENT" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmTaskinstance" class="com.mes.old.JbpmTaskinstance" fetch="select">
+            <column name="TASKINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmToken" class="com.mes.old.JbpmToken" fetch="select">
+            <column name="TOKEN_" scale="0" />
+        </many-to-one>
+        <property name="version" type="long">
+            <column name="VERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="actorid" type="string">
+            <column name="ACTORID_" />
+        </property>
+        <property name="time" type="date">
+            <column name="TIME_" length="7" />
+        </property>
+        <property name="message" type="string">
+            <column name="MESSAGE_" length="4000" />
+        </property>
+        <property name="tokenindex" type="java.lang.Long">
+            <column name="TOKENINDEX_" precision="10" scale="0" />
+        </property>
+        <property name="taskinstanceindex" type="java.lang.Long">
+            <column name="TASKINSTANCEINDEX_" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

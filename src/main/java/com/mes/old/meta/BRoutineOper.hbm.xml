@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BRoutineOper" table="B_ROUTINE_OPER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BRoutineOperId">
+            <key-property name="routing" type="string">
+                <column name="ROUTING" />
+            </key-property>
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="10" />
+            </key-property>
+            <key-property name="BRoutineOperOutUid" type="string">
+                <column name="B_ROUTINE_OPER_OUT_UID" />
+            </key-property>
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="BRoutineHeader" class="com.mes.old.BRoutineHeader" update="false" insert="false" fetch="select">
+            <column name="ROUTING" not-null="true">
+                <comment>&#185;&#164;&#210;&#213;&#194;&#183;&#207;&#223;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

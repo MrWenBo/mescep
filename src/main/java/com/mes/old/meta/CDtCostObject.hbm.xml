@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CDtCostObject" table="C_DT_COST_OBJECT" schema="MES188" optimistic-lock="version">
+        <comment>&#179;&#201;&#177;&#190;&#182;&#212;&#207;&#243;&#187;&#249;&#180;&#161;&#202;&#253;&#190;&#221;</comment>
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CCostCenter" class="com.mes.old.CCostCenter" fetch="select">
+            <column name="COST_CENTER_ID" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="CDtCostDriver" class="com.mes.old.CDtCostDriver" fetch="select">
+            <column name="COST_DRIVER_ID" length="100">
+                <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <property name="costObjectName" type="string">
+            <column name="COST_OBJECT_NAME" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#182;&#212;&#207;&#243;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="costObjectId" type="string">
+            <column name="COST_OBJECT_ID" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#182;&#212;&#207;&#243;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="costObjectType" type="java.lang.Long">
+            <column name="COST_OBJECT_TYPE" precision="10" scale="0">
+                <comment>&#179;&#201;&#177;&#190;&#182;&#212;&#207;&#243;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="costObjectUnitCost" type="big_decimal">
+            <column name="COST_OBJECT_UNIT_COST" precision="10">
+                <comment>&#179;&#201;&#177;&#190;&#182;&#212;&#207;&#243;&#181;&#165;&#206;&#187;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="costObjectAccountId" type="string">
+            <column name="COST_OBJECT_ACCOUNT_ID" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#182;&#212;&#207;&#243;&#213;&#202;&#187;&#167;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="100">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

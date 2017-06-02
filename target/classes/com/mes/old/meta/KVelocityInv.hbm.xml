@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KVelocityInv" table="K_VELOCITY_INV" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.KVelocityInvId">
+            <key-property name="invid" type="string">
+                <column name="INVID" length="32" />
+            </key-property>
+            <key-property name="day" type="date">
+                <column name="DAY" length="7" />
+            </key-property>
+        </composite-id>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID" length="32" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" length="32" />
+        </property>
+        <property name="invtype" type="string">
+            <column name="INVTYPE" length="32" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="32" />
+        </property>
+        <property name="invqty" type="big_decimal">
+            <column name="INVQTY" precision="25" scale="0" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" length="32" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" length="32" />
+        </property>
+    </class>
+</hibernate-mapping>

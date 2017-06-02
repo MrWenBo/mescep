@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Bigscreen2GongduanFpc" table="BIGSCREEN2_GONGDUAN_FPC" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.Bigscreen2GongduanFpcId">
+            <key-property name="messagepriority" type="java.lang.Long">
+                <column name="MESSAGEPRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="sendtime" type="date">
+                <column name="SENDTIME" length="7" />
+            </key-property>
+            <key-property name="content" type="clob">
+                <column name="CONTENT" />
+            </key-property>
+            <key-property name="employeename" type="string">
+                <column name="EMPLOYEENAME" length="100" />
+            </key-property>
+            <key-property name="iddesc" type="string">
+                <column name="IDDESC" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

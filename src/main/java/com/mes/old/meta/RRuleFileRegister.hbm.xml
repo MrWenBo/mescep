@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RRuleFileRegister" table="R_RULE_FILE_REGISTER" schema="MES188" optimistic-lock="version">
+        <comment>&#189;&#248;&#208;&#208;&#185;&#230;&#212;&#242;&#206;&#196;&#188;&#254;&#181;&#196;&#215;&#162;&#178;&#225;</comment>
+        <id name="fileuid" type="string">
+            <column name="FILEUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fileid" type="string">
+            <column name="FILEID">
+                <comment>&#206;&#196;&#188;&#254;&#180;&#250;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="filename" type="string">
+            <column name="FILENAME">
+                <comment>&#206;&#196;&#188;&#254;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="filepath" type="string">
+            <column name="FILEPATH">
+                <comment>&#206;&#196;&#188;&#254;&#194;&#183;&#190;&#182;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

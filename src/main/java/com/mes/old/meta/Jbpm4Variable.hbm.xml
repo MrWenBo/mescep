@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4Variable" table="JBPM4_VARIABLE" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4ExecutionByExesys" class="com.mes.old.Jbpm4Execution" fetch="select">
+            <column name="EXESYS_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4ExecutionByExecution" class="com.mes.old.Jbpm4Execution" fetch="select">
+            <column name="EXECUTION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4Lob" class="com.mes.old.Jbpm4Lob" fetch="select">
+            <column name="LOB_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4Task" class="com.mes.old.Jbpm4Task" fetch="select">
+            <column name="TASK_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="string">
+            <column name="CLASS_" length="510" not-null="true" />
+        </property>
+        <property name="dbversion" type="long">
+            <column name="DBVERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="key" type="string">
+            <column name="KEY_" length="510" />
+        </property>
+        <property name="converter" type="string">
+            <column name="CONVERTER_" length="510" />
+        </property>
+        <property name="hist" type="java.lang.Boolean">
+            <column name="HIST_" precision="1" scale="0" />
+        </property>
+        <property name="dateValue" type="serializable">
+            <column name="DATE_VALUE_" />
+        </property>
+        <property name="doubleValue" type="java.lang.Double">
+            <column name="DOUBLE_VALUE_" precision="126" scale="0" />
+        </property>
+        <property name="classname" type="string">
+            <column name="CLASSNAME_" length="510" />
+        </property>
+        <property name="longValue" type="big_decimal">
+            <column name="LONG_VALUE_" scale="0" />
+        </property>
+        <property name="stringValue" type="string">
+            <column name="STRING_VALUE_" length="510" />
+        </property>
+        <property name="textValue" type="clob">
+            <column name="TEXT_VALUE_" />
+        </property>
+    </class>
+</hibernate-mapping>

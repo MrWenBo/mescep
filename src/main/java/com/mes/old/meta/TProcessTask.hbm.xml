@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TProcessTask" table="T_PROCESS_TASK" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#210;&#213;&#200;&#206;&#206;&#241;</comment>
+        <id name="taskuid" type="string">
+            <column name="TASKUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="taskName" type="string">
+            <column name="TASK_NAME">
+                <comment>&#185;&#164;&#210;&#213;&#200;&#206;&#206;&#241;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="taskType" type="string">
+            <column name="TASK_TYPE">
+                <comment>
+                &#200;&#206;&#206;&#241;&#192;&#224;&#208;&#205;&#163;&#172;&#176;&#252;&#192;&#168;&#201;&#232;&#188;&#198;&#207;&#224;&#185;&#216;&#161;&#162;&#185;&#164;&#210;&#213;&#207;&#224;&#185;&#216;&#161;&#162;&#179;&#204;&#208;&#242;&#207;&#224;&#185;&#216;</comment>
+            </column>
+        </property>
+        <property name="taskState" type="string">
+            <column name="TASK_STATE">
+                <comment>&#200;&#206;&#206;&#241;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="taskDescription" type="string">
+            <column name="TASK_DESCRIPTION" length="500">
+                <comment>&#200;&#206;&#206;&#241;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID">
+                <comment>
+                &#185;&#164;&#210;&#213;&#200;&#206;&#206;&#241;&#214;&#184;&#182;&#168;&#181;&#196;&#178;&#191;&#195;&#197;&#163;&#172;&#210;&#178;&#190;&#205;&#202;&#199;&#184;&#186;&#212;&#240;&#189;&#248;&#208;&#208;&#200;&#206;&#206;&#241;&#180;&#166;&#192;&#237;&#181;&#196;&#178;&#191;&#195;&#197;</comment>
+            </column>
+        </property>
+        <property name="dispatcher" type="string">
+            <column name="DISPATCHER" length="50">
+                <comment>&#200;&#206;&#206;&#241;&#181;&#196;&#197;&#201;&#185;&#164;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID" length="50">
+                <comment>&#200;&#206;&#206;&#241;&#181;&#196;&#214;&#180;&#208;&#208;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="planstart" type="date">
+            <column name="PLANSTART" length="7">
+                <comment>&#212;&#164;&#188;&#198;&#191;&#170;&#202;&#188;</comment>
+            </column>
+        </property>
+        <property name="planfinish" type="date">
+            <column name="PLANFINISH" length="7">
+                <comment>&#212;&#164;&#188;&#198;&#205;&#234;&#179;&#201;</comment>
+            </column>
+        </property>
+        <property name="actualstart" type="date">
+            <column name="ACTUALSTART" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#191;&#170;&#202;&#188;</comment>
+            </column>
+        </property>
+        <property name="actualfinish" type="date">
+            <column name="ACTUALFINISH" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#205;&#234;&#179;&#201;</comment>
+            </column>
+        </property>
+        <property name="relationTaskuid" type="string">
+            <column name="RELATION_TASKUID">
+                <comment>&#185;&#216;&#193;&#170;&#200;&#206;&#206;&#241;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#200;&#206;&#206;&#241;&#181;&#196;&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#200;&#206;&#206;&#241;&#181;&#196;&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="dispatchtime" type="date">
+            <column name="DISPATCHTIME" length="7">
+                <comment>&#197;&#201;&#185;&#164;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

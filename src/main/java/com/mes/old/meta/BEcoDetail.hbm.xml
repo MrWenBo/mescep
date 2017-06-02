@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BEcoDetail" table="B_ECO_DETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BEcoDetailId">
+            <key-property name="changeuid" type="string">
+                <column name="CHANGEUID" />
+            </key-property>
+            <key-property name="seq" type="string">
+                <column name="SEQ" />
+            </key-property>
+        </composite-id>
+        <property name="changetype" type="string">
+            <column name="CHANGETYPE" />
+        </property>
+        <property name="fromopuid" type="string">
+            <column name="FROMOPUID" />
+        </property>
+        <property name="toopuid" type="string">
+            <column name="TOOPUID" />
+        </property>
+        <property name="modifycontent" type="string">
+            <column name="MODIFYCONTENT" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="modifyreason" type="string">
+            <column name="MODIFYREASON" />
+        </property>
+        <property name="fromopversionid" type="string">
+            <column name="FROMOPVERSIONID" />
+        </property>
+        <property name="fromopiddesc" type="string">
+            <column name="FROMOPIDDESC" />
+        </property>
+        <property name="fromopname" type="string">
+            <column name="FROMOPNAME" />
+        </property>
+        <property name="toopversionid" type="string">
+            <column name="TOOPVERSIONID" />
+        </property>
+        <property name="toopiddesc" type="string">
+            <column name="TOOPIDDESC" />
+        </property>
+        <property name="toopname" type="string">
+            <column name="TOOPNAME" />
+        </property>
+        <property name="predopuid" type="string">
+            <column name="PREDOPUID" />
+        </property>
+        <property name="succopuid" type="string">
+            <column name="SUCCOPUID" />
+        </property>
+        <property name="toopseq" type="big_decimal">
+            <column name="TOOPSEQ" precision="10" />
+        </property>
+        <property name="succopuiddesc" type="string">
+            <column name="SUCCOPUIDDESC" />
+        </property>
+        <property name="predopuiddesc" type="string">
+            <column name="PREDOPUIDDESC" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

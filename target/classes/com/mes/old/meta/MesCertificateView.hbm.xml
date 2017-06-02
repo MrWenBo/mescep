@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MesCertificateView" table="MES_CERTIFICATE_VIEW" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MesCertificateViewId">
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="certificateid" type="string">
+                <column name="CERTIFICATEID" />
+            </key-property>
+            <key-property name="customer" type="string">
+                <column name="CUSTOMER" length="50" />
+            </key-property>
+            <key-property name="productIssue" type="string">
+                <column name="PRODUCT_ISSUE" length="10" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" length="50" />
+            </key-property>
+            <key-property name="productPhase" type="string">
+                <column name="PRODUCT_PHASE" length="50" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" length="50" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" length="50" />
+            </key-property>
+            <key-property name="sourcebatchnum" type="string">
+                <column name="SOURCEBATCHNUM" />
+            </key-property>
+            <key-property name="partstyle" type="string">
+                <column name="PARTSTYLE" length="50" />
+            </key-property>
+            <key-property name="materialBatchnum" type="string">
+                <column name="MATERIAL_BATCHNUM" length="50" />
+            </key-property>
+            <key-property name="certificateqty" type="java.lang.Long">
+                <column name="CERTIFICATEQTY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="repairuid" type="string">
+                <column name="REPAIRUID" />
+            </key-property>
+            <key-property name="checker" type="string">
+                <column name="CHECKER" length="50" />
+            </key-property>
+            <key-property name="checktime" type="date">
+                <column name="CHECKTIME" length="7" />
+            </key-property>
+            <key-property name="checkerprint" type="string">
+                <column name="CHECKERPRINT" length="50" />
+            </key-property>
+            <key-property name="checkername" type="string">
+                <column name="CHECKERNAME" length="50" />
+            </key-property>
+            <key-property name="technicalbillid" type="string">
+                <column name="TECHNICALBILLID" length="50" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="materialsns" type="string">
+                <column name="MATERIALSNS" length="2000" />
+            </key-property>
+            <key-property name="designReplaceBillnumber" type="string">
+                <column name="DESIGN_REPLACE_BILLNUMBER" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

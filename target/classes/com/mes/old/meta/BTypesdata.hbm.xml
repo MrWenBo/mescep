@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BTypesdata" table="B_TYPESDATA" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BTypesdataId">
+            <key-property name="typesname" type="string">
+                <column name="TYPESNAME" length="50" />
+            </key-property>
+            <key-property name="id" type="string">
+                <column name="ID" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="iddesc" type="string">
+            <column name="IDDESC" length="100" not-null="true" />
+        </property>
+        <property name="min" type="string">
+            <column name="MIN" length="50" />
+        </property>
+        <property name="max" type="string">
+            <column name="MAX" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="BTypesdataOutUid" type="string">
+            <column name="B_TYPESDATA_OUT_UID" />
+        </property>
+        <property name="value" type="string">
+            <column name="VALUE" length="50" />
+        </property>
+        <property name="iconpath" type="string">
+            <column name="ICONPATH" />
+        </property>
+        <property name="iconuid" type="string">
+            <column name="ICONUID" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

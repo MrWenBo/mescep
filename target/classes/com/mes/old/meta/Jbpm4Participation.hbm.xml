@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4Participation" table="JBPM4_PARTICIPATION" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4Swimlane" class="com.mes.old.Jbpm4Swimlane" fetch="select">
+            <column name="SWIMLANE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4Task" class="com.mes.old.Jbpm4Task" fetch="select">
+            <column name="TASK_" scale="0" />
+        </many-to-one>
+        <property name="dbversion" type="long">
+            <column name="DBVERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="groupid" type="string">
+            <column name="GROUPID_" length="510" />
+        </property>
+        <property name="userid" type="string">
+            <column name="USERID_" length="510" />
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE_" length="510" />
+        </property>
+    </class>
+</hibernate-mapping>

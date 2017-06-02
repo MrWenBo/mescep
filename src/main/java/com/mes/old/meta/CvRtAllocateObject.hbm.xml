@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CvRtAllocateObject" table="CV_RT_ALLOCATE_OBJECT" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.CvRtAllocateObjectId">
+            <key-property name="accountantPeriodId" type="string">
+                <column name="ACCOUNTANT_PERIOD_ID" length="100" />
+            </key-property>
+            <key-property name="costObjectId" type="string">
+                <column name="COST_OBJECT_ID" length="100" />
+            </key-property>
+            <key-property name="costCorrectId" type="string">
+                <column name="COST_CORRECT_ID" length="100" />
+            </key-property>
+            <key-property name="costObjectName" type="string">
+                <column name="COST_OBJECT_NAME" length="100" />
+            </key-property>
+            <key-property name="costCenterId" type="string">
+                <column name="COST_CENTER_ID" length="100" />
+            </key-property>
+            <key-property name="costCenterName" type="string">
+                <column name="COST_CENTER_NAME" length="100" />
+            </key-property>
+            <key-property name="costDriverId" type="string">
+                <column name="COST_DRIVER_ID" length="100" />
+            </key-property>
+            <key-property name="costDriverName" type="string">
+                <column name="COST_DRIVER_NAME" length="100" />
+            </key-property>
+            <key-property name="allocateCost" type="big_decimal">
+                <column name="ALLOCATE_COST" precision="10" />
+            </key-property>
+            <key-property name="unallocateCost" type="big_decimal">
+                <column name="UNALLOCATE_COST" precision="10" />
+            </key-property>
+            <key-property name="actualCost" type="big_decimal">
+                <column name="ACTUAL_COST" precision="10" />
+            </key-property>
+            <key-property name="planCost" type="big_decimal">
+                <column name="PLAN_COST" precision="10" />
+            </key-property>
+            <key-property name="relationResourceId" type="string">
+                <column name="RELATION_RESOURCE_ID" length="100" />
+            </key-property>
+            <key-property name="relationResourceType" type="java.lang.Long">
+                <column name="RELATION_RESOURCE_TYPE" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CCodehistory" table="C_CODEHISTORY" schema="MES188" optimistic-lock="version">
+        <id name="chuid" type="string">
+            <column name="CHUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="BClassinfo" class="com.mes.old.BClassinfo" fetch="select">
+            <column name="CLASS_UID" length="50" />
+        </many-to-one>
+        <property name="gencode" type="string">
+            <column name="GENCODE" length="50" />
+        </property>
+        <property name="applydomain" type="string">
+            <column name="APPLYDOMAIN" length="100" />
+        </property>
+        <property name="applyip" type="string">
+            <column name="APPLYIP" length="50" />
+        </property>
+        <property name="applydept" type="string">
+            <column name="APPLYDEPT" length="100" />
+        </property>
+        <property name="applyemployeeid" type="string">
+            <column name="APPLYEMPLOYEEID" length="100" />
+        </property>
+        <property name="applytime" type="date">
+            <column name="APPLYTIME" length="7" />
+        </property>
+        <property name="returntime" type="date">
+            <column name="RETURNTIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="500" />
+        </property>
+        <property name="features" type="string">
+            <column name="FEATURES" length="500" />
+        </property>
+        <property name="errorCode" type="string">
+            <column name="ERROR_CODE" length="500" />
+        </property>
+    </class>
+</hibernate-mapping>

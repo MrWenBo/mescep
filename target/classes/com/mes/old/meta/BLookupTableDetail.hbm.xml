@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BLookupTableDetail" table="B_LOOKUP_TABLE_DETAIL" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="headeruid" type="string">
+            <column name="HEADERUID" length="50" not-null="true" />
+        </property>
+        <property name="parameter1Value" type="string">
+            <column name="PARAMETER1_VALUE" length="10" />
+        </property>
+        <property name="parameter2Value" type="string">
+            <column name="PARAMETER2_VALUE" length="10" />
+        </property>
+        <property name="parameter3Value" type="string">
+            <column name="PARAMETER3_VALUE" length="10" />
+        </property>
+        <property name="parameter4Value" type="string">
+            <column name="PARAMETER4_VALUE" length="10" />
+        </property>
+        <property name="parameter5Value" type="string">
+            <column name="PARAMETER5_VALUE" length="10" />
+        </property>
+        <property name="parameter6Value" type="string">
+            <column name="PARAMETER6_VALUE" length="10" />
+        </property>
+        <property name="parameter7Value" type="string">
+            <column name="PARAMETER7_VALUE" length="10" />
+        </property>
+        <property name="parameter8Value" type="string">
+            <column name="PARAMETER8_VALUE" length="10" />
+        </property>
+        <property name="parameter9Value" type="string">
+            <column name="PARAMETER9_VALUE" length="10" />
+        </property>
+        <property name="parameter10Value" type="string">
+            <column name="PARAMETER10_VALUE" length="10" />
+        </property>
+        <property name="value" type="string">
+            <column name="VALUE" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

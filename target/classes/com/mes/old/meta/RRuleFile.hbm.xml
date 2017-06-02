@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RRuleFile" table="R_RULE_FILE" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#230;&#212;&#242;&#206;&#196;&#188;&#254;&#181;&#196;&#202;&#185;&#211;&#195;&#208;&#197;&#207;&#162;</comment>
+        <composite-id name="id" class="com.mes.old.RRuleFileId">
+            <key-property name="fileuid" type="string">
+                <column name="FILEUID" />
+            </key-property>
+            <key-property name="beanid" type="string">
+                <column name="BEANID" />
+            </key-property>
+        </composite-id>
+        <property name="filename" type="string">
+            <column name="FILENAME">
+                <comment>&#206;&#196;&#188;&#254;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="filepath" type="string">
+            <column name="FILEPATH">
+                <comment>&#206;&#196;&#188;&#254;&#194;&#183;&#190;&#182;</comment>
+            </column>
+        </property>
+        <property name="classid" type="string">
+            <column name="CLASSID">
+                <comment>&#202;&#185;&#211;&#195;&#181;&#196;Class&#208;&#197;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID">
+                <comment>
+                &#206;&#168;&#210;&#187;&#186;&#197;&#163;&#172;&#206;&#170;&#193;&#203;&#188;&#230;&#200;&#221;&#208;&#212;&#182;&#248;&#212;&#221;&#202;&#177;&#202;&#185;&#211;&#195;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

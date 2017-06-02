@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TAssignments" table="T_ASSIGNMENTS" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="RResource" class="com.mes.old.RResource" fetch="select">
+            <column name="RESUID" />
+        </many-to-one>
+        <many-to-one name="TTasks" class="com.mes.old.TTasks" fetch="select">
+            <column name="TASKUID" not-null="true" />
+        </many-to-one>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID" length="50" />
+        </property>
+        <property name="assnunits" type="big_decimal">
+            <column name="ASSNUNITS" precision="25" scale="6" />
+        </property>
+        <property name="assntype" type="java.lang.Long">
+            <column name="ASSNTYPE" precision="10" scale="0" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="consumeLife" type="java.lang.Long">
+            <column name="CONSUME_LIFE" precision="10" scale="0" />
+        </property>
+        <property name="isineffect" type="java.lang.Byte">
+            <column name="ISINEFFECT" precision="2" scale="0" />
+        </property>
+        <property name="assnstart" type="date">
+            <column name="ASSNSTART" length="7" />
+        </property>
+        <property name="assnfinish" type="date">
+            <column name="ASSNFINISH" length="7" />
+        </property>
+        <property name="assnqty" type="big_decimal">
+            <column name="ASSNQTY" precision="25" scale="0" />
+        </property>
+        <property name="assnwork" type="big_decimal">
+            <column name="ASSNWORK" precision="25" />
+        </property>
+        <property name="assnstate" type="java.lang.Long">
+            <column name="ASSNSTATE" precision="10" scale="0" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="remindinterval" type="java.lang.Long">
+            <column name="REMINDINTERVAL" precision="10" scale="0" />
+        </property>
+        <property name="lastremind" type="date">
+            <column name="LASTREMIND" length="7" />
+        </property>
+        <property name="plansatisfy" type="date">
+            <column name="PLANSATISFY" length="7" />
+        </property>
+        <property name="toolchecker" type="string">
+            <column name="TOOLCHECKER" />
+        </property>
+        <property name="taskexecstate" type="string">
+            <column name="TASKEXECSTATE" length="10" />
+        </property>
+        <property name="preoptime" type="big_decimal">
+            <column name="PREOPTIME" precision="25" />
+        </property>
+        <property name="runtime" type="big_decimal">
+            <column name="RUNTIME" precision="25" />
+        </property>
+        <property name="dispatchtype" type="java.lang.Long">
+            <column name="DISPATCHTYPE" precision="10" scale="0" />
+        </property>
+        <property name="completeqty" type="big_decimal">
+            <column name="COMPLETEQTY" precision="27" />
+        </property>
+        <property name="actualstart" type="date">
+            <column name="ACTUALSTART" length="7" />
+        </property>
+        <property name="actualfinish" type="date">
+            <column name="ACTUALFINISH" length="7" />
+        </property>
+        <property name="ncuid" type="string">
+            <column name="NCUID" />
+        </property>
+        <property name="preassnQty" type="string">
+            <column name="PREASSN_QTY" length="50" />
+        </property>
+        <property name="preassnDate" type="date">
+            <column name="PREASSN_DATE" length="7" />
+        </property>
+        <property name="prepareEmployeeid" type="string">
+            <column name="PREPARE_EMPLOYEEID" length="50" />
+        </property>
+        <property name="prepareWarehouseid" type="string">
+            <column name="PREPARE_WAREHOUSEID" length="50" />
+        </property>
+        <property name="completework" type="big_decimal">
+            <column name="COMPLETEWORK" precision="25" />
+        </property>
+        <property name="actualwork" type="big_decimal">
+            <column name="ACTUALWORK" precision="25" />
+        </property>
+    </class>
+</hibernate-mapping>

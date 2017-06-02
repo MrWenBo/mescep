@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IvPrepareInvmanage" table="IV_PREPARE_INVMANAGE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IvPrepareInvmanageId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="warehousename" type="string">
+                <column name="WAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="binid" type="string">
+                <column name="BINID" length="50" />
+            </key-property>
+            <key-property name="binname" type="string">
+                <column name="BINNAME" length="50" />
+            </key-property>
+            <key-property name="barcode" type="string">
+                <column name="BARCODE" />
+            </key-property>
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="sn" type="string">
+                <column name="SN" />
+            </key-property>
+            <key-property name="materialstate" type="java.lang.Long">
+                <column name="MATERIALSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="qualitystate" type="java.lang.Long">
+                <column name="QUALITYSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="versionid" type="string">
+                <column name="VERSIONID" length="50" />
+            </key-property>
+            <key-property name="invqty" type="big_decimal">
+                <column name="INVQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="invtype" type="java.lang.Integer">
+                <column name="INVTYPE" precision="5" scale="0" />
+            </key-property>
+            <key-property name="invdate" type="date">
+                <column name="INVDATE" length="7" />
+            </key-property>
+            <key-property name="latestInDate" type="date">
+                <column name="LATEST_IN_DATE" length="7" />
+            </key-property>
+            <key-property name="latestOutDate" type="date">
+                <column name="LATEST_OUT_DATE" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

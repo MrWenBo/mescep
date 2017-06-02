@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SShowDevice" table="S_SHOW_DEVICE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SShowDeviceId">
+            <key-property name="showDeviceUid" type="string">
+                <column name="SHOW_DEVICE_UID" />
+            </key-property>
+            <key-property name="showDeviceId" type="string">
+                <column name="SHOW_DEVICE_ID" />
+            </key-property>
+            <key-property name="ipAddress" type="string">
+                <column name="IP_ADDRESS" length="50" />
+            </key-property>
+            <key-property name="location" type="string">
+                <column name="LOCATION" />
+            </key-property>
+            <key-property name="showUrl" type="string">
+                <column name="SHOW_URL" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="50" />
+            </key-property>
+            <key-property name="dutyEmployeeid" type="string">
+                <column name="DUTY_EMPLOYEEID" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="showDeviceType" type="string">
+                <column name="SHOW_DEVICE_TYPE" length="50" />
+            </key-property>
+            <key-property name="showDeviceState" type="string">
+                <column name="SHOW_DEVICE_STATE" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

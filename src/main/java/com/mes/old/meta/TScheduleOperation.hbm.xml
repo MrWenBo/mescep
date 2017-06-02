@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TScheduleOperation" table="T_SCHEDULE_OPERATION" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TScheduleOperationId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" />
+            </key-property>
+            <key-property name="scheduleuid" type="string">
+                <column name="SCHEDULEUID" />
+            </key-property>
+            <key-property name="operationType" type="string">
+                <column name="OPERATION_TYPE" length="10" />
+            </key-property>
+            <key-property name="operationOrder" type="long">
+                <column name="OPERATION_ORDER" precision="10" scale="0" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="text1" type="string">
+                <column name="TEXT1" length="50" />
+            </key-property>
+            <key-property name="text2" type="string">
+                <column name="TEXT2" length="50" />
+            </key-property>
+            <key-property name="text3" type="string">
+                <column name="TEXT3" length="50" />
+            </key-property>
+            <key-property name="text4" type="string">
+                <column name="TEXT4" length="50" />
+            </key-property>
+            <key-property name="text5" type="string">
+                <column name="TEXT5" length="50" />
+            </key-property>
+            <key-property name="text6" type="string">
+                <column name="TEXT6" length="50" />
+            </key-property>
+            <key-property name="text7" type="string">
+                <column name="TEXT7" length="50" />
+            </key-property>
+            <key-property name="text8" type="string">
+                <column name="TEXT8" length="50" />
+            </key-property>
+            <key-property name="text9" type="string">
+                <column name="TEXT9" length="50" />
+            </key-property>
+            <key-property name="text10" type="string">
+                <column name="TEXT10" length="50" />
+            </key-property>
+            <key-property name="beginprocess" type="string">
+                <column name="BEGINPROCESS" length="10" />
+            </key-property>
+            <key-property name="endprocess" type="string">
+                <column name="ENDPROCESS" length="10" />
+            </key-property>
+            <key-property name="parentuid" type="string">
+                <column name="PARENTUID" />
+            </key-property>
+            <key-property name="text11" type="string">
+                <column name="TEXT11" length="50" />
+            </key-property>
+            <key-property name="text12" type="string">
+                <column name="TEXT12" length="50" />
+            </key-property>
+            <key-property name="text13" type="string">
+                <column name="TEXT13" length="50" />
+            </key-property>
+            <key-property name="text14" type="string">
+                <column name="TEXT14" length="50" />
+            </key-property>
+            <key-property name="text15" type="string">
+                <column name="TEXT15" length="50" />
+            </key-property>
+            <key-property name="text16" type="string">
+                <column name="TEXT16" length="50" />
+            </key-property>
+            <key-property name="text17" type="string">
+                <column name="TEXT17" length="50" />
+            </key-property>
+            <key-property name="text18" type="string">
+                <column name="TEXT18" length="50" />
+            </key-property>
+            <key-property name="text19" type="string">
+                <column name="TEXT19" length="50" />
+            </key-property>
+            <key-property name="text20" type="string">
+                <column name="TEXT20" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

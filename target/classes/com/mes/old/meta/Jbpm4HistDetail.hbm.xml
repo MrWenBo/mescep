@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4HistDetail" table="JBPM4_HIST_DETAIL" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4HistActinst" class="com.mes.old.Jbpm4HistActinst" fetch="select">
+            <column name="HACTI_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4HistProcinst" class="com.mes.old.Jbpm4HistProcinst" fetch="select">
+            <column name="HPROCI_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4HistTask" class="com.mes.old.Jbpm4HistTask" fetch="select">
+            <column name="HTASK_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4HistVar" class="com.mes.old.Jbpm4HistVar" fetch="select">
+            <column name="HVAR_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="string">
+            <column name="CLASS_" length="510" not-null="true" />
+        </property>
+        <property name="dbversion" type="long">
+            <column name="DBVERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="userid" type="string">
+            <column name="USERID_" length="510" />
+        </property>
+        <property name="time" type="serializable">
+            <column name="TIME_" />
+        </property>
+        <property name="hprociidx" type="java.lang.Long">
+            <column name="HPROCIIDX_" precision="10" scale="0" />
+        </property>
+        <property name="hactiidx" type="java.lang.Long">
+            <column name="HACTIIDX_" precision="10" scale="0" />
+        </property>
+        <property name="htaskidx" type="java.lang.Long">
+            <column name="HTASKIDX_" precision="10" scale="0" />
+        </property>
+        <property name="hvaridx" type="java.lang.Long">
+            <column name="HVARIDX_" precision="10" scale="0" />
+        </property>
+        <property name="message" type="clob">
+            <column name="MESSAGE_" />
+        </property>
+        <property name="oldStr" type="string">
+            <column name="OLD_STR_" length="510" />
+        </property>
+        <property name="newStr" type="string">
+            <column name="NEW_STR_" length="510" />
+        </property>
+        <property name="oldInt" type="java.lang.Long">
+            <column name="OLD_INT_" precision="10" scale="0" />
+        </property>
+        <property name="newInt" type="java.lang.Long">
+            <column name="NEW_INT_" precision="10" scale="0" />
+        </property>
+        <property name="oldTime" type="serializable">
+            <column name="OLD_TIME_" />
+        </property>
+        <property name="newTime" type="serializable">
+            <column name="NEW_TIME_" />
+        </property>
+        <property name="parent" type="big_decimal">
+            <column name="PARENT_" scale="0" />
+        </property>
+        <property name="parentIdx" type="java.lang.Long">
+            <column name="PARENT_IDX_" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

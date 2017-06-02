@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmPooledactor" table="JBPM_POOLEDACTOR" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmSwimlaneinstance" class="com.mes.old.JbpmSwimlaneinstance" fetch="select">
+            <column name="SWIMLANEINSTANCE_" scale="0" />
+        </many-to-one>
+        <property name="actorid" type="string">
+            <column name="ACTORID_" />
+        </property>
+        <set name="jbpmTaskinstances" table="JBPM_TASKACTORPOOL" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="POOLEDACTOR_" scale="0" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.mes.old.JbpmTaskinstance">
+                <column name="TASKINSTANCE_" scale="0" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

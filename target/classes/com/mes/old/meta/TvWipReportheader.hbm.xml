@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvWipReportheader" table="TV_WIP_REPORTHEADER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvWipReportheaderId">
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" length="50" />
+            </key-property>
+            <key-property name="wipreportid" type="string">
+                <column name="WIPREPORTID" length="50" />
+            </key-property>
+            <key-property name="startdate" type="date">
+                <column name="STARTDATE" length="7" />
+            </key-property>
+            <key-property name="enddate" type="date">
+                <column name="ENDDATE" length="7" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="1000" />
+            </key-property>
+            <key-property name="accountantYear" type="java.lang.Short">
+                <column name="ACCOUNTANT_YEAR" precision="4" scale="0" />
+            </key-property>
+            <key-property name="accountantMonth" type="java.lang.Byte">
+                <column name="ACCOUNTANT_MONTH" precision="2" scale="0" />
+            </key-property>
+            <key-property name="reportname" type="string">
+                <column name="REPORTNAME" length="50" />
+            </key-property>
+            <key-property name="mastershopname" type="string">
+                <column name="MASTERSHOPNAME" length="50" />
+            </key-property>
+            <key-property name="creatorname" type="string">
+                <column name="CREATORNAME" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

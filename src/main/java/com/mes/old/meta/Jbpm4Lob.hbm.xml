@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4Lob" table="JBPM4_LOB" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4Deployment" class="com.mes.old.Jbpm4Deployment" fetch="select">
+            <column name="DEPLOYMENT_" scale="0" />
+        </many-to-one>
+        <property name="dbversion" type="long">
+            <column name="DBVERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="blobValue" type="blob">
+            <column name="BLOB_VALUE_" />
+        </property>
+        <property name="name" type="clob">
+            <column name="NAME_" />
+        </property>
+        <set name="jbpm4Jobs" table="JBPM4_JOB" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CFG_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.Jbpm4Job" />
+        </set>
+        <set name="jbpm4Variables" table="JBPM4_VARIABLE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="LOB_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.Jbpm4Variable" />
+        </set>
+    </class>
+</hibernate-mapping>

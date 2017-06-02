@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.STreeTopic" table="S_TREE_TOPIC" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.STreeTopicId">
+            <key-property name="treeid" type="big_decimal">
+                <column name="TREEID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="menuitemname" type="string">
+                <column name="MENUITEMNAME" length="50" />
+            </key-property>
+            <key-property name="menuid" type="big_decimal">
+                <column name="MENUID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="roleid" type="string">
+                <column name="ROLEID" length="50" />
+            </key-property>
+            <key-property name="tag" type="string">
+                <column name="TAG" length="50" />
+            </key-property>
+            <key-property name="topicid" type="java.lang.Long">
+                <column name="TOPICID" precision="10" scale="0" />
+            </key-property>
+            <key-property name="company" type="string">
+                <column name="COMPANY" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

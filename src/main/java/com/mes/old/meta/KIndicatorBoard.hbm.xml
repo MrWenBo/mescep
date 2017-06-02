@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KIndicatorBoard" table="K_INDICATOR_BOARD" schema="MES188" optimistic-lock="version">
+        <comment>&#214;&#184;&#177;&#234;&#185;&#171;&#184;&#230;&#176;&#229;</comment>
+        <id name="boardid" type="string">
+            <column name="BOARDID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="KIndicatorUser" class="com.mes.old.KIndicatorUser" fetch="select">
+            <column name="IUID" length="32">
+                <comment>&#214;&#184;&#177;&#234;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="RDept" class="com.mes.old.RDept" fetch="select">
+            <column name="DEPTID" length="32">
+                <comment>&#203;&#249;&#202;&#244;&#178;&#191;&#195;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="boardname" type="string">
+            <column name="BOARDNAME" length="32">
+                <comment>&#185;&#171;&#184;&#230;&#176;&#229;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

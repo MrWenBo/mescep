@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BOperatestep" table="B_OPERATESTEP" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#178;&#189;&#208;&#197;&#207;&#162;</comment>
+        <composite-id name="id" class="com.mes.old.BOperatestepId">
+            <key-property name="stepid" type="long">
+                <column name="STEPID" precision="10" scale="0" />
+            </key-property>
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="operationId" type="big_decimal">
+            <column name="OPERATION_ID" precision="10" not-null="true">
+                <comment>&#185;&#164;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="routing" type="string">
+            <column name="ROUTING" not-null="true">
+                <comment>&#185;&#164;&#210;&#213;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="stepname" type="string">
+            <column name="STEPNAME" length="18">
+                <comment>&#185;&#164;&#178;&#189;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="processtime" type="string">
+            <column name="PROCESSTIME" length="18">
+                <comment>&#180;&#166;&#192;&#237;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="200">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="string">
+            <column name="CREATETIME" length="10">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="BOperatestepOutUid" type="string">
+            <column name="B_OPERATESTEP_OUT_UID" />
+        </property>
+    </class>
+</hibernate-mapping>

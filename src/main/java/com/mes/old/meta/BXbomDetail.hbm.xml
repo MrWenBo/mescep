@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BXbomDetail" table="B_XBOM_DETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BXbomDetailId">
+            <key-property name="xbomuid" type="string">
+                <column name="XBOMUID" length="50" />
+            </key-property>
+            <key-property name="parentPartNumber" type="string">
+                <column name="PARENT_PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="childPartNumber" type="string">
+                <column name="CHILD_PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="childQty" type="string">
+                <column name="CHILD_QTY" />
+            </key-property>
+            <key-property name="effective" type="java.lang.Byte">
+                <column name="EFFECTIVE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="50" />
+            </key-property>
+            <key-property name="isCritical" type="java.lang.Byte">
+                <column name="IS_CRITICAL" precision="2" scale="0" />
+            </key-property>
+            <key-property name="readypoint" type="java.lang.Long">
+                <column name="READYPOINT" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jobshop&#179;&#181;&#188;&#228;&#212;&#218;&#188;&#236;&#200;&#206;&#206;&#241;"
+    table="JOBSHOP_&#179;&#181;&#188;&#228;&#212;&#218;&#188;&#236;&#200;&#206;&#206;&#241;" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.Jobshop&#179;&#181;&#188;&#228;&#212;&#218;&#188;&#236;&#200;&#206;&#206;&#241;Id">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="employeename" type="string">
+                <column name="EMPLOYEENAME" length="100" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="priority" type="java.lang.Long">
+                <column name="PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="checktasktype" type="java.lang.Long">
+                <column name="CHECKTASKTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="planqty" type="big_decimal">
+                <column name="PLANQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="parentuid" type="string">
+                <column name="PARENTUID" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="latefinish" type="date">
+                <column name="LATEFINISH" length="7" />
+            </key-property>
+            <key-property name="delaytime" type="string">
+                <column name="DELAYTIME" length="44" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

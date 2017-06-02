@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.J4Bills" table="J4_BILLS" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.J4BillsId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="50" />
+            </key-property>
+            <key-property name="billsort" type="string">
+                <column name="BILLSORT" length="50" />
+            </key-property>
+            <key-property name="billurl" type="string">
+                <column name="BILLURL" />
+            </key-property>
+            <key-property name="billversion" type="string">
+                <column name="BILLVERSION" length="50" />
+            </key-property>
+            <key-property name="iseffect" type="string">
+                <column name="ISEFFECT" length="50" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

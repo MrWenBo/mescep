@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmIdGroup" table="JBPM_ID_GROUP" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmIdGroup" class="com.mes.old.JbpmIdGroup" fetch="select">
+            <column name="PARENT_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="char">
+            <column name="CLASS_" length="1" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE_" />
+        </property>
+        <set name="jbpmIdGroups" table="JBPM_ID_GROUP" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PARENT_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmIdGroup" />
+        </set>
+        <set name="jbpmIdMemberships" table="JBPM_ID_MEMBERSHIP" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="GROUP_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmIdMembership" />
+        </set>
+    </class>
+</hibernate-mapping>

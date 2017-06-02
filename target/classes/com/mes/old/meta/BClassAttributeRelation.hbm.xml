@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BClassAttributeRelation" table="B_CLASS_ATTRIBUTE_RELATION" schema="MES188" optimistic-lock="version">
+        <id name="uuid" type="string">
+            <column name="UUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="BAttribute" class="com.mes.old.BAttribute" fetch="select">
+            <column name="ATTRIBUTE_UID" length="50" not-null="true" />
+        </many-to-one>
+        <many-to-one name="BClassinfo" class="com.mes.old.BClassinfo" fetch="select">
+            <column name="CLASS_UID" length="50" />
+        </many-to-one>
+        <property name="notes" type="string">
+            <column name="NOTES" length="500" />
+        </property>
+        <property name="effective" type="java.lang.Byte">
+            <column name="EFFECTIVE" precision="2" scale="0" />
+        </property>
+        <property name="relationType" type="string">
+            <column name="RELATION_TYPE" length="50" />
+        </property>
+        <property name="attributeIndex" type="java.lang.Short">
+            <column name="ATTRIBUTE_INDEX" precision="4" scale="0" />
+        </property>
+        <property name="attributeGroupName" type="string">
+            <column name="ATTRIBUTE_GROUP_NAME" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

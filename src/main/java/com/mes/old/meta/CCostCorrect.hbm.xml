@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CCostCorrect" table="C_COST_CORRECT" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="allocateFrom" type="string">
+            <column name="ALLOCATE_FROM" length="100" />
+        </property>
+        <property name="relationResourceType" type="java.lang.Long">
+            <column name="RELATION_RESOURCE_TYPE" precision="10" scale="0" />
+        </property>
+        <property name="relationResourceId" type="string">
+            <column name="RELATION_RESOURCE_ID" length="100" />
+        </property>
+        <property name="correctCoefficient" type="big_decimal">
+            <column name="CORRECT_COEFFICIENT" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

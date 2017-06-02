@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmTask" table="JBPM_TASK" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmDelegation" class="com.mes.old.JbpmDelegation" fetch="select">
+            <column name="ASSIGNMENTDELEGATION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmModuledefinition" class="com.mes.old.JbpmModuledefinition" fetch="select">
+            <column name="TASKMGMTDEFINITION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmNodeByTasknode" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="TASKNODE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmNodeByStartstate" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="STARTSTATE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmProcessdefinition" class="com.mes.old.JbpmProcessdefinition" fetch="select">
+            <column name="PROCESSDEFINITION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmSwimlane" class="com.mes.old.JbpmSwimlane" fetch="select">
+            <column name="SWIMLANE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTaskcontroller" class="com.mes.old.JbpmTaskcontroller" fetch="select">
+            <column name="TASKCONTROLLER_" scale="0" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION_" length="4000" />
+        </property>
+        <property name="isblocking" type="java.lang.Boolean">
+            <column name="ISBLOCKING_" precision="1" scale="0" />
+        </property>
+        <property name="issignalling" type="java.lang.Boolean">
+            <column name="ISSIGNALLING_" precision="1" scale="0" />
+        </property>
+        <property name="duedate" type="string">
+            <column name="DUEDATE_" />
+        </property>
+        <property name="actoridexpression" type="string">
+            <column name="ACTORIDEXPRESSION_" />
+        </property>
+        <property name="pooledactorsexpression" type="string">
+            <column name="POOLEDACTORSEXPRESSION_" />
+        </property>
+        <set name="jbpmEvents" table="JBPM_EVENT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASK_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmEvent" />
+        </set>
+        <set name="jbpmModuledefinitions" table="JBPM_MODULEDEFINITION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="STARTTASK_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmModuledefinition" />
+        </set>
+        <set name="jbpmTaskinstances" table="JBPM_TASKINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASK_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTaskinstance" />
+        </set>
+    </class>
+</hibernate-mapping>

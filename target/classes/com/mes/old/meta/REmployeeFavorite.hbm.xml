@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.REmployeeFavorite" table="R_EMPLOYEE_FAVORITE" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID" length="50" not-null="true">
+                <comment>&#184;&#246;&#200;&#203;&#182;&#168;&#210;&#229;&#192;&#224;&#208;&#205;
+                &#206;&#170;&#184;&#246;&#200;&#203;&#177;&#224;&#194;&#235;&#163;&#172;&#185;&#178;&#207;&#237;&#181;&#196;&#206;&#170;share</comment>
+            </column>
+        </property>
+        <property name="fieldtype" type="string">
+            <column name="FIELDTYPE" length="50" not-null="true">
+                <comment>MODEL &#208;&#205;&#186;&#197;&#163;&#172;RESOURCE &#201;&#232;&#177;&#184;</comment>
+            </column>
+        </property>
+        <property name="fielduid" type="string">
+            <column name="FIELDUID" not-null="true">
+                <comment>
+                &#191;&#201;&#210;&#212;&#202;&#199;&#209;&#161;&#212;&#241;&#181;&#196;&#208;&#205;&#186;&#197;&#163;&#172;&#210;&#178;&#191;&#201;&#210;&#212;&#202;&#199;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="parentid" type="string">
+            <column name="PARENTID" not-null="true">
+                <comment>
+                &#189;&#168;&#193;&#162;&#195;&#251;&#179;&#198;&#186;&#205;&#215;&#202;&#212;&#180;&#181;&#196;&#185;&#216;&#207;&#181;&#163;&#172;&#200;&#231;&#185;&#251;114
+                &#212;&#242;&#202;&#199;&#184;&#249;&#214;&#181;&#163;&#172;&gt;114&#211;&#195;&#212;&#218;&#204;&#216;&#202;&#226;&#181;&#196;&#202;&#247;&#214;&#208;</comment>
+            </column>
+        </property>
+        <property name="sortindex" type="string">
+            <column name="SORTINDEX">
+                <comment>&#197;&#197;&#193;&#208;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

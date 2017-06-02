@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MCheckheader" table="M_CHECKHEADER" schema="MES188" optimistic-lock="version">
+        <id name="checkuid" type="string">
+            <column name="CHECKUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="checkid" type="string">
+            <column name="CHECKID" not-null="true" unique="true" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" />
+        </property>
+        <property name="checktype" type="java.lang.Long">
+            <column name="CHECKTYPE" precision="10" scale="0" />
+        </property>
+        <property name="submitemployeeid" type="string">
+            <column name="SUBMITEMPLOYEEID" length="50" />
+        </property>
+        <property name="submitdeptid" type="string">
+            <column name="SUBMITDEPTID" length="50" />
+        </property>
+        <property name="submitdate" type="date">
+            <column name="SUBMITDATE" length="7" />
+        </property>
+        <property name="submitqty" type="big_decimal">
+            <column name="SUBMITQTY" precision="20" />
+        </property>
+        <property name="defectqty" type="big_decimal">
+            <column name="DEFECTQTY" precision="20" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="attatchref" type="string">
+            <column name="ATTATCHREF" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="measurebase" type="string">
+            <column name="MEASUREBASE" />
+        </property>
+        <property name="submitreason" type="string">
+            <column name="SUBMITREASON" />
+        </property>
+        <property name="checkstate" type="string">
+            <column name="CHECKSTATE" length="50" />
+        </property>
+        <property name="qualitystate" type="java.lang.Long">
+            <column name="QUALITYSTATE" precision="10" scale="0" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="refcheckuid" type="string">
+            <column name="REFCHECKUID" />
+        </property>
+        <property name="checktaskuid" type="string">
+            <column name="CHECKTASKUID" />
+        </property>
+        <property name="clamprequired" type="string">
+            <column name="CLAMPREQUIRED" />
+        </property>
+        <property name="clampvalue" type="string">
+            <column name="CLAMPVALUE" />
+        </property>
+        <property name="shift" type="string">
+            <column name="SHIFT" length="20" />
+        </property>
+        <property name="checkdeviceid" type="string">
+            <column name="CHECKDEVICEID" length="20" />
+        </property>
+        <property name="approvestate" type="java.lang.Long">
+            <column name="APPROVESTATE" precision="10" scale="0" />
+        </property>
+        <property name="approveperson" type="string">
+            <column name="APPROVEPERSON" length="50" />
+        </property>
+        <property name="worker" type="string">
+            <column name="WORKER" length="50" />
+        </property>
+        <property name="actualcheckqty" type="big_decimal">
+            <column name="ACTUALCHECKQTY" precision="10" />
+        </property>
+        <property name="keycount" type="java.lang.Long">
+            <column name="KEYCOUNT" precision="10" scale="0" />
+        </property>
+        <property name="checkcount" type="string">
+            <column name="CHECKCOUNT" length="50" />
+        </property>
+        <property name="checker1" type="string">
+            <column name="CHECKER1" length="50" />
+        </property>
+        <property name="checktime1" type="date">
+            <column name="CHECKTIME1" length="7" />
+        </property>
+        <property name="checker2" type="string">
+            <column name="CHECKER2" length="50" />
+        </property>
+        <property name="checktime2" type="date">
+            <column name="CHECKTIME2" length="7" />
+        </property>
+        <property name="defectqtyBeforecheck" type="big_decimal">
+            <column name="DEFECTQTY_BEFORECHECK" precision="10" />
+        </property>
+        <property name="isStatistic" type="java.lang.Byte">
+            <column name="IS_STATISTIC" precision="2" scale="0" />
+        </property>
+        <property name="firstcheckerprint" type="string">
+            <column name="FIRSTCHECKERPRINT" length="50" />
+        </property>
+        <set name="MCheckdetails" table="M_CHECKDETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CHECKUID" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.MCheckdetail" />
+        </set>
+    </class>
+</hibernate-mapping>

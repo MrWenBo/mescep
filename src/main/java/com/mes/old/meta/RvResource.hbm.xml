@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RvResource" table="RV_RESOURCE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.RvResourceId">
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="resname" type="string">
+                <column name="RESNAME" />
+            </key-property>
+            <key-property name="calUid" type="string">
+                <column name="CAL_UID" length="50" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="resourcetype" type="java.lang.Long">
+                <column name="RESOURCETYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="location" type="string">
+                <column name="LOCATION" length="50" />
+            </key-property>
+            <key-property name="numOfPooledResources" type="java.lang.Long">
+                <column name="NUM_OF_POOLED_RESOURCES" precision="10" scale="0" />
+            </key-property>
+            <key-property name="estimatedQueueTime" type="java.lang.Long">
+                <column name="ESTIMATED_QUEUE_TIME" precision="18" scale="0" />
+            </key-property>
+            <key-property name="estimatedQueueTimeUom" type="string">
+                <column name="ESTIMATED_QUEUE_TIME_UOM" length="50" />
+            </key-property>
+            <key-property name="defaultSetupTime" type="java.lang.Long">
+                <column name="DEFAULT_SETUP_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="defaultTimeUom" type="string">
+                <column name="DEFAULT_TIME_UOM" length="50" />
+            </key-property>
+            <key-property name="idealUtilizationLevel" type="big_decimal">
+                <column name="IDEAL_UTILIZATION_LEVEL" precision="18" scale="4" />
+            </key-property>
+            <key-property name="idealUtilCalName" type="string">
+                <column name="IDEAL_UTIL_CAL_NAME" length="50" />
+            </key-property>
+            <key-property name="wageRatePer" type="string">
+                <column name="WAGE_RATE_PER" length="50" />
+            </key-property>
+            <key-property name="wageRatePerTime" type="big_decimal">
+                <column name="WAGE_RATE_PER_TIME" scale="4" />
+            </key-property>
+            <key-property name="setupMatrixId" type="string">
+                <column name="SETUP_MATRIX_ID" />
+            </key-property>
+            <key-property name="setupSequenceId" type="string">
+                <column name="SETUP_SEQUENCE_ID" length="50" />
+            </key-property>
+            <key-property name="setupSequenceGoback" type="java.lang.Byte">
+                <column name="SETUP_SEQUENCE_GOBACK" precision="2" scale="0" />
+            </key-property>
+            <key-property name="minimumQueueTime" type="java.lang.Long">
+                <column name="MINIMUM_QUEUE_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="minimumQueueTimeUom" type="string">
+                <column name="MINIMUM_QUEUE_TIME_UOM" length="50" />
+            </key-property>
+            <key-property name="modelName" type="string">
+                <column name="MODEL_NAME" length="50" />
+            </key-property>
+            <key-property name="scheduleFreezeHorizon" type="java.lang.Long">
+                <column name="SCHEDULE_FREEZE_HORIZON" precision="18" scale="0" />
+            </key-property>
+            <key-property name="sfhUom" type="string">
+                <column name="SFH_UOM" length="50" />
+            </key-property>
+            <key-property name="batchingHorizon" type="java.lang.Long">
+                <column name="BATCHING_HORIZON" precision="18" scale="0" />
+            </key-property>
+            <key-property name="batchingHorizonUom" type="string">
+                <column name="BATCHING_HORIZON_UOM" length="50" />
+            </key-property>
+            <key-property name="batchingLookahead" type="java.lang.Long">
+                <column name="BATCHING_LOOKAHEAD" precision="18" scale="0" />
+            </key-property>
+            <key-property name="batchingLookaheadUom" type="string">
+                <column name="BATCHING_LOOKAHEAD_UOM" length="50" />
+            </key-property>
+            <key-property name="latenessTolerance" type="java.lang.Long">
+                <column name="LATENESS_TOLERANCE" precision="18" scale="0" />
+            </key-property>
+            <key-property name="latenessToleranceUom" type="string">
+                <column name="LATENESS_TOLERANCE_UOM" length="50" />
+            </key-property>
+            <key-property name="earlinessTolerance" type="java.lang.Long">
+                <column name="EARLINESS_TOLERANCE" precision="18" scale="0" />
+            </key-property>
+            <key-property name="earlinessToleranceUom" type="string">
+                <column name="EARLINESS_TOLERANCE_UOM" length="50" />
+            </key-property>
+            <key-property name="queueSizeMode" type="string">
+                <column name="QUEUE_SIZE_MODE" length="50" />
+            </key-property>
+            <key-property name="maxQueueSize" type="string">
+                <column name="MAX_QUEUE_SIZE" length="50" />
+            </key-property>
+            <key-property name="queueConformanceMode" type="string">
+                <column name="QUEUE_CONFORMANCE_MODE" length="50" />
+            </key-property>
+            <key-property name="outputRateLimit" type="java.lang.Long">
+                <column name="OUTPUT_RATE_LIMIT" precision="10" scale="0" />
+            </key-property>
+            <key-property name="outputRateLimitPer" type="string">
+                <column name="OUTPUT_RATE_LIMIT_PER" length="50" />
+            </key-property>
+            <key-property name="outputRateLimitUom" type="string">
+                <column name="OUTPUT_RATE_LIMIT_UOM" length="50" />
+            </key-property>
+            <key-property name="lowRwt" type="java.lang.Long">
+                <column name="LOW_RWT" precision="18" scale="0" />
+            </key-property>
+            <key-property name="lowRwtPer" type="string">
+                <column name="LOW_RWT_PER" length="50" />
+            </key-property>
+            <key-property name="lowRwtUom" type="string">
+                <column name="LOW_RWT_UOM" length="50" />
+            </key-property>
+            <key-property name="highRwtUom" type="string">
+                <column name="HIGH_RWT_UOM" length="50" />
+            </key-property>
+            <key-property name="highRwtPer" type="string">
+                <column name="HIGH_RWT_PER" length="50" />
+            </key-property>
+            <key-property name="highRwt" type="java.lang.Long">
+                <column name="HIGH_RWT" precision="18" scale="0" />
+            </key-property>
+            <key-property name="acmFlag" type="string">
+                <column name="ACM_FLAG" length="50" />
+            </key-property>
+            <key-property name="incOvertimeCostPer" type="string">
+                <column name="INC_OVERTIME_COST_PER" length="50" />
+            </key-property>
+            <key-property name="incOvertimeCostPerT" type="string">
+                <column name="INC_OVERTIME_COST_PER_T" length="50" />
+            </key-property>
+            <key-property name="lastMaintDate" type="java.lang.Long">
+                <column name="LAST_MAINT_DATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="lastMaintDateFormat" type="string">
+                <column name="LAST_MAINT_DATE_FORMAT" length="50" />
+            </key-property>
+            <key-property name="lastMaintSeqNumber" type="string">
+                <column name="LAST_MAINT_SEQ_NUMBER" length="50" />
+            </key-property>
+            <key-property name="lastMaintTime" type="java.lang.Long">
+                <column name="LAST_MAINT_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="lastMaintTimeUom" type="string">
+                <column name="LAST_MAINT_TIME_UOM" length="50" />
+            </key-property>
+            <key-property name="loadSinceLastMaint" type="java.lang.Long">
+                <column name="LOAD_SINCE_LAST_MAINT" precision="10" scale="0" />
+            </key-property>
+            <key-property name="loadSinceUom" type="string">
+                <column name="LOAD_SINCE_UOM" length="50" />
+            </key-property>
+            <key-property name="maximumUtilLevel" type="java.lang.Long">
+                <column name="MAXIMUM_UTIL_LEVEL" precision="18" scale="0" />
+            </key-property>
+            <key-property name="minOpTimeCalName" type="string">
+                <column name="MIN_OP_TIME_CAL_NAME" length="50" />
+            </key-property>
+            <key-property name="minQueueConfLength" type="date">
+                <column name="MIN_QUEUE_CONF_LENGTH" length="7" />
+            </key-property>
+            <key-property name="minQueueConfUom" type="string">
+                <column name="MIN_QUEUE_CONF_UOM" length="50" />
+            </key-property>
+            <key-property name="minimumUtilLevel" type="java.lang.Long">
+                <column name="MINIMUM_UTIL_LEVEL" precision="18" scale="0" />
+            </key-property>
+            <key-property name="offloadableFrom" type="java.lang.Byte">
+                <column name="OFFLOADABLE_FROM" precision="2" scale="0" />
+            </key-property>
+            <key-property name="offloadableTo" type="java.lang.Byte">
+                <column name="OFFLOADABLE_TO" precision="2" scale="0" />
+            </key-property>
+            <key-property name="overtimeBasis" type="java.lang.Long">
+                <column name="OVERTIME_BASIS" precision="18" scale="0" />
+            </key-property>
+            <key-property name="obertimeBasisUom" type="string">
+                <column name="OBERTIME_BASIS_UOM" length="50" />
+            </key-property>
+            <key-property name="overtimeThreshold" type="java.lang.Long">
+                <column name="OVERTIME_THRESHOLD" precision="18" scale="0" />
+            </key-property>
+            <key-property name="overtimeThresholdUom" type="string">
+                <column name="OVERTIME_THRESHOLD_UOM" length="50" />
+            </key-property>
+            <key-property name="processedMaterialTypes" type="string">
+                <column name="PROCESSED_MATERIAL_TYPES" length="50" />
+            </key-property>
+            <key-property name="queueSizeUom" type="string">
+                <column name="QUEUE_SIZE_UOM" length="50" />
+            </key-property>
+            <key-property name="schedulingCriticality" type="java.lang.Long">
+                <column name="SCHEDULING_CRITICALITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="unitSetupCostPer" type="string">
+                <column name="UNIT_SETUP_COST_PER" length="50" />
+            </key-property>
+            <key-property name="unitSetupCostPerTime" type="big_decimal">
+                <column name="UNIT_SETUP_COST_PER_TIME" scale="4" />
+            </key-property>
+            <key-property name="caoPostProcDownstream" type="java.lang.Long">
+                <column name="CAO_POST_PROC_DOWNSTREAM" precision="18" scale="0" />
+            </key-property>
+            <key-property name="keepRelatedTasksTog" type="java.lang.Byte">
+                <column name="KEEP_RELATED_TASKS_TOG" precision="2" scale="0" />
+            </key-property>
+            <key-property name="preIcpOlRuntimeRatio" type="java.lang.Long">
+                <column name="PRE_ICP_OL_RUNTIME_RATIO" precision="18" scale="0" />
+            </key-property>
+            <key-property name="simulHierSetups" type="java.lang.Byte">
+                <column name="SIMUL_HIER_SETUPS" precision="2" scale="0" />
+            </key-property>
+            <key-property name="ignoreForCapPlan" type="java.lang.Byte">
+                <column name="IGNORE_FOR_CAP_PLAN" precision="2" scale="0" />
+            </key-property>
+            <key-property name="noneneeddispatch" type="java.lang.Boolean">
+                <column name="NONENEEDDISPATCH" precision="1" scale="0" />
+            </key-property>
+            <key-property name="resourceref" type="string">
+                <column name="RESOURCEREF" />
+            </key-property>
+            <key-property name="criticalLevel" type="java.lang.Byte">
+                <column name="CRITICAL_LEVEL" precision="2" scale="0" />
+            </key-property>
+            <key-property name="needNc" type="big_decimal">
+                <column name="NEED_NC" precision="10" scale="3" />
+            </key-property>
+            <key-property name="restype" type="string">
+                <column name="RESTYPE" />
+            </key-property>
+            <key-property name="monthplanwork" type="big_decimal">
+                <column name="MONTHPLANWORK" precision="10" scale="1" />
+            </key-property>
+            <key-property name="optype" type="java.lang.Long">
+                <column name="OPTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="RResourceOutUid" type="string">
+                <column name="R_RESOURCE_OUT_UID" />
+            </key-property>
+            <key-property name="resstate" type="java.lang.Long">
+                <column name="RESSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="customerResuid" type="string">
+                <column name="CUSTOMER_RESUID" />
+            </key-property>
+            <key-property name="toolShankSpec" type="string">
+                <column name="TOOL_SHANK_SPEC" />
+            </key-property>
+            <key-property name="ncSysModel" type="string">
+                <column name="NC_SYS_MODEL" />
+            </key-property>
+            <key-property name="deviceTableCount" type="java.lang.Long">
+                <column name="DEVICE_TABLE_COUNT" precision="10" scale="0" />
+            </key-property>
+            <key-property name="currentEmployeeid" type="string">
+                <column name="CURRENT_EMPLOYEEID" length="50" />
+            </key-property>
+            <key-property name="bottleneckLevel" type="string">
+                <column name="BOTTLENECK_LEVEL" length="10" />
+            </key-property>
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="resourcetypedesc" type="string">
+                <column name="RESOURCETYPEDESC" length="100" />
+            </key-property>
+            <key-property name="criticalleveldesc" type="string">
+                <column name="CRITICALLEVELDESC" length="100" />
+            </key-property>
+            <key-property name="calName" type="string">
+                <column name="CAL_NAME" length="50" />
+            </key-property>
+            <key-property name="workcentername" type="string">
+                <column name="WORKCENTERNAME" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

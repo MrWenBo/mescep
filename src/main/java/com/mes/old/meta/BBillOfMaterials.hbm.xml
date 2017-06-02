@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BBillOfMaterials" table="B_BILL_OF_MATERIALS" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#208;&#242;&#206;&#239;&#193;&#207;</comment>
+        <id name="uniqueid" type="long">
+            <column name="UNIQUEID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="BPartNumberByConsumedPartNumber" class="com.mes.old.BPartNumber" fetch="select">
+            <column name="CONSUMED_PART_NUMBER" not-null="true">
+                <comment>&#207;&#251;&#186;&#196;&#206;&#239;&#193;&#207;&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="BPartNumberByProducedPartNumber" class="com.mes.old.BPartNumber" fetch="select">
+            <column name="PRODUCED_PART_NUMBER" not-null="true">
+                <comment>&#178;&#250;&#179;&#246;&#206;&#239;&#193;&#207;&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="BRoutine" class="com.mes.old.BRoutine" fetch="select">
+            <column name="OPUID" precision="30" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="operationId" type="big_decimal">
+            <column name="OPERATION_ID" precision="10">
+                <comment>&#185;&#164;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="routing" type="string">
+            <column name="ROUTING">
+                <comment>&#185;&#164;&#210;&#213;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="minFixedShrinkage" type="big_decimal">
+            <column name="MIN_FIXED_SHRINKAGE" precision="25" scale="6">
+                <comment>&#215;&#238;&#208;&#161;&#185;&#204;&#182;&#168;&#203;&#240;&#186;&#196;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="minPercentShrinkage" type="big_decimal">
+            <column name="MIN_PERCENT_SHRINKAGE" precision="25" scale="6">
+                <comment>&#215;&#238;&#208;&#161;&#203;&#240;&#186;&#196;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="phantom" type="java.lang.Byte">
+            <column name="PHANTOM" precision="2" scale="0">
+                <comment>&#208;&#233;&#196;&#226;&#188;&#254;</comment>
+            </column>
+        </property>
+        <property name="ecnDate" type="date">
+            <column name="ECN_DATE" length="7">
+                <comment>&#185;&#164;&#179;&#204;&#184;&#252;&#184;&#196;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="ecnDescription" type="string">
+            <column name="ECN_DESCRIPTION">
+                <comment>&#185;&#164;&#179;&#204;&#184;&#252;&#184;&#196;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="ecnDateFormat" type="date">
+            <column name="ECN_DATE_FORMAT" length="7">
+                <comment>&#185;&#164;&#179;&#204;&#184;&#252;&#184;&#196;&#200;&#213;&#198;&#218;&#184;&#241;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="ecnCode" type="string">
+            <column name="ECN_CODE" length="10">
+                <comment>&#185;&#164;&#179;&#204;&#184;&#252;&#184;&#196;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="ecnLevel" type="java.lang.Long">
+            <column name="ECN_LEVEL" precision="10" scale="0">
+                <comment>&#185;&#164;&#179;&#204;&#184;&#252;&#184;&#196;&#188;&#182;&#177;&#240;</comment>
+            </column>
+        </property>
+        <property name="ecnNumber" type="java.lang.Long">
+            <column name="ECN_NUMBER" precision="10" scale="0">
+                <comment>&#185;&#164;&#179;&#204;&#184;&#252;&#184;&#196;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="usableByNewMfgOrder" type="java.lang.Byte">
+            <column name="USABLE_BY_NEW_MFG_ORDER" precision="2" scale="0">
+                <comment>&#196;&#220;&#183;&#241;&#177;&#187;&#208;&#194;&#214;&#198;&#212;&#236;&#182;&#169;&#181;&#165;&#203;&#249;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="normPercentShrinkage" type="big_decimal">
+            <column name="NORM_PERCENT_SHRINKAGE" precision="25" scale="6">
+                <comment>&#213;&#253;&#179;&#163;&#203;&#240;&#186;&#196;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="normFixedShrinkage" type="big_decimal">
+            <column name="NORM_FIXED_SHRINKAGE" precision="25" scale="6">
+                <comment>&#213;&#253;&#179;&#163;&#203;&#240;&#186;&#196;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="minQuantity" type="big_decimal">
+            <column name="MIN_QUANTITY" precision="25" scale="6">
+                <comment>&#215;&#238;&#208;&#161;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="producedQuantityUom" type="string">
+            <column name="PRODUCED_QUANTITY_UOM" length="50">
+                <comment>&#178;&#250;&#179;&#246;&#206;&#239;&#193;&#207;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="process" type="string">
+            <column name="PROCESS" length="50">
+                <comment>&#185;&#253;&#179;&#204;</comment>
+            </column>
+        </property>
+        <property name="quantityConstraintType" type="string">
+            <column name="QUANTITY_CONSTRAINT_TYPE" length="50">
+                <comment>&#202;&#253;&#193;&#191;&#207;&#222;&#214;&#198;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="consumedQuantityUom" type="string">
+            <column name="CONSUMED_QUANTITY_UOM" length="50">
+                <comment>&#207;&#251;&#186;&#196;&#206;&#239;&#193;&#207;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="flexibleMinQuantityP" type="java.lang.Byte">
+            <column name="FLEXIBLE_MIN_QUANTITY_P" precision="2" scale="0">
+                <comment>&#181;&#175;&#208;&#212;&#215;&#238;&#208;&#161;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="maxQuantity" type="big_decimal">
+            <column name="MAX_QUANTITY" precision="25" scale="6">
+                <comment>&#215;&#238;&#180;&#243;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="multipleQuantity" type="big_decimal">
+            <column name="MULTIPLE_QUANTITY" precision="25" scale="6">
+                <comment>&#177;&#182;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="attributeConsumed" type="string">
+            <column name="ATTRIBUTE_CONSUMED" length="50">
+                <comment>&#207;&#251;&#186;&#196;&#202;&#244;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="attributeProduced" type="string">
+            <column name="ATTRIBUTE_PRODUCED" length="50">
+                <comment>&#178;&#250;&#201;&#250;&#202;&#244;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="changer" type="string">
+            <column name="CHANGER" length="50">
+                <comment>&#177;&#228;&#184;&#252;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="changetime" type="date">
+            <column name="CHANGETIME" length="7">
+                <comment>&#177;&#228;&#184;&#252;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="changestate" type="java.lang.Byte">
+            <column name="CHANGESTATE" precision="2" scale="0">
+                <comment>&#177;&#228;&#184;&#252;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="effective" type="java.lang.Byte">
+            <column name="EFFECTIVE" precision="2" scale="0">
+                <comment>&#211;&#208;&#208;&#167;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="roundType" type="java.lang.Byte">
+            <column name="ROUND_TYPE" precision="2" scale="0" />
+        </property>
+        <property name="consumeType" type="java.lang.Long">
+            <column name="CONSUME_TYPE" precision="10" scale="0" />
+        </property>
+        <property name="producedQuantity" type="big_decimal">
+            <column name="PRODUCED_QUANTITY" precision="25" scale="6" />
+        </property>
+        <property name="consumedQuantity" type="big_decimal">
+            <column name="CONSUMED_QUANTITY" precision="25" scale="6" />
+        </property>
+        <property name="BBomOutUid" type="string">
+            <column name="B_BOM_OUT_UID" />
+        </property>
+        <property name="PBeginday" type="date">
+            <column name="P_BEGINDAY" length="7" />
+        </property>
+        <property name="PEndday" type="date">
+            <column name="P_ENDDAY" length="7" />
+        </property>
+        <property name="EBeginday" type="date">
+            <column name="E_BEGINDAY" length="7" />
+        </property>
+        <property name="EEndday" type="date">
+            <column name="E_ENDDAY" length="7" />
+        </property>
+        <property name="PBomnumber" type="string">
+            <column name="P_BOMNUMBER" />
+        </property>
+        <property name="EBomnumber" type="string">
+            <column name="E_BOMNUMBER" />
+        </property>
+        <property name="sfPath" type="string">
+            <column name="SF_PATH" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="1000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="isCritical" type="java.lang.Byte">
+            <column name="IS_CRITICAL" precision="2" scale="0">
+                <comment>&#185;&#216;&#188;&#252;&#188;&#224;&#191;&#216;&#181;&#227;</comment>
+            </column>
+        </property>
+        <property name="readypoint" type="java.lang.Long">
+            <column name="READYPOINT" precision="10" scale="0">
+                <comment>&#198;&#235;&#204;&#215;&#181;&#227;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

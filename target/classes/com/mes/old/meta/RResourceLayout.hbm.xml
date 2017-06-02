@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RResourceLayout" table="R_RESOURCE_LAYOUT" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#202;&#212;&#180;&#197;&#228;&#214;&#195;</comment>
+        <composite-id name="id" class="com.mes.old.RResourceLayoutId">
+            <key-property name="y" type="long">
+                <column name="Y" precision="10" scale="0" />
+            </key-property>
+            <key-property name="x" type="long">
+                <column name="X" precision="10" scale="0" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+        </composite-id>
+        <property name="width" type="java.lang.Long">
+            <column name="WIDTH" precision="10" scale="0">
+                <comment>&#176;&#178;&#215;&#176;&#191;&#237;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="height" type="java.lang.Long">
+            <column name="HEIGHT" precision="10" scale="0">
+                <comment>&#184;&#223;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="resuid" type="string">
+            <column name="RESUID">
+                <comment>&#215;&#202;&#212;&#180;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="resname" type="string">
+            <column name="RESNAME" />
+        </property>
+        <property name="stateid" type="java.lang.Long">
+            <column name="STATEID" precision="10" scale="0" />
+        </property>
+        <property name="layouttype" type="string">
+            <column name="LAYOUTTYPE" />
+        </property>
+        <property name="areaid" type="string">
+            <column name="AREAID">
+                <comment>&#199;&#248;&#211;&#242;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="xnum" type="java.lang.Long">
+            <column name="XNUM" precision="10" scale="0">
+                <comment>&#186;&#225;&#207;&#242;&#199;&#248;&#211;&#242;</comment>
+            </column>
+        </property>
+        <property name="ynum" type="java.lang.Long">
+            <column name="YNUM" precision="10" scale="0">
+                <comment>&#215;&#221;&#207;&#242;&#199;&#248;&#211;&#242;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

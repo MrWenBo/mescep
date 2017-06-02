@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SCoderule" table="S_CODERULE" schema="MES188" optimistic-lock="version">
+        <comment>&#207;&#181;&#205;&#179;&#177;&#224;&#194;&#235;&#185;&#230;&#212;&#242;</comment>
+        <composite-id name="id" class="com.mes.old.SCoderuleId">
+            <key-property name="codetype" type="string">
+                <column name="CODETYPE" length="50" />
+            </key-property>
+            <key-property name="codefieldname" type="string">
+                <column name="CODEFIELDNAME" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" scale="0" not-null="true">
+                <comment>&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="codefielddesc" type="string">
+            <column name="CODEFIELDDESC" length="50">
+                <comment>&#177;&#224;&#194;&#235;&#215;&#214;&#182;&#206;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="fieldorder" type="java.lang.Long">
+            <column name="FIELDORDER" precision="10" scale="0">
+                <comment>&#215;&#214;&#182;&#206;&#203;&#179;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="NOTE" length="0">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="placeholder" type="string">
+            <column name="PLACEHOLDER" length="10">
+                <comment>&#213;&#188;&#206;&#187;&#183;&#251;</comment>
+            </column>
+        </property>
+        <property name="isplaceholderbefore" type="java.lang.Byte">
+            <column name="ISPLACEHOLDERBEFORE" precision="2" scale="0">
+                <comment>&#213;&#188;&#206;&#187;&#184;&#182;&#199;&#176;&#214;&#195;</comment>
+            </column>
+        </property>
+        <property name="fieldlength" type="java.lang.Long">
+            <column name="FIELDLENGTH" precision="10" scale="0">
+                <comment>&#215;&#214;&#182;&#206;&#179;&#164;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="parakey" type="string">
+            <column name="PARAKEY" length="50">
+                <comment>&#178;&#206;&#202;&#253;&#188;&#252;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="paraname" type="string">
+            <column name="PARANAME" length="50">
+                <comment>&#178;&#206;&#202;&#253;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="sntablename" type="string">
+            <column name="SNTABLENAME" length="50">
+                <comment>&#193;&#247;&#203;&#174;&#186;&#197;&#182;&#212;&#211;&#166;&#177;&#237;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="snfieldname" type="string">
+            <column name="SNFIELDNAME" length="50">
+                <comment>&#193;&#247;&#203;&#174;&#186;&#197;&#182;&#212;&#211;&#166;&#215;&#214;&#182;&#206;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="isautosn" type="java.lang.Byte">
+            <column name="ISAUTOSN" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#215;&#212;&#182;&#175;&#193;&#247;&#203;&#174;</comment>
+            </column>
+        </property>
+        <property name="lastuniqueid" type="big_decimal">
+            <column name="LASTUNIQUEID" scale="0">
+                <comment>&#201;&#207;&#210;&#187;&#180;&#206;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

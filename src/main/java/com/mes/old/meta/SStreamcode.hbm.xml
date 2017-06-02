@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SStreamcode" table="S_STREAMCODE" schema="MES188" optimistic-lock="version">
+        <comment>&#193;&#247;&#203;&#174;&#194;&#235;</comment>
+        <composite-id name="id" class="com.mes.old.SStreamcodeId">
+            <key-property name="codetype" type="string">
+                <column name="CODETYPE" length="50" />
+            </key-property>
+            <key-property name="prestreamcode" type="string">
+                <column name="PRESTREAMCODE" length="100" />
+            </key-property>
+        </composite-id>
+        <property name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" scale="0" not-null="true">
+                <comment>&#206;&#168;&#210;&#187;&#177;&#234;&#202;&#182;</comment>
+            </column>
+        </property>
+        <property name="streamcode" type="big_decimal">
+            <column name="STREAMCODE" precision="20" scale="0">
+                <comment>&#193;&#247;&#203;&#174;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

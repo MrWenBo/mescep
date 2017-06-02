@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1">
+    <jdbcConnection connectionURL="jdbc:oracle:thin:@192.168.1.114:1521:MM" driverClass="oracle.jdbc.driver.OracleDriver" password="mes" userId="mes518" />
+    <javaModelGenerator targetPackage="com.mes.cep.meta" targetProject="mescep" />
+    <sqlMapGenerator targetPackage="com.mes.cep.mybatis" targetProject="mescep" />
+    <javaClientGenerator targetPackage="com.mes.cep.dao" targetProject="mescep" type="XMLMAPPER" />
+    <table tableName="T_TASKS">
+  
+    </table>
+  </context>
+</generatorConfiguration>

@@ -1,0 +1,199 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvCotask" table="TV_COTASK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvCotaskId">
+            <key-property name="cotaskuid" type="string">
+                <column name="COTASKUID" length="500" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" length="2550" />
+            </key-property>
+            <key-property name="taskstate" type="big_decimal">
+                <column name="TASKSTATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cotaskstate" type="java.lang.Long">
+                <column name="COTASKSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="cofeedback" type="string">
+                <column name="COFEEDBACK" length="2000" />
+            </key-property>
+            <key-property name="planstart" type="date">
+                <column name="PLANSTART" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="planfinish" type="date">
+                <column name="PLANFINISH" length="7" />
+            </key-property>
+            <key-property name="planqty" type="big_decimal">
+                <column name="PLANQTY" precision="20" scale="0" />
+            </key-property>
+            <key-property name="actualstart" type="date">
+                <column name="ACTUALSTART" length="7" />
+            </key-property>
+            <key-property name="actualfinish" type="date">
+                <column name="ACTUALFINISH" length="7" />
+            </key-property>
+            <key-property name="actualreceive" type="date">
+                <column name="ACTUALRECEIVE" length="7" />
+            </key-property>
+            <key-property name="completeqty" type="big_decimal">
+                <column name="COMPLETEQTY" precision="20" />
+            </key-property>
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="schedulestart" type="date">
+                <column name="SCHEDULESTART" length="7" />
+            </key-property>
+            <key-property name="schedulefinish" type="date">
+                <column name="SCHEDULEFINISH" length="7" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" length="500" />
+            </key-property>
+            <key-property name="taskname" type="string">
+                <column name="TASKNAME" length="2000" />
+            </key-property>
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="mastershopname" type="string">
+                <column name="MASTERSHOPNAME" length="50" />
+            </key-property>
+            <key-property name="optypename" type="java.lang.Character">
+                <column name="OPTYPENAME" length="0" />
+            </key-property>
+            <key-property name="taskstatedesc" type="string">
+                <column name="TASKSTATEDESC" length="100" />
+            </key-property>
+            <key-property name="suspended" type="java.lang.Boolean">
+                <column name="SUSPENDED" precision="1" scale="0" />
+            </key-property>
+            <key-property name="opuid" type="string">
+                <column name="OPUID" length="500" />
+            </key-property>
+            <key-property name="optype" type="big_decimal">
+                <column name="OPTYPE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="agreestate" type="java.lang.Long">
+                <column name="AGREESTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="agreestateiddesc" type="string">
+                <column name="AGREESTATEIDDESC" length="100" />
+            </key-property>
+            <key-property name="priority" type="java.lang.Long">
+                <column name="PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="sender" type="string">
+                <column name="SENDER" />
+            </key-property>
+            <key-property name="sendqty" type="big_decimal">
+                <column name="SENDQTY" precision="20" />
+            </key-property>
+            <key-property name="sendwarehouseid" type="string">
+                <column name="SENDWAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="sendername" type="string">
+                <column name="SENDERNAME" length="100" />
+            </key-property>
+            <key-property name="actualsend" type="date">
+                <column name="ACTUALSEND" length="7" />
+            </key-property>
+            <key-property name="receiver" type="string">
+                <column name="RECEIVER" />
+            </key-property>
+            <key-property name="outqty" type="big_decimal">
+                <column name="OUTQTY" precision="20" />
+            </key-property>
+            <key-property name="receiveqty" type="big_decimal">
+                <column name="RECEIVEQTY" precision="20" />
+            </key-property>
+            <key-property name="receivewarehouseid" type="string">
+                <column name="RECEIVEWAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="receivername" type="string">
+                <column name="RECEIVERNAME" length="100" />
+            </key-property>
+            <key-property name="outtime" type="date">
+                <column name="OUTTIME" length="7" />
+            </key-property>
+            <key-property name="fetcher" type="string">
+                <column name="FETCHER" />
+            </key-property>
+            <key-property name="fetchqty" type="big_decimal">
+                <column name="FETCHQTY" precision="20" />
+            </key-property>
+            <key-property name="fetchername" type="string">
+                <column name="FETCHERNAME" length="100" />
+            </key-property>
+            <key-property name="actualfetch" type="date">
+                <column name="ACTUALFETCH" length="7" />
+            </key-property>
+            <key-property name="accepter" type="string">
+                <column name="ACCEPTER" />
+            </key-property>
+            <key-property name="acceptqty" type="big_decimal">
+                <column name="ACCEPTQTY" precision="20" />
+            </key-property>
+            <key-property name="acceptername" type="string">
+                <column name="ACCEPTERNAME" length="100" />
+            </key-property>
+            <key-property name="actualaccept" type="date">
+                <column name="ACTUALACCEPT" length="7" />
+            </key-property>
+            <key-property name="parentuid" type="string">
+                <column name="PARENTUID" />
+            </key-property>
+            <key-property name="expirenum" type="java.lang.Long">
+                <column name="EXPIRENUM" precision="10" scale="0" />
+            </key-property>
+            <key-property name="lostnum" type="java.lang.Long">
+                <column name="LOSTNUM" precision="10" scale="0" />
+            </key-property>
+            <key-property name="sendwarehousename" type="string">
+                <column name="SENDWAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="receivewarehousename" type="string">
+                <column name="RECEIVEWAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="fetchwarehousename" type="string">
+                <column name="FETCHWAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="acceptwarehousename" type="string">
+                <column name="ACCEPTWAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="lagdays" type="big_decimal">
+                <column name="LAGDAYS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="partlatefinish" type="date">
+                <column name="PARTLATEFINISH" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

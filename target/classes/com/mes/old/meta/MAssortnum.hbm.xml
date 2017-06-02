@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MAssortnum" table="M_ASSORTNUM" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MAssortnumId">
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="assortnum" type="string">
+                <column name="ASSORTNUM" />
+            </key-property>
+        </composite-id>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" not-null="true" unique="true" />
+        </property>
+        <property name="isassorted" type="java.lang.Long">
+            <column name="ISASSORTED" precision="10" scale="0" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL" />
+        </property>
+        <property name="partModel" type="string">
+            <column name="PART_MODEL" />
+        </property>
+        <property name="reqDate" type="date">
+            <column name="REQ_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

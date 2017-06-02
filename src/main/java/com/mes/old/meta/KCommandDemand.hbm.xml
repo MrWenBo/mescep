@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KCommandDemand" table="K_COMMAND_DEMAND" schema="MES188" optimistic-lock="version">
+        <comment>&#195;&#252;&#193;&#238;</comment>
+        <composite-id name="id" class="com.mes.old.KCommandDemandId">
+            <key-property name="commandid" type="string">
+                <column name="COMMANDID" length="32" />
+            </key-property>
+            <key-property name="commandname" type="string">
+                <column name="COMMANDNAME" length="32" />
+            </key-property>
+            <key-property name="commandtype" type="string">
+                <column name="COMMANDTYPE" length="2" />
+            </key-property>
+            <key-property name="commandstate" type="string">
+                <column name="COMMANDSTATE" length="2" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="32" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="invalidtime" type="date">
+                <column name="INVALIDTIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="blob">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="demanduid" type="string">
+                <column name="DEMANDUID" length="32" />
+            </key-property>
+            <key-property name="latefinish" type="date">
+                <column name="LATEFINISH" length="7" />
+            </key-property>
+            <key-property name="dueqty" type="big_decimal">
+                <column name="DUEQTY" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

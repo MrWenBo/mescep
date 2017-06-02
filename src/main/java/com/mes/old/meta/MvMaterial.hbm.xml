@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MvMaterial" table="MV_MATERIAL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MvMaterialId">
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="sn" type="string">
+                <column name="SN" />
+            </key-property>
+            <key-property name="materialspecs" type="string">
+                <column name="MATERIALSPECS" />
+            </key-property>
+            <key-property name="materialqty" type="big_decimal">
+                <column name="MATERIALQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="qualitynum" type="string">
+                <column name="QUALITYNUM" />
+            </key-property>
+            <key-property name="stovenum" type="string">
+                <column name="STOVENUM" />
+            </key-property>
+            <key-property name="forgenum" type="string">
+                <column name="FORGENUM" />
+            </key-property>
+            <key-property name="materialsource" type="string">
+                <column name="MATERIALSOURCE" />
+            </key-property>
+            <key-property name="invdate" type="date">
+                <column name="INVDATE" length="7" />
+            </key-property>
+            <key-property name="invaliddate" type="date">
+                <column name="INVALIDDATE" length="7" />
+            </key-property>
+            <key-property name="productdate" type="date">
+                <column name="PRODUCTDATE" length="7" />
+            </key-property>
+            <key-property name="packageweight" type="big_decimal">
+                <column name="PACKAGEWEIGHT" precision="25" scale="6" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="50" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="text1" type="string">
+                <column name="TEXT1" />
+            </key-property>
+            <key-property name="text2" type="string">
+                <column name="TEXT2" />
+            </key-property>
+            <key-property name="text3" type="string">
+                <column name="TEXT3" />
+            </key-property>
+            <key-property name="text4" type="string">
+                <column name="TEXT4" />
+            </key-property>
+            <key-property name="text5" type="string">
+                <column name="TEXT5" />
+            </key-property>
+            <key-property name="text6" type="string">
+                <column name="TEXT6" />
+            </key-property>
+            <key-property name="text7" type="string">
+                <column name="TEXT7" />
+            </key-property>
+            <key-property name="text8" type="string">
+                <column name="TEXT8" />
+            </key-property>
+            <key-property name="text9" type="string">
+                <column name="TEXT9" />
+            </key-property>
+            <key-property name="text10" type="string">
+                <column name="TEXT10" />
+            </key-property>
+            <key-property name="materialstate" type="java.lang.Long">
+                <column name="MATERIALSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="completepercent" type="big_decimal">
+                <column name="COMPLETEPERCENT" precision="25" scale="0" />
+            </key-property>
+            <key-property name="qualitystate" type="java.lang.Long">
+                <column name="QUALITYSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="materiallife" type="big_decimal">
+                <column name="MATERIALLIFE" precision="25" scale="0" />
+            </key-property>
+            <key-property name="axisrepair" type="big_decimal">
+                <column name="AXISREPAIR" precision="25" scale="6" />
+            </key-property>
+            <key-property name="radialrepair" type="big_decimal">
+                <column name="RADIALREPAIR" precision="25" scale="6" />
+            </key-property>
+            <key-property name="partner" type="string">
+                <column name="PARTNER" length="50" />
+            </key-property>
+            <key-property name="radiusrepair" type="big_decimal">
+                <column name="RADIUSREPAIR" precision="25" scale="6" />
+            </key-property>
+            <key-property name="lengthrepair" type="big_decimal">
+                <column name="LENGTHREPAIR" precision="25" scale="6" />
+            </key-property>
+            <key-property name="cutteractlength" type="big_decimal">
+                <column name="CUTTERACTLENGTH" precision="25" scale="6" />
+            </key-property>
+            <key-property name="tineposition" type="big_decimal">
+                <column name="TINEPOSITION" precision="25" scale="6" />
+            </key-property>
+            <key-property name="checkupDate" type="date">
+                <column name="CHECKUP_DATE" length="7" />
+            </key-property>
+            <key-property name="maintenanceDate" type="date">
+                <column name="MAINTENANCE_DATE" length="7" />
+            </key-property>
+            <key-property name="barcode" type="string">
+                <column name="BARCODE" />
+            </key-property>
+            <key-property name="customerchecker" type="string">
+                <column name="CUSTOMERCHECKER" length="50" />
+            </key-property>
+            <key-property name="certifyChecker" type="string">
+                <column name="CERTIFY_CHECKER" length="50" />
+            </key-property>
+            <key-property name="maintenancer" type="string">
+                <column name="MAINTENANCER" length="50" />
+            </key-property>
+            <key-property name="washer" type="string">
+                <column name="WASHER" length="50" />
+            </key-property>
+            <key-property name="isCustomcheck" type="java.lang.Byte">
+                <column name="IS_CUSTOMCHECK" precision="2" scale="0" />
+            </key-property>
+            <key-property name="isassembled" type="java.lang.Long">
+                <column name="ISASSEMBLED" precision="10" scale="0" />
+            </key-property>
+            <key-property name="usetimeCounter" type="java.lang.Long">
+                <column name="USETIME_COUNTER" precision="10" scale="0" />
+            </key-property>
+            <key-property name="groupusn" type="string">
+                <column name="GROUPUSN" />
+            </key-property>
+            <key-property name="isprint" type="java.lang.Long">
+                <column name="ISPRINT" precision="10" scale="0" />
+            </key-property>
+            <key-property name="relationbillnumber" type="string">
+                <column name="RELATIONBILLNUMBER" />
+            </key-property>
+            <key-property name="printdate" type="date">
+                <column name="PRINTDATE" length="7" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="lendDate" type="date">
+                <column name="LEND_DATE" length="7" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="unitPrice" type="java.lang.Double">
+                <column name="UNIT_PRICE" precision="126" scale="0" />
+            </key-property>
+            <key-property name="partDescription" type="string">
+                <column name="PART_DESCRIPTION" />
+            </key-property>
+            <key-property name="partNumberType" type="string">
+                <column name="PART_NUMBER_TYPE" length="50" />
+            </key-property>
+            <key-property name="classname" type="string">
+                <column name="CLASSNAME" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="UOM" length="50" />
+            </key-property>
+            <key-property name="uomdesc" type="string">
+                <column name="UOMDESC" length="50" />
+            </key-property>
+            <key-property name="materialstatedesc" type="string">
+                <column name="MATERIALSTATEDESC" length="100" />
+            </key-property>
+            <key-property name="qualitystatedesc" type="string">
+                <column name="QUALITYSTATEDESC" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

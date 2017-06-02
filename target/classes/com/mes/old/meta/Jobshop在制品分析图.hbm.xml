@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jobshop&#212;&#218;&#214;&#198;&#198;&#183;&#183;&#214;&#206;&#246;&#205;&#188;"
+    table="JOBSHOP_&#212;&#218;&#214;&#198;&#198;&#183;&#183;&#214;&#206;&#246;&#205;&#188;" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.Jobshop&#212;&#218;&#214;&#198;&#198;&#183;&#183;&#214;&#206;&#246;&#205;&#188;Id">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="wipqty" type="big_decimal">
+                <column name="WIPQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cpart" type="big_decimal">
+                <column name="CPART" precision="22" scale="0" />
+            </key-property>
+            <key-property name="invqty" type="big_decimal">
+                <column name="INVQTY" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

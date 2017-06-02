@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TTaskMemorandum" table="T_TASK_MEMORANDUM" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="notes" type="string">
+            <column name="NOTES" length="4000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="memorandumtype" type="string">
+            <column name="MEMORANDUMTYPE" length="50">
+                <comment>&#188;&#199;&#202;&#194;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="memorandum" type="string">
+            <column name="MEMORANDUM" length="4000">
+                <comment>&#214;&#216;&#210;&#170;&#188;&#199;&#202;&#194;</comment>
+            </column>
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50">
+                <comment>&#188;&#236;&#209;&#233;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7">
+                <comment>&#188;&#236;&#209;&#233;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="seq" type="string">
+            <column name="SEQ" length="50">
+                <comment>&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="state" type="java.lang.Byte">
+            <column name="STATE" precision="2" scale="0">
+                <comment>&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

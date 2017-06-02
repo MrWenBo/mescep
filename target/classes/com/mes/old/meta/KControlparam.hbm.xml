@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KControlparam" table="K_CONTROLPARAM" schema="MES188" optimistic-lock="version">
+        <comment>&#191;&#216;&#214;&#198;&#177;&#228;&#193;&#191;&#188;&#199;&#194;&#188;</comment>
+        <composite-id name="id" class="com.mes.old.KControlparamId">
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="32" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" length="32" />
+            </key-property>
+            <key-property name="controltype" type="string">
+                <column name="CONTROLTYPE" length="32" />
+            </key-property>
+        </composite-id>
+        <property name="controlvalue" type="string">
+            <column name="CONTROLVALUE" length="32">
+                <comment>&#177;&#228;&#193;&#191;&#214;&#181;&#163;&#168;&#190;&#171;&#200;&#183;&#196;&#163;&#186;&#253;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="controlstate" type="string">
+            <column name="CONTROLSTATE" length="32" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

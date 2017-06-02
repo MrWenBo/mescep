@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmTaskinstance" table="JBPM_TASKINSTANCE" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmModuleinstance" class="com.mes.old.JbpmModuleinstance" fetch="select">
+            <column name="TASKMGMTINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmSwimlaneinstance" class="com.mes.old.JbpmSwimlaneinstance" fetch="select">
+            <column name="SWIMLANINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTask" class="com.mes.old.JbpmTask" fetch="select">
+            <column name="TASK_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmToken" class="com.mes.old.JbpmToken" fetch="select">
+            <column name="TOKEN_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="char">
+            <column name="CLASS_" length="1" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION_" length="4000" />
+        </property>
+        <property name="actorid" type="string">
+            <column name="ACTORID_" />
+        </property>
+        <property name="create" type="date">
+            <column name="CREATE_" length="7" />
+        </property>
+        <property name="start" type="date">
+            <column name="START_" length="7" />
+        </property>
+        <property name="end" type="date">
+            <column name="END_" length="7" />
+        </property>
+        <property name="duedate" type="date">
+            <column name="DUEDATE_" length="7" />
+        </property>
+        <property name="priority" type="java.lang.Long">
+            <column name="PRIORITY_" precision="10" scale="0" />
+        </property>
+        <property name="iscancelled" type="java.lang.Boolean">
+            <column name="ISCANCELLED_" precision="1" scale="0" />
+        </property>
+        <property name="issuspended" type="java.lang.Boolean">
+            <column name="ISSUSPENDED_" precision="1" scale="0" />
+        </property>
+        <property name="isopen" type="java.lang.Boolean">
+            <column name="ISOPEN_" precision="1" scale="0" />
+        </property>
+        <property name="issignalling" type="java.lang.Boolean">
+            <column name="ISSIGNALLING_" precision="1" scale="0" />
+        </property>
+        <property name="isblocking" type="java.lang.Boolean">
+            <column name="ISBLOCKING_" precision="1" scale="0" />
+        </property>
+        <set name="jbpmPooledactors" table="JBPM_TASKACTORPOOL" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="TASKINSTANCE_" scale="0" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.mes.old.JbpmPooledactor">
+                <column name="POOLEDACTOR_" scale="0" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="jbpmLogs" table="JBPM_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKINSTANCE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmLog" />
+        </set>
+        <set name="jbpmVariableinstances" table="JBPM_VARIABLEINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKINSTANCE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmVariableinstance" />
+        </set>
+        <set name="jbpmTimers" table="JBPM_TIMER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKINSTANCE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTimer" />
+        </set>
+        <set name="jbpmComments" table="JBPM_COMMENT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKINSTANCE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmComment" />
+        </set>
+        <set name="jbpmMessages" table="JBPM_MESSAGE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKINSTANCE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmMessage" />
+        </set>
+    </class>
+</hibernate-mapping>

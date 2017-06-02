@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvParttask" table="TV_PARTTASK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvParttaskId">
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="taskid" type="string">
+                <column name="TASKID" />
+            </key-property>
+            <key-property name="taskname" type="string">
+                <column name="TASKNAME" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="planstart" type="date">
+                <column name="PLANSTART" length="7" />
+            </key-property>
+            <key-property name="planfinish" type="date">
+                <column name="PLANFINISH" length="7" />
+            </key-property>
+            <key-property name="earlystart" type="date">
+                <column name="EARLYSTART" length="7" />
+            </key-property>
+            <key-property name="latefinish" type="date">
+                <column name="LATEFINISH" length="7" />
+            </key-property>
+            <key-property name="priority" type="java.lang.Long">
+                <column name="PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="prioritydesc" type="string">
+                <column name="PRIORITYDESC" length="100" />
+            </key-property>
+            <key-property name="tasktype" type="string">
+                <column name="TASKTYPE" length="50" />
+            </key-property>
+            <key-property name="taskwork" type="big_decimal">
+                <column name="TASKWORK" precision="25" scale="6" />
+            </key-property>
+            <key-property name="planqty" type="big_decimal">
+                <column name="PLANQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="completeqty" type="big_decimal">
+                <column name="COMPLETEQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="routing" type="string">
+                <column name="ROUTING" />
+            </key-property>
+            <key-property name="routineVersionid" type="string">
+                <column name="ROUTINE_VERSIONID" length="50" />
+            </key-property>
+            <key-property name="routineVersionidDesc" type="string">
+                <column name="ROUTINE_VERSIONID_DESC" length="152" />
+            </key-property>
+            <key-property name="deliveryqty" type="big_decimal">
+                <column name="DELIVERYQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="taskstate" type="big_decimal">
+                <column name="TASKSTATE" precision="20" scale="6" />
+            </key-property>
+            <key-property name="routinestate" type="java.lang.Integer">
+                <column name="ROUTINESTATE" precision="5" scale="0" />
+            </key-property>
+            <key-property name="materialstate" type="java.lang.Integer">
+                <column name="MATERIALSTATE" precision="5" scale="0" />
+            </key-property>
+            <key-property name="materialstatedesc" type="string">
+                <column name="MATERIALSTATEDESC" length="100" />
+            </key-property>
+            <key-property name="resourcestate" type="java.lang.Integer">
+                <column name="RESOURCESTATE" precision="5" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="employeename" type="string">
+                <column name="EMPLOYEENAME" length="100" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="check1qty" type="big_decimal">
+                <column name="CHECK1QTY" precision="25" scale="0" />
+            </key-property>
+            <key-property name="rootbatchnum" type="string">
+                <column name="ROOTBATCHNUM" />
+            </key-property>
+            <key-property name="costid" type="string">
+                <column name="COSTID" />
+            </key-property>
+            <key-property name="isprint" type="java.lang.Boolean">
+                <column name="ISPRINT" precision="1" scale="0" />
+            </key-property>
+            <key-property name="reasoncode" type="string">
+                <column name="REASONCODE" />
+            </key-property>
+            <key-property name="check8qty" type="big_decimal">
+                <column name="CHECK8QTY" precision="25" scale="0" />
+            </key-property>
+            <key-property name="modeldesc" type="string">
+                <column name="MODELDESC" />
+            </key-property>
+            <key-property name="suspended" type="java.lang.Byte">
+                <column name="SUSPENDED" precision="2" scale="0" />
+            </key-property>
+            <key-property name="isturned" type="java.lang.Boolean">
+                <column name="ISTURNED" precision="1" scale="0" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="isImportantPart" type="java.lang.Long">
+                <column name="IS_IMPORTANT_PART" precision="10" scale="0" />
+            </key-property>
+            <key-property name="isCriticalPart" type="java.lang.Long">
+                <column name="IS_CRITICAL_PART" precision="10" scale="0" />
+            </key-property>
+            <key-property name="productPhase" type="string">
+                <column name="PRODUCT_PHASE" />
+            </key-property>
+            <key-property name="taskstatedesc" type="string">
+                <column name="TASKSTATEDESC" length="100" />
+            </key-property>
+            <key-property name="tasktypedesc" type="string">
+                <column name="TASKTYPEDESC" length="100" />
+            </key-property>
+            <key-property name="deptiddesc" type="string">
+                <column name="DEPTIDDESC" length="50" />
+            </key-property>
+            <key-property name="mastershopdesc" type="string">
+                <column name="MASTERSHOPDESC" length="50" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="versionid" type="string">
+                <column name="VERSIONID" length="50" />
+            </key-property>
+            <key-property name="actualstart" type="date">
+                <column name="ACTUALSTART" length="7" />
+            </key-property>
+            <key-property name="actualfinish" type="date">
+                <column name="ACTUALFINISH" length="7" />
+            </key-property>
+            <key-property name="locked" type="java.lang.Byte">
+                <column name="LOCKED" precision="2" scale="0" />
+            </key-property>
+            <key-property name="dueqty" type="big_decimal">
+                <column name="DUEQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="isUrgent" type="java.lang.Boolean">
+                <column name="IS_URGENT" precision="1" scale="0" />
+            </key-property>
+            <key-property name="demandlinkqty" type="big_decimal">
+                <column name="DEMANDLINKQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="roughNumber" type="string">
+                <column name="ROUGH_NUMBER" length="50" />
+            </key-property>
+            <key-property name="materialNumber" type="string">
+                <column name="MATERIAL_NUMBER" length="50" />
+            </key-property>
+            <key-property name="importantdesc" type="string">
+                <column name="IMPORTANTDESC" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

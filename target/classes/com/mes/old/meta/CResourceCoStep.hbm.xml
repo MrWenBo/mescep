@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CResourceCoStep" table="C_RESOURCE_CO_STEP" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#202;&#212;&#180;&#181;&#189;&#179;&#201;&#177;&#190;&#182;&#212;&#207;&#243;&#194;&#183;&#190;&#182;</comment>
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="resourceId" type="string">
+            <column name="RESOURCE_ID" length="100">
+                <comment>&#215;&#202;&#212;&#180;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="costObjectId" type="string">
+            <column name="COST_OBJECT_ID" length="10">
+                <comment>&#179;&#201;&#177;&#190;&#182;&#212;&#207;&#243;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="cost" type="big_decimal">
+            <column name="COST" precision="10">
+                <comment>&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

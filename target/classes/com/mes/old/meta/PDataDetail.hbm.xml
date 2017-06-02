@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.PDataDetail" table="P_DATA_DETAIL" schema="MES188" optimistic-lock="version">
+        <comment>&#201;&#250;&#178;&#250;&#215;&#188;&#177;&#184;&#212;&#164;&#212;&#188;&#181;&#165;&#207;&#234;&#199;&#233;</comment>
+        <composite-id name="id" class="com.mes.old.PDataDetailId">
+            <key-property name="dataid" type="string">
+                <column name="DATAID" />
+            </key-property>
+            <key-property name="dataseq" type="int">
+                <column name="DATASEQ" precision="6" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="PDataHeader" class="com.mes.old.PDataHeader" update="false" insert="false" fetch="select">
+            <column name="DATAID" not-null="true">
+                <comment>&#212;&#164;&#212;&#188;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER">
+                <comment>&#208;&#232;&#210;&#170;&#212;&#164;&#212;&#188;&#181;&#196;&#206;&#239;&#193;&#207;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="requireNum" type="java.lang.Integer">
+            <column name="REQUIRE_NUM" precision="6" scale="0">
+                <comment>&#208;&#232;&#199;&#243;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="dataNum" type="java.lang.Integer">
+            <column name="DATA_NUM" precision="6" scale="0">
+                <comment>&#212;&#164;&#212;&#188;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="relationOrder" type="string">
+            <column name="RELATION_ORDER">
+                <comment>
+                &#185;&#216;&#193;&#170;&#181;&#165;&#186;&#197;&#163;&#172;&#182;&#212;&#211;&#218;&#212;&#164;&#212;&#188;&#200;&#206;&#206;&#241;&#192;&#180;&#203;&#181;&#163;&#172;&#212;&#221;&#202;&#177;&#178;&#187;&#189;&#248;&#208;&#208;&#202;&#185;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="itemDataState" type="string">
+            <column name="ITEM_DATA_STATE" length="50">
+                <comment>&#212;&#164;&#212;&#188;&#207;&#238;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="isFinishData" type="string">
+            <column name="IS_FINISH_DATA" length="50">
+                <comment>&#202;&#199;&#183;&#241;&#205;&#234;&#179;&#201;&#212;&#164;&#212;&#188;</comment>
+            </column>
+        </property>
+        <property name="finalTime" type="date">
+            <column name="FINAL_TIME" length="7">
+                <comment>&#212;&#164;&#212;&#188;&#207;&#238;&#214;&#180;&#208;&#208;&#198;&#218;&#207;&#222;</comment>
+            </column>
+        </property>
+        <property name="nextTime" type="date">
+            <column name="NEXT_TIME" length="7">
+                <comment>&#207;&#194;&#180;&#206;&#212;&#164;&#212;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="startTime" type="date">
+            <column name="START_TIME" length="7">
+                <comment>&#212;&#164;&#212;&#188;&#202;&#177;&#188;&#228;&#182;&#206;&#163;&#172;&#191;&#170;&#202;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="endTime" type="date">
+            <column name="END_TIME" length="7">
+                <comment>&#212;&#164;&#212;&#188;&#202;&#177;&#188;&#228;&#182;&#206;&#163;&#172;&#189;&#225;&#202;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID">
+                <comment>&#206;&#168;&#210;&#187;&#186;&#197;&#163;&#172;&#185;&#169;Hibernate&#192;&#180;&#189;&#248;&#208;&#208;&#202;&#185;&#211;&#195;</comment>
+            </column>
+        </property>
+        <property name="lastDataNum" type="big_decimal">
+            <column name="LAST_DATA_NUM" precision="10" />
+        </property>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID" />
+        </property>
+    </class>
+</hibernate-mapping>

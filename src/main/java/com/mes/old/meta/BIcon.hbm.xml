@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BIcon" table="B_ICON" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="notes" type="string">
+            <column name="NOTES" length="256" />
+        </property>
+        <property name="smallicon" type="string">
+            <column name="SMALLICON" length="50" />
+        </property>
+        <property name="middleicon" type="string">
+            <column name="MIDDLEICON" length="50" />
+        </property>
+        <property name="bigicon" type="string">
+            <column name="BIGICON" length="50" />
+        </property>
+        <property name="class_" type="string">
+            <column name="CLASS" length="10" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

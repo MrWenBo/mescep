@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KEmployeeCustom" table="K_EMPLOYEE_CUSTOM" schema="MES188" optimistic-lock="version">
+        <comment>&#211;&#195;&#187;&#167;&#178;&#206;&#202;&#253;&#182;&#168;&#214;&#198;</comment>
+        <composite-id name="id" class="com.mes.old.KEmployeeCustomId">
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="32" />
+            </key-property>
+            <key-property name="ktype" type="string">
+                <column name="KTYPE" length="10" />
+            </key-property>
+            <key-property name="kvalue" type="string">
+                <column name="KVALUE" />
+            </key-property>
+        </composite-id>
+        <property name="identification" type="string">
+            <column name="IDENTIFICATION" length="2" />
+        </property>
+    </class>
+</hibernate-mapping>

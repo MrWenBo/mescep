@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.LagdaysPrepare" table="LAGDAYS_PREPARE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.LagdaysPrepareId">
+            <key-property name="mmaLagdays" type="big_decimal">
+                <column name="MMA_LAGDAYS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="lagdays" type="big_decimal">
+                <column name="LAGDAYS" precision="22" scale="0" />
+            </key-property>
+            <key-property name="prepareTaskuid" type="string">
+                <column name="PREPARE_TASKUID" />
+            </key-property>
+            <key-property name="prepareTaskname" type="string">
+                <column name="PREPARE_TASKNAME" />
+            </key-property>
+            <key-property name="prepareTasktype" type="string">
+                <column name="PREPARE_TASKTYPE" />
+            </key-property>
+            <key-property name="prepareTaskstate" type="string">
+                <column name="PREPARE_TASKSTATE" />
+            </key-property>
+            <key-property name="priority" type="java.lang.Long">
+                <column name="PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" />
+            </key-property>
+            <key-property name="relationid" type="string">
+                <column name="RELATIONID" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="orderid" type="string">
+                <column name="ORDERID" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="taskPartNumber" type="string">
+                <column name="TASK_PART_NUMBER" />
+            </key-property>
+            <key-property name="taskPartName" type="string">
+                <column name="TASK_PART_NAME" />
+            </key-property>
+            <key-property name="taskDrawingid" type="string">
+                <column name="TASK_DRAWINGID" />
+            </key-property>
+            <key-property name="taskVersionid" type="string">
+                <column name="TASK_VERSIONID" />
+            </key-property>
+            <key-property name="taskBatchnum" type="string">
+                <column name="TASK_BATCHNUM" length="555" />
+            </key-property>
+            <key-property name="taskPlanstart" type="date">
+                <column name="TASK_PLANSTART" length="7" />
+            </key-property>
+            <key-property name="routing" type="string">
+                <column name="ROUTING" />
+            </key-property>
+            <key-property name="routingVer" type="string">
+                <column name="ROUTING_VER" />
+            </key-property>
+            <key-property name="opuid" type="string">
+                <column name="OPUID" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="10" scale="6" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="taskTaskid" type="string">
+                <column name="TASK_TASKID" />
+            </key-property>
+            <key-property name="taskTaskname" type="string">
+                <column name="TASK_TASKNAME" />
+            </key-property>
+            <key-property name="taskTasktype" type="string">
+                <column name="TASK_TASKTYPE" length="50" />
+            </key-property>
+            <key-property name="taskTaskstate" type="big_decimal">
+                <column name="TASK_TASKSTATE" precision="20" scale="6" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="relationOrder" type="string">
+                <column name="RELATION_ORDER" />
+            </key-property>
+            <key-property name="startTime" type="date">
+                <column name="START_TIME" length="7" />
+            </key-property>
+            <key-property name="endTime" type="date">
+                <column name="END_TIME" length="7" />
+            </key-property>
+            <key-property name="finalTime" type="date">
+                <column name="FINAL_TIME" length="7" />
+            </key-property>
+            <key-property name="nextTime" type="date">
+                <column name="NEXT_TIME" length="7" />
+            </key-property>
+            <key-property name="actualstart" type="date">
+                <column name="ACTUALSTART" length="7" />
+            </key-property>
+            <key-property name="estimatefinish" type="date">
+                <column name="ESTIMATEFINISH" length="7" />
+            </key-property>
+            <key-property name="actualfinish" type="date">
+                <column name="ACTUALFINISH" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="scheduleTaskuid" type="string">
+                <column name="SCHEDULE_TASKUID" />
+            </key-property>
+            <key-property name="completepercent" type="big_decimal">
+                <column name="COMPLETEPERCENT" precision="6" />
+            </key-property>
+            <key-property name="taskdescription" type="string">
+                <column name="TASKDESCRIPTION" />
+            </key-property>
+            <key-property name="dispatcher" type="string">
+                <column name="DISPATCHER" />
+            </key-property>
+            <key-property name="dispatchTime" type="date">
+                <column name="DISPATCH_TIME" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

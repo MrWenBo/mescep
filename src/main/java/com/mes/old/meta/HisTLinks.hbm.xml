@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisTLinks" table="HIS_T_LINKS" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisTLinksId">
+            <key-property name="succuid" type="serializable">
+                <column name="SUCCUID" />
+            </key-property>
+            <key-property name="preduid" type="serializable">
+                <column name="PREDUID" />
+            </key-property>
+            <key-property name="linkqty" type="serializable">
+                <column name="LINKQTY" />
+            </key-property>
+            <key-property name="linktype" type="serializable">
+                <column name="LINKTYPE" />
+            </key-property>
+            <key-property name="linklag" type="serializable">
+                <column name="LINKLAG" />
+            </key-property>
+            <key-property name="isineffect" type="serializable">
+                <column name="ISINEFFECT" />
+            </key-property>
+            <key-property name="uniqueId" type="serializable">
+                <column name="UNIQUE_ID" />
+            </key-property>
+            <key-property name="dependtype" type="serializable">
+                <column name="DEPENDTYPE" />
+            </key-property>
+            <key-property name="locklevel" type="serializable">
+                <column name="LOCKLEVEL" />
+            </key-property>
+            <key-property name="lockexpiredate" type="serializable">
+                <column name="LOCKEXPIREDATE" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

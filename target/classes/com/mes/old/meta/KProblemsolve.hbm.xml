@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KProblemsolve" table="K_PROBLEMSOLVE" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="model" type="string">
+            <column name="MODEL" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" />
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" />
+        </property>
+        <property name="sender" type="string">
+            <column name="SENDER" />
+        </property>
+        <property name="rdeptid" type="string">
+            <column name="RDEPTID" />
+        </property>
+        <property name="resolver" type="string">
+            <column name="RESOLVER" />
+        </property>
+        <property name="sendtime" type="date">
+            <column name="SENDTIME" length="7" />
+        </property>
+        <property name="resolvetime" type="date">
+            <column name="RESOLVETIME" length="7" />
+        </property>
+        <property name="planresolvetime" type="date">
+            <column name="PLANRESOLVETIME" length="7" />
+        </property>
+        <property name="isresolved" type="string">
+            <column name="ISRESOLVED" />
+        </property>
+    </class>
+</hibernate-mapping>

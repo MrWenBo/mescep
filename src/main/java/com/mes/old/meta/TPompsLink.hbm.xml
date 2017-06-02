@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TPompsLink" table="T_POMPS_LINK" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="TMps" class="com.mes.old.TMps" fetch="select">
+            <column name="MPSUID" length="50" not-null="true" />
+        </many-to-one>
+        <many-to-one name="TProductorder" class="com.mes.old.TProductorder" fetch="select">
+            <column name="POUID" length="50" not-null="true" />
+        </many-to-one>
+        <property name="linkqty" type="big_decimal">
+            <column name="LINKQTY" precision="25" scale="6" />
+        </property>
+        <property name="linktype" type="string">
+            <column name="LINKTYPE" length="10" />
+        </property>
+        <property name="effective" type="java.lang.Byte">
+            <column name="EFFECTIVE" precision="2" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

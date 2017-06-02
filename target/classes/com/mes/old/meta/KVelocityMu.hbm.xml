@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KVelocityMu" table="K_VELOCITY_MU" schema="MES188" optimistic-lock="version">
+        <id name="taskuid" type="string">
+            <column name="TASKUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="deptid" type="string">
+            <column name="DEPTID">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER">
+                <comment>&#206;&#239;&#193;&#207;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL">
+                <comment>&#208;&#205;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="actualfinish" type="date">
+            <column name="ACTUALFINISH" length="7">
+                <comment>&#202;&#181;&#188;&#202;&#205;&#234;&#185;&#164;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="completeqty" type="big_decimal">
+            <column name="COMPLETEQTY" precision="25" scale="6">
+                <comment>&#205;&#234;&#179;&#201;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="wipqty" type="big_decimal">
+            <column name="WIPQTY" precision="25" scale="6">
+                <comment>&#212;&#218;&#214;&#198;&#198;&#183;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM">
+                <comment>&#197;&#250;&#180;&#206;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="latefinish" type="date">
+            <column name="LATEFINISH" length="7">
+                <comment>&#189;&#187;&#187;&#245;&#198;&#218;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

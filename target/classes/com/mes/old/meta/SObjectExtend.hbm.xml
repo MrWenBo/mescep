@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SObjectExtend" table="S_OBJECT_EXTEND" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="objectUid" type="string">
+            <column name="OBJECT_UID" not-null="true" />
+        </property>
+        <property name="objectType" type="string">
+            <column name="OBJECT_TYPE" not-null="true" />
+        </property>
+        <property name="text1" type="string">
+            <column name="TEXT1" />
+        </property>
+        <property name="text2" type="string">
+            <column name="TEXT2" />
+        </property>
+        <property name="text3" type="string">
+            <column name="TEXT3" />
+        </property>
+        <property name="text4" type="string">
+            <column name="TEXT4" />
+        </property>
+        <property name="text5" type="string">
+            <column name="TEXT5" />
+        </property>
+        <property name="text6" type="string">
+            <column name="TEXT6" />
+        </property>
+        <property name="text7" type="string">
+            <column name="TEXT7" />
+        </property>
+        <property name="text8" type="string">
+            <column name="TEXT8" />
+        </property>
+        <property name="text9" type="string">
+            <column name="TEXT9" />
+        </property>
+        <property name="text10" type="string">
+            <column name="TEXT10" />
+        </property>
+        <property name="text11" type="string">
+            <column name="TEXT11" />
+        </property>
+        <property name="text12" type="string">
+            <column name="TEXT12" />
+        </property>
+        <property name="text13" type="string">
+            <column name="TEXT13" />
+        </property>
+        <property name="text14" type="string">
+            <column name="TEXT14" />
+        </property>
+        <property name="text15" type="string">
+            <column name="TEXT15" />
+        </property>
+        <property name="text16" type="string">
+            <column name="TEXT16" />
+        </property>
+        <property name="text17" type="string">
+            <column name="TEXT17" />
+        </property>
+        <property name="text18" type="string">
+            <column name="TEXT18" />
+        </property>
+        <property name="text19" type="string">
+            <column name="TEXT19" />
+        </property>
+        <property name="text20" type="string">
+            <column name="TEXT20" />
+        </property>
+        <property name="date1" type="date">
+            <column name="DATE1" length="7" />
+        </property>
+        <property name="date2" type="date">
+            <column name="DATE2" length="7" />
+        </property>
+        <property name="date3" type="date">
+            <column name="DATE3" length="7" />
+        </property>
+        <property name="date4" type="date">
+            <column name="DATE4" length="7" />
+        </property>
+        <property name="date5" type="date">
+            <column name="DATE5" length="7" />
+        </property>
+        <property name="date6" type="date">
+            <column name="DATE6" length="7" />
+        </property>
+        <property name="date7" type="date">
+            <column name="DATE7" length="7" />
+        </property>
+        <property name="date8" type="date">
+            <column name="DATE8" length="7" />
+        </property>
+        <property name="date9" type="date">
+            <column name="DATE9" length="7" />
+        </property>
+        <property name="date10" type="date">
+            <column name="DATE10" length="7" />
+        </property>
+        <property name="number1" type="big_decimal">
+            <column name="NUMBER1" precision="20" scale="0" />
+        </property>
+        <property name="number2" type="big_decimal">
+            <column name="NUMBER2" precision="20" scale="0" />
+        </property>
+        <property name="number3" type="big_decimal">
+            <column name="NUMBER3" precision="20" scale="0" />
+        </property>
+        <property name="number4" type="big_decimal">
+            <column name="NUMBER4" precision="20" scale="0" />
+        </property>
+        <property name="number5" type="big_decimal">
+            <column name="NUMBER5" precision="20" scale="0" />
+        </property>
+        <property name="number6" type="big_decimal">
+            <column name="NUMBER6" precision="20" scale="0" />
+        </property>
+        <property name="number7" type="big_decimal">
+            <column name="NUMBER7" precision="20" scale="0" />
+        </property>
+        <property name="number8" type="big_decimal">
+            <column name="NUMBER8" precision="20" scale="0" />
+        </property>
+        <property name="number9" type="big_decimal">
+            <column name="NUMBER9" precision="20" scale="0" />
+        </property>
+        <property name="number10" type="big_decimal">
+            <column name="NUMBER10" precision="20" scale="0" />
+        </property>
+        <property name="float1" type="big_decimal">
+            <column name="FLOAT1" precision="20" scale="6" />
+        </property>
+        <property name="float2" type="big_decimal">
+            <column name="FLOAT2" precision="20" scale="6" />
+        </property>
+        <property name="float3" type="big_decimal">
+            <column name="FLOAT3" precision="20" scale="6" />
+        </property>
+        <property name="float4" type="big_decimal">
+            <column name="FLOAT4" precision="20" scale="6" />
+        </property>
+        <property name="float5" type="big_decimal">
+            <column name="FLOAT5" precision="20" scale="6" />
+        </property>
+        <property name="float6" type="big_decimal">
+            <column name="FLOAT6" precision="20" scale="6" />
+        </property>
+        <property name="float7" type="big_decimal">
+            <column name="FLOAT7" precision="20" scale="6" />
+        </property>
+        <property name="float8" type="big_decimal">
+            <column name="FLOAT8" precision="20" scale="6" />
+        </property>
+        <property name="float9" type="big_decimal">
+            <column name="FLOAT9" precision="20" scale="6" />
+        </property>
+        <property name="float10" type="big_decimal">
+            <column name="FLOAT10" precision="20" scale="6" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BvBom" table="BV_BOM" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BvBomId">
+            <key-property name="producedPartNumber" type="string">
+                <column name="PRODUCED_PART_NUMBER" />
+            </key-property>
+            <key-property name="consumedPartNumber" type="string">
+                <column name="CONSUMED_PART_NUMBER" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="10" />
+            </key-property>
+            <key-property name="routing" type="string">
+                <column name="ROUTING" />
+            </key-property>
+            <key-property name="minFixedShrinkage" type="big_decimal">
+                <column name="MIN_FIXED_SHRINKAGE" precision="25" scale="6" />
+            </key-property>
+            <key-property name="minPercentShrinkage" type="big_decimal">
+                <column name="MIN_PERCENT_SHRINKAGE" precision="25" scale="6" />
+            </key-property>
+            <key-property name="phantom" type="java.lang.Byte">
+                <column name="PHANTOM" precision="2" scale="0" />
+            </key-property>
+            <key-property name="ecnDate" type="date">
+                <column name="ECN_DATE" length="7" />
+            </key-property>
+            <key-property name="ecnDescription" type="string">
+                <column name="ECN_DESCRIPTION" />
+            </key-property>
+            <key-property name="ecnDateFormat" type="date">
+                <column name="ECN_DATE_FORMAT" length="7" />
+            </key-property>
+            <key-property name="ecnCode" type="string">
+                <column name="ECN_CODE" length="10" />
+            </key-property>
+            <key-property name="ecnLevel" type="java.lang.Long">
+                <column name="ECN_LEVEL" precision="10" scale="0" />
+            </key-property>
+            <key-property name="ecnNumber" type="java.lang.Long">
+                <column name="ECN_NUMBER" precision="10" scale="0" />
+            </key-property>
+            <key-property name="usableByNewMfgOrder" type="java.lang.Byte">
+                <column name="USABLE_BY_NEW_MFG_ORDER" precision="2" scale="0" />
+            </key-property>
+            <key-property name="normPercentShrinkage" type="big_decimal">
+                <column name="NORM_PERCENT_SHRINKAGE" precision="25" scale="6" />
+            </key-property>
+            <key-property name="normFixedShrinkage" type="big_decimal">
+                <column name="NORM_FIXED_SHRINKAGE" precision="25" scale="6" />
+            </key-property>
+            <key-property name="minQuantity" type="big_decimal">
+                <column name="MIN_QUANTITY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="producedQuantityUom" type="string">
+                <column name="PRODUCED_QUANTITY_UOM" length="50" />
+            </key-property>
+            <key-property name="process" type="string">
+                <column name="PROCESS" length="50" />
+            </key-property>
+            <key-property name="quantityConstraintType" type="string">
+                <column name="QUANTITY_CONSTRAINT_TYPE" length="50" />
+            </key-property>
+            <key-property name="consumedQuantityUom" type="string">
+                <column name="CONSUMED_QUANTITY_UOM" length="50" />
+            </key-property>
+            <key-property name="flexibleMinQuantityP" type="java.lang.Byte">
+                <column name="FLEXIBLE_MIN_QUANTITY_P" precision="2" scale="0" />
+            </key-property>
+            <key-property name="maxQuantity" type="big_decimal">
+                <column name="MAX_QUANTITY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="multipleQuantity" type="big_decimal">
+                <column name="MULTIPLE_QUANTITY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="attributeConsumed" type="string">
+                <column name="ATTRIBUTE_CONSUMED" length="50" />
+            </key-property>
+            <key-property name="attributeProduced" type="string">
+                <column name="ATTRIBUTE_PRODUCED" length="50" />
+            </key-property>
+            <key-property name="changer" type="string">
+                <column name="CHANGER" length="50" />
+            </key-property>
+            <key-property name="changetime" type="date">
+                <column name="CHANGETIME" length="7" />
+            </key-property>
+            <key-property name="changestate" type="java.lang.Byte">
+                <column name="CHANGESTATE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="uniqueid" type="long">
+                <column name="UNIQUEID" precision="10" scale="0" />
+            </key-property>
+            <key-property name="effective" type="java.lang.Byte">
+                <column name="EFFECTIVE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="roundType" type="java.lang.Byte">
+                <column name="ROUND_TYPE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="consumeType" type="java.lang.Long">
+                <column name="CONSUME_TYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="producedQuantity" type="big_decimal">
+                <column name="PRODUCED_QUANTITY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="consumedQuantity" type="big_decimal">
+                <column name="CONSUMED_QUANTITY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="BBomOutUid" type="string">
+                <column name="B_BOM_OUT_UID" />
+            </key-property>
+            <key-property name="PBeginday" type="date">
+                <column name="P_BEGINDAY" length="7" />
+            </key-property>
+            <key-property name="PEndday" type="date">
+                <column name="P_ENDDAY" length="7" />
+            </key-property>
+            <key-property name="EBeginday" type="date">
+                <column name="E_BEGINDAY" length="7" />
+            </key-property>
+            <key-property name="EEndday" type="date">
+                <column name="E_ENDDAY" length="7" />
+            </key-property>
+            <key-property name="PBomnumber" type="string">
+                <column name="P_BOMNUMBER" />
+            </key-property>
+            <key-property name="EBomnumber" type="string">
+                <column name="E_BOMNUMBER" />
+            </key-property>
+            <key-property name="sfPath" type="string">
+                <column name="SF_PATH" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="1000" />
+            </key-property>
+            <key-property name="isCritical" type="java.lang.Byte">
+                <column name="IS_CRITICAL" precision="2" scale="0" />
+            </key-property>
+            <key-property name="readypoint" type="java.lang.Long">
+                <column name="READYPOINT" precision="10" scale="0" />
+            </key-property>
+            <key-property name="consumedpartnumberdesc" type="string">
+                <column name="CONSUMEDPARTNUMBERDESC" />
+            </key-property>
+            <key-property name="consumedDrawingid" type="string">
+                <column name="CONSUMED_DRAWINGID" />
+            </key-property>
+            <key-property name="consumedpartnumberuom" type="string">
+                <column name="CONSUMEDPARTNUMBERUOM" length="50" />
+            </key-property>
+            <key-property name="producedpartnumberdesc" type="string">
+                <column name="PRODUCEDPARTNUMBERDESC" />
+            </key-property>
+            <key-property name="producedDrawingid" type="string">
+                <column name="PRODUCED_DRAWINGID" />
+            </key-property>
+            <key-property name="producedpartnumberuom" type="string">
+                <column name="PRODUCEDPARTNUMBERUOM" length="50" />
+            </key-property>
+            <key-property name="operationName" type="string">
+                <column name="OPERATION_NAME" />
+            </key-property>
+            <key-property name="mastershopdesc" type="string">
+                <column name="MASTERSHOPDESC" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

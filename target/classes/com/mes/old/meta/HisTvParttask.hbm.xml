@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisTvParttask" table="HIS_TV_PARTTASK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisTvParttaskId">
+            <key-property name="taskuid" type="serializable">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="taskid" type="serializable">
+                <column name="TASKID" />
+            </key-property>
+            <key-property name="taskname" type="serializable">
+                <column name="TASKNAME" />
+            </key-property>
+            <key-property name="model" type="serializable">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="batchnum" type="serializable">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="partNumber" type="serializable">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="planstart" type="serializable">
+                <column name="PLANSTART" />
+            </key-property>
+            <key-property name="planfinish" type="serializable">
+                <column name="PLANFINISH" />
+            </key-property>
+            <key-property name="earlystart" type="serializable">
+                <column name="EARLYSTART" />
+            </key-property>
+            <key-property name="latefinish" type="serializable">
+                <column name="LATEFINISH" />
+            </key-property>
+            <key-property name="priority" type="serializable">
+                <column name="PRIORITY" />
+            </key-property>
+            <key-property name="prioritydesc" type="serializable">
+                <column name="PRIORITYDESC" />
+            </key-property>
+            <key-property name="tasktype" type="serializable">
+                <column name="TASKTYPE" />
+            </key-property>
+            <key-property name="taskwork" type="serializable">
+                <column name="TASKWORK" />
+            </key-property>
+            <key-property name="planqty" type="serializable">
+                <column name="PLANQTY" />
+            </key-property>
+            <key-property name="completeqty" type="serializable">
+                <column name="COMPLETEQTY" />
+            </key-property>
+            <key-property name="deptid" type="serializable">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="mastershop" type="serializable">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="routing" type="serializable">
+                <column name="ROUTING" />
+            </key-property>
+            <key-property name="routineVersionid" type="serializable">
+                <column name="ROUTINE_VERSIONID" />
+            </key-property>
+            <key-property name="routineVersionidDesc" type="serializable">
+                <column name="ROUTINE_VERSIONID_DESC" />
+            </key-property>
+            <key-property name="deliveryqty" type="serializable">
+                <column name="DELIVERYQTY" />
+            </key-property>
+            <key-property name="taskstate" type="serializable">
+                <column name="TASKSTATE" />
+            </key-property>
+            <key-property name="routinestate" type="serializable">
+                <column name="ROUTINESTATE" />
+            </key-property>
+            <key-property name="materialstate" type="serializable">
+                <column name="MATERIALSTATE" />
+            </key-property>
+            <key-property name="materialstatedesc" type="serializable">
+                <column name="MATERIALSTATEDESC" />
+            </key-property>
+            <key-property name="resourcestate" type="serializable">
+                <column name="RESOURCESTATE" />
+            </key-property>
+            <key-property name="creator" type="serializable">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="employeename" type="serializable">
+                <column name="EMPLOYEENAME" />
+            </key-property>
+            <key-property name="createtime" type="serializable">
+                <column name="CREATETIME" />
+            </key-property>
+            <key-property name="notes" type="serializable">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="check1qty" type="serializable">
+                <column name="CHECK1QTY" />
+            </key-property>
+            <key-property name="rootbatchnum" type="serializable">
+                <column name="ROOTBATCHNUM" />
+            </key-property>
+            <key-property name="costid" type="serializable">
+                <column name="COSTID" />
+            </key-property>
+            <key-property name="isprint" type="serializable">
+                <column name="ISPRINT" />
+            </key-property>
+            <key-property name="reasoncode" type="serializable">
+                <column name="REASONCODE" />
+            </key-property>
+            <key-property name="check8qty" type="serializable">
+                <column name="CHECK8QTY" />
+            </key-property>
+            <key-property name="modeldesc" type="serializable">
+                <column name="MODELDESC" />
+            </key-property>
+            <key-property name="suspended" type="serializable">
+                <column name="SUSPENDED" />
+            </key-property>
+            <key-property name="isturned" type="serializable">
+                <column name="ISTURNED" />
+            </key-property>
+            <key-property name="partName" type="serializable">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="isImportantPart" type="serializable">
+                <column name="IS_IMPORTANT_PART" />
+            </key-property>
+            <key-property name="isCriticalPart" type="serializable">
+                <column name="IS_CRITICAL_PART" />
+            </key-property>
+            <key-property name="productPhase" type="serializable">
+                <column name="PRODUCT_PHASE" />
+            </key-property>
+            <key-property name="taskstatedesc" type="serializable">
+                <column name="TASKSTATEDESC" />
+            </key-property>
+            <key-property name="tasktypedesc" type="serializable">
+                <column name="TASKTYPEDESC" />
+            </key-property>
+            <key-property name="deptiddesc" type="serializable">
+                <column name="DEPTIDDESC" />
+            </key-property>
+            <key-property name="mastershopdesc" type="serializable">
+                <column name="MASTERSHOPDESC" />
+            </key-property>
+            <key-property name="drawingid" type="serializable">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="versionid" type="serializable">
+                <column name="VERSIONID" />
+            </key-property>
+            <key-property name="actualstart" type="serializable">
+                <column name="ACTUALSTART" />
+            </key-property>
+            <key-property name="actualfinish" type="serializable">
+                <column name="ACTUALFINISH" />
+            </key-property>
+            <key-property name="locked" type="serializable">
+                <column name="LOCKED" />
+            </key-property>
+            <key-property name="dueqty" type="serializable">
+                <column name="DUEQTY" />
+            </key-property>
+            <key-property name="demandlinkqty" type="serializable">
+                <column name="DEMANDLINKQTY" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

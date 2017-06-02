@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BClassinfo" table="B_CLASSINFO" schema="MES188" optimistic-lock="version">
+        <comment>&#183;&#214;&#192;&#224;</comment>
+        <id name="uuid" type="string">
+            <column name="UUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="classid" type="string">
+            <column name="CLASSID" length="40" not-null="true">
+                <comment>&#192;&#224;&#177;&#240;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="classname" type="string">
+            <column name="CLASSNAME">
+                <comment>&#192;&#224;&#177;&#240;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="parentid" type="string">
+            <column name="PARENTID" length="50">
+                <comment>&#184;&#184;&#192;&#224;&#177;&#240;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="sortid" type="string">
+            <column name="SORTID" not-null="true">
+                <comment>&#183;&#214;&#192;&#224;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="isineffect" type="java.lang.Byte">
+            <column name="ISINEFFECT" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#211;&#208;&#208;&#167;</comment>
+            </column>
+        </property>
+        <property name="sortindex" type="java.lang.Integer">
+            <column name="SORTINDEX" precision="9" scale="0">
+                <comment>&#192;&#224;&#177;&#240;&#203;&#179;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="customerClassid" type="string">
+            <column name="CUSTOMER_CLASSID" length="50" />
+        </property>
+        <property name="BClassinfoOutUid" type="string">
+            <column name="B_CLASSINFO_OUT_UID" />
+        </property>
+        <property name="classtype" type="string">
+            <column name="CLASSTYPE">
+                <comment>&#202;&#199;&#183;&#241;&#206;&#170;&#208;&#233;&#189;&#218;&#181;&#227;&#163;&#186;1-&#183;&#241;&#163;&#172;2-&#202;&#199;</comment>
+            </column>
+        </property>
+        <property name="parentuid" type="string">
+            <column name="PARENTUID" length="50" />
+        </property>
+        <property name="leafnode" type="java.lang.Boolean">
+            <column name="LEAFNODE" precision="1" scale="0" />
+        </property>
+        <property name="customerFeaturesFormat" type="string">
+            <column name="CUSTOMER_FEATURES_FORMAT" />
+        </property>
+        <property name="childseq" type="java.lang.Long">
+            <column name="CHILDSEQ" precision="10" scale="0" />
+        </property>
+        <property name="mapkeyuid" type="string">
+            <column name="MAPKEYUID" length="256">
+                <comment>&#211;&#179;&#201;&#228;Id</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="managerClassName" type="string">
+            <column name="MANAGER_CLASS_NAME" />
+        </property>
+        <property name="iconUid" type="string">
+            <column name="ICON_UID" length="50" />
+        </property>
+        <property name="codeAttribute" type="string">
+            <column name="CODE_ATTRIBUTE" length="50" />
+        </property>
+        <property name="objectClassName" type="string">
+            <column name="OBJECT_CLASS_NAME" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="iconpath" type="string">
+            <column name="ICONPATH" length="50" />
+        </property>
+        <set name="CCodehistories" table="C_CODEHISTORY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CLASS_UID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.CCodehistory" />
+        </set>
+        <set name="BClassAttributeRelations" table="B_CLASS_ATTRIBUTE_RELATION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CLASS_UID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.BClassAttributeRelation" />
+        </set>
+        <set name="CCoderesultsForRuleClassUid" table="C_CODERESULT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RULE_CLASS_UID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.CCoderesult" />
+        </set>
+        <set name="CCoderesultsForClassUid" table="C_CODERESULT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CLASS_UID" length="50">
+                    <comment>&#183;&#214;&#192;&#224;&#177;&#224;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CCoderesult" />
+        </set>
+        <set name="CCoderules" table="C_CODERULE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CLASS_UID" length="50" />
+            </key>
+            <one-to-many class="com.mes.old.CCoderule" />
+        </set>
+    </class>
+</hibernate-mapping>

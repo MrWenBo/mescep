@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BRoutineLink" table="B_ROUTINE_LINK" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="routing1" type="string">
+            <column name="ROUTING1" not-null="true" />
+        </property>
+        <property name="operationId1" type="big_decimal">
+            <column name="OPERATION_ID1" precision="10" not-null="true" />
+        </property>
+        <property name="routing2" type="string">
+            <column name="ROUTING2" not-null="true" />
+        </property>
+        <property name="operationId2" type="big_decimal">
+            <column name="OPERATION_ID2" precision="10" not-null="true" />
+        </property>
+        <property name="linktype" type="string">
+            <column name="LINKTYPE" length="10" not-null="true" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

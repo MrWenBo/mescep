@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SfMovementposition" table="SF_MOVEMENTPOSITION" schema="MES188" optimistic-lock="version">
+        <id name="uuid" type="string">
+            <column name="UUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="translationx" type="big_decimal">
+            <column name="TRANSLATIONX" precision="30" scale="3">
+                <comment>X&#183;&#189;&#207;&#242;&#212;&#246;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="translationy" type="big_decimal">
+            <column name="TRANSLATIONY" precision="30" scale="3">
+                <comment>Y&#183;&#189;&#207;&#242;&#212;&#246;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="translationz" type="big_decimal">
+            <column name="TRANSLATIONZ" precision="30" scale="3">
+                <comment>Z&#183;&#189;&#207;&#242;&#212;&#246;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="rotationx" type="big_decimal">
+            <column name="ROTATIONX" precision="30" scale="3">
+                <comment>&#202;&#199;&#183;&#241;&#209;&#216;X&#214;&#225;&#208;&#253;&#215;&#170;</comment>
+            </column>
+        </property>
+        <property name="rotationy" type="big_decimal">
+            <column name="ROTATIONY" precision="30" scale="3">
+                <comment>&#202;&#199;&#183;&#241;&#209;&#216;Y&#214;&#225;&#208;&#253;&#215;&#170;</comment>
+            </column>
+        </property>
+        <property name="rotationz" type="big_decimal">
+            <column name="ROTATIONZ" precision="30" scale="3">
+                <comment>&#202;&#199;&#183;&#241;&#209;&#216;Z&#214;&#225;&#208;&#253;&#215;&#170;</comment>
+            </column>
+        </property>
+        <property name="rotationangle" type="big_decimal">
+            <column name="ROTATIONANGLE" precision="30" scale="3">
+                <comment>&#208;&#253;&#215;&#170;&#189;&#199;&#182;&#200;</comment>
+            </column>
+        </property>
+        <property name="modelpath" type="string">
+            <column name="MODELPATH">
+                <comment>&#178;&#217;&#215;&#247;&#181;&#196;&#196;&#163;&#208;&#205;&#200;&#171;&#194;&#183;&#190;&#182;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="opstepmoveuid" type="string">
+            <column name="OPSTEPMOVEUID">
+                <comment>sf_operstepmoveincr&#181;&#196;&#214;&#247;&#188;&#252;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="changetime" type="date">
+            <column name="CHANGETIME" length="7" />
+        </property>
+        <property name="moveid" type="big_decimal">
+            <column name="MOVEID" precision="30" scale="0">
+                <comment>&#196;&#218;&#178;&#191;&#197;&#197;&#208;&#242;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="partuid" type="string">
+            <column name="PARTUID" />
+        </property>
+        <property name="drawingid" type="string">
+            <column name="DRAWINGID" />
+        </property>
+        <property name="partname" type="string">
+            <column name="PARTNAME" />
+        </property>
+    </class>
+</hibernate-mapping>

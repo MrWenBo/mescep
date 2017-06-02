@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BLookupTableHeader" table="B_LOOKUP_TABLE_HEADER" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="50" />
+        </property>
+        <property name="parameter1" type="string">
+            <column name="PARAMETER1" length="50" />
+        </property>
+        <property name="parameter2" type="string">
+            <column name="PARAMETER2" length="50" />
+        </property>
+        <property name="parameter3" type="string">
+            <column name="PARAMETER3" length="50" />
+        </property>
+        <property name="parameter4" type="string">
+            <column name="PARAMETER4" length="50" />
+        </property>
+        <property name="parameter5" type="string">
+            <column name="PARAMETER5" length="50" />
+        </property>
+        <property name="parameter6" type="string">
+            <column name="PARAMETER6" length="50" />
+        </property>
+        <property name="parameter7" type="string">
+            <column name="PARAMETER7" length="50" />
+        </property>
+        <property name="parameter8" type="string">
+            <column name="PARAMETER8" length="50" />
+        </property>
+        <property name="parameter9" type="string">
+            <column name="PARAMETER9" length="50" />
+        </property>
+        <property name="parameter10" type="string">
+            <column name="PARAMETER10" length="50" />
+        </property>
+        <property name="tableId" type="string">
+            <column name="TABLE_ID" length="50" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>

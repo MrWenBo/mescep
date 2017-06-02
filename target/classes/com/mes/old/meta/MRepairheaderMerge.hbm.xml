@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MRepairheaderMerge" table="M_REPAIRHEADER_MERGE" schema="MES188">
+        <id name="repairuid" type="string">
+            <column name="REPAIRUID" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="string">
+            <column name="VERSION" length="50" />
+        </version>
+        <property name="repairid" type="string">
+            <column name="REPAIRID" not-null="true" unique="true" />
+        </property>
+        <property name="defectjudgeuid" type="string">
+            <column name="DEFECTJUDGEUID" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="repairqty" type="big_decimal">
+            <column name="REPAIRQTY" precision="20" />
+        </property>
+        <property name="certificateuid" type="string">
+            <column name="CERTIFICATEUID" />
+        </property>
+        <property name="repairstate" type="java.lang.Long">
+            <column name="REPAIRSTATE" precision="10" scale="0" />
+        </property>
+        <property name="dutier" type="string">
+            <column name="DUTIER" length="50" />
+        </property>
+        <property name="checkmanager" type="string">
+            <column name="CHECKMANAGER" length="50" />
+        </property>
+        <property name="dutydeptmanager" type="string">
+            <column name="DUTYDEPTMANAGER" length="50" />
+        </property>
+        <property name="designMind" type="string">
+            <column name="DESIGN_MIND" />
+        </property>
+        <property name="auditordept" type="string">
+            <column name="AUDITORDEPT" length="50" />
+        </property>
+        <property name="techMind" type="string">
+            <column name="TECH_MIND" />
+        </property>
+        <property name="metalMind" type="string">
+            <column name="METAL_MIND" />
+        </property>
+        <property name="customerMind" type="string">
+            <column name="CUSTOMER_MIND" />
+        </property>
+        <property name="defectlevel" type="java.lang.Long">
+            <column name="DEFECTLEVEL" precision="10" scale="0" />
+        </property>
+        <property name="segementmanager" type="string">
+            <column name="SEGEMENTMANAGER" length="50" />
+        </property>
+        <property name="isinbulk" type="java.lang.Long">
+            <column name="ISINBULK" precision="10" scale="0" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="repairhour" type="big_decimal">
+            <column name="REPAIRHOUR" precision="20" />
+        </property>
+        <property name="repairmoney" type="big_decimal">
+            <column name="REPAIRMONEY" precision="20" />
+        </property>
+        <property name="attatchref" type="string">
+            <column name="ATTATCHREF" />
+        </property>
+        <property name="checkMind" type="string">
+            <column name="CHECK_MIND" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="customerbillid" type="string">
+            <column name="CUSTOMERBILLID" />
+        </property>
+        <property name="isineffect" type="java.lang.Long">
+            <column name="ISINEFFECT" precision="10" scale="0" />
+        </property>
+        <property name="approvestate" type="java.lang.Long">
+            <column name="APPROVESTATE" precision="10" scale="0" />
+        </property>
+        <property name="approveperson" type="string">
+            <column name="APPROVEPERSON" length="50" />
+        </property>
+        <property name="billnumber" type="string">
+            <column name="BILLNUMBER" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" />
+        </property>
+        <property name="judgeCommitteeMind" type="string">
+            <column name="JUDGE_COMMITTEE_MIND" />
+        </property>
+        <property name="defectreason" type="string">
+            <column name="DEFECTREASON" />
+        </property>
+        <property name="dutydeptid" type="string">
+            <column name="DUTYDEPTID" length="50" />
+        </property>
+        <property name="qtyappearance" type="big_decimal">
+            <column name="QTYAPPEARANCE" precision="20" />
+        </property>
+        <property name="qtydimension" type="big_decimal">
+            <column name="QTYDIMENSION" precision="20" />
+        </property>
+        <property name="qtyneedtorepair" type="big_decimal">
+            <column name="QTYNEEDTOREPAIR" precision="20" />
+        </property>
+        <property name="standingOrgMind" type="string">
+            <column name="STANDING_ORG_MIND" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" />
+        </property>
+        <property name="batchnumQty" type="big_decimal">
+            <column name="BATCHNUM_QTY" precision="20" />
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL" />
+        </property>
+        <property name="operationIddesc" type="string">
+            <column name="OPERATION_IDDESC" length="50" />
+        </property>
+        <set name="MRepairdetailMerges" table="M_REPAIRDETAIL_MERGE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="REPAIRUID" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.MRepairdetailMerge" />
+        </set>
+    </class>
+</hibernate-mapping>

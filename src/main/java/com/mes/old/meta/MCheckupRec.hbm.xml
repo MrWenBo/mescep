@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MCheckupRec" table="M_CHECKUP_REC" schema="MES188" optimistic-lock="version">
+        <comment>&#193;&#227;&#188;&#254;&#184;&#180;&#188;&#236;&#193;&#247;&#203;&#174;&#188;&#199;&#194;&#188;</comment>
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="MMaterial" class="com.mes.old.MMaterial" fetch="select">
+            <column name="MATERIALUSN" length="50" />
+        </many-to-one>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7">
+                <comment>&#188;&#236;&#209;&#233;&#186;&#207;&#184;&#241;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50">
+                <comment>&#188;&#236;&#209;&#233;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="nextChecktime" type="date">
+            <column name="NEXT_CHECKTIME" length="7">
+                <comment>&#207;&#194;&#210;&#187;&#180;&#206;&#184;&#180;&#188;&#236;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#194;&#188;&#200;&#235;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#194;&#188;&#200;&#235;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="qualitystate" type="java.lang.Byte">
+            <column name="QUALITYSTATE" precision="2" scale="0">
+                <comment>&#188;&#236;&#209;&#233;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

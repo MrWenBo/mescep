@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SMainXml" table="S_MAIN_XML" schema="MES188" optimistic-lock="version">
+        <id name="xmlid" type="long">
+            <column name="XMLID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="xmlname" type="string">
+            <column name="XMLNAME" length="50" />
+        </property>
+        <property name="mainid" type="long">
+            <column name="MAINID" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="xmlurl" type="string">
+            <column name="XMLURL" />
+        </property>
+        <property name="company" type="string">
+            <column name="COMPANY" length="10" not-null="true" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+    </class>
+</hibernate-mapping>

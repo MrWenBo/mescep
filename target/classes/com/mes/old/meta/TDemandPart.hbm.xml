@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TDemandPart" table="T_DEMAND_PART" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TDemandPartId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="50" />
+            </key-property>
+            <key-property name="demanduid" type="string">
+                <column name="DEMANDUID" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="qtyreq" type="big_decimal">
+                <column name="QTYREQ" precision="25" scale="0" />
+            </key-property>
+            <key-property name="reqtype" type="java.lang.Long">
+                <column name="REQTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="allocatedqty" type="big_decimal">
+                <column name="ALLOCATEDQTY" precision="25" scale="0" />
+            </key-property>
+            <key-property name="singlein" type="big_decimal">
+                <column name="SINGLEIN" precision="25" scale="0" />
+            </key-property>
+            <key-property name="singleout" type="big_decimal">
+                <column name="SINGLEOUT" precision="25" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="locklevel" type="java.lang.Long">
+                <column name="LOCKLEVEL" precision="10" scale="0" />
+            </key-property>
+            <key-property name="readypoint" type="java.lang.Long">
+                <column name="READYPOINT" precision="10" scale="0" />
+            </key-property>
+            <key-property name="iscritical" type="java.lang.Byte">
+                <column name="ISCRITICAL" precision="2" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="BPartNumber" class="com.mes.old.BPartNumber" update="false" insert="false" fetch="select">
+            <column name="PART_NUMBER" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

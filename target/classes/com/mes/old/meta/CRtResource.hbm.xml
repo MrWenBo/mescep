@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CRtResource" table="C_RT_RESOURCE" schema="MES188" optimistic-lock="version">
+        <comment>&#198;&#218;&#188;&#228;&#215;&#202;&#212;&#180;</comment>
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CAccountantPeriod" class="com.mes.old.CAccountantPeriod" fetch="select">
+            <column name="ACCOUNTANT_PERIOD_ID" length="100">
+                <comment>&#187;&#225;&#188;&#198;&#198;&#218;&#188;&#228;</comment>
+            </column>
+        </many-to-one>
+        <property name="resourceId" type="string">
+            <column name="RESOURCE_ID" length="100">
+                <comment>&#215;&#202;&#212;&#180;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="relationResourceId" type="string">
+            <column name="RELATION_RESOURCE_ID" length="100">
+                <comment>&#207;&#224;&#185;&#216;&#215;&#202;&#212;&#180;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="resourceAccountId" type="string">
+            <column name="RESOURCE_ACCOUNT_ID" length="100">
+                <comment>&#215;&#202;&#212;&#180;&#213;&#202;&#187;&#167;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="planCost" type="big_decimal">
+            <column name="PLAN_COST" precision="10">
+                <comment>&#215;&#202;&#212;&#180;&#188;&#198;&#187;&#174;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="actualCost" type="big_decimal">
+            <column name="ACTUAL_COST" precision="10">
+                <comment>&#215;&#202;&#212;&#180;&#202;&#181;&#188;&#202;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="discrepanceCost" type="big_decimal">
+            <column name="DISCREPANCE_COST" precision="10">
+                <comment>&#215;&#202;&#212;&#180;&#179;&#201;&#177;&#190;&#178;&#238;&#210;&#236;</comment>
+            </column>
+        </property>
+        <property name="isAllocated" type="java.lang.Long">
+            <column name="IS_ALLOCATED" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#210;&#209;&#190;&#173;&#178;&#206;&#211;&#235;&#183;&#214;&#197;&#228;</comment>
+            </column>
+        </property>
+        <property name="unallocateCost" type="big_decimal">
+            <column name="UNALLOCATE_COST" precision="10">
+                <comment>&#206;&#180;&#183;&#214;&#197;&#228;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="allocateCost" type="big_decimal">
+            <column name="ALLOCATE_COST" precision="10">
+                <comment>&#210;&#209;&#183;&#214;&#197;&#228;&#189;&#240;&#182;&#238;</comment>
+            </column>
+        </property>
+        <property name="costCenterId" type="string">
+            <column name="COST_CENTER_ID" length="100" />
+        </property>
+        <property name="relationResourceType" type="java.lang.Long">
+            <column name="RELATION_RESOURCE_TYPE" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

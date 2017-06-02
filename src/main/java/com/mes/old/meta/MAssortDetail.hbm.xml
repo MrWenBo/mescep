@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MAssortDetail" table="M_ASSORT_DETAIL" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="assortnum" type="string">
+            <column name="ASSORTNUM" />
+        </property>
+        <property name="qualitynum" type="string">
+            <column name="QUALITYNUM" />
+        </property>
+        <property name="drawingid" type="string">
+            <column name="DRAWINGID" />
+        </property>
+        <property name="partName" type="string">
+            <column name="PART_NAME" />
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL" />
+        </property>
+        <property name="materialqtySum" type="string">
+            <column name="MATERIALQTY_SUM" />
+        </property>
+        <property name="materialqty" type="string">
+            <column name="MATERIALQTY" />
+        </property>
+        <property name="partModel" type="string">
+            <column name="PART_MODEL" />
+        </property>
+        <property name="reqDate" type="date">
+            <column name="REQ_DATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

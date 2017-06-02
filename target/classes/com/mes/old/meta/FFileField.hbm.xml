@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.FFileField" table="F_FILE_FIELD" schema="MES188" optimistic-lock="version">
+        <comment>&#206;&#196;&#181;&#181;&#211;&#166;&#211;&#195;</comment>
+        <composite-id name="id" class="com.mes.old.FFileFieldId">
+            <key-property name="fileuid" type="string">
+                <column name="FILEUID" />
+            </key-property>
+            <key-property name="fielduid" type="string">
+                <column name="FIELDUID" />
+            </key-property>
+            <key-property name="fieldtype" type="string">
+                <column name="FIELDTYPE" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="changer" type="string">
+            <column name="CHANGER" length="50" />
+        </property>
+        <property name="changetime" type="date">
+            <column name="CHANGETIME" length="7" />
+        </property>
+        <property name="changereason" type="string">
+            <column name="CHANGEREASON" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50">
+                <comment>&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="effective" type="big_decimal">
+            <column name="EFFECTIVE" precision="22" scale="0">
+                <comment>&#211;&#208;&#208;&#167;&#208;&#212;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

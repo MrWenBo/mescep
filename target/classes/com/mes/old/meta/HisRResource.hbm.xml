@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisRResource" table="HIS_R_RESOURCE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisRResourceId">
+            <key-property name="resuid" type="serializable">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="resname" type="serializable">
+                <column name="RESNAME" />
+            </key-property>
+            <key-property name="calUid" type="serializable">
+                <column name="CAL_UID" />
+            </key-property>
+            <key-property name="deptid" type="serializable">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="resourcetype" type="serializable">
+                <column name="RESOURCETYPE" />
+            </key-property>
+            <key-property name="location" type="serializable">
+                <column name="LOCATION" />
+            </key-property>
+            <key-property name="numOfPooledResources" type="serializable">
+                <column name="NUM_OF_POOLED_RESOURCES" />
+            </key-property>
+            <key-property name="estimatedQueueTime" type="serializable">
+                <column name="ESTIMATED_QUEUE_TIME" />
+            </key-property>
+            <key-property name="estimatedQueueTimeUom" type="serializable">
+                <column name="ESTIMATED_QUEUE_TIME_UOM" />
+            </key-property>
+            <key-property name="defaultSetupTime" type="serializable">
+                <column name="DEFAULT_SETUP_TIME" />
+            </key-property>
+            <key-property name="defaultTimeUom" type="serializable">
+                <column name="DEFAULT_TIME_UOM" />
+            </key-property>
+            <key-property name="idealUtilizationLevel" type="serializable">
+                <column name="IDEAL_UTILIZATION_LEVEL" />
+            </key-property>
+            <key-property name="idealUtilCalName" type="serializable">
+                <column name="IDEAL_UTIL_CAL_NAME" />
+            </key-property>
+            <key-property name="wageRatePer" type="serializable">
+                <column name="WAGE_RATE_PER" />
+            </key-property>
+            <key-property name="wageRatePerTime" type="serializable">
+                <column name="WAGE_RATE_PER_TIME" />
+            </key-property>
+            <key-property name="setupMatrixId" type="serializable">
+                <column name="SETUP_MATRIX_ID" />
+            </key-property>
+            <key-property name="setupSequenceId" type="serializable">
+                <column name="SETUP_SEQUENCE_ID" />
+            </key-property>
+            <key-property name="setupSequenceGoback" type="serializable">
+                <column name="SETUP_SEQUENCE_GOBACK" />
+            </key-property>
+            <key-property name="minimumQueueTime" type="serializable">
+                <column name="MINIMUM_QUEUE_TIME" />
+            </key-property>
+            <key-property name="minimumQueueTimeUom" type="serializable">
+                <column name="MINIMUM_QUEUE_TIME_UOM" />
+            </key-property>
+            <key-property name="modelName" type="serializable">
+                <column name="MODEL_NAME" />
+            </key-property>
+            <key-property name="scheduleFreezeHorizon" type="serializable">
+                <column name="SCHEDULE_FREEZE_HORIZON" />
+            </key-property>
+            <key-property name="sfhUom" type="serializable">
+                <column name="SFH_UOM" />
+            </key-property>
+            <key-property name="batchingHorizon" type="serializable">
+                <column name="BATCHING_HORIZON" />
+            </key-property>
+            <key-property name="batchingHorizonUom" type="serializable">
+                <column name="BATCHING_HORIZON_UOM" />
+            </key-property>
+            <key-property name="batchingLookahead" type="serializable">
+                <column name="BATCHING_LOOKAHEAD" />
+            </key-property>
+            <key-property name="batchingLookaheadUom" type="serializable">
+                <column name="BATCHING_LOOKAHEAD_UOM" />
+            </key-property>
+            <key-property name="latenessTolerance" type="serializable">
+                <column name="LATENESS_TOLERANCE" />
+            </key-property>
+            <key-property name="latenessToleranceUom" type="serializable">
+                <column name="LATENESS_TOLERANCE_UOM" />
+            </key-property>
+            <key-property name="earlinessTolerance" type="serializable">
+                <column name="EARLINESS_TOLERANCE" />
+            </key-property>
+            <key-property name="earlinessToleranceUom" type="serializable">
+                <column name="EARLINESS_TOLERANCE_UOM" />
+            </key-property>
+            <key-property name="queueSizeMode" type="serializable">
+                <column name="QUEUE_SIZE_MODE" />
+            </key-property>
+            <key-property name="maxQueueSize" type="serializable">
+                <column name="MAX_QUEUE_SIZE" />
+            </key-property>
+            <key-property name="queueConformanceMode" type="serializable">
+                <column name="QUEUE_CONFORMANCE_MODE" />
+            </key-property>
+            <key-property name="outputRateLimit" type="serializable">
+                <column name="OUTPUT_RATE_LIMIT" />
+            </key-property>
+            <key-property name="outputRateLimitPer" type="serializable">
+                <column name="OUTPUT_RATE_LIMIT_PER" />
+            </key-property>
+            <key-property name="outputRateLimitUom" type="serializable">
+                <column name="OUTPUT_RATE_LIMIT_UOM" />
+            </key-property>
+            <key-property name="lowRwt" type="serializable">
+                <column name="LOW_RWT" />
+            </key-property>
+            <key-property name="lowRwtPer" type="serializable">
+                <column name="LOW_RWT_PER" />
+            </key-property>
+            <key-property name="lowRwtUom" type="serializable">
+                <column name="LOW_RWT_UOM" />
+            </key-property>
+            <key-property name="highRwtUom" type="serializable">
+                <column name="HIGH_RWT_UOM" />
+            </key-property>
+            <key-property name="highRwtPer" type="serializable">
+                <column name="HIGH_RWT_PER" />
+            </key-property>
+            <key-property name="highRwt" type="serializable">
+                <column name="HIGH_RWT" />
+            </key-property>
+            <key-property name="acmFlag" type="serializable">
+                <column name="ACM_FLAG" />
+            </key-property>
+            <key-property name="incOvertimeCostPer" type="serializable">
+                <column name="INC_OVERTIME_COST_PER" />
+            </key-property>
+            <key-property name="incOvertimeCostPerT" type="serializable">
+                <column name="INC_OVERTIME_COST_PER_T" />
+            </key-property>
+            <key-property name="lastMaintDate" type="serializable">
+                <column name="LAST_MAINT_DATE" />
+            </key-property>
+            <key-property name="lastMaintDateFormat" type="serializable">
+                <column name="LAST_MAINT_DATE_FORMAT" />
+            </key-property>
+            <key-property name="lastMaintSeqNumber" type="serializable">
+                <column name="LAST_MAINT_SEQ_NUMBER" />
+            </key-property>
+            <key-property name="lastMaintTime" type="serializable">
+                <column name="LAST_MAINT_TIME" />
+            </key-property>
+            <key-property name="lastMaintTimeUom" type="serializable">
+                <column name="LAST_MAINT_TIME_UOM" />
+            </key-property>
+            <key-property name="loadSinceLastMaint" type="serializable">
+                <column name="LOAD_SINCE_LAST_MAINT" />
+            </key-property>
+            <key-property name="loadSinceUom" type="serializable">
+                <column name="LOAD_SINCE_UOM" />
+            </key-property>
+            <key-property name="maximumUtilLevel" type="serializable">
+                <column name="MAXIMUM_UTIL_LEVEL" />
+            </key-property>
+            <key-property name="minOpTimeCalName" type="serializable">
+                <column name="MIN_OP_TIME_CAL_NAME" />
+            </key-property>
+            <key-property name="minQueueConfLength" type="serializable">
+                <column name="MIN_QUEUE_CONF_LENGTH" />
+            </key-property>
+            <key-property name="minQueueConfUom" type="serializable">
+                <column name="MIN_QUEUE_CONF_UOM" />
+            </key-property>
+            <key-property name="minimumUtilLevel" type="serializable">
+                <column name="MINIMUM_UTIL_LEVEL" />
+            </key-property>
+            <key-property name="offloadableFrom" type="serializable">
+                <column name="OFFLOADABLE_FROM" />
+            </key-property>
+            <key-property name="offloadableTo" type="serializable">
+                <column name="OFFLOADABLE_TO" />
+            </key-property>
+            <key-property name="overtimeBasis" type="serializable">
+                <column name="OVERTIME_BASIS" />
+            </key-property>
+            <key-property name="obertimeBasisUom" type="serializable">
+                <column name="OBERTIME_BASIS_UOM" />
+            </key-property>
+            <key-property name="overtimeThreshold" type="serializable">
+                <column name="OVERTIME_THRESHOLD" />
+            </key-property>
+            <key-property name="overtimeThresholdUom" type="serializable">
+                <column name="OVERTIME_THRESHOLD_UOM" />
+            </key-property>
+            <key-property name="processedMaterialTypes" type="serializable">
+                <column name="PROCESSED_MATERIAL_TYPES" />
+            </key-property>
+            <key-property name="queueSizeUom" type="serializable">
+                <column name="QUEUE_SIZE_UOM" />
+            </key-property>
+            <key-property name="schedulingCriticality" type="serializable">
+                <column name="SCHEDULING_CRITICALITY" />
+            </key-property>
+            <key-property name="unitSetupCostPer" type="serializable">
+                <column name="UNIT_SETUP_COST_PER" />
+            </key-property>
+            <key-property name="unitSetupCostPerTime" type="serializable">
+                <column name="UNIT_SETUP_COST_PER_TIME" />
+            </key-property>
+            <key-property name="caoPostProcDownstream" type="serializable">
+                <column name="CAO_POST_PROC_DOWNSTREAM" />
+            </key-property>
+            <key-property name="keepRelatedTasksTog" type="serializable">
+                <column name="KEEP_RELATED_TASKS_TOG" />
+            </key-property>
+            <key-property name="preIcpOlRuntimeRatio" type="serializable">
+                <column name="PRE_ICP_OL_RUNTIME_RATIO" />
+            </key-property>
+            <key-property name="simulHierSetups" type="serializable">
+                <column name="SIMUL_HIER_SETUPS" />
+            </key-property>
+            <key-property name="ignoreForCapPlan" type="serializable">
+                <column name="IGNORE_FOR_CAP_PLAN" />
+            </key-property>
+            <key-property name="noneneeddispatch" type="serializable">
+                <column name="NONENEEDDISPATCH" />
+            </key-property>
+            <key-property name="resourceref" type="serializable">
+                <column name="RESOURCEREF" />
+            </key-property>
+            <key-property name="criticalLevel" type="serializable">
+                <column name="CRITICAL_LEVEL" />
+            </key-property>
+            <key-property name="needNc" type="serializable">
+                <column name="NEED_NC" />
+            </key-property>
+            <key-property name="restype" type="serializable">
+                <column name="RESTYPE" />
+            </key-property>
+            <key-property name="monthplanwork" type="serializable">
+                <column name="MONTHPLANWORK" />
+            </key-property>
+            <key-property name="optype" type="serializable">
+                <column name="OPTYPE" />
+            </key-property>
+            <key-property name="RResourceOutUid" type="serializable">
+                <column name="R_RESOURCE_OUT_UID" />
+            </key-property>
+            <key-property name="resstate" type="serializable">
+                <column name="RESSTATE" />
+            </key-property>
+            <key-property name="customerResuid" type="serializable">
+                <column name="CUSTOMER_RESUID" />
+            </key-property>
+            <key-property name="toolShankSpec" type="serializable">
+                <column name="TOOL_SHANK_SPEC" />
+            </key-property>
+            <key-property name="ncSysModel" type="serializable">
+                <column name="NC_SYS_MODEL" />
+            </key-property>
+            <key-property name="deviceTableCount" type="serializable">
+                <column name="DEVICE_TABLE_COUNT" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

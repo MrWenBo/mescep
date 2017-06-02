@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BOperationResource" table="B_OPERATION_RESOURCE" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#208;&#242;&#215;&#202;&#212;&#180;</comment>
+        <composite-id name="id" class="com.mes.old.BOperationResourceId">
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="machineNumber" type="string">
+                <column name="MACHINE_NUMBER" length="50" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="BPartNumber" class="com.mes.old.BPartNumber" update="false" insert="false" fetch="select">
+            <column name="MACHINE_NUMBER" length="50" not-null="true">
+                <comment>&#215;&#202;&#212;&#180;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="BRoutine" class="com.mes.old.BRoutine" update="false" insert="false" fetch="select">
+            <column name="OPUID" precision="30" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="routing" type="string">
+            <column name="ROUTING">
+                <comment>&#185;&#164;&#210;&#213;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="operationId" type="big_decimal">
+            <column name="OPERATION_ID" precision="10">
+                <comment>&#185;&#164;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="simultaneousUsage" type="string">
+            <column name="SIMULTANEOUS_USAGE" length="50">
+                <comment>&#205;&#172;&#178;&#189;&#202;&#185;&#211;&#195;&#194;&#202;</comment>
+            </column>
+        </property>
+        <property name="numOperators" type="java.lang.Long">
+            <column name="NUM_OPERATORS" precision="10" scale="0">
+                <comment>&#178;&#217;&#215;&#247;&#213;&#223;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="considerAltsDuring" type="string">
+            <column name="CONSIDER_ALTS_DURING" length="50">
+                <comment>&#191;&#188;&#194;&#199;&#204;&#230;&#187;&#187;&#188;&#254;&#214;&#220;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="cooldownTimeFactor" type="java.lang.Long">
+            <column name="COOLDOWN_TIME_FACTOR" precision="10" scale="0">
+                <comment>&#208;&#182;&#212;&#216;&#202;&#177;&#188;&#228;&#207;&#181;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="minOperationTimeFactor" type="java.lang.Long">
+            <column name="MIN_OPERATION_TIME_FACTOR" precision="10" scale="0">
+                <comment>&#215;&#238;&#208;&#161;&#178;&#217;&#215;&#247;&#202;&#177;&#188;&#228;&#207;&#181;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="offloadLevel" type="java.lang.Long">
+            <column name="OFFLOAD_LEVEL" precision="10" scale="0">
+                <comment>&#208;&#182;&#212;&#216;&#181;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <property name="partQtyPerResource" type="big_decimal">
+            <column name="PART_QTY_PER_RESOURCE" precision="25" scale="6">
+                <comment>&#195;&#191;&#215;&#202;&#212;&#180;&#181;&#196;&#206;&#239;&#193;&#207;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="partQtyPerResourceUom" type="string">
+            <column name="PART_QTY_PER_RESOURCE_UOM" length="50">
+                <comment>&#195;&#191;&#215;&#202;&#212;&#180;&#181;&#196;&#206;&#239;&#193;&#207;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="primaryP" type="java.lang.Byte">
+            <column name="PRIMARY_P" precision="2" scale="0">
+                <comment>&#214;&#247;&#215;&#202;&#212;&#180;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="ramupCalendarName" type="string">
+            <column name="RAMUP_CALENDAR_NAME" length="50">
+                <comment>RAMUP&#200;&#213;&#192;&#250;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="runtimeFactor" type="java.lang.Byte">
+            <column name="RUNTIME_FACTOR" precision="2" scale="0">
+                <comment>&#212;&#203;&#208;&#208;&#202;&#177;&#188;&#228;&#207;&#181;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="preopTimeFactor" type="java.lang.Long">
+            <column name="PREOP_TIME_FACTOR" precision="10" scale="0">
+                <comment>&#215;&#188;&#177;&#184;&#202;&#177;&#188;&#228;&#207;&#181;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="usagePercent" type="big_decimal">
+            <column name="USAGE_PERCENT" precision="25" scale="6">
+                <comment>&#202;&#185;&#211;&#195;&#202;&#177;&#188;&#228;&#176;&#217;&#183;&#214;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="useForSetup" type="java.lang.Byte">
+            <column name="USE_FOR_SETUP" precision="2" scale="0">
+                <comment>&#176;&#178;&#215;&#176;&#202;&#177;&#188;&#228;&#176;&#217;&#183;&#214;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="resourceGroup" type="string">
+            <column name="RESOURCE_GROUP" length="50">
+                <comment>&#215;&#202;&#212;&#180;&#215;&#233;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" not-null="true">
+                <comment>&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="consumeLife" type="big_decimal">
+            <column name="CONSUME_LIFE" precision="20" scale="0">
+                <comment>&#207;&#251;&#186;&#196;&#202;&#217;&#195;&#252;</comment>
+            </column>
+        </property>
+        <property name="effective" type="java.lang.Byte">
+            <column name="EFFECTIVE" precision="2" scale="0">
+                <comment>&#211;&#208;&#208;&#167;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="changer" type="string">
+            <column name="CHANGER" length="50">
+                <comment>&#177;&#228;&#184;&#252;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="changestate" type="java.lang.Byte">
+            <column name="CHANGESTATE" precision="2" scale="0">
+                <comment>&#177;&#228;&#184;&#252;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="changereason" type="string">
+            <column name="CHANGEREASON" length="100">
+                <comment>&#177;&#228;&#184;&#252;&#212;&#173;&#210;&#242;</comment>
+            </column>
+        </property>
+        <property name="changetime" type="date">
+            <column name="CHANGETIME" length="7">
+                <comment>&#177;&#228;&#184;&#252;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="TCode" type="string">
+            <column name="T_CODE" length="100" />
+        </property>
+        <property name="BOperationResourceOutUid" type="string">
+            <column name="B_OPERATION_RESOURCE_OUT_UID" />
+        </property>
+        <property name="useType" type="string">
+            <column name="USE_TYPE" />
+        </property>
+    </class>
+</hibernate-mapping>

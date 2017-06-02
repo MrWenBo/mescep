@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmModuleinstance" table="JBPM_MODULEINSTANCE" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmModuledefinition" class="com.mes.old.JbpmModuledefinition" fetch="select">
+            <column name="TASKMGMTDEFINITION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmProcessinstance" class="com.mes.old.JbpmProcessinstance" fetch="select">
+            <column name="PROCESSINSTANCE_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="char">
+            <column name="CLASS_" length="1" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <set name="jbpmSwimlaneinstances" table="JBPM_SWIMLANEINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKMGMTINSTANCE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmSwimlaneinstance" />
+        </set>
+        <set name="jbpmTokenvariablemaps" table="JBPM_TOKENVARIABLEMAP" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CONTEXTINSTANCE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTokenvariablemap" />
+        </set>
+        <set name="jbpmTaskinstances" table="JBPM_TASKINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKMGMTINSTANCE_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTaskinstance" />
+        </set>
+    </class>
+</hibernate-mapping>

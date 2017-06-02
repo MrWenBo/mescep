@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BRoutine" table="B_ROUTINE" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#210;&#213;&#194;&#183;&#207;&#223;&#185;&#220;&#192;&#237;</comment>
+        <id name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" precision="30" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="BRoutine" class="com.mes.old.BRoutine" fetch="select">
+            <column name="PARENTOPUID" precision="30" scale="0" />
+        </many-to-one>
+        <many-to-one name="RResource" class="com.mes.old.RResource" fetch="select">
+            <column name="MACHINE_NUMBER">
+                <comment>&#185;&#164;&#215;&#247;&#214;&#208;&#208;&#196;</comment>
+            </column>
+        </many-to-one>
+        <property name="operationName" type="string">
+            <column name="OPERATION_NAME">
+                <comment>&#185;&#164;&#208;&#242;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="operationGroup" type="string">
+            <column name="OPERATION_GROUP">
+                <comment>&#185;&#164;&#208;&#242;&#215;&#233;</comment>
+            </column>
+        </property>
+        <property name="preopTime" type="big_decimal">
+            <column name="PREOP_TIME" precision="12">
+                <comment>&#215;&#188;&#177;&#184;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="unitRuntime" type="big_decimal">
+            <column name="UNIT_RUNTIME" precision="12">
+                <comment>&#181;&#165;&#188;&#254;&#212;&#203;&#208;&#208;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="postopTime" type="big_decimal">
+            <column name="POSTOP_TIME" precision="12">
+                <comment>&#189;&#225;&#202;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="baseMachineResource" type="string">
+            <column name="BASE_MACHINE_RESOURCE">
+                <comment>&#187;&#249;&#215;&#188;&#188;&#211;&#185;&#164;&#215;&#202;&#212;&#180;</comment>
+            </column>
+        </property>
+        <property name="numOperators" type="java.lang.Long">
+            <column name="NUM_OPERATORS" precision="10" scale="0">
+                <comment>&#178;&#217;&#215;&#247;&#213;&#223;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="parallel" type="java.lang.Long">
+            <column name="PARALLEL" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#178;&#162;&#208;&#208;</comment>
+            </column>
+        </property>
+        <property name="parallelThreshold" type="string">
+            <column name="PARALLEL_THRESHOLD" length="10">
+                <comment>&#178;&#162;&#208;&#208;&#188;&#171;&#207;&#222;</comment>
+            </column>
+        </property>
+        <property name="minimumParallelSubtask" type="string">
+            <column name="MINIMUM_PARALLEL_SUBTASK" length="10">
+                <comment>&#215;&#238;&#208;&#161;&#198;&#189;&#208;&#208;&#215;&#211;&#200;&#206;&#206;&#241;</comment>
+            </column>
+        </property>
+        <property name="useMprsIfNotLate" type="java.lang.Long">
+            <column name="USE_MPRS_IF_NOT_LATE" precision="10" scale="0">
+                <comment>&#200;&#231;&#185;&#251;&#195;&#187;&#211;&#208;&#205;&#207;&#198;&#218;&#190;&#205;&#212;&#203;&#208;&#208;MRP</comment>
+            </column>
+        </property>
+        <property name="minOperationTime" type="java.lang.Long">
+            <column name="MIN_OPERATION_TIME" precision="10" scale="0">
+                <comment>&#215;&#238;&#208;&#161;&#185;&#164;&#208;&#242;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="opEstimatedQueneTime" type="big_decimal">
+            <column name="OP_ESTIMATED_QUENE_TIME" precision="12">
+                <comment>&#185;&#192;&#188;&#198;&#178;&#217;&#215;&#247;&#197;&#197;&#182;&#211;&#181;&#200;&#180;&#253;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="opMininumQueneTime" type="big_decimal">
+            <column name="OP_MININUM_QUENE_TIME" precision="12">
+                <comment>&#181;&#165;&#180;&#206;&#181;&#165;&#188;&#254;&#212;&#203;&#208;&#208;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="baseYield" type="big_decimal">
+            <column name="BASE_YIELD" precision="10" scale="5">
+                <comment>&#181;&#165;&#188;&#254;&#178;&#250;&#179;&#246;</comment>
+            </column>
+        </property>
+        <property name="interruptible" type="java.lang.Long">
+            <column name="INTERRUPTIBLE" precision="10" scale="0">
+                <comment>&#191;&#201;&#183;&#241;&#184;&#201;&#201;&#230;</comment>
+            </column>
+        </property>
+        <property name="operationType" type="java.lang.Long">
+            <column name="OPERATION_TYPE" precision="10" scale="0">
+                <comment>&#185;&#164;&#208;&#242;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="priority" type="java.lang.Long">
+            <column name="PRIORITY" precision="10" scale="0">
+                <comment>&#211;&#197;&#207;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <property name="queueCalendarName" type="string">
+            <column name="QUEUE_CALENDAR_NAME">
+                <comment>&#181;&#200;&#180;&#253;&#200;&#213;&#192;&#250;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="rampupCalendarName" type="string">
+            <column name="RAMPUP_CALENDAR_NAME">
+                <comment>RAMUP&#200;&#213;&#192;&#250;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="transferBatchQuantity" type="java.lang.Long">
+            <column name="TRANSFER_BATCH_QUANTITY" precision="10" scale="0">
+                <comment>&#180;&#171;&#202;&#228;&#197;&#250;&#180;&#206;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="isCrossOperation" type="java.lang.Long">
+            <column name="IS_CROSS_OPERATION" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#189;&#187;&#178;&#230;&#185;&#164;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="needCheck" type="java.lang.Long">
+            <column name="NEED_CHECK" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#208;&#232;&#210;&#170;&#188;&#236;&#209;&#233;</comment>
+            </column>
+        </property>
+        <property name="isCriticalOperation" type="java.lang.Long">
+            <column name="IS_CRITICAL_OPERATION" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#185;&#216;&#188;&#252;&#185;&#164;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="operationSpecification" type="string">
+            <column name="OPERATION_SPECIFICATION">
+                <comment>&#185;&#164;&#208;&#242;&#203;&#181;&#195;&#247;</comment>
+            </column>
+        </property>
+        <property name="materialCheckIn" type="java.lang.Long">
+            <column name="MATERIAL_CHECK_IN" precision="10" scale="0">
+                <comment>&#206;&#239;&#193;&#207;&#188;&#236;&#200;&#235;</comment>
+            </column>
+        </property>
+        <property name="materialCheckOut" type="java.lang.Long">
+            <column name="MATERIAL_CHECK_OUT" precision="10" scale="0">
+                <comment>&#206;&#239;&#193;&#207;&#188;&#236;&#179;&#246;</comment>
+            </column>
+        </property>
+        <property name="operationCostSum" type="java.lang.Long">
+            <column name="OPERATION_COST_SUM" precision="10" scale="0">
+                <comment>&#185;&#164;&#208;&#242;&#215;&#220;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="laborCost" type="java.lang.Long">
+            <column name="LABOR_COST" precision="10" scale="0">
+                <comment>&#200;&#203;&#193;&#166;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="machineCost" type="java.lang.Long">
+            <column name="MACHINE_COST" precision="10" scale="0">
+                <comment>&#201;&#232;&#177;&#184;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="linkDownstreamP" type="java.lang.Long">
+            <column name="LINK_DOWNSTREAM_P" precision="10" scale="0">
+                <comment>&#193;&#180;&#189;&#211;&#207;&#194;&#211;&#206;&#185;&#164;&#208;&#242;&#177;&#234;&#214;&#190;</comment>
+            </column>
+        </property>
+        <property name="linkDownstreamMinWip" type="java.lang.Long">
+            <column name="LINK_DOWNSTREAM_MIN_WIP" precision="10" scale="0">
+                <comment>&#215;&#238;&#208;&#161;&#193;&#180;&#189;&#211;&#207;&#194;&#211;&#206;&#185;&#164;&#208;&#242;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="linkDownstreamMaxWip" type="java.lang.Long">
+            <column name="LINK_DOWNSTREAM_MAX_WIP" precision="10" scale="0">
+                <comment>&#215;&#238;&#180;&#243;&#193;&#180;&#189;&#211;&#207;&#194;&#211;&#206;&#185;&#164;&#208;&#242;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="unitRuntimeCostPer" type="string">
+            <column name="UNIT_RUNTIME_COST_PER">
+                <comment>&#181;&#165;&#188;&#254;&#212;&#203;&#208;&#208;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="unitRuntimeCostPerTime" type="java.lang.Long">
+            <column name="UNIT_RUNTIME_COST_PER_TIME" precision="10" scale="0" />
+        </property>
+        <property name="unitWipCarryCostPer" type="string">
+            <column name="UNIT_WIP_CARRY_COST_PER">
+                <comment>&#181;&#165;&#188;&#254;&#212;&#203;&#203;&#205;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="unitWipCarryCostPerTime" type="java.lang.Long">
+            <column name="UNIT_WIP_CARRY_COST_PER_TIME" precision="10" scale="0">
+                <comment>&#181;&#165;&#180;&#206;&#181;&#165;&#188;&#254;&#212;&#203;&#203;&#205;&#179;&#201;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="sequenceDependentSetupType" type="string">
+            <column name="SEQUENCE_DEPENDENT_SETUP_TYPE">
+                <comment>&#201;&#232;&#177;&#184;&#176;&#178;&#215;&#176;&#215;&#170;&#187;&#187;&#190;&#216;&#213;&#243;3</comment>
+            </column>
+        </property>
+        <property name="sequenceDependentSetupType2" type="string">
+            <column name="SEQUENCE_DEPENDENT_SETUP_TYPE2">
+                <comment>&#201;&#232;&#177;&#184;&#176;&#178;&#215;&#176;&#215;&#170;&#187;&#187;&#190;&#216;&#213;&#243;2</comment>
+            </column>
+        </property>
+        <property name="sequenceDependentSetupType3" type="string">
+            <column name="SEQUENCE_DEPENDENT_SETUP_TYPE3">
+                <comment>&#201;&#232;&#177;&#184;&#176;&#178;&#215;&#176;&#215;&#170;&#187;&#187;&#190;&#216;&#213;&#243;3</comment>
+            </column>
+        </property>
+        <property name="note" type="string">
+            <column name="NOTE" length="2000">
+                <comment>&#185;&#164;&#210;&#213;&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="routingType" type="string">
+            <column name="ROUTING_TYPE">
+                <comment>&#185;&#164;&#210;&#213;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="operationNote" type="string">
+            <column name="OPERATION_NOTE">
+                <comment>&#185;&#164;&#208;&#242;&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="workcoefficient" type="big_decimal">
+            <column name="WORKCOEFFICIENT" precision="25" scale="6">
+                <comment>&#185;&#164;&#202;&#177;&#207;&#181;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="changetime" type="date">
+            <column name="CHANGETIME" length="7">
+                <comment>&#177;&#228;&#184;&#252;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="changer" type="string">
+            <column name="CHANGER" length="50">
+                <comment>&#184;&#252;&#184;&#196;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="changereason" type="string">
+            <column name="CHANGEREASON" length="100">
+                <comment>&#184;&#252;&#184;&#196;&#212;&#173;&#210;&#242;</comment>
+            </column>
+        </property>
+        <property name="changestate" type="big_decimal">
+            <column name="CHANGESTATE" precision="10">
+                <comment>&#177;&#228;&#184;&#252;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="effective" type="java.lang.Byte">
+            <column name="EFFECTIVE" precision="2" scale="0">
+                <comment>&#211;&#208;&#208;&#167;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="100">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="dispatchgrade" type="java.lang.Long">
+            <column name="DISPATCHGRADE" precision="10" scale="0" />
+        </property>
+        <property name="sampleqty" type="java.lang.Integer">
+            <column name="SAMPLEQTY" precision="5" scale="0" />
+        </property>
+        <property name="samplepercent" type="big_decimal">
+            <column name="SAMPLEPERCENT" precision="5" />
+        </property>
+        <property name="operationIddesc" type="string">
+            <column name="OPERATION_IDDESC">
+                <comment>&#185;&#164;&#208;&#242;&#186;&#197;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+        <property name="estipretime" type="string">
+            <column name="ESTIPRETIME" />
+        </property>
+        <property name="estiruntime" type="string">
+            <column name="ESTIRUNTIME" />
+        </property>
+        <property name="sampleOpid" type="string">
+            <column name="SAMPLE_OPID" length="50" />
+        </property>
+        <property name="needSample" type="java.lang.Byte">
+            <column name="NEED_SAMPLE" precision="2" scale="0" />
+        </property>
+        <property name="checkstate" type="java.lang.Boolean">
+            <column name="CHECKSTATE" precision="1" scale="0" />
+        </property>
+        <property name="groupuid" type="string">
+            <column name="GROUPUID">
+                <comment>&#201;&#232;&#177;&#184;&#192;&#224;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="opid" type="string">
+            <column name="OPID">
+                <comment>&#207;&#181;&#205;&#179;&#205;&#226;&#210;&#253;&#200;&#235;&#181;&#196;&#185;&#164;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="optype" type="java.lang.Long">
+            <column name="OPTYPE" precision="10" scale="0">
+                <comment>&#185;&#164;&#214;&#214;</comment>
+            </column>
+        </property>
+        <property name="versionid" type="string">
+            <column name="VERSIONID" length="10">
+                <comment>&#185;&#164;&#208;&#242;&#176;&#230;&#177;&#190;</comment>
+            </column>
+        </property>
+        <property name="routingNote" type="string">
+            <column name="ROUTING_NOTE" />
+        </property>
+        <property name="sampleRuntime" type="big_decimal">
+            <column name="SAMPLE_RUNTIME" precision="12" />
+        </property>
+        <property name="needFirstcheck" type="java.lang.Boolean">
+            <column name="NEED_FIRSTCHECK" precision="1" scale="0" />
+        </property>
+        <property name="checkpercent" type="big_decimal">
+            <column name="CHECKPERCENT" precision="10" />
+        </property>
+        <property name="refrouting" type="string">
+            <column name="REFROUTING" />
+        </property>
+        <property name="BRoutineOutUid" type="string">
+            <column name="B_ROUTINE_OUT_UID" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" />
+        </property>
+        <property name="deviceuid" type="string">
+            <column name="DEVICEUID" />
+        </property>
+        <property name="operationContentTt" type="string">
+            <column name="OPERATION_CONTENT_TT" length="3000">
+                <comment>&#185;&#164;&#208;&#242;&#196;&#218;&#200;&#221;</comment>
+            </column>
+        </property>
+        <property name="ncNumber" type="string">
+            <column name="NC_NUMBER" />
+        </property>
+        <property name="ncVersionid" type="string">
+            <column name="NC_VERSIONID" />
+        </property>
+        <property name="isSpecialOperation" type="string">
+            <column name="IS_SPECIAL_OPERATION">
+                <comment>&#208;&#173;&#215;&#247;&#182;&#168;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="preparegrade" type="java.lang.Byte">
+            <column name="PREPAREGRADE" precision="2" scale="0" />
+        </property>
+        <property name="needPhoto" type="java.lang.Boolean">
+            <column name="NEED_PHOTO" precision="1" scale="0" />
+        </property>
+        <property name="operationSimpleContent" type="clob">
+            <column name="OPERATION_SIMPLE_CONTENT">
+                <comment>&#185;&#164;&#208;&#242;&#188;&#242;&#187;&#175;&#196;&#218;&#200;&#221;</comment>
+            </column>
+        </property>
+        <property name="operationContent" type="clob">
+            <column name="OPERATION_CONTENT">
+                <comment>&#185;&#164;&#208;&#242;&#196;&#218;&#200;&#221;</comment>
+            </column>
+        </property>
+        <property name="isStatisticCheck" type="java.lang.Long">
+            <column name="IS_STATISTIC_CHECK" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#205;&#179;&#188;&#198;&#188;&#236;&#209;&#233;</comment>
+            </column>
+        </property>
+        <property name="keycount" type="java.lang.Boolean">
+            <column name="KEYCOUNT" precision="1" scale="0">
+                <comment>&#204;&#216;&#208;&#212;&#202;&#253;</comment>
+            </column>
+        </property>
+        <set name="BOperationResources" table="B_OPERATION_RESOURCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="OPUID" precision="30" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.BOperationResource" />
+        </set>
+        <set name="BBillOfMaterialses" table="B_BILL_OF_MATERIALS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="OPUID" precision="30" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.BBillOfMaterials" />
+        </set>
+        <set name="BRoutines" table="B_ROUTINE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PARENTOPUID" precision="30" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.BRoutine" />
+        </set>
+    </class>
+</hibernate-mapping>

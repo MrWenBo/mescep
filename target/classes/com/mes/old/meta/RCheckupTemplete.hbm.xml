@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RCheckupTemplete" table="R_CHECKUP_TEMPLETE" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="templeteName" type="string">
+            <column name="TEMPLETE_NAME" length="50">
+                <comment>&#181;&#227;&#188;&#236;&#196;&#163;&#176;&#229;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="templeteType" type="java.lang.Byte">
+            <column name="TEMPLETE_TYPE" precision="2" scale="0">
+                <comment>&#181;&#227;&#188;&#236;&#196;&#163;&#176;&#229;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="deviceuid" type="string">
+            <column name="DEVICEUID">
+                <comment>&#201;&#232;&#177;&#184;&#186;&#197;</comment>
+            </column>
+        </property>
+        <set name="RCheckupTempleteDetails" table="R_CHECKUP_TEMPLETE_DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TEMPLETE_UID">
+                    <comment>&#181;&#227;&#188;&#236;&#196;&#163;&#176;&#229;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.RCheckupTempleteDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

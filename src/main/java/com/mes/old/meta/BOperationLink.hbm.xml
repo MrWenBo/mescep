@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BOperationLink" table="B_OPERATION_LINK" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#208;&#242;&#214;&#174;&#188;&#228;&#181;&#196;&#185;&#216;&#207;&#181;</comment>
+        <composite-id name="id" class="com.mes.old.BOperationLinkId">
+            <key-property name="opuid1" type="string">
+                <column name="OPUID1" />
+            </key-property>
+            <key-property name="opuid2" type="string">
+                <column name="OPUID2" />
+            </key-property>
+            <key-property name="operlinktype" type="string">
+                <column name="OPERLINKTYPE" length="20" />
+            </key-property>
+        </composite-id>
+        <property name="operlinkuid" type="string">
+            <column name="OPERLINKUID" not-null="true" unique="true">
+                <comment>&#185;&#164;&#208;&#242;&#185;&#216;&#207;&#181;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="changer" type="string">
+            <column name="CHANGER" length="50">
+                <comment>&#177;&#228;&#184;&#252;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="changetime" type="date">
+            <column name="CHANGETIME" length="7">
+                <comment>&#177;&#228;&#184;&#252;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="changereason" type="string">
+            <column name="CHANGEREASON">
+                <comment>&#177;&#228;&#184;&#252;&#212;&#173;&#210;&#242;</comment>
+            </column>
+        </property>
+        <property name="parentforopuid" type="string">
+            <column name="PARENTFOROPUID" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TScheduleDetail" table="T_SCHEDULE_DETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TScheduleDetailId">
+            <key-property name="scheduleuid" type="string">
+                <column name="SCHEDULEUID" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="TScheduleHeader" class="com.mes.old.TScheduleHeader" update="false" insert="false" fetch="select">
+            <column name="SCHEDULEUID" not-null="true" />
+        </many-to-one>
+        <property name="planqty" type="big_decimal">
+            <column name="PLANQTY" precision="20" scale="0" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="schedulestart" type="date">
+            <column name="SCHEDULESTART" length="7" />
+        </property>
+        <property name="schedulefinish" type="date">
+            <column name="SCHEDULEFINISH" length="7" />
+        </property>
+        <property name="resuid" type="string">
+            <column name="RESUID" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" />
+        </property>
+        <property name="basestart" type="date">
+            <column name="BASESTART" length="7" />
+        </property>
+        <property name="basefinish" type="date">
+            <column name="BASEFINISH" length="7" />
+        </property>
+        <property name="priority" type="java.lang.Integer">
+            <column name="PRIORITY" precision="5" scale="0" />
+        </property>
+        <property name="constrainttype" type="java.lang.Byte">
+            <column name="CONSTRAINTTYPE" precision="2" scale="0" />
+        </property>
+        <property name="constraintdate" type="date">
+            <column name="CONSTRAINTDATE" length="7" />
+        </property>
+        <property name="workcenteruid" type="string">
+            <column name="WORKCENTERUID" />
+        </property>
+        <property name="estitaskwork" type="big_decimal">
+            <column name="ESTITASKWORK" precision="20" />
+        </property>
+        <property name="oldworkcenteruid" type="string">
+            <column name="OLDWORKCENTERUID" />
+        </property>
+        <property name="estipretime" type="big_decimal">
+            <column name="ESTIPRETIME" precision="25" scale="6" />
+        </property>
+        <property name="estiruntime" type="big_decimal">
+            <column name="ESTIRUNTIME" precision="25" scale="6" />
+        </property>
+        <property name="locked" type="java.lang.Boolean">
+            <column name="LOCKED" precision="1" scale="0" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" length="50" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" length="555" />
+        </property>
+        <property name="operationId" type="java.lang.Long">
+            <column name="OPERATION_ID" precision="10" scale="0" />
+        </property>
+        <property name="operationIddesc" type="string">
+            <column name="OPERATION_IDDESC" />
+        </property>
+        <property name="issuccess" type="string">
+            <column name="ISSUCCESS" length="50" />
+        </property>
+        <property name="earlystart" type="date">
+            <column name="EARLYSTART" length="7" />
+        </property>
+        <property name="latefinish" type="date">
+            <column name="LATEFINISH" length="7" />
+        </property>
+        <property name="completeqty" type="big_decimal">
+            <column name="COMPLETEQTY" precision="20" />
+        </property>
+        <property name="parentuid" type="string">
+            <column name="PARENTUID" length="50" />
+        </property>
+        <property name="taskstate" type="java.lang.Long">
+            <column name="TASKSTATE" precision="10" scale="0" />
+        </property>
+        <property name="preoptime" type="big_decimal">
+            <column name="PREOPTIME" precision="10" />
+        </property>
+        <property name="runtime" type="big_decimal">
+            <column name="RUNTIME" precision="10" />
+        </property>
+        <property name="startendmark" type="java.lang.Long">
+            <column name="STARTENDMARK" precision="10" scale="0" />
+        </property>
+        <property name="needprepare" type="java.lang.Long">
+            <column name="NEEDPREPARE" precision="10" scale="0" />
+        </property>
+        <property name="linklag" type="big_decimal">
+            <column name="LINKLAG" precision="10" />
+        </property>
+        <property name="mastershop" type="string">
+            <column name="MASTERSHOP" length="50" />
+        </property>
+        <property name="isineffect" type="java.lang.Boolean">
+            <column name="ISINEFFECT" precision="1" scale="0" />
+        </property>
+        <property name="taskschedulestate" type="java.lang.Byte">
+            <column name="TASKSCHEDULESTATE" precision="2" scale="0" />
+        </property>
+        <property name="opuid" type="big_decimal">
+            <column name="OPUID" precision="30" scale="0" />
+        </property>
+        <property name="taskname" type="string">
+            <column name="TASKNAME" />
+        </property>
+        <property name="slackfactor" type="big_decimal">
+            <column name="SLACKFACTOR" precision="20" />
+        </property>
+        <property name="latestartsegement" type="big_decimal">
+            <column name="LATESTARTSEGEMENT" precision="20" scale="0" />
+        </property>
+        <property name="prepareready" type="java.lang.Boolean">
+            <column name="PREPAREREADY" precision="1" scale="0" />
+        </property>
+        <property name="shiftsCount" type="big_decimal">
+            <column name="SHIFTS_COUNT" precision="10" />
+        </property>
+        <property name="actualstart" type="date">
+            <column name="ACTUALSTART" length="7" />
+        </property>
+        <property name="actualfinish" type="date">
+            <column name="ACTUALFINISH" length="7" />
+        </property>
+        <property name="actuaLshiftsCount" type="big_decimal">
+            <column name="ACTUA_LSHIFTS_COUNT" precision="10" />
+        </property>
+        <property name="violateReason" type="string">
+            <column name="VIOLATE_REASON" />
+        </property>
+        <property name="taskscheduletype" type="java.lang.Byte">
+            <column name="TASKSCHEDULETYPE" precision="2" scale="0" />
+        </property>
+        <property name="actualPrepareFinish" type="date">
+            <column name="ACTUAL_PREPARE_FINISH" length="7" />
+        </property>
+        <property name="actualFirstFinish" type="date">
+            <column name="ACTUAL_FIRST_FINISH" length="7" />
+        </property>
+        <property name="cansplit" type="java.lang.Boolean">
+            <column name="CANSPLIT" precision="1" scale="0" />
+        </property>
+        <property name="deviceseq" type="java.lang.Long">
+            <column name="DEVICESEQ" precision="10" scale="0" />
+        </property>
+        <property name="calUid" type="string">
+            <column name="CAL_UID" length="50" />
+        </property>
+        <property name="groupTaskuid" type="string">
+            <column name="GROUP_TASKUID" length="50" />
+        </property>
+        <property name="assignstate" type="java.lang.Byte">
+            <column name="ASSIGNSTATE" precision="2" scale="0" />
+        </property>
+        <property name="tasktype" type="string">
+            <column name="TASKTYPE" length="50" />
+        </property>
+        <property name="cotaskstate" type="java.lang.Byte">
+            <column name="COTASKSTATE" precision="2" scale="0" />
+        </property>
+        <property name="coschedulestart" type="date">
+            <column name="COSCHEDULESTART" length="7" />
+        </property>
+        <property name="coschedulefinish" type="date">
+            <column name="COSCHEDULEFINISH" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IBackDetail" table="I_BACK_DETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IBackDetailId">
+            <key-property name="invbackid" type="string">
+                <column name="INVBACKID" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="IBackHeader" class="com.mes.old.IBackHeader" update="false" insert="false" fetch="select">
+            <column name="INVBACKID" not-null="true">
+                <comment>&#187;&#216;&#202;&#213;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN">
+                <comment>&#206;&#239;&#193;&#207;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER">
+                <comment>&#206;&#239;&#193;&#207;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM">
+                <comment>&#197;&#250;&#180;&#206;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="sn" type="string">
+            <column name="SN">
+                <comment>&#197;&#250;&#196;&#218;&#208;&#242;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="binid" type="string">
+            <column name="BINID">
+                <comment>&#196;&#191;&#177;&#234;&#185;&#241;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="backqty" type="big_decimal">
+            <column name="BACKQTY" precision="10" scale="6">
+                <comment>&#187;&#216;&#202;&#213;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="itemBackState" type="string">
+            <column name="ITEM_BACK_STATE" length="50">
+                <comment>&#187;&#216;&#202;&#213;&#207;&#238;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="turnBoxId" type="string">
+            <column name="TURN_BOX_ID">
+                <comment>&#214;&#220;&#215;&#170;&#207;&#228;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="relationid" type="string">
+            <column name="RELATIONID" />
+        </property>
+        <property name="relationseq" type="java.lang.Long">
+            <column name="RELATIONSEQ" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

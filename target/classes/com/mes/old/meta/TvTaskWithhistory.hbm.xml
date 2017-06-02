@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvTaskWithhistory" table="TV_TASK_WITHHISTORY" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvTaskWithhistoryId">
+            <key-property name="taskuid" type="serializable">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="taskid" type="serializable">
+                <column name="TASKID" />
+            </key-property>
+            <key-property name="taskname" type="serializable">
+                <column name="TASKNAME" />
+            </key-property>
+            <key-property name="model" type="serializable">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="batchnum" type="serializable">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="partNumber" type="serializable">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="dueqty" type="serializable">
+                <column name="DUEQTY" />
+            </key-property>
+            <key-property name="earlystart" type="serializable">
+                <column name="EARLYSTART" />
+            </key-property>
+            <key-property name="earlyfinish" type="serializable">
+                <column name="EARLYFINISH" />
+            </key-property>
+            <key-property name="latestart" type="serializable">
+                <column name="LATESTART" />
+            </key-property>
+            <key-property name="latefinish" type="serializable">
+                <column name="LATEFINISH" />
+            </key-property>
+            <key-property name="constrainttype" type="serializable">
+                <column name="CONSTRAINTTYPE" />
+            </key-property>
+            <key-property name="constraintdate" type="serializable">
+                <column name="CONSTRAINTDATE" />
+            </key-property>
+            <key-property name="planstart" type="serializable">
+                <column name="PLANSTART" />
+            </key-property>
+            <key-property name="planfinish" type="serializable">
+                <column name="PLANFINISH" />
+            </key-property>
+            <key-property name="planstate" type="serializable">
+                <column name="PLANSTATE" />
+            </key-property>
+            <key-property name="schedulestart" type="serializable">
+                <column name="SCHEDULESTART" />
+            </key-property>
+            <key-property name="schedulefinish" type="serializable">
+                <column name="SCHEDULEFINISH" />
+            </key-property>
+            <key-property name="actualstart" type="serializable">
+                <column name="ACTUALSTART" />
+            </key-property>
+            <key-property name="actualfinish" type="serializable">
+                <column name="ACTUALFINISH" />
+            </key-property>
+            <key-property name="demandstart" type="serializable">
+                <column name="DEMANDSTART" />
+            </key-property>
+            <key-property name="demandfinish" type="serializable">
+                <column name="DEMANDFINISH" />
+            </key-property>
+            <key-property name="priority" type="serializable">
+                <column name="PRIORITY" />
+            </key-property>
+            <key-property name="completepercent" type="serializable">
+                <column name="COMPLETEPERCENT" />
+            </key-property>
+            <key-property name="tasktype" type="serializable">
+                <column name="TASKTYPE" />
+            </key-property>
+            <key-property name="taskwork" type="serializable">
+                <column name="TASKWORK" />
+            </key-property>
+            <key-property name="preoptime" type="serializable">
+                <column name="PREOPTIME" />
+            </key-property>
+            <key-property name="postoptime" type="serializable">
+                <column name="POSTOPTIME" />
+            </key-property>
+            <key-property name="runtime" type="serializable">
+                <column name="RUNTIME" />
+            </key-property>
+            <key-property name="shrinkqty" type="serializable">
+                <column name="SHRINKQTY" />
+            </key-property>
+            <key-property name="suspended" type="serializable">
+                <column name="SUSPENDED" />
+            </key-property>
+            <key-property name="locked" type="serializable">
+                <column name="LOCKED" />
+            </key-property>
+            <key-property name="planqty" type="serializable">
+                <column name="PLANQTY" />
+            </key-property>
+            <key-property name="completeqty" type="serializable">
+                <column name="COMPLETEQTY" />
+            </key-property>
+            <key-property name="deliveryqty" type="serializable">
+                <column name="DELIVERYQTY" />
+            </key-property>
+            <key-property name="isdemand" type="serializable">
+                <column name="ISDEMAND" />
+            </key-property>
+            <key-property name="demandstate" type="serializable">
+                <column name="DEMANDSTATE" />
+            </key-property>
+            <key-property name="deptid" type="serializable">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="mastershop" type="serializable">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="routing" type="serializable">
+                <column name="ROUTING" />
+            </key-property>
+            <key-property name="operationId" type="serializable">
+                <column name="OPERATION_ID" />
+            </key-property>
+            <key-property name="dispatchtime" type="serializable">
+                <column name="DISPATCHTIME" />
+            </key-property>
+            <key-property name="taskstate" type="serializable">
+                <column name="TASKSTATE" />
+            </key-property>
+            <key-property name="reasoncode" type="serializable">
+                <column name="REASONCODE" />
+            </key-property>
+            <key-property name="routinestate" type="serializable">
+                <column name="ROUTINESTATE" />
+            </key-property>
+            <key-property name="materialstate" type="serializable">
+                <column name="MATERIALSTATE" />
+            </key-property>
+            <key-property name="resourcestate" type="serializable">
+                <column name="RESOURCESTATE" />
+            </key-property>
+            <key-property name="parentuid" type="serializable">
+                <column name="PARENTUID" />
+            </key-property>
+            <key-property name="creator" type="serializable">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="createtime" type="serializable">
+                <column name="CREATETIME" />
+            </key-property>
+            <key-property name="needcheck" type="serializable">
+                <column name="NEEDCHECK" />
+            </key-property>
+            <key-property name="rootbatchnum" type="serializable">
+                <column name="ROOTBATCHNUM" />
+            </key-property>
+            <key-property name="completework" type="serializable">
+                <column name="COMPLETEWORK" />
+            </key-property>
+            <key-property name="text1" type="serializable">
+                <column name="TEXT1" />
+            </key-property>
+            <key-property name="startendmark" type="serializable">
+                <column name="STARTENDMARK" />
+            </key-property>
+            <key-property name="text2" type="serializable">
+                <column name="TEXT2" />
+            </key-property>
+            <key-property name="text3" type="serializable">
+                <column name="TEXT3" />
+            </key-property>
+            <key-property name="text4" type="serializable">
+                <column name="TEXT4" />
+            </key-property>
+            <key-property name="text5" type="serializable">
+                <column name="TEXT5" />
+            </key-property>
+            <key-property name="text6" type="serializable">
+                <column name="TEXT6" />
+            </key-property>
+            <key-property name="text7" type="serializable">
+                <column name="TEXT7" />
+            </key-property>
+            <key-property name="text8" type="serializable">
+                <column name="TEXT8" />
+            </key-property>
+            <key-property name="text9" type="serializable">
+                <column name="TEXT9" />
+            </key-property>
+            <key-property name="text10" type="serializable">
+                <column name="TEXT10" />
+            </key-property>
+            <key-property name="checker" type="serializable">
+                <column name="CHECKER" />
+            </key-property>
+            <key-property name="checkdate" type="serializable">
+                <column name="CHECKDATE" />
+            </key-property>
+            <key-property name="check1qty" type="serializable">
+                <column name="CHECK1QTY" />
+            </key-property>
+            <key-property name="check2qty" type="serializable">
+                <column name="CHECK2QTY" />
+            </key-property>
+            <key-property name="check3qty" type="serializable">
+                <column name="CHECK3QTY" />
+            </key-property>
+            <key-property name="check4qty" type="serializable">
+                <column name="CHECK4QTY" />
+            </key-property>
+            <key-property name="check5qty" type="serializable">
+                <column name="CHECK5QTY" />
+            </key-property>
+            <key-property name="check6qty" type="serializable">
+                <column name="CHECK6QTY" />
+            </key-property>
+            <key-property name="check7qty" type="serializable">
+                <column name="CHECK7QTY" />
+            </key-property>
+            <key-property name="check8qty" type="serializable">
+                <column name="CHECK8QTY" />
+            </key-property>
+            <key-property name="check9qty" type="serializable">
+                <column name="CHECK9QTY" />
+            </key-property>
+            <key-property name="checknotes" type="serializable">
+                <column name="CHECKNOTES" />
+            </key-property>
+            <key-property name="warehouseid" type="serializable">
+                <column name="WAREHOUSEID" />
+            </key-property>
+            <key-property name="isCriticalOperation" type="serializable">
+                <column name="IS_CRITICAL_OPERATION" />
+            </key-property>
+            <key-property name="agreestate" type="serializable">
+                <column name="AGREESTATE" />
+            </key-property>
+            <key-property name="notes" type="serializable">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="costid" type="serializable">
+                <column name="COSTID" />
+            </key-property>
+            <key-property name="responsetime" type="serializable">
+                <column name="RESPONSETIME" />
+            </key-property>
+            <key-property name="basestart" type="serializable">
+                <column name="BASESTART" />
+            </key-property>
+            <key-property name="basefinish" type="serializable">
+                <column name="BASEFINISH" />
+            </key-property>
+            <key-property name="noneneeddispatch" type="serializable">
+                <column name="NONENEEDDISPATCH" />
+            </key-property>
+            <key-property name="isturned" type="serializable">
+                <column name="ISTURNED" />
+            </key-property>
+            <key-property name="isprint" type="serializable">
+                <column name="ISPRINT" />
+            </key-property>
+            <key-property name="operationIddesc" type="serializable">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="estipretime" type="serializable">
+                <column name="ESTIPRETIME" />
+            </key-property>
+            <key-property name="estiruntime" type="serializable">
+                <column name="ESTIRUNTIME" />
+            </key-property>
+            <key-property name="estitaskwork" type="serializable">
+                <column name="ESTITASKWORK" />
+            </key-property>
+            <key-property name="opuid" type="serializable">
+                <column name="OPUID" />
+            </key-property>
+            <key-property name="tryqty" type="serializable">
+                <column name="TRYQTY" />
+            </key-property>
+            <key-property name="manhourstate" type="serializable">
+                <column name="MANHOURSTATE" />
+            </key-property>
+            <key-property name="optype" type="serializable">
+                <column name="OPTYPE" />
+            </key-property>
+            <key-property name="workcenteruid" type="serializable">
+                <column name="WORKCENTERUID" />
+            </key-property>
+            <key-property name="deviceuid" type="serializable">
+                <column name="DEVICEUID" />
+            </key-property>
+            <key-property name="TTasksOutUid" type="serializable">
+                <column name="T_TASKS_OUT_UID" />
+            </key-property>
+            <key-property name="bigmodel" type="serializable">
+                <column name="BIGMODEL" />
+            </key-property>
+            <key-property name="controlstart" type="serializable">
+                <column name="CONTROLSTART" />
+            </key-property>
+            <key-property name="controlfinish" type="serializable">
+                <column name="CONTROLFINISH" />
+            </key-property>
+            <key-property name="demandisbreak" type="serializable">
+                <column name="DEMANDISBREAK" />
+            </key-property>
+            <key-property name="slackfactor" type="serializable">
+                <column name="SLACKFACTOR" />
+            </key-property>
+            <key-property name="operationDistance" type="serializable">
+                <column name="OPERATION_DISTANCE" />
+            </key-property>
+            <key-property name="mdsuid" type="serializable">
+                <column name="MDSUID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

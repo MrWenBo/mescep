@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KWaittime" table="K_WAITTIME" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.KWaittimeId">
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" length="32" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="timeend" type="string">
+                <column name="TIMEEND" length="40" />
+            </key-property>
+            <key-property name="timestart" type="string">
+                <column name="TIMESTART" length="40" />
+            </key-property>
+            <key-property name="waittime" type="big_decimal">
+                <column name="WAITTIME" precision="22" scale="0" />
+            </key-property>
+            <key-property name="day" type="date">
+                <column name="DAY" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

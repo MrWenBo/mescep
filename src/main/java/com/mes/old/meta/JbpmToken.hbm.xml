@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmToken" table="JBPM_TOKEN" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmNode" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="NODE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmProcessinstanceBySubprocessinstance" class="com.mes.old.JbpmProcessinstance" fetch="select">
+            <column name="SUBPROCESSINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmProcessinstanceByProcessinstance" class="com.mes.old.JbpmProcessinstance" fetch="select">
+            <column name="PROCESSINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmToken" class="com.mes.old.JbpmToken" fetch="select">
+            <column name="PARENT_" scale="0" />
+        </many-to-one>
+        <property name="version" type="long">
+            <column name="VERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" />
+        </property>
+        <property name="start" type="date">
+            <column name="START_" length="7" />
+        </property>
+        <property name="end" type="date">
+            <column name="END_" length="7" />
+        </property>
+        <property name="nodeenter" type="date">
+            <column name="NODEENTER_" length="7" />
+        </property>
+        <property name="nextlogindex" type="java.lang.Long">
+            <column name="NEXTLOGINDEX_" precision="10" scale="0" />
+        </property>
+        <property name="isabletoreactivateparent" type="java.lang.Boolean">
+            <column name="ISABLETOREACTIVATEPARENT_" precision="1" scale="0" />
+        </property>
+        <property name="isterminationimplicit" type="java.lang.Boolean">
+            <column name="ISTERMINATIONIMPLICIT_" precision="1" scale="0" />
+        </property>
+        <property name="issuspended" type="java.lang.Boolean">
+            <column name="ISSUSPENDED_" precision="1" scale="0" />
+        </property>
+        <set name="jbpmProcessinstancesForSuperprocesstoken" table="JBPM_PROCESSINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SUPERPROCESSTOKEN_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmProcessinstance" />
+        </set>
+        <set name="jbpmProcessinstancesForRoottoken" table="JBPM_PROCESSINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ROOTTOKEN_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmProcessinstance" />
+        </set>
+        <set name="jbpmTimers" table="JBPM_TIMER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TOKEN_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTimer" />
+        </set>
+        <set name="jbpmMessages" table="JBPM_MESSAGE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TOKEN_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmMessage" />
+        </set>
+        <set name="jbpmTaskinstances" table="JBPM_TASKINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TOKEN_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTaskinstance" />
+        </set>
+        <set name="jbpmVariableinstances" table="JBPM_VARIABLEINSTANCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TOKEN_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmVariableinstance" />
+        </set>
+        <set name="jbpmLogsForChild" table="JBPM_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CHILD_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmLog" />
+        </set>
+        <set name="jbpmLogsForToken" table="JBPM_LOG" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TOKEN_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmLog" />
+        </set>
+        <set name="jbpmTokenvariablemaps" table="JBPM_TOKENVARIABLEMAP" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TOKEN_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTokenvariablemap" />
+        </set>
+        <set name="jbpmComments" table="JBPM_COMMENT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TOKEN_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmComment" />
+        </set>
+        <set name="jbpmTokens" table="JBPM_TOKEN" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PARENT_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmToken" />
+        </set>
+    </class>
+</hibernate-mapping>

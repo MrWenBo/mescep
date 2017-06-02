@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.ErpDrawingid" table="ERP_DRAWINGID" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.ErpDrawingidId">
+            <key-property name="mc" type="string">
+                <column name="MC" />
+            </key-property>
+            <key-property name="bh" type="string">
+                <column name="BH" />
+            </key-property>
+            <key-property name="version" type="string">
+                <column name="VERSION" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

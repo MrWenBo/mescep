@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KIndicatorUser" table="K_INDICATOR_USER" schema="MES188" optimistic-lock="version">
+        <comment>&#211;&#195;&#187;&#167;&#214;&#184;&#177;&#234;</comment>
+        <id name="iuid" type="string">
+            <column name="IUID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="KIndicator" class="com.mes.old.KIndicator" fetch="select">
+            <column name="INDICATORID" length="32">
+                <comment>&#214;&#184;&#177;&#234;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="value" type="big_decimal">
+            <column name="VALUE" precision="22" scale="0">
+                <comment>&#211;&#195;&#187;&#167;&#201;&#232;&#182;&#168;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="32" />
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL" length="32" />
+        </property>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID" length="32" />
+        </property>
+        <property name="iustate" type="string">
+            <column name="IUSTATE" length="10">
+                <comment>&#211;&#195;&#187;&#167;&#214;&#184;&#177;&#234;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID" length="32">
+                <comment>&#211;&#195;&#187;&#167;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="32" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="invalidtime" type="date">
+            <column name="INVALIDTIME" length="7" />
+        </property>
+        <set name="KIndicatorBoards" table="K_INDICATOR_BOARD" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="IUID" length="32">
+                    <comment>&#214;&#184;&#177;&#234;&#177;&#224;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.KIndicatorBoard" />
+        </set>
+    </class>
+</hibernate-mapping>

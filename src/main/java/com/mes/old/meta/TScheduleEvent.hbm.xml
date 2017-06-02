@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TScheduleEvent" table="T_SCHEDULE_EVENT" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TScheduleEventId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="50" />
+            </key-property>
+            <key-property name="scheduleuid" type="string">
+                <column name="SCHEDULEUID" length="50" />
+            </key-property>
+            <key-property name="eventType" type="string">
+                <column name="EVENT_TYPE" length="50" />
+            </key-property>
+            <key-property name="keyUid" type="string">
+                <column name="KEY_UID" />
+            </key-property>
+            <key-property name="eventContent" type="clob">
+                <column name="EVENT_CONTENT" />
+            </key-property>
+            <key-property name="eventState" type="java.lang.Long">
+                <column name="EVENT_STATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="sourceUid" type="string">
+                <column name="SOURCE_UID" />
+            </key-property>
+            <key-property name="sourceType" type="string">
+                <column name="SOURCE_TYPE" length="50" />
+            </key-property>
+            <key-property name="handler" type="string">
+                <column name="HANDLER" length="50" />
+            </key-property>
+            <key-property name="handletime" type="date">
+                <column name="HANDLETIME" length="7" />
+            </key-property>
+            <key-property name="eventDesc" type="string">
+                <column name="EVENT_DESC" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

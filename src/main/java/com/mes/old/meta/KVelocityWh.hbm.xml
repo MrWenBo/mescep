@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KVelocityWh" table="K_VELOCITY_WH" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.KVelocityWhId">
+            <key-property name="invioid" type="string">
+                <column name="INVIOID" length="32" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID" length="32" not-null="true">
+                <comment>&#191;&#226;&#183;&#191;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" length="32" not-null="true">
+                <comment>&#206;&#239;&#193;&#207;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="iodate" type="date">
+            <column name="IODATE" length="7">
+                <comment>&#179;&#246;&#200;&#235;&#191;&#226;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="outqty" type="big_decimal">
+            <column name="OUTQTY" precision="25" scale="0">
+                <comment>&#179;&#246;&#191;&#226;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="invqty" type="big_decimal">
+            <column name="INVQTY" precision="25" scale="0">
+                <comment>&#191;&#226;&#180;&#230;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="32" not-null="true">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

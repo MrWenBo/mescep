@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.DxjDevice" table="DXJ_DEVICE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.DxjDeviceId">
+            <key-property name="deviceId" type="string">
+                <column name="DEVICE_ID" />
+            </key-property>
+            <key-property name="deviceName" type="string">
+                <column name="DEVICE_NAME" />
+            </key-property>
+            <key-property name="wcName" type="string">
+                <column name="WC_NAME" />
+            </key-property>
+            <key-property name="tableCount" type="string">
+                <column name="TABLE_COUNT" />
+            </key-property>
+            <key-property name="wcId" type="string">
+                <column name="WC_ID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

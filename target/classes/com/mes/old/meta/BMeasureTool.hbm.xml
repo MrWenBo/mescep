@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BMeasureTool" table="B_MEASURE_TOOL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BMeasureToolId">
+            <key-property name="uuid" type="string">
+                <column name="UUID" length="50" />
+            </key-property>
+            <key-property name="lbound" type="string">
+                <column name="LBOUND" />
+            </key-property>
+            <key-property name="ubound" type="string">
+                <column name="UBOUND" />
+            </key-property>
+            <key-property name="precision" type="string">
+                <column name="PRECISION" length="50" />
+            </key-property>
+            <key-property name="toleranceid" type="string">
+                <column name="TOLERANCEID" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="toolName" type="string">
+            <column name="TOOL_NAME" not-null="true" />
+        </property>
+        <property name="tolerancename" type="string">
+            <column name="TOLERANCENAME" />
+        </property>
+        <property name="tolerancetype" type="string">
+            <column name="TOLERANCETYPE" />
+        </property>
+        <property name="barcode" type="string">
+            <column name="BARCODE" />
+        </property>
+    </class>
+</hibernate-mapping>

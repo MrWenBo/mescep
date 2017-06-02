@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmTaskcontroller" table="JBPM_TASKCONTROLLER" schema="MES188" optimistic-lock="version">
+        <id name="id" type="big_decimal">
+            <column name="ID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmDelegation" class="com.mes.old.JbpmDelegation" fetch="select">
+            <column name="TASKCONTROLLERDELEGATION_" scale="0" />
+        </many-to-one>
+        <set name="jbpmTasks" table="JBPM_TASK" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKCONTROLLER_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmTask" />
+        </set>
+        <set name="jbpmVariableaccesses" table="JBPM_VARIABLEACCESS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASKCONTROLLER_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.JbpmVariableaccess" />
+        </set>
+    </class>
+</hibernate-mapping>

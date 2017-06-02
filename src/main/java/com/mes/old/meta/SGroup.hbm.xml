@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SGroup" table="S_GROUP" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#166;&#196;&#220;&#215;&#233;</comment>
+        <id name="groupid" type="long">
+            <column name="GROUPID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="groupname" type="string">
+            <column name="GROUPNAME" length="50">
+                <comment>&#215;&#233;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="50">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="groupdescription" type="string">
+            <column name="GROUPDESCRIPTION" length="50">
+                <comment>&#215;&#233;&#195;&#232;&#202;&#246;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BvOperationResource" table="BV_OPERATION_RESOURCE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BvOperationResourceId">
+            <key-property name="routing" type="string">
+                <column name="ROUTING" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="10" />
+            </key-property>
+            <key-property name="simultaneousUsage" type="string">
+                <column name="SIMULTANEOUS_USAGE" length="50" />
+            </key-property>
+            <key-property name="numOperators" type="java.lang.Long">
+                <column name="NUM_OPERATORS" precision="10" scale="0" />
+            </key-property>
+            <key-property name="considerAltsDuring" type="string">
+                <column name="CONSIDER_ALTS_DURING" length="50" />
+            </key-property>
+            <key-property name="cooldownTimeFactor" type="java.lang.Long">
+                <column name="COOLDOWN_TIME_FACTOR" precision="10" scale="0" />
+            </key-property>
+            <key-property name="minOperationTimeFactor" type="java.lang.Long">
+                <column name="MIN_OPERATION_TIME_FACTOR" precision="10" scale="0" />
+            </key-property>
+            <key-property name="offloadLevel" type="java.lang.Long">
+                <column name="OFFLOAD_LEVEL" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partQtyPerResource" type="big_decimal">
+                <column name="PART_QTY_PER_RESOURCE" precision="25" scale="6" />
+            </key-property>
+            <key-property name="partQtyPerResourceUom" type="string">
+                <column name="PART_QTY_PER_RESOURCE_UOM" length="50" />
+            </key-property>
+            <key-property name="machineNumber" type="string">
+                <column name="MACHINE_NUMBER" length="50" />
+            </key-property>
+            <key-property name="primaryP" type="java.lang.Byte">
+                <column name="PRIMARY_P" precision="2" scale="0" />
+            </key-property>
+            <key-property name="ramupCalendarName" type="string">
+                <column name="RAMUP_CALENDAR_NAME" length="50" />
+            </key-property>
+            <key-property name="runtimeFactor" type="java.lang.Byte">
+                <column name="RUNTIME_FACTOR" precision="2" scale="0" />
+            </key-property>
+            <key-property name="preopTimeFactor" type="java.lang.Long">
+                <column name="PREOP_TIME_FACTOR" precision="10" scale="0" />
+            </key-property>
+            <key-property name="usagePercent" type="big_decimal">
+                <column name="USAGE_PERCENT" precision="25" scale="6" />
+            </key-property>
+            <key-property name="useForSetup" type="java.lang.Byte">
+                <column name="USE_FOR_SETUP" precision="2" scale="0" />
+            </key-property>
+            <key-property name="resourceGroup" type="string">
+                <column name="RESOURCE_GROUP" length="50" />
+            </key-property>
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="50" />
+            </key-property>
+            <key-property name="consumeLife" type="big_decimal">
+                <column name="CONSUME_LIFE" precision="20" scale="0" />
+            </key-property>
+            <key-property name="effective" type="java.lang.Byte">
+                <column name="EFFECTIVE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="changer" type="string">
+                <column name="CHANGER" length="50" />
+            </key-property>
+            <key-property name="changestate" type="java.lang.Byte">
+                <column name="CHANGESTATE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="changereason" type="string">
+                <column name="CHANGEREASON" length="100" />
+            </key-property>
+            <key-property name="changetime" type="date">
+                <column name="CHANGETIME" length="7" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="TCode" type="string">
+                <column name="T_CODE" length="100" />
+            </key-property>
+            <key-property name="BOperationResourceOutUid" type="string">
+                <column name="B_OPERATION_RESOURCE_OUT_UID" />
+            </key-property>
+            <key-property name="useType" type="string">
+                <column name="USE_TYPE" />
+            </key-property>
+            <key-property name="machinenumberdesc" type="string">
+                <column name="MACHINENUMBERDESC" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="classname" type="string">
+                <column name="CLASSNAME" />
+            </key-property>
+            <key-property name="partDescription" type="string">
+                <column name="PART_DESCRIPTION" />
+            </key-property>
+            <key-property name="classid" type="string">
+                <column name="CLASSID" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.STreedetail" table="S_TREEDETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.STreedetailId">
+            <key-property name="treeid" type="big_decimal">
+                <column name="TREEID" precision="22" scale="0" />
+            </key-property>
+            <key-property name="itemname" type="string">
+                <column name="ITEMNAME" />
+            </key-property>
+        </composite-id>
+        <property name="itemurl" type="string">
+            <column name="ITEMURL" not-null="true" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="uniqueid" type="big_decimal">
+            <column name="UNIQUEID" precision="25" scale="0" not-null="true" unique="true" />
+        </property>
+        <property name="itemseq" type="big_decimal">
+            <column name="ITEMSEQ" precision="25" scale="0" />
+        </property>
+        <property name="isvisible" type="java.lang.Boolean">
+            <column name="ISVISIBLE" precision="1" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

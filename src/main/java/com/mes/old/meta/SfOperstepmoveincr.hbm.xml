@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SfOperstepmoveincr" table="SF_OPERSTEPMOVEINCR" schema="MES188" optimistic-lock="version">
+        <id name="uuid" type="string">
+            <column name="UUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="operuid" type="string">
+            <column name="OPERUID">
+                <comment>&#185;&#164;&#208;&#242;&#214;&#247;&#188;&#252;</comment>
+            </column>
+        </property>
+        <property name="stepuid" type="string">
+            <column name="STEPUID">
+                <comment>&#185;&#164;&#208;&#242;&#214;&#247;&#188;&#252;</comment>
+            </column>
+        </property>
+        <property name="translationincruid" type="string">
+            <column name="TRANSLATIONINCRUID">
+                <comment>
+                &#210;&#198;&#182;&#175;&#188;&#199;&#194;&#188;UID&#163;&#172;&#187;&#242;&#213;&#223;&#211;&#195;&#211;&#218;&#177;&#234;&#188;&#199;&#202;&#199;&#183;&#241;&#211;&#208;&#182;&#212;&#211;&#166;&#181;&#196;&#210;&#198;&#182;&#175;&#188;&#199;&#194;&#188;&#161;&#163;&#196;&#191;&#199;&#176;&#211;&#195;&#186;&#243;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="rotationincruid" type="string">
+            <column name="ROTATIONINCRUID">
+                <comment>
+                &#208;&#253;&#215;&#170;&#188;&#199;&#194;&#188;UID&#163;&#172;&#187;&#242;&#213;&#223;&#211;&#195;&#211;&#218;&#177;&#234;&#188;&#199;&#202;&#199;&#183;&#241;&#211;&#208;&#182;&#212;&#211;&#166;&#181;&#196;&#208;&#253;&#215;&#170;&#188;&#199;&#194;&#188;&#161;&#163;&#196;&#191;&#199;&#176;&#211;&#195;&#186;&#243;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="moveid" type="java.lang.Long">
+            <column name="MOVEID" precision="10" scale="0">
+                <comment>&#212;&#203;&#182;&#175;&#181;&#227;&#177;&#224;&#186;&#197;[&#196;&#218;&#178;&#191;&#197;&#197;&#208;&#242;&#211;&#195;]</comment>
+            </column>
+        </property>
+        <property name="movename" type="string">
+            <column name="MOVENAME">
+                <comment>&#212;&#203;&#182;&#175;&#181;&#227;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="routing" type="string">
+            <column name="ROUTING" />
+        </property>
+    </class>
+</hibernate-mapping>

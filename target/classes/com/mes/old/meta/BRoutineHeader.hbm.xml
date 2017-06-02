@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BRoutineHeader" table="B_ROUTINE_HEADER" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#210;&#213;&#194;&#183;&#207;&#223;&#185;&#220;&#192;&#237;</comment>
+        <id name="routing" type="string">
+            <column name="ROUTING" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="BPartNumber" class="com.mes.old.BPartNumber" fetch="select">
+            <column name="PART_NUMBER" length="50">
+                <comment>&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="routingName" type="string">
+            <column name="ROUTING_NAME" length="50">
+                <comment>&#185;&#164;&#210;&#213;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="versionid" type="string">
+            <column name="VERSIONID" length="50">
+                <comment>&#176;&#230;&#177;&#190;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="effective" type="java.lang.Byte">
+            <column name="EFFECTIVE" precision="2" scale="0">
+                <comment>&#211;&#208;&#208;&#167;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50">
+                <comment>&#188;&#236;&#178;&#233;</comment>
+            </column>
+        </property>
+        <property name="auditor" type="string">
+            <column name="AUDITOR" length="50">
+                <comment>&#201;&#243;&#186;&#203;</comment>
+            </column>
+        </property>
+        <property name="approver" type="string">
+            <column name="APPROVER" length="50">
+                <comment>&#197;&#250;&#215;&#188;</comment>
+            </column>
+        </property>
+        <property name="worktimeRation" type="java.lang.Long">
+            <column name="WORKTIME_RATION" precision="10" scale="0">
+                <comment>&#185;&#164;&#202;&#177;&#207;&#181;&#202;&#253;</comment>
+            </column>
+        </property>
+        <property name="iscritical" type="java.lang.Byte">
+            <column name="ISCRITICAL" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#185;&#216;&#188;&#252;</comment>
+            </column>
+        </property>
+        <property name="changetime" type="date">
+            <column name="CHANGETIME" length="7">
+                <comment>&#184;&#252;&#184;&#196;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="changer" type="string">
+            <column name="CHANGER" length="50">
+                <comment>&#184;&#252;&#184;&#196;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="changestate" type="java.lang.Byte">
+            <column name="CHANGESTATE" precision="2" scale="0">
+                <comment>&#184;&#252;&#184;&#196;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="useeffective" type="java.lang.Byte">
+            <column name="USEEFFECTIVE" precision="2" scale="0">
+                <comment>&#211;&#195;&#187;&#167;&#211;&#208;&#208;&#167;&#208;&#212;</comment>
+            </column>
+        </property>
+        <property name="routingid" type="string">
+            <column name="ROUTINGID" length="50">
+                <comment>&#185;&#164;&#210;&#213;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="mastershop" type="string">
+            <column name="MASTERSHOP" length="50">
+                <comment>&#214;&#247;&#214;&#198;&#179;&#181;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="dataorigin" type="java.lang.Long">
+            <column name="DATAORIGIN" precision="10" scale="0" />
+        </property>
+        <property name="manhourState" type="java.lang.Byte">
+            <column name="MANHOUR_STATE" precision="2" scale="0" />
+        </property>
+        <property name="routingType" type="string">
+            <column name="ROUTING_TYPE">
+                <comment>&#185;&#164;&#210;&#213;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#185;&#164;&#210;&#213;&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="opuid" type="string">
+            <column name="OPUID" />
+        </property>
+        <property name="routinemanager" type="string">
+            <column name="ROUTINEMANAGER" />
+        </property>
+        <property name="BRoutineHeaderOutUid" type="string">
+            <column name="B_ROUTINE_HEADER_OUT_UID" />
+        </property>
+        <property name="productPhase" type="string">
+            <column name="PRODUCT_PHASE" length="50" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="approvetime" type="date">
+            <column name="APPROVETIME" length="7" />
+        </property>
+        <property name="statisticEffective" type="java.lang.Byte">
+            <column name="STATISTIC_EFFECTIVE" precision="2" scale="0" />
+        </property>
+        <property name="parentrouting" type="string">
+            <column name="PARENTROUTING">
+                <comment>&#184;&#184;&#185;&#164;&#210;&#213;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="totalwork" type="big_decimal">
+            <column name="TOTALWORK" precision="20">
+                <comment>&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <set name="BRoutineOpers" table="B_ROUTINE_OPER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ROUTING" not-null="true">
+                    <comment>&#185;&#164;&#210;&#213;&#194;&#183;&#207;&#223;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.BRoutineOper" />
+        </set>
+    </class>
+</hibernate-mapping>

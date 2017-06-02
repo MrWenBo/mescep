@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RvDept" table="RV_DEPT" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.RvDeptId">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="50" />
+            </key-property>
+            <key-property name="leaderid" type="string">
+                <column name="LEADERID" length="50" />
+            </key-property>
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="contactid" type="string">
+                <column name="CONTACTID" length="50" />
+            </key-property>
+            <key-property name="creatorid" type="string">
+                <column name="CREATORID" length="50" />
+            </key-property>
+            <key-property name="depttype" type="big_decimal">
+                <column name="DEPTTYPE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="superdeptid" type="string">
+                <column name="SUPERDEPTID" length="50" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="50" />
+            </key-property>
+            <key-property name="schemaid" type="string">
+                <column name="SCHEMAID" length="50" />
+            </key-property>
+            <key-property name="customerDeptid" type="string">
+                <column name="CUSTOMER_DEPTID" length="50" />
+            </key-property>
+            <key-property name="RDeptOutUid" type="string">
+                <column name="R_DEPT_OUT_UID" />
+            </key-property>
+            <key-property name="deptLevel" type="string">
+                <column name="DEPT_LEVEL" />
+            </key-property>
+            <key-property name="deptTreeCode" type="string">
+                <column name="DEPT_TREE_CODE" />
+            </key-property>
+            <key-property name="leadername" type="string">
+                <column name="LEADERNAME" length="100" />
+            </key-property>
+            <key-property name="contactname" type="string">
+                <column name="CONTACTNAME" length="100" />
+            </key-property>
+            <key-property name="creatorname" type="string">
+                <column name="CREATORNAME" length="100" />
+            </key-property>
+            <key-property name="depttypedesc" type="string">
+                <column name="DEPTTYPEDESC" length="100" />
+            </key-property>
+            <key-property name="superdeptname" type="string">
+                <column name="SUPERDEPTNAME" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

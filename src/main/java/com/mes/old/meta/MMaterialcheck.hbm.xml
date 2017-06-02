@@ -1,0 +1,227 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MMaterialcheck" table="M_MATERIALCHECK" schema="MES188" optimistic-lock="version">
+        <comment>&#206;&#239;&#193;&#207;&#188;&#236;&#209;&#233;&#208;&#197;&#207;&#162;</comment>
+        <id name="checkuid" type="string">
+            <column name="CHECKUID" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="MMaterial" class="com.mes.old.MMaterial" fetch="select">
+            <column name="MATERIALUSN" not-null="true">
+                <comment>&#206;&#239;&#193;&#207;&#204;&#245;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <property name="taskuid" type="string">
+            <column name="TASKUID">
+                <comment>&#200;&#206;&#206;&#241;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER">
+                <comment>&#188;&#236;&#209;&#233;&#212;&#177;</comment>
+            </column>
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7">
+                <comment>&#188;&#236;&#209;&#233;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="checktype" type="java.lang.Long">
+            <column name="CHECKTYPE" precision="10" scale="0">
+                <comment>&#188;&#236;&#209;&#233;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="resuid" type="string">
+            <column name="RESUID">
+                <comment>&#215;&#202;&#212;&#180;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="checkstandard" type="string">
+            <column name="CHECKSTANDARD">
+                <comment>&#188;&#236;&#209;&#233;&#177;&#234;&#215;&#188;</comment>
+            </column>
+        </property>
+        <property name="qualitystate" type="java.lang.Long">
+            <column name="QUALITYSTATE" precision="10" scale="0">
+                <comment>&#214;&#202;&#193;&#191;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="defectid" type="string">
+            <column name="DEFECTID">
+                <comment>&#200;&#177;&#207;&#221;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="dutytype" type="java.lang.Long">
+            <column name="DUTYTYPE" precision="10" scale="0">
+                <comment>&#200;&#177;&#207;&#221;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="dutier" type="string">
+            <column name="DUTIER" length="50">
+                <comment>&#212;&#240;&#200;&#206;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="dutyresuid" type="string">
+            <column name="DUTYRESUID">
+                <comment>&#212;&#240;&#200;&#206;&#201;&#232;&#177;&#184;</comment>
+            </column>
+        </property>
+        <property name="checkref" type="string">
+            <column name="CHECKREF">
+                <comment>&#188;&#236;&#209;&#233;&#178;&#206;&#213;&#213;&#206;&#196;&#188;&#254;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="text1" type="string">
+            <column name="TEXT1">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#210;&#187;</comment>
+            </column>
+        </property>
+        <property name="text2" type="string">
+            <column name="TEXT2">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#182;&#254;</comment>
+            </column>
+        </property>
+        <property name="text3" type="string">
+            <column name="TEXT3">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#200;&#253;</comment>
+            </column>
+        </property>
+        <property name="text4" type="string">
+            <column name="TEXT4">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#203;&#196;</comment>
+            </column>
+        </property>
+        <property name="text5" type="string">
+            <column name="TEXT5">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#206;&#229;</comment>
+            </column>
+        </property>
+        <property name="text6" type="string">
+            <column name="TEXT6">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#193;&#249;</comment>
+            </column>
+        </property>
+        <property name="text7" type="string">
+            <column name="TEXT7">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#198;&#223;</comment>
+            </column>
+        </property>
+        <property name="text8" type="string">
+            <column name="TEXT8">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#176;&#203;</comment>
+            </column>
+        </property>
+        <property name="text9" type="string">
+            <column name="TEXT9">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#190;&#197;</comment>
+            </column>
+        </property>
+        <property name="text10" type="string">
+            <column name="TEXT10">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#202;&#174;</comment>
+            </column>
+        </property>
+        <property name="checktaskuid" type="string">
+            <column name="CHECKTASKUID">
+                <comment>&#215;&#168;&#188;&#236;&#200;&#206;&#206;&#241;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="checkid" type="string">
+            <column name="CHECKID" not-null="true">
+                <comment>&#188;&#236;&#209;&#233;&#181;&#165;&#186;&#197;(&#211;&#201;&#211;&#195;&#187;&#167;&#215;&#212;&#182;&#168;&#210;&#229;)</comment>
+            </column>
+        </property>
+        <property name="checkqty" type="big_decimal">
+            <column name="CHECKQTY" precision="25" scale="0">
+                <comment>&#188;&#236;&#209;&#233;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="check1qty" type="java.lang.Long">
+            <column name="CHECK1QTY" precision="10" scale="0">
+                <comment>&#188;&#236;&#209;&#233;&#186;&#207;&#184;&#241;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="workrecuniqueid" type="big_decimal">
+            <column name="WORKRECUNIQUEID" scale="0">
+                <comment>T_WORKREC&#181;&#196;id</comment>
+            </column>
+        </property>
+        <property name="handled" type="java.lang.Boolean">
+            <column name="HANDLED" precision="1" scale="0">
+                <comment>&#181;&#165;&#190;&#221;&#202;&#199;&#183;&#241;&#210;&#209;&#180;&#166;&#192;&#237;</comment>
+            </column>
+        </property>
+        <property name="parentuid" type="string">
+            <column name="PARENTUID">
+                <comment>&#201;&#207;&#211;&#206;&#181;&#165;&#190;&#221;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="wastemoney" type="big_decimal">
+            <column name="WASTEMONEY" />
+        </property>
+        <property name="wastehour" type="big_decimal">
+            <column name="WASTEHOUR">
+                <comment>&#183;&#207;&#198;&#183;&#185;&#164;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="wastematerial" type="big_decimal">
+            <column name="WASTEMATERIAL" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="customerid" type="string">
+            <column name="CUSTOMERID" length="50" />
+        </property>
+        <property name="dutydeptid" type="string">
+            <column name="DUTYDEPTID" length="50" />
+        </property>
+        <property name="dutydeptmanager" type="string">
+            <column name="DUTYDEPTMANAGER" length="50" />
+        </property>
+        <property name="checkmanager" type="string">
+            <column name="CHECKMANAGER" length="50" />
+        </property>
+        <property name="defectlevel" type="string">
+            <column name="DEFECTLEVEL" length="50" />
+        </property>
+        <property name="designmind" type="string">
+            <column name="DESIGNMIND" />
+        </property>
+        <property name="auditormind" type="string">
+            <column name="AUDITORMIND" />
+        </property>
+        <property name="technicsmind" type="string">
+            <column name="TECHNICSMIND" />
+        </property>
+        <property name="metamind" type="string">
+            <column name="METAMIND" />
+        </property>
+        <property name="tranid" type="string">
+            <column name="TRANID" length="50" />
+        </property>
+        <property name="checkmind" type="string">
+            <column name="CHECKMIND" />
+        </property>
+        <property name="customermind" type="string">
+            <column name="CUSTOMERMIND" />
+        </property>
+        <property name="technologist" type="string">
+            <column name="TECHNOLOGIST" length="50" />
+        </property>
+        <property name="techprodate" type="date">
+            <column name="TECHPRODATE" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

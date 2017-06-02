@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MCertificate" table="M_CERTIFICATE" schema="MES188">
+        <id name="certificateuid" type="string">
+            <column name="CERTIFICATEUID" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="java.lang.Long">
+            <column name="VERSION" precision="10" scale="0" />
+        </version>
+        <property name="repairuid" type="string">
+            <column name="REPAIRUID" />
+        </property>
+        <property name="materialrepuid" type="string">
+            <column name="MATERIALREPUID" />
+        </property>
+        <property name="sourcebatchnum" type="string">
+            <column name="SOURCEBATCHNUM" />
+        </property>
+        <property name="washer" type="string">
+            <column name="WASHER" length="50" />
+        </property>
+        <property name="attatchref" type="string">
+            <column name="ATTATCHREF" length="2000" />
+        </property>
+        <property name="oiler" type="string">
+            <column name="OILER" length="50" />
+        </property>
+        <property name="oildate" type="date">
+            <column name="OILDATE" length="7" />
+        </property>
+        <property name="oilchecker" type="string">
+            <column name="OILCHECKER" length="50" />
+        </property>
+        <property name="certificateid" type="string">
+            <column name="CERTIFICATEID" not-null="true" />
+        </property>
+        <property name="certificatestate" type="java.lang.Long">
+            <column name="CERTIFICATESTATE" precision="10" scale="0" />
+        </property>
+        <property name="customerchecked" type="java.lang.Long">
+            <column name="CUSTOMERCHECKED" precision="10" scale="0" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" />
+        </property>
+        <property name="certificateqty" type="java.lang.Long">
+            <column name="CERTIFICATEQTY" precision="10" scale="0" />
+        </property>
+        <property name="materialsns" type="string">
+            <column name="MATERIALSNS" length="2000" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="intowarehousedate" type="date">
+            <column name="INTOWAREHOUSEDATE" length="7" />
+        </property>
+        <property name="partstyle" type="string">
+            <column name="PARTSTYLE" length="50" />
+        </property>
+        <property name="productPhase" type="string">
+            <column name="PRODUCT_PHASE" length="50" />
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL" length="50" />
+        </property>
+        <property name="drawingid" type="string">
+            <column name="DRAWINGID" length="50" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" length="50" />
+        </property>
+        <property name="partName" type="string">
+            <column name="PART_NAME" />
+        </property>
+        <property name="deptname" type="string">
+            <column name="DEPTNAME" length="50" />
+        </property>
+        <property name="changereason" type="string">
+            <column name="CHANGEREASON" length="2000" />
+        </property>
+        <property name="reprintAllow" type="java.lang.Long">
+            <column name="REPRINT_ALLOW" precision="10" scale="0" />
+        </property>
+        <property name="productVersion" type="java.lang.Long">
+            <column name="PRODUCT_VERSION" precision="10" scale="0" />
+        </property>
+        <property name="customer" type="string">
+            <column name="CUSTOMER" length="50" />
+        </property>
+        <property name="materialBatchnum" type="string">
+            <column name="MATERIAL_BATCHNUM" length="50" />
+        </property>
+        <property name="technicalbillid" type="string">
+            <column name="TECHNICALBILLID" length="50" />
+        </property>
+        <property name="supplystate" type="string">
+            <column name="SUPPLYSTATE" length="10" />
+        </property>
+        <property name="checkdeptname" type="string">
+            <column name="CHECKDEPTNAME" length="50" />
+        </property>
+        <property name="checkdeptid" type="string">
+            <column name="CHECKDEPTID" length="10" />
+        </property>
+        <property name="techstandardid" type="string">
+            <column name="TECHSTANDARDID" length="50" />
+        </property>
+        <property name="pccheckresult" type="string">
+            <column name="PCCHECKRESULT" length="50" />
+        </property>
+        <property name="certificatetype" type="string">
+            <column name="CERTIFICATETYPE" length="10" />
+        </property>
+        <property name="replacematerial" type="string">
+            <column name="REPLACEMATERIAL" length="50" />
+        </property>
+        <property name="checkername" type="string">
+            <column name="CHECKERNAME" length="50" />
+        </property>
+        <property name="productIssue" type="string">
+            <column name="PRODUCT_ISSUE" length="10" />
+        </property>
+        <property name="techCondition" type="string">
+            <column name="TECH_CONDITION" length="50" />
+        </property>
+        <property name="customerRepresent" type="string">
+            <column name="CUSTOMER_REPRESENT" length="50" />
+        </property>
+        <property name="lastprint" type="date">
+            <column name="LASTPRINT" length="7" />
+        </property>
+        <property name="useState" type="string">
+            <column name="USE_STATE" length="50" />
+        </property>
+        <property name="subMaterialrepuid" type="string">
+            <column name="SUB_MATERIALREPUID" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" />
+        </property>
+        <property name="designReplaceBillnumber" type="string">
+            <column name="DESIGN_REPLACE_BILLNUMBER" />
+        </property>
+    </class>
+</hibernate-mapping>

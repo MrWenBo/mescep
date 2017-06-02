@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KQualitymessage" table="K_QUALITYMESSAGE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.KQualitymessageId">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="32" />
+            </key-property>
+            <key-property name="kyear" type="string">
+                <column name="KYEAR" length="32" />
+            </key-property>
+            <key-property name="kweek" type="string">
+                <column name="KWEEK" length="32" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" length="32" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" length="32" />
+            </key-property>
+            <key-property name="defectqty" type="java.lang.Long">
+                <column name="DEFECTQTY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="submitqty" type="java.lang.Long">
+                <column name="SUBMITQTY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="qualityrate" type="big_decimal">
+                <column name="QUALITYRATE" precision="10" scale="4" />
+            </key-property>
+            <key-property name="yicidefectqty" type="java.lang.Long">
+                <column name="YICIDEFECTQTY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="yicisubmitqty" type="java.lang.Long">
+                <column name="YICISUBMITQTY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="yicirate" type="big_decimal">
+                <column name="YICIRATE" precision="10" scale="4" />
+            </key-property>
+            <key-property name="rejectqty" type="java.lang.Long">
+                <column name="REJECTQTY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="rejectrate" type="big_decimal">
+                <column name="REJECTRATE" precision="10" scale="4" />
+            </key-property>
+            <key-property name="kday" type="date">
+                <column name="KDAY" length="7" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

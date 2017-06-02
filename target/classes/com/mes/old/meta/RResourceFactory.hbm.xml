@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RResourceFactory" table="R_RESOURCE_FACTORY" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.RResourceFactoryId">
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="32" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="32" />
+            </key-property>
+            <key-property name="width" type="big_decimal">
+                <column name="WIDTH" precision="22" scale="0" />
+            </key-property>
+            <key-property name="height" type="big_decimal">
+                <column name="HEIGHT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cellwidth" type="big_decimal">
+                <column name="CELLWIDTH" precision="22" scale="0" />
+            </key-property>
+            <key-property name="cellheight" type="big_decimal">
+                <column name="CELLHEIGHT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="areacount" type="big_decimal">
+                <column name="AREACOUNT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="xcount" type="big_decimal">
+                <column name="XCOUNT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ycount" type="big_decimal">
+                <column name="YCOUNT" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TChangeDetail" table="T_CHANGE_DETAIL" schema="MES188" optimistic-lock="version">
+        <comment>&#183;&#214;&#198;&#218;&#189;&#187;&#184;&#182;&#188;&#198;&#187;&#174;&#184;&#252;&#184;&#196;&#181;&#165;&#195;&#247;&#207;&#184;</comment>
+        <composite-id name="id" class="com.mes.old.TChangeDetailId">
+            <key-property name="changeid" type="string">
+                <column name="CHANGEID" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="TChangeHeader" class="com.mes.old.TChangeHeader" update="false" insert="false" fetch="select">
+            <column name="CHANGEID" not-null="true">
+                <comment>&#184;&#252;&#184;&#196;&#181;&#165;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="newlatefinish" type="date">
+            <column name="NEWLATEFINISH" length="7">
+                <comment>&#189;&#168;&#210;&#233;&#189;&#187;&#187;&#245;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="newdueqty" type="java.lang.Long">
+            <column name="NEWDUEQTY" precision="10" scale="0">
+                <comment>&#189;&#168;&#210;&#233;&#189;&#187;&#184;&#182;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID">
+                <comment>&#183;&#214;&#198;&#218;&#189;&#187;&#184;&#182;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="changereason" type="string">
+            <column name="CHANGEREASON">
+                <comment>&#177;&#228;&#184;&#252;&#212;&#173;&#210;&#242;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

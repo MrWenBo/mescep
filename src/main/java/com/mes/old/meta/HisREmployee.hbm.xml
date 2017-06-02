@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisREmployee" table="HIS_R_EMPLOYEE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisREmployeeId">
+            <key-property name="deptid" type="serializable">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="groupid" type="serializable">
+                <column name="GROUPID" />
+            </key-property>
+            <key-property name="sex" type="serializable">
+                <column name="SEX" />
+            </key-property>
+            <key-property name="employeename" type="serializable">
+                <column name="EMPLOYEENAME" />
+            </key-property>
+            <key-property name="password" type="serializable">
+                <column name="PASSWORD" />
+            </key-property>
+            <key-property name="positionid" type="serializable">
+                <column name="POSITIONID" />
+            </key-property>
+            <key-property name="employeeid" type="serializable">
+                <column name="EMPLOYEEID" />
+            </key-property>
+            <key-property name="web" type="serializable">
+                <column name="WEB" />
+            </key-property>
+            <key-property name="married" type="serializable">
+                <column name="MARRIED" />
+            </key-property>
+            <key-property name="email" type="serializable">
+                <column name="EMAIL" />
+            </key-property>
+            <key-property name="cellphone" type="serializable">
+                <column name="CELLPHONE" />
+            </key-property>
+            <key-property name="employeetype" type="serializable">
+                <column name="EMPLOYEETYPE" />
+            </key-property>
+            <key-property name="degree" type="serializable">
+                <column name="DEGREE" />
+            </key-property>
+            <key-property name="birth" type="serializable">
+                <column name="BIRTH" />
+            </key-property>
+            <key-property name="employeeid1" type="serializable">
+                <column name="EMPLOYEEID1" />
+            </key-property>
+            <key-property name="job" type="serializable">
+                <column name="JOB" />
+            </key-property>
+            <key-property name="REmployeeOutUid" type="serializable">
+                <column name="R_EMPLOYEE_OUT_UID" />
+            </key-property>
+            <key-property name="employeestate" type="serializable">
+                <column name="EMPLOYEESTATE" />
+            </key-property>
+            <key-property name="confirmtype" type="serializable">
+                <column name="CONFIRMTYPE" />
+            </key-property>
+            <key-property name="cardid" type="serializable">
+                <column name="CARDID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

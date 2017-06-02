@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.PvProblemfeedback" table="PV_PROBLEMFEEDBACK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.PvProblemfeedbackId">
+            <key-property name="pdeptid" type="string">
+                <column name="PDEPTID" length="50" />
+            </key-property>
+            <key-property name="pemployeeid" type="string">
+                <column name="PEMPLOYEEID" length="100" />
+            </key-property>
+            <key-property name="ptime" type="date">
+                <column name="PTIME" length="7" />
+            </key-property>
+            <key-property name="demandfbtime" type="date">
+                <column name="DEMANDFBTIME" length="7" />
+            </key-property>
+            <key-property name="ptopic" type="string">
+                <column name="PTOPIC" length="200" />
+            </key-property>
+            <key-property name="pcontent" type="string">
+                <column name="PCONTENT" length="2000" />
+            </key-property>
+            <key-property name="dutydeptid" type="string">
+                <column name="DUTYDEPTID" length="50" />
+            </key-property>
+            <key-property name="dutyemployeeid" type="string">
+                <column name="DUTYEMPLOYEEID" length="100" />
+            </key-property>
+            <key-property name="fbresult" type="string">
+                <column name="FBRESULT" length="2000" />
+            </key-property>
+            <key-property name="fbemployeeid" type="string">
+                <column name="FBEMPLOYEEID" length="100" />
+            </key-property>
+            <key-property name="fbtime" type="date">
+                <column name="FBTIME" length="7" />
+            </key-property>
+            <key-property name="attachid" type="string">
+                <column name="ATTACHID" length="200" />
+            </key-property>
+            <key-property name="uniqueid" type="big_decimal">
+                <column name="UNIQUEID" precision="20" scale="0" />
+            </key-property>
+            <key-property name="fbstate" type="java.lang.Long">
+                <column name="FBSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="fbtype" type="string">
+                <column name="FBTYPE" length="10" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

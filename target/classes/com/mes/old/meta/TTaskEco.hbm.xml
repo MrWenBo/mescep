@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TTaskEco" table="T_TASK_ECO" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TTaskEcoId">
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="changeuid" type="string">
+                <column name="CHANGEUID" length="10" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="BEcoHeader" class="com.mes.old.BEcoHeader" update="false" insert="false" fetch="select">
+            <column name="CHANGEUID" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="TTasks" class="com.mes.old.TTasks" update="false" insert="false" fetch="select">
+            <column name="TASKUID" not-null="true" />
+        </many-to-one>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IWarehousepart" table="I_WAREHOUSEPART" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IWarehousepartId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="binid" type="string">
+            <column name="BINID" length="50">
+                <comment>&#185;&#241;&#206;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="checkTime" type="big_decimal">
+            <column name="CHECK_TIME" precision="10" scale="4">
+                <comment>&#197;&#204;&#181;&#227;&#214;&#220;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="allowedMinInventoryQuantity" type="big_decimal">
+            <column name="ALLOWED_MIN_INVENTORY_QUANTITY" precision="10" scale="4">
+                <comment>&#212;&#202;&#208;&#237;&#215;&#238;&#208;&#161;&#191;&#226;&#180;&#230;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="orderPointStockQuantity" type="java.lang.Long">
+            <column name="ORDER_POINT_STOCK_QUANTITY" precision="10" scale="0" />
+        </property>
+        <property name="totalqty" type="big_decimal">
+            <column name="TOTALQTY" precision="10" scale="4" />
+        </property>
+        <property name="ableDataNum" type="big_decimal">
+            <column name="ABLE_DATA_NUM" precision="10" scale="4">
+                <comment>&#191;&#201;&#211;&#195;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="alreadyDataNum" type="big_decimal">
+            <column name="ALREADY_DATA_NUM" precision="10" scale="4" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

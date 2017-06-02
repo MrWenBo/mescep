@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RAvailability" table="R_AVAILABILITY" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#202;&#212;&#180;&#192;&#251;&#211;&#195;&#194;&#202;</comment>
+        <composite-id name="id" class="com.mes.old.RAvailabilityId">
+            <key-property name="availUid" type="big_decimal">
+                <column name="AVAIL_UID" scale="0" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="availTo" type="date">
+                <column name="AVAIL_TO" length="7" />
+            </key-property>
+            <key-property name="availFrom" type="date">
+                <column name="AVAIL_FROM" length="7" />
+            </key-property>
+            <key-property name="availUnits" type="big_decimal">
+                <column name="AVAIL_UNITS" precision="18" scale="4" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

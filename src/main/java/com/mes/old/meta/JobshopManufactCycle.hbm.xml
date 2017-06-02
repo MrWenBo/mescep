@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JobshopManufactCycle" table="JOBSHOP_MANUFACT_CYCLE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.JobshopManufactCycleId">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="avgcycle" type="string">
+                <column name="AVGCYCLE" length="12" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

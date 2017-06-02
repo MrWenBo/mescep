@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IvMovedetail" table="IV_MOVEDETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IvMovedetailId">
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+            <key-property name="invmoveid" type="string">
+                <column name="INVMOVEID" length="50" />
+            </key-property>
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="sn" type="string">
+                <column name="SN" length="50" />
+            </key-property>
+            <key-property name="moveqty" type="big_decimal">
+                <column name="MOVEQTY" precision="10" scale="4" />
+            </key-property>
+            <key-property name="moveamount" type="big_decimal">
+                <column name="MOVEAMOUNT" precision="10" scale="4" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="UOM" length="50" />
+            </key-property>
+            <key-property name="unitprice" type="big_decimal">
+                <column name="UNITPRICE" precision="10" scale="4" />
+            </key-property>
+            <key-property name="packagetype" type="string">
+                <column name="PACKAGETYPE" length="50" />
+            </key-property>
+            <key-property name="packageweight" type="big_decimal">
+                <column name="PACKAGEWEIGHT" precision="10" scale="4" />
+            </key-property>
+            <key-property name="productdate" type="date">
+                <column name="PRODUCTDATE" length="7" />
+            </key-property>
+            <key-property name="validdate" type="date">
+                <column name="VALIDDATE" length="7" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="frombinid" type="string">
+                <column name="FROMBINID" length="50" />
+            </key-property>
+            <key-property name="tobinid" type="string">
+                <column name="TOBINID" length="50" />
+            </key-property>
+            <key-property name="text1" type="string">
+                <column name="TEXT1" length="50" />
+            </key-property>
+            <key-property name="text2" type="string">
+                <column name="TEXT2" length="50" />
+            </key-property>
+            <key-property name="text3" type="string">
+                <column name="TEXT3" length="50" />
+            </key-property>
+            <key-property name="text4" type="string">
+                <column name="TEXT4" length="50" />
+            </key-property>
+            <key-property name="text5" type="string">
+                <column name="TEXT5" length="50" />
+            </key-property>
+            <key-property name="text6" type="string">
+                <column name="TEXT6" length="50" />
+            </key-property>
+            <key-property name="text7" type="string">
+                <column name="TEXT7" length="50" />
+            </key-property>
+            <key-property name="text8" type="string">
+                <column name="TEXT8" length="50" />
+            </key-property>
+            <key-property name="text9" type="string">
+                <column name="TEXT9" length="50" />
+            </key-property>
+            <key-property name="text10" type="string">
+                <column name="TEXT10" length="50" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" length="50" />
+            </key-property>
+            <key-property name="newmaterialusn" type="string">
+                <column name="NEWMATERIALUSN" />
+            </key-property>
+            <key-property name="newsn" type="string">
+                <column name="NEWSN" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" length="50" />
+            </key-property>
+            <key-property name="ispart" type="java.lang.Long">
+                <column name="ISPART" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="frombinname" type="string">
+                <column name="FROMBINNAME" length="50" />
+            </key-property>
+            <key-property name="tobinname" type="string">
+                <column name="TOBINNAME" length="50" />
+            </key-property>
+            <key-property name="uomdesc" type="string">
+                <column name="UOMDESC" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

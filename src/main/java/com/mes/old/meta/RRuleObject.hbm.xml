@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RRuleObject" table="R_RULE_OBJECT" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#230;&#212;&#242;&#207;&#181;&#205;&#179;&#181;&#196;&#193;&#236;&#211;&#242;&#182;&#212;&#207;&#243;&#215;&#162;&#178;&#225;</comment>
+        <id name="objectuid" type="string">
+            <column name="OBJECTUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="objectid" type="string">
+            <column name="OBJECTID">
+                <comment>&#182;&#212;&#207;&#243;&#180;&#250;&#186;&#197;&#163;&#172;&#190;&#205;&#202;&#199;Java&#192;&#224;&#181;&#196;&#192;&#224;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="objectalias" type="string">
+            <column name="OBJECTALIAS">
+                <comment>&#182;&#212;&#207;&#243;&#188;&#242;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="objectname" type="string">
+            <column name="OBJECTNAME">
+                <comment>
+                &#182;&#212;&#207;&#243;&#195;&#251;&#179;&#198;&#163;&#172;&#213;&#226;&#192;&#239;&#214;&#184;&#181;&#196;&#202;&#199;&#186;&#186;&#211;&#239;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="objectdomain" type="string">
+            <column name="OBJECTDOMAIN">
+                <comment>
+                &#182;&#212;&#207;&#243;&#203;&#249;&#202;&#244;&#193;&#236;&#211;&#242;&#163;&#172;&#200;&#231;PrepareTask&#193;&#236;&#211;&#242;&#163;&#172;&#187;&#242;&#213;&#223;Task&#193;&#236;&#211;&#242;</comment>
+            </column>
+        </property>
+        <property name="objecttype" type="string">
+            <column name="OBJECTTYPE">
+                <comment>
+                &#182;&#212;&#207;&#243;&#192;&#224;&#208;&#205;&#163;&#172;&#202;&#199;&#210;&#181;&#206;&#241;&#182;&#212;&#207;&#243;&#163;&#172;&#187;&#185;&#202;&#199;&#193;&#236;&#211;&#242;&#182;&#212;&#207;&#243;</comment>
+            </column>
+        </property>
+        <property name="objectlocation" type="string">
+            <column name="OBJECTLOCATION">
+                <comment>&#193;&#236;&#211;&#242;&#182;&#212;&#207;&#243;&#206;&#187;&#214;&#195;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="isresolve" type="string">
+            <column name="ISRESOLVE" length="50">
+                <comment>&#202;&#199;&#183;&#241;&#205;&#234;&#179;&#201;&#189;&#226;&#206;&#246;</comment>
+            </column>
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID">
+                <comment>&#206;&#168;&#210;&#187;&#186;&#197;&#163;&#172;&#204;&#225;&#185;&#169;&#184;&#248;Hibernate&#202;&#185;&#211;&#195;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CEmployeeClass" table="C_EMPLOYEE_CLASS" schema="MES188" optimistic-lock="version">
+        <id name="esuid" type="string">
+            <column name="ESUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID" length="50" not-null="true" />
+        </property>
+        <property name="sectionuid" type="string">
+            <column name="SECTIONUID" length="50" not-null="true" />
+        </property>
+        <property name="functiontype" type="string">
+            <column name="FUNCTIONTYPE" length="50" not-null="true" />
+        </property>
+        <property name="roleid" type="string">
+            <column name="ROLEID" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

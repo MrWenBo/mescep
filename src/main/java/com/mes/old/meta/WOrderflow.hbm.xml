@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.WOrderflow" table="W_ORDERFLOW" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="billuid" type="string">
+            <column name="BILLUID" not-null="true" />
+        </property>
+        <property name="billtype" type="long">
+            <column name="BILLTYPE" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="sender" type="string">
+            <column name="SENDER" length="50" not-null="true" />
+        </property>
+        <property name="sendtime" type="date">
+            <column name="SENDTIME" length="7" not-null="true" />
+        </property>
+        <property name="acceptor" type="string">
+            <column name="ACCEPTOR" length="50" />
+        </property>
+        <property name="isineffect" type="java.lang.Long">
+            <column name="ISINEFFECT" precision="10" scale="0" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="wtaskid" type="string">
+            <column name="WTASKID" length="50" />
+        </property>
+        <property name="wtaskname" type="string">
+            <column name="WTASKNAME" />
+        </property>
+        <property name="dealtype" type="string">
+            <column name="DEALTYPE" />
+        </property>
+        <property name="excutionid" type="string">
+            <column name="EXCUTIONID" length="50" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" />
+        </property>
+        <property name="checkbilltype" type="string">
+            <column name="CHECKBILLTYPE" length="10" />
+        </property>
+        <property name="piid" type="string">
+            <column name="PIID" length="200" />
+        </property>
+        <property name="processname" type="string">
+            <column name="PROCESSNAME" length="50" />
+        </property>
+        <property name="billnumber" type="string">
+            <column name="BILLNUMBER" />
+        </property>
+    </class>
+</hibernate-mapping>

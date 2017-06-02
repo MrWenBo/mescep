@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SfEcoDetail" table="SF_ECO_DETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SfEcoDetailId">
+            <key-property name="changeuid" type="string">
+                <column name="CHANGEUID" />
+            </key-property>
+            <key-property name="seq" type="string">
+                <column name="SEQ" />
+            </key-property>
+        </composite-id>
+        <property name="changetype" type="string">
+            <column name="CHANGETYPE">
+                <comment>&#177;&#228;&#184;&#252;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="fromopuid" type="string">
+            <column name="FROMOPUID">
+                <comment>&#212;&#180;&#185;&#164;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="toopuid" type="string">
+            <column name="TOOPUID">
+                <comment>&#181;&#177;&#199;&#176;&#185;&#164;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="modifycontent" type="string">
+            <column name="MODIFYCONTENT">
+                <comment>&#177;&#228;&#184;&#252;&#196;&#218;&#200;&#221;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="modifyreason" type="string">
+            <column name="MODIFYREASON">
+                <comment>&#177;&#228;&#184;&#252;&#212;&#173;&#210;&#242;</comment>
+            </column>
+        </property>
+        <property name="fromopversionid" type="string">
+            <column name="FROMOPVERSIONID" />
+        </property>
+        <property name="fromopiddesc" type="string">
+            <column name="FROMOPIDDESC" />
+        </property>
+        <property name="fromopname" type="string">
+            <column name="FROMOPNAME" />
+        </property>
+        <property name="toopversionid" type="string">
+            <column name="TOOPVERSIONID" />
+        </property>
+        <property name="toopiddesc" type="string">
+            <column name="TOOPIDDESC" />
+        </property>
+        <property name="toopname" type="string">
+            <column name="TOOPNAME" />
+        </property>
+        <property name="predopuid" type="string">
+            <column name="PREDOPUID" />
+        </property>
+        <property name="succopuid" type="string">
+            <column name="SUCCOPUID" />
+        </property>
+        <property name="toopseq" type="big_decimal">
+            <column name="TOOPSEQ" precision="10" />
+        </property>
+        <property name="succopuiddesc" type="string">
+            <column name="SUCCOPUIDDESC" />
+        </property>
+        <property name="predopuiddesc" type="string">
+            <column name="PREDOPUIDDESC" />
+        </property>
+        <property name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+        </property>
+        <property name="isanimate" type="java.lang.Byte">
+            <column name="ISANIMATE" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#211;&#208;&#182;&#175;&#187;&#173;</comment>
+            </column>
+        </property>
+        <property name="fromAssemblyPath" type="string">
+            <column name="FROM_ASSEMBLY_PATH">
+                <comment>&#212;&#180;&#202;&#247;&#189;&#218;&#181;&#227;&#200;&#171;&#194;&#183;&#190;&#182;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="toAssemblyPath" type="string">
+            <column name="TO_ASSEMBLY_PATH">
+                <comment>&#181;&#177;&#199;&#176;&#202;&#247;&#189;&#218;&#181;&#227;&#200;&#171;&#194;&#183;&#190;&#182;&#195;&#251;</comment>
+            </column>
+        </property>
+        <property name="fromAssemblyUid" type="string">
+            <column name="FROM_ASSEMBLY_UID" not-null="true">
+                <comment>&#212;&#180;&#202;&#247;&#189;&#218;&#181;&#227;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="toAssemblyUid" type="string">
+            <column name="TO_ASSEMBLY_UID">
+                <comment>&#181;&#177;&#199;&#176;&#202;&#247;&#189;&#218;&#181;&#227;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="fromAssemblyName" type="string">
+            <column name="FROM_ASSEMBLY_NAME">
+                <comment>&#212;&#180;&#202;&#247;&#189;&#218;&#181;&#227;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="toAssemblyName" type="string">
+            <column name="TO_ASSEMBLY_NAME">
+                <comment>&#181;&#177;&#199;&#176;&#202;&#247;&#189;&#218;&#181;&#227;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="fromPartNumber" type="string">
+            <column name="FROM_PART_NUMBER">
+                <comment>&#212;&#180;&#206;&#239;&#193;&#207;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="toPartNumber" type="string">
+            <column name="TO_PART_NUMBER">
+                <comment>&#181;&#177;&#199;&#176; &#206;&#239;&#193;&#207;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="animateuid" type="string">
+            <column name="ANIMATEUID">
+                <comment>&#182;&#175;&#187;&#173;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="fromDrawingid" type="string">
+            <column name="FROM_DRAWINGID">
+                <comment>&#212;&#180;&#206;&#239;&#193;&#207;&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="toDrawingid" type="string">
+            <column name="TO_DRAWINGID">
+                <comment>&#181;&#177;&#199;&#176;&#206;&#239;&#193;&#207;&#205;&#188;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="fromPartName" type="string">
+            <column name="FROM_PART_NAME">
+                <comment>&#212;&#180;&#206;&#239;&#193;&#207;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="toPartName" type="string">
+            <column name="TO_PART_NAME">
+                <comment>&#181;&#177;&#199;&#176;&#206;&#239;&#193;&#207;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

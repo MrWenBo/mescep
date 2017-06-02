@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KIndicator" table="K_INDICATOR" schema="MES188" optimistic-lock="version">
+        <comment>&#214;&#184;&#177;&#234;</comment>
+        <id name="indicatorid" type="string">
+            <column name="INDICATORID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="indicatorname" type="string">
+            <column name="INDICATORNAME" length="32">
+                <comment>&#214;&#184;&#177;&#234;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="defaultvalue" type="big_decimal">
+            <column name="DEFAULTVALUE" precision="22" scale="0">
+                <comment>&#196;&#172;&#200;&#207;&#214;&#181;</comment>
+            </column>
+        </property>
+        <property name="indicatortype" type="string">
+            <column name="INDICATORTYPE" length="10">
+                <comment>&#214;&#184;&#177;&#234;&#192;&#224;&#208;&#205;&#205;&#172;&#177;&#168;&#177;&#237;&#210;&#181;&#206;&#241;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="hql" type="string">
+            <column name="HQL">
+                <comment>HQL&#178;&#233;&#209;&#175;&#204;&#245;&#188;&#254;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="32" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <set name="KIndicatorUsers" table="K_INDICATOR_USER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="INDICATORID" length="32">
+                    <comment>&#214;&#184;&#177;&#234;&#177;&#224;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.KIndicatorUser" />
+        </set>
+    </class>
+</hibernate-mapping>

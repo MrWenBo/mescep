@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BvOperationlink" table="BV_OPERATIONLINK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BvOperationlinkId">
+            <key-property name="prerouting" type="string">
+                <column name="PREROUTING" />
+            </key-property>
+            <key-property name="preopuid" type="string">
+                <column name="PREOPUID" length="40" />
+            </key-property>
+            <key-property name="preoperationIddesc" type="string">
+                <column name="PREOPERATION_IDDESC" />
+            </key-property>
+            <key-property name="predeptid" type="string">
+                <column name="PREDEPTID" />
+            </key-property>
+            <key-property name="thisrouting" type="string">
+                <column name="THISROUTING" />
+            </key-property>
+            <key-property name="thisopuid" type="string">
+                <column name="THISOPUID" length="40" />
+            </key-property>
+            <key-property name="thisoperationIddesc" type="string">
+                <column name="THISOPERATION_IDDESC" />
+            </key-property>
+            <key-property name="thispartNumber" type="string">
+                <column name="THISPART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="thisdeptid" type="string">
+                <column name="THISDEPTID" />
+            </key-property>
+            <key-property name="succrouting" type="string">
+                <column name="SUCCROUTING" />
+            </key-property>
+            <key-property name="succopuid" type="string">
+                <column name="SUCCOPUID" length="40" />
+            </key-property>
+            <key-property name="succoperationIddesc" type="string">
+                <column name="SUCCOPERATION_IDDESC" />
+            </key-property>
+            <key-property name="succdeptid" type="string">
+                <column name="SUCCDEPTID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

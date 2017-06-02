@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BColumnAspectHeader" table="B_COLUMN_ASPECT_HEADER" schema="MES188" optimistic-lock="version">
+        <id name="configid" type="long">
+            <column name="CONFIGID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="tableViewName" type="string">
+            <column name="TABLE_VIEW_NAME" length="50" not-null="true">
+                <comment>&#197;&#228;&#214;&#195;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="variable1Name" type="string">
+            <column name="VARIABLE1_NAME" length="50">
+                <comment>&#197;&#228;&#214;&#195;&#177;&#228;&#193;&#191;1</comment>
+            </column>
+        </property>
+        <property name="variable1Value" type="string">
+            <column name="VARIABLE1_VALUE" length="50">
+                <comment>&#197;&#228;&#214;&#195;&#177;&#228;&#193;&#191;2</comment>
+            </column>
+        </property>
+        <property name="variable2Name" type="string">
+            <column name="VARIABLE2_NAME" length="50">
+                <comment>&#197;&#228;&#214;&#195;&#177;&#228;&#193;&#191;3</comment>
+            </column>
+        </property>
+        <property name="variable2Value" type="string">
+            <column name="VARIABLE2_VALUE" length="50" />
+        </property>
+        <property name="variable3Name" type="string">
+            <column name="VARIABLE3_NAME" length="50" />
+        </property>
+        <property name="variable3Value" type="string">
+            <column name="VARIABLE3_VALUE" length="50" />
+        </property>
+        <property name="variable4Name" type="string">
+            <column name="VARIABLE4_NAME" length="50" />
+        </property>
+        <property name="variable4Value" type="string">
+            <column name="VARIABLE4_VALUE" length="50" />
+        </property>
+        <property name="variable5Name" type="string">
+            <column name="VARIABLE5_NAME" length="50" />
+        </property>
+        <property name="variable5Value" type="string">
+            <column name="VARIABLE5_VALUE" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

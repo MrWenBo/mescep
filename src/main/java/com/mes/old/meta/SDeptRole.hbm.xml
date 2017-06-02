@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SDeptRole" table="S_DEPT_ROLE" schema="MES188" optimistic-lock="version">
+        <id name="drid" type="string">
+            <column name="DRID" length="32" />
+            <generator class="assigned" />
+        </id>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="20" not-null="true" />
+        </property>
+        <property name="roleid" type="string">
+            <column name="ROLEID" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

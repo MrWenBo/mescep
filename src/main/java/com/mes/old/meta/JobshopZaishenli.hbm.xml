@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JobshopZaishenli" table="JOBSHOP_ZAISHENLI" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.JobshopZaishenliId">
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="barcode" type="string">
+                <column name="BARCODE" />
+            </key-property>
+            <key-property name="checkdeptid" type="string">
+                <column name="CHECKDEPTID" length="50" />
+            </key-property>
+            <key-property name="submitqty" type="big_decimal">
+                <column name="SUBMITQTY" precision="20" />
+            </key-property>
+            <key-property name="defectqty" type="big_decimal">
+                <column name="DEFECTQTY" precision="20" />
+            </key-property>
+            <key-property name="judger" type="string">
+                <column name="JUDGER" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="delaytime" type="big_decimal">
+                <column name="DELAYTIME" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

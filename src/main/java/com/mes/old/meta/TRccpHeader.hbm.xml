@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TRccpHeader" table="T_RCCP_HEADER" schema="MES188" optimistic-lock="version">
+        <id name="rccpUid" type="string">
+            <column name="RCCP_UID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="segmentType" type="string">
+            <column name="SEGMENT_TYPE" length="50" />
+        </property>
+        <property name="rccpType" type="string">
+            <column name="RCCP_TYPE" length="50" />
+        </property>
+        <property name="analyseStart" type="date">
+            <column name="ANALYSE_START" length="7" />
+        </property>
+        <property name="analyseFinish" type="date">
+            <column name="ANALYSE_FINISH" length="7" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="dayhour" type="big_decimal">
+            <column name="DAYHOUR" precision="10" />
+        </property>
+        <property name="weekhour" type="big_decimal">
+            <column name="WEEKHOUR" precision="10" />
+        </property>
+        <property name="monthday" type="big_decimal">
+            <column name="MONTHDAY" precision="10" />
+        </property>
+        <property name="rccpName" type="string">
+            <column name="RCCP_NAME" length="50" />
+        </property>
+        <set name="TRccpDetails" table="T_RCCP_DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="RCCP_UID" length="50" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.TRccpDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

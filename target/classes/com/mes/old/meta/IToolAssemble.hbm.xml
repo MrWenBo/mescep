@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IToolAssemble" table="I_TOOL_ASSEMBLE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IToolAssembleId">
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="childmaterialusn" type="string">
+                <column name="CHILDMATERIALUSN" />
+            </key-property>
+        </composite-id>
+        <property name="relationQty" type="big_decimal">
+            <column name="RELATION_QTY" precision="25" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

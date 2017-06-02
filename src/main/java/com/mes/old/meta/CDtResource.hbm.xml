@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CDtResource" table="C_DT_RESOURCE" schema="MES188" optimistic-lock="version">
+        <comment>&#215;&#202;&#212;&#180;&#187;&#249;&#180;&#161;&#202;&#253;&#190;&#221;</comment>
+        <id name="resourceId" type="string">
+            <column name="RESOURCE_ID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CCostCenter" class="com.mes.old.CCostCenter" fetch="select">
+            <column name="COST_CENTER_ID" length="100">
+                <comment>&#179;&#201;&#177;&#190;&#214;&#208;&#208;&#196;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <many-to-one name="CCostElement" class="com.mes.old.CCostElement" fetch="select">
+            <column name="COST_ELEMENT_ID" length="100" />
+        </many-to-one>
+        <many-to-one name="CDtCostDriver" class="com.mes.old.CDtCostDriver" fetch="select">
+            <column name="COST_DRIVER_ID" length="100">
+                <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </many-to-one>
+        <property name="resourceName" type="string">
+            <column name="RESOURCE_NAME" length="100">
+                <comment>&#215;&#202;&#212;&#180;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="resourceAccountId" type="string">
+            <column name="RESOURCE_ACCOUNT_ID" length="100">
+                <comment>&#215;&#202;&#212;&#180;&#213;&#202;&#187;&#167;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="resourceUnitCost" type="big_decimal">
+            <column name="RESOURCE_UNIT_COST" precision="10">
+                <comment>&#215;&#202;&#212;&#180;&#181;&#165;&#188;&#219;</comment>
+            </column>
+        </property>
+        <property name="traditionSubjectId" type="string">
+            <column name="TRADITION_SUBJECT_ID" length="100">
+                <comment>&#180;&#171;&#205;&#179;&#191;&#198;&#196;&#191;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="relationResourceId" type="string">
+            <column name="RELATION_RESOURCE_ID" length="100">
+                <comment>&#207;&#224;&#185;&#216;&#215;&#202;&#212;&#180;&#180;&#250;&#194;&#235;</comment>
+            </column>
+        </property>
+        <property name="relationResourceType" type="java.lang.Long">
+            <column name="RELATION_RESOURCE_TYPE" precision="10" scale="0">
+                <comment>&#207;&#224;&#185;&#216;&#215;&#202;&#212;&#180;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="isKeyResource" type="java.lang.Long">
+            <column name="IS_KEY_RESOURCE" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#185;&#216;&#188;&#252;&#215;&#202;&#212;&#180;</comment>
+            </column>
+        </property>
+        <property name="resourceQuantity" type="big_decimal">
+            <column name="RESOURCE_QUANTITY" precision="10">
+                <comment>&#215;&#202;&#212;&#180;&#202;&#253;&#193;&#191;,&#200;&#231;&#199;&#167;&#205;&#223;&#202;&#177;</comment>
+            </column>
+        </property>
+        <property name="uom" type="string">
+            <column name="UOM" length="100">
+                <comment>&#188;&#198;&#193;&#191;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="100">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="100">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="isFixconsumeResource" type="java.lang.Long">
+            <column name="IS_FIXCONSUME_RESOURCE" precision="10" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#185;&#204;&#182;&#168;&#207;&#251;&#186;&#196;&#215;&#202;&#212;&#180;</comment>
+            </column>
+        </property>
+        <property name="validDate" type="date">
+            <column name="VALID_DATE" length="7">
+                <comment>&#211;&#208;&#208;&#167;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="cost" type="big_decimal">
+            <column name="COST" precision="10" />
+        </property>
+        <property name="resourceType" type="java.lang.Long">
+            <column name="RESOURCE_TYPE" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Aaa" table="AAA" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.AaaId">
+            <key-property name="a" type="string">
+                <column name="A" length="225" />
+            </key-property>
+            <key-property name="b" type="string">
+                <column name="B" />
+            </key-property>
+            <key-property name="c" type="string">
+                <column name="C" />
+            </key-property>
+            <key-property name="d" type="string">
+                <column name="D" />
+            </key-property>
+            <key-property name="e" type="string">
+                <column name="E" />
+            </key-property>
+            <key-property name="f" type="string">
+                <column name="F" />
+            </key-property>
+            <key-property name="g" type="string">
+                <column name="G" />
+            </key-property>
+            <key-property name="h" type="string">
+                <column name="H" />
+            </key-property>
+            <key-property name="i" type="string">
+                <column name="I" />
+            </key-property>
+            <key-property name="j" type="string">
+                <column name="J" />
+            </key-property>
+            <key-property name="k" type="string">
+                <column name="K" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

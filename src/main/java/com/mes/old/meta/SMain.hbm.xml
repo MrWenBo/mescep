@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SMain" table="S_MAIN" schema="MES188" optimistic-lock="version">
+        <comment>&#214;&#247;&#210;&#179;&#195;&#230;</comment>
+        <id name="mainid" type="big_decimal">
+            <column name="MAINID" precision="22" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="mainname" type="string">
+            <column name="MAINNAME" length="50" unique="true">
+                <comment>&#214;&#247;&#210;&#179;&#195;&#230;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="mainurl" type="string">
+            <column name="MAINURL" unique="true">
+                <comment>&#214;&#247;&#210;&#179;&#195;&#230;URL</comment>
+            </column>
+        </property>
+        <property name="maintype" type="java.lang.Byte">
+            <column name="MAINTYPE" precision="2" scale="0">
+                <comment>&#214;&#247;&#210;&#179;&#195;&#230;&#192;&#224;&#208;&#205;,0&#206;&#170;jsp,1&#206;&#170;&#177;&#168;&#177;&#237;</comment>
+            </column>
+        </property>
+        <property name="ispdf" type="java.lang.Byte">
+            <column name="ISPDF" precision="2" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

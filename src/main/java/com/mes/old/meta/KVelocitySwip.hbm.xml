@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.KVelocitySwip" table="K_VELOCITY_SWIP" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.KVelocitySwipId">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="32" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" length="32" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" length="32" />
+            </key-property>
+            <key-property name="partNumberType" type="string">
+                <column name="PART_NUMBER_TYPE" length="32" />
+            </key-property>
+            <key-property name="day" type="string">
+                <column name="DAY" length="32" />
+            </key-property>
+            <key-property name="statisticType" type="string">
+                <column name="STATISTIC_TYPE" length="10" />
+            </key-property>
+            <key-property name="velocityWip" type="big_decimal">
+                <column name="VELOCITY_WIP" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

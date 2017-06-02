@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.AResourceJudgeHeader" table="A_RESOURCE_JUDGE_HEADER" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#164;&#215;&#176;&#198;&#192;&#201;&#243;&#181;&#165;&#177;&#237;&#205;&#183;</comment>
+        <id name="judgeId" type="string">
+            <column name="JUDGE_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="relationid" type="string">
+            <column name="RELATIONID">
+                <comment>&#185;&#216;&#193;&#170;&#200;&#206;&#206;&#241;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="judgeState" type="string">
+            <column name="JUDGE_STATE" length="50">
+                <comment>
+                &#198;&#192;&#201;&#243;&#215;&#180;&#204;&#172;&#163;&#172;&#196;&#172;&#200;&#207;&#199;&#233;&#191;&#246;&#207;&#194;&#202;&#199;0&#163;&#172;&#177;&#237;&#202;&#190;&#206;&#180;&#198;&#192;&#201;&#243;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50">
+                <comment>&#198;&#192;&#201;&#243;&#178;&#191;&#195;&#197;</comment>
+            </column>
+        </property>
+        <property name="employeeid" type="string">
+            <column name="EMPLOYEEID">
+                <comment>&#189;&#248;&#208;&#208;&#198;&#192;&#201;&#243;&#181;&#196;&#212;&#177;&#185;&#164;</comment>
+            </column>
+        </property>
+        <property name="finalTime" type="date">
+            <column name="FINAL_TIME" length="7">
+                <comment>&#198;&#192;&#201;&#243;&#215;&#238;&#214;&#213;&#214;&#213;&#214;&#185;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="nextTime" type="date">
+            <column name="NEXT_TIME" length="7">
+                <comment>&#207;&#194;&#180;&#206;&#198;&#192;&#201;&#243;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="isValid" type="string">
+            <column name="IS_VALID" length="50">
+                <comment>
+                &#202;&#199;&#183;&#241;&#211;&#208;&#208;&#167;&#163;&#172;0&#177;&#237;&#202;&#190;&#206;&#222;&#208;&#167;&#163;&#172;1&#177;&#237;&#202;&#190;&#211;&#208;&#208;&#167;&#163;&#172;&#196;&#172;&#200;&#207;&#214;&#181;&#202;&#199;1&#163;&#172;&#212;&#218;judge_state&#201;&#232;&#214;&#195;&#206;&#170;4&#202;&#177;&#163;&#172;&#215;&#212;&#182;&#175;&#201;&#232;&#214;&#195;&#206;&#170;0</comment>
+            </column>
+        </property>
+        <property name="priority" type="java.lang.Integer">
+            <column name="PRIORITY" precision="6" scale="0">
+                <comment>&#211;&#197;&#207;&#200;&#188;&#182;</comment>
+            </column>
+        </property>
+        <set name="AResourceJudgeDetails" table="A_RESOURCE_JUDGE_DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="JUDGE_ID" not-null="true">
+                    <comment>&#198;&#192;&#201;&#243;&#181;&#165;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.AResourceJudgeDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

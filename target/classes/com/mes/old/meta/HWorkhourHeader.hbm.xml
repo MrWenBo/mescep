@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HWorkhourHeader" table="H_WORKHOUR_HEADER" schema="MES188" optimistic-lock="version">
+        <id name="accountUid" type="string">
+            <column name="ACCOUNT_UID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="accountId" type="string">
+            <column name="ACCOUNT_ID" length="50">
+                <comment>&#213;&#202;&#204;&#215;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="accountName" type="string">
+            <column name="ACCOUNT_NAME" length="50">
+                <comment>&#213;&#202;&#204;&#215;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="accountState" type="java.lang.Long">
+            <column name="ACCOUNT_STATE" precision="10" scale="0">
+                <comment>
+                &#213;&#202;&#204;&#215;&#215;&#180;&#204;&#172;&#163;&#168;0&#161;&#162;&#178;&#221;&#184;&#229;&#163;&#187;1&#161;&#162;&#191;&#170;&#198;&#244;&#163;&#187;2&#161;&#162;&#185;&#216;&#177;&#213;&#163;&#187;3&#161;&#162;&#200;&#161;&#207;&#251;&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="accountType" type="string">
+            <column name="ACCOUNT_TYPE" length="50">
+                <comment>&#213;&#202;&#204;&#215;&#192;&#224;&#208;&#205;&#163;&#168;1&#161;&#162;&#185;&#164;&#202;&#177;&#163;&#187;2&#163;&#169;</comment>
+            </column>
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50">
+                <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="deptname" type="string">
+            <column name="DEPTNAME" length="50">
+                <comment>&#178;&#191;&#195;&#197;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="lastUpdate" type="date">
+            <column name="LAST_UPDATE" length="7">
+                <comment>&#215;&#238;&#186;&#243;&#184;&#252;&#208;&#194;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="closeTime" type="date">
+            <column name="CLOSE_TIME" length="7">
+                <comment>&#185;&#216;&#177;&#213;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="closer" type="string">
+            <column name="CLOSER" length="50">
+                <comment>&#185;&#216;&#177;&#213;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="openTime" type="date">
+            <column name="OPEN_TIME" length="7">
+                <comment>&#213;&#202;&#204;&#215;&#180;&#242;&#191;&#170;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="opener" type="string">
+            <column name="OPENER" length="50">
+                <comment>&#213;&#202;&#204;&#215;&#180;&#242;&#191;&#170;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="archiever" type="string">
+            <column name="ARCHIEVER" length="50">
+                <comment>&#185;&#233;&#181;&#181;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="archieveTime" type="date">
+            <column name="ARCHIEVE_TIME" length="7">
+                <comment>&#185;&#233;&#181;&#181;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <set name="HWorkhourSummaries" table="H_WORKHOUR_SUMMARY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACCOUNT_UID" length="50" not-null="true">
+                    <comment>&#213;&#202;&#204;&#215;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.HWorkhourSummary" />
+        </set>
+        <set name="HWorkhourDetails" table="H_WORKHOUR_DETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ACCOUNT_UID" length="50">
+                    <comment>&#213;&#202;&#204;&#215;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.HWorkhourDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

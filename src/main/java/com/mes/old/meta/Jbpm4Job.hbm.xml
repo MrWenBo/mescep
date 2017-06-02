@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4Job" table="JBPM4_JOB" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4Lob" class="com.mes.old.Jbpm4Lob" fetch="select">
+            <column name="CFG_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="string">
+            <column name="CLASS_" length="510" not-null="true" />
+        </property>
+        <property name="dbversion" type="long">
+            <column name="DBVERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="duedate" type="serializable">
+            <column name="DUEDATE_" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE_" length="510" />
+        </property>
+        <property name="isexclusive" type="java.lang.Boolean">
+            <column name="ISEXCLUSIVE_" precision="1" scale="0" />
+        </property>
+        <property name="lockowner" type="string">
+            <column name="LOCKOWNER_" length="510" />
+        </property>
+        <property name="lockexptime" type="serializable">
+            <column name="LOCKEXPTIME_" />
+        </property>
+        <property name="exception" type="clob">
+            <column name="EXCEPTION_" />
+        </property>
+        <property name="retries" type="java.lang.Long">
+            <column name="RETRIES_" precision="10" scale="0" />
+        </property>
+        <property name="processinstance" type="big_decimal">
+            <column name="PROCESSINSTANCE_" scale="0" />
+        </property>
+        <property name="execution" type="big_decimal">
+            <column name="EXECUTION_" scale="0" />
+        </property>
+        <property name="signal" type="string">
+            <column name="SIGNAL_" length="510" />
+        </property>
+        <property name="event" type="string">
+            <column name="EVENT_" length="510" />
+        </property>
+        <property name="repeat" type="string">
+            <column name="REPEAT_" length="510" />
+        </property>
+    </class>
+</hibernate-mapping>

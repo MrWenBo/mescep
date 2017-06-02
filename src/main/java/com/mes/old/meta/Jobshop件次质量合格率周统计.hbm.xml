@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jobshop&#188;&#254;&#180;&#206;&#214;&#202;&#193;&#191;&#186;&#207;&#184;&#241;&#194;&#202;&#214;&#220;&#205;&#179;&#188;&#198;"
+    table="JOBSHOP_&#188;&#254;&#180;&#206;&#214;&#202;&#193;&#191;&#186;&#207;&#184;&#241;&#194;&#202;&#214;&#220;&#205;&#179;&#188;&#198;" schema="MES188"
+    optimistic-lock="version">
+        <composite-id name="id"
+        class="com.mes.old.Jobshop&#188;&#254;&#180;&#206;&#214;&#202;&#193;&#191;&#186;&#207;&#184;&#241;&#194;&#202;&#214;&#220;&#205;&#179;&#188;&#198;Id">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="kyear" type="string">
+                <column name="KYEAR" length="4" />
+            </key-property>
+            <key-property name="kweek" type="string">
+                <column name="KWEEK" length="2" />
+            </key-property>
+            <key-property name="submitqty" type="big_decimal">
+                <column name="SUBMITQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="defectqty" type="big_decimal">
+                <column name="DEFECTQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="qualityrate" type="big_decimal">
+                <column name="QUALITYRATE" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

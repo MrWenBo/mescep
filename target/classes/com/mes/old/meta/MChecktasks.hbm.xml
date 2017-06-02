@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MChecktasks" table="M_CHECKTASKS" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" not-null="true" />
+        </property>
+        <property name="checktasktype" type="java.lang.Long">
+            <column name="CHECKTASKTYPE" precision="10" scale="0" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" />
+        </property>
+        <property name="checktaskstate" type="java.lang.Long">
+            <column name="CHECKTASKSTATE" precision="10" scale="0" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="planstart" type="date">
+            <column name="PLANSTART" length="7" />
+        </property>
+        <property name="planfinish" type="date">
+            <column name="PLANFINISH" length="7" />
+        </property>
+        <property name="planqty" type="big_decimal">
+            <column name="PLANQTY" precision="25" scale="6" />
+        </property>
+        <property name="comitqty" type="big_decimal">
+            <column name="COMITQTY" precision="25" scale="6" />
+        </property>
+        <property name="dispatchgrade" type="java.lang.Long">
+            <column name="DISPATCHGRADE" precision="10" scale="0" />
+        </property>
+        <property name="suspended" type="java.lang.Long">
+            <column name="SUSPENDED" precision="10" scale="0" />
+        </property>
+        <property name="checkqty1" type="big_decimal">
+            <column name="CHECKQTY1" precision="10" />
+        </property>
+        <property name="defectqty1" type="big_decimal">
+            <column name="DEFECTQTY1" precision="10" />
+        </property>
+        <property name="checkqty2" type="big_decimal">
+            <column name="CHECKQTY2" precision="10" />
+        </property>
+        <property name="defectqty2" type="big_decimal">
+            <column name="DEFECTQTY2" precision="10" />
+        </property>
+        <property name="checkqty3" type="big_decimal">
+            <column name="CHECKQTY3" precision="10" />
+        </property>
+        <property name="defectqty3" type="big_decimal">
+            <column name="DEFECTQTY3" precision="10" />
+        </property>
+        <property name="checkqty4" type="big_decimal">
+            <column name="CHECKQTY4" precision="10" />
+        </property>
+        <property name="defectqty4" type="big_decimal">
+            <column name="DEFECTQTY4" precision="10" />
+        </property>
+        <property name="checkqty5" type="big_decimal">
+            <column name="CHECKQTY5" precision="10" />
+        </property>
+        <property name="defectqty5" type="big_decimal">
+            <column name="DEFECTQTY5" precision="10" />
+        </property>
+        <property name="actualcheckqty" type="big_decimal">
+            <column name="ACTUALCHECKQTY" precision="10" />
+        </property>
+        <property name="actualstart" type="date">
+            <column name="ACTUALSTART" length="7" />
+        </property>
+        <property name="actualfinish" type="date">
+            <column name="ACTUALFINISH" length="7" />
+        </property>
+        <property name="mastershop" type="string">
+            <column name="MASTERSHOP" length="50" />
+        </property>
+        <property name="keycount" type="java.lang.Long">
+            <column name="KEYCOUNT" precision="10" scale="0" />
+        </property>
+        <property name="checkWorkcenterUid" type="string">
+            <column name="CHECK_WORKCENTER_UID" length="50" />
+        </property>
+        <property name="actualsend" type="date">
+            <column name="ACTUALSEND" length="7" />
+        </property>
+        <property name="plansend" type="date">
+            <column name="PLANSEND" length="7" />
+        </property>
+        <property name="sender" type="string">
+            <column name="SENDER" length="50" />
+        </property>
+        <property name="earlystart" type="date">
+            <column name="EARLYSTART" length="7" />
+        </property>
+        <property name="latefinish" type="date">
+            <column name="LATEFINISH" length="7" />
+        </property>
+        <property name="completeqty" type="big_decimal">
+            <column name="COMPLETEQTY" precision="10" />
+        </property>
+        <property name="devicePause" type="java.lang.Boolean">
+            <column name="DEVICE_PAUSE" precision="1" scale="0" />
+        </property>
+        <property name="reworkBilluid" type="string">
+            <column name="REWORK_BILLUID" />
+        </property>
+        <property name="checktaskid" type="string">
+            <column name="CHECKTASKID" length="50" />
+        </property>
+        <set name="MChecktaskassnses" table="M_CHECKTASKASSNS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CHECKTASKUID" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.MChecktaskassns" />
+        </set>
+    </class>
+</hibernate-mapping>

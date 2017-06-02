@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SMessageContent" table="S_MESSAGE_CONTENT" schema="MES188" optimistic-lock="version">
+        <id name="messageContentuid" type="string">
+            <column name="MESSAGE_CONTENTUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="topic" type="string">
+            <column name="TOPIC" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="messagenum" type="java.lang.Long">
+            <column name="MESSAGENUM" precision="10" scale="0" />
+        </property>
+        <property name="content" type="clob">
+            <column name="CONTENT" />
+        </property>
+    </class>
+</hibernate-mapping>

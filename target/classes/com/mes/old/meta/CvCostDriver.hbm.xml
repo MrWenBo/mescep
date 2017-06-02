@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CvCostDriver" table="CV_COST_DRIVER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.CvCostDriverId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="100" />
+            </key-property>
+            <key-property name="accountantPeriodId" type="string">
+                <column name="ACCOUNTANT_PERIOD_ID" length="100" />
+            </key-property>
+            <key-property name="costDriverId" type="string">
+                <column name="COST_DRIVER_ID" length="100" />
+            </key-property>
+            <key-property name="costDriverQuantity" type="big_decimal">
+                <column name="COST_DRIVER_QUANTITY" precision="10" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="100" />
+            </key-property>
+            <key-property name="costCenterId" type="string">
+                <column name="COST_CENTER_ID" length="100" />
+            </key-property>
+            <key-property name="costDriverTypedesc" type="string">
+                <column name="COST_DRIVER_TYPEDESC" length="100" />
+            </key-property>
+            <key-property name="costDriverName" type="string">
+                <column name="COST_DRIVER_NAME" length="100" />
+            </key-property>
+            <key-property name="uomdesc" type="string">
+                <column name="UOMDESC" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

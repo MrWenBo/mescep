@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BNcFile" table="B_NC_FILE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BNcFileId">
+            <key-property name="groupuid" type="string">
+                <column name="GROUPUID" />
+            </key-property>
+            <key-property name="opuid" type="big_decimal">
+                <column name="OPUID" precision="30" scale="0" />
+            </key-property>
+            <key-property name="stepId" type="java.lang.Byte">
+                <column name="STEP_ID" precision="2" scale="0" />
+            </key-property>
+            <key-property name="ncId" type="string">
+                <column name="NC_ID" />
+            </key-property>
+            <key-property name="ncFileName" type="string">
+                <column name="NC_FILE_NAME" />
+            </key-property>
+            <key-property name="versionId" type="string">
+                <column name="VERSION_ID" length="50" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="510" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="changetime" type="date">
+                <column name="CHANGETIME" length="7" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="isEffect" type="java.lang.Byte">
+                <column name="IS_EFFECT" precision="2" scale="0" />
+            </key-property>
+            <key-property name="changer" type="string">
+                <column name="CHANGER" length="50" />
+            </key-property>
+            <key-property name="ncFile" type="clob">
+                <column name="NC_FILE" />
+            </key-property>
+            <key-property name="isPrivate" type="java.lang.Byte">
+                <column name="IS_PRIVATE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="useRecord" type="string">
+                <column name="USE_RECORD" />
+            </key-property>
+            <key-property name="useType" type="string">
+                <column name="USE_TYPE" length="50" />
+            </key-property>
+            <key-property name="ncuid" type="string">
+                <column name="NCUID" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

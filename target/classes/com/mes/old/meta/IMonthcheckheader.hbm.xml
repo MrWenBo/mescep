@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IMonthcheckheader" table="I_MONTHCHECKHEADER" schema="MES188" optimistic-lock="version">
+        <comment>&#212;&#194;&#197;&#204;&#180;&#230;&#188;&#242;&#195;&#247;</comment>
+        <id name="invmonthcheckid" type="string">
+            <column name="INVMONTHCHECKID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="monthchecktype" type="java.lang.Long">
+            <column name="MONTHCHECKTYPE" precision="10" scale="0">
+                <comment>&#197;&#204;&#180;&#230;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="warehouseid" type="string">
+            <column name="WAREHOUSEID" length="50" not-null="true">
+                <comment>&#191;&#226;&#183;&#191;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="startdate" type="date">
+            <column name="STARTDATE" length="7">
+                <comment>&#191;&#170;&#202;&#188;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="enddate" type="date">
+            <column name="ENDDATE" length="7">
+                <comment>&#189;&#225;&#202;&#248;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="billchecker" type="string">
+            <column name="BILLCHECKER" length="50">
+                <comment>&#201;&#243;&#186;&#203;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="0">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#202;&#174;</comment>
+            </column>
+        </property>
+        <property name="text1" type="string">
+            <column name="TEXT1" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#210;&#187;</comment>
+            </column>
+        </property>
+        <property name="text2" type="string">
+            <column name="TEXT2" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#182;&#254;</comment>
+            </column>
+        </property>
+        <property name="text3" type="string">
+            <column name="TEXT3" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#200;&#253;</comment>
+            </column>
+        </property>
+        <property name="text4" type="string">
+            <column name="TEXT4" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#203;&#196;</comment>
+            </column>
+        </property>
+        <property name="text5" type="string">
+            <column name="TEXT5" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#206;&#229;</comment>
+            </column>
+        </property>
+        <property name="text6" type="string">
+            <column name="TEXT6" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#193;&#249;</comment>
+            </column>
+        </property>
+        <property name="text7" type="string">
+            <column name="TEXT7" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#198;&#223;</comment>
+            </column>
+        </property>
+        <property name="text8" type="string">
+            <column name="TEXT8" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#176;&#203;</comment>
+            </column>
+        </property>
+        <property name="text9" type="string">
+            <column name="TEXT9" length="50">
+                <comment>&#177;&#184;&#211;&#195;&#206;&#196;&#177;&#190;&#190;&#197;</comment>
+            </column>
+        </property>
+        <property name="text10" type="string">
+            <column name="TEXT10" length="50">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="accountantYear" type="java.lang.Short">
+            <column name="ACCOUNTANT_YEAR" precision="4" scale="0">
+                <comment>&#197;&#204;&#180;&#230;&#196;&#234;&#183;&#221;</comment>
+            </column>
+        </property>
+        <property name="accountantMonth" type="java.lang.Byte">
+            <column name="ACCOUNTANT_MONTH" precision="2" scale="0">
+                <comment>&#197;&#204;&#180;&#230;&#212;&#194;&#183;&#221;</comment>
+            </column>
+        </property>
+        <property name="invmonthcheckname" type="string">
+            <column name="INVMONTHCHECKNAME" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

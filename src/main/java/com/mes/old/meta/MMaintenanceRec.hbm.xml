@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MMaintenanceRec" table="M_MAINTENANCE_REC" schema="MES188">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="string">
+            <column name="VERSION" length="50">
+                <comment>&#176;&#230;&#180;&#206;</comment>
+            </column>
+        </version>
+        <many-to-one name="MMaterial" class="com.mes.old.MMaterial" fetch="select">
+            <column name="MATERIALUSN" length="50" />
+        </many-to-one>
+        <property name="maintenancetime" type="date">
+            <column name="MAINTENANCETIME" length="7">
+                <comment>&#211;&#205;&#183;&#226;/&#206;&#172;&#187;&#164;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="maintenancer" type="string">
+            <column name="MAINTENANCER" length="50">
+                <comment>&#211;&#205;&#183;&#226;&#185;&#164;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50">
+                <comment>&#188;&#236;&#209;&#233;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="nextMaintenancetime" type="date">
+            <column name="NEXT_MAINTENANCETIME" length="7">
+                <comment>&#207;&#194;&#210;&#187;&#180;&#206;&#211;&#205;&#183;&#226;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7">
+                <comment>&#188;&#236;&#209;&#233;&#186;&#207;&#184;&#241;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="maintenancenum" type="big_decimal">
+            <column name="MAINTENANCENUM" precision="20" scale="0">
+                <comment>&#211;&#205;&#183;&#226;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="produceDate" type="date">
+            <column name="PRODUCE_DATE" length="7">
+                <comment>&#201;&#250;&#178;&#250;&#163;&#168;&#193;&#242;&#187;&#175;&#163;&#169;&#200;&#213;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="longestMaintenancetime" type="big_decimal">
+            <column name="LONGEST_MAINTENANCETIME" precision="20" scale="0">
+                <comment>&#215;&#238;&#179;&#164;&#177;&#163;&#185;&#220;&#198;&#218;</comment>
+            </column>
+        </property>
+        <property name="certificateuid" type="string">
+            <column name="CERTIFICATEUID">
+                <comment>&#186;&#207;&#184;&#241;&#214;&#164;</comment>
+            </column>
+        </property>
+        <property name="currentMaintenanceTime" type="big_decimal">
+            <column name="CURRENT_MAINTENANCE_TIME" precision="20" scale="0">
+                <comment>&#181;&#177;&#199;&#176;&#177;&#163;&#185;&#220;&#198;&#218;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jobshop&#198;&#191;&#190;&#177;&#201;&#232;&#177;&#184;&#200;&#206;&#206;&#241;&#183;&#214;&#206;&#246;"
+    table="JOBSHOP_&#198;&#191;&#190;&#177;&#201;&#232;&#177;&#184;&#200;&#206;&#206;&#241;&#183;&#214;&#206;&#246;" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.Jobshop&#198;&#191;&#190;&#177;&#201;&#232;&#177;&#184;&#200;&#206;&#206;&#241;&#183;&#214;&#206;&#246;Id">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="taskc1" type="big_decimal">
+                <column name="TASKC1" precision="22" scale="0" />
+            </key-property>
+            <key-property name="wips1" type="big_decimal">
+                <column name="WIPS1" precision="22" scale="0" />
+            </key-property>
+            <key-property name="resourcerate" type="big_decimal">
+                <column name="RESOURCERATE" precision="22" scale="0" />
+            </key-property>
+            <key-property name="taskc2" type="big_decimal">
+                <column name="TASKC2" precision="22" scale="0" />
+            </key-property>
+            <key-property name="wips2" type="big_decimal">
+                <column name="WIPS2" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

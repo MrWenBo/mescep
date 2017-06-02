@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisMChecktasks" table="HIS_M_CHECKTASKS" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisMChecktasksId">
+            <key-property name="uniqueid" type="serializable">
+                <column name="UNIQUEID" />
+            </key-property>
+            <key-property name="taskuid" type="serializable">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="checktasktype" type="serializable">
+                <column name="CHECKTASKTYPE" />
+            </key-property>
+            <key-property name="checker" type="serializable">
+                <column name="CHECKER" />
+            </key-property>
+            <key-property name="checktaskstate" type="serializable">
+                <column name="CHECKTASKSTATE" />
+            </key-property>
+            <key-property name="creator" type="serializable">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="createtime" type="serializable">
+                <column name="CREATETIME" />
+            </key-property>
+            <key-property name="notes" type="serializable">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="deptid" type="serializable">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="planstart" type="serializable">
+                <column name="PLANSTART" />
+            </key-property>
+            <key-property name="planfinish" type="serializable">
+                <column name="PLANFINISH" />
+            </key-property>
+            <key-property name="planqty" type="serializable">
+                <column name="PLANQTY" />
+            </key-property>
+            <key-property name="comitqty" type="serializable">
+                <column name="COMITQTY" />
+            </key-property>
+            <key-property name="dispatchgrade" type="serializable">
+                <column name="DISPATCHGRADE" />
+            </key-property>
+            <key-property name="suspended" type="serializable">
+                <column name="SUSPENDED" />
+            </key-property>
+            <key-property name="checkqty1" type="serializable">
+                <column name="CHECKQTY1" />
+            </key-property>
+            <key-property name="defectqty1" type="serializable">
+                <column name="DEFECTQTY1" />
+            </key-property>
+            <key-property name="checkqty2" type="serializable">
+                <column name="CHECKQTY2" />
+            </key-property>
+            <key-property name="defectqty2" type="serializable">
+                <column name="DEFECTQTY2" />
+            </key-property>
+            <key-property name="checkqty3" type="serializable">
+                <column name="CHECKQTY3" />
+            </key-property>
+            <key-property name="defectqty3" type="serializable">
+                <column name="DEFECTQTY3" />
+            </key-property>
+            <key-property name="checkqty4" type="serializable">
+                <column name="CHECKQTY4" />
+            </key-property>
+            <key-property name="defectqty4" type="serializable">
+                <column name="DEFECTQTY4" />
+            </key-property>
+            <key-property name="checkqty5" type="serializable">
+                <column name="CHECKQTY5" />
+            </key-property>
+            <key-property name="defectqty5" type="serializable">
+                <column name="DEFECTQTY5" />
+            </key-property>
+            <key-property name="actualcheckqty" type="serializable">
+                <column name="ACTUALCHECKQTY" />
+            </key-property>
+            <key-property name="actualstart" type="serializable">
+                <column name="ACTUALSTART" />
+            </key-property>
+            <key-property name="actualfinish" type="serializable">
+                <column name="ACTUALFINISH" />
+            </key-property>
+            <key-property name="mastershop" type="serializable">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="keycount" type="serializable">
+                <column name="KEYCOUNT" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

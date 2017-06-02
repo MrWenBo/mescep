@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CCoderesult" table="C_CODERESULT" schema="MES188" optimistic-lock="version">
+        <id name="ccuid" type="string">
+            <column name="CCUID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="BClassinfoByRuleClassUid" class="com.mes.old.BClassinfo" fetch="select">
+            <column name="RULE_CLASS_UID" length="50" />
+        </many-to-one>
+        <many-to-one name="BClassinfoByClassUid" class="com.mes.old.BClassinfo" fetch="select">
+            <column name="CLASS_UID" length="50">
+                <comment>&#183;&#214;&#192;&#224;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="gencode" type="string">
+            <column name="GENCODE" length="100" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="creattime" type="date">
+            <column name="CREATTIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="500" />
+        </property>
+        <property name="features" type="string">
+            <column name="FEATURES" length="500" />
+        </property>
+        <property name="featuresFormat" type="string">
+            <column name="FEATURES_FORMAT" length="500" />
+        </property>
+        <property name="auditstatus" type="string">
+            <column name="AUDITSTATUS" length="10" />
+        </property>
+        <property name="customerFeatures" type="string">
+            <column name="CUSTOMER_FEATURES" length="500">
+                <comment>&#211;&#195;&#187;&#167;&#215;&#212;&#182;&#168;&#210;&#229;&#181;&#196;&#204;&#216;&#213;&#247;&#184;&#241;&#202;&#189;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

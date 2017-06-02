@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IvIo" table="IV_IO" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IvIoId">
+            <key-property name="invioid" type="string">
+                <column name="INVIOID" length="50" />
+            </key-property>
+            <key-property name="iotype" type="java.lang.Long">
+                <column name="IOTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="iostate" type="java.lang.Long">
+                <column name="IOSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="reasoncode" type="string">
+                <column name="REASONCODE" length="50" />
+            </key-property>
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="warehousemanager" type="string">
+                <column name="WAREHOUSEMANAGER" length="50" />
+            </key-property>
+            <key-property name="iodate" type="date">
+                <column name="IODATE" length="7" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" length="50" />
+            </key-property>
+            <key-property name="deptemp" type="string">
+                <column name="DEPTEMP" length="50" />
+            </key-property>
+            <key-property name="totalamount" type="big_decimal">
+                <column name="TOTALAMOUNT" precision="10" scale="4" />
+            </key-property>
+            <key-property name="invoiceid" type="string">
+                <column name="INVOICEID" length="50" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="partnerid" type="string">
+                <column name="PARTNERID" length="50" />
+            </key-property>
+            <key-property name="vouno" type="string">
+                <column name="VOUNO" length="50" />
+            </key-property>
+            <key-property name="billchecker" type="string">
+                <column name="BILLCHECKER" length="50" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="binid" type="string">
+                <column name="BINID" length="50" />
+            </key-property>
+            <key-property name="ioqty" type="big_decimal">
+                <column name="IOQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="iogrossqty" type="big_decimal">
+                <column name="IOGROSSQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="amount" type="big_decimal">
+                <column name="AMOUNT" precision="25" scale="6" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="UOM" length="50" />
+            </key-property>
+            <key-property name="unitprice" type="big_decimal">
+                <column name="UNITPRICE" precision="25" scale="6" />
+            </key-property>
+            <key-property name="relationid" type="string">
+                <column name="RELATIONID" length="50" />
+            </key-property>
+            <key-property name="relationseq" type="java.lang.Long">
+                <column name="RELATIONSEQ" precision="10" scale="0" />
+            </key-property>
+            <key-property name="taxrate" type="big_decimal">
+                <column name="TAXRATE" precision="25" scale="6" />
+            </key-property>
+            <key-property name="taxunitprice" type="big_decimal">
+                <column name="TAXUNITPRICE" precision="25" scale="0" />
+            </key-property>
+            <key-property name="taxamount" type="big_decimal">
+                <column name="TAXAMOUNT" precision="25" scale="0" />
+            </key-property>
+            <key-property name="uinvioid" type="string">
+                <column name="UINVIOID" />
+            </key-property>
+            <key-property name="uinvioseq" type="java.lang.Long">
+                <column name="UINVIOSEQ" precision="10" scale="0" />
+            </key-property>
+            <key-property name="uinvioqty" type="big_decimal">
+                <column name="UINVIOQTY" precision="25" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

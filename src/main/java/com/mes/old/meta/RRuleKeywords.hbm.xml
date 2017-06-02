@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RRuleKeywords" table="R_RULE_KEYWORDS" schema="MES188" optimistic-lock="version">
+        <comment>&#185;&#230;&#212;&#242;&#207;&#181;&#205;&#179;&#181;&#196;&#185;&#216;&#188;&#252;&#215;&#214;</comment>
+        <composite-id name="id" class="com.mes.old.RRuleKeywordsId">
+            <key-property name="keyworduid" type="string">
+                <column name="KEYWORDUID" />
+            </key-property>
+            <key-property name="keywordtype" type="string">
+                <column name="KEYWORDTYPE" />
+            </key-property>
+        </composite-id>
+        <property name="keywordid" type="string">
+            <column name="KEYWORDID">
+                <comment>&#185;&#216;&#188;&#252;&#215;&#214;&#180;&#250;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="keywordstate" type="string">
+            <column name="KEYWORDSTATE">
+                <comment>&#185;&#216;&#188;&#252;&#215;&#214;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="keywordname" type="string">
+            <column name="KEYWORDNAME">
+                <comment>&#185;&#216;&#188;&#252;&#215;&#214;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="prefix" type="string">
+            <column name="PREFIX" length="50">
+                <comment>
+                &#199;&#176;&#215;&#186;&#163;&#172;&#214;&#187;&#213;&#235;&#182;&#212;&#211;&#218;keywordtype&#206;&#170;valuetype&#181;&#196;&#192;&#224;&#208;&#205;&#211;&#208;&#208;&#167;</comment>
+            </column>
+        </property>
+        <property name="suffix" type="string">
+            <column name="SUFFIX" length="50">
+                <comment>
+                &#186;&#243;&#215;&#186;&#163;&#172;&#214;&#187;&#213;&#235;&#182;&#212;&#211;&#218;keywordtype&#206;&#170;valuetype&#181;&#196;&#192;&#224;&#208;&#205;&#211;&#208;&#208;&#167;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

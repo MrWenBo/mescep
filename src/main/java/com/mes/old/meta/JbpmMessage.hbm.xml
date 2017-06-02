@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.JbpmMessage" table="JBPM_MESSAGE" schema="MES188" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="ID_" length="20" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpmAction" class="com.mes.old.JbpmAction" fetch="select">
+            <column name="ACTION_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmNode" class="com.mes.old.JbpmNode" fetch="select">
+            <column name="NODE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmTaskinstance" class="com.mes.old.JbpmTaskinstance" fetch="select">
+            <column name="TASKINSTANCE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpmToken" class="com.mes.old.JbpmToken" fetch="select">
+            <column name="TOKEN_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="char">
+            <column name="CLASS_" length="1" not-null="true" />
+        </property>
+        <property name="destination" type="string">
+            <column name="DESTINATION_" />
+        </property>
+        <property name="exception" type="string">
+            <column name="EXCEPTION_" length="4000" />
+        </property>
+        <property name="issuspended" type="java.lang.Boolean">
+            <column name="ISSUSPENDED_" precision="1" scale="0" />
+        </property>
+        <property name="text" type="string">
+            <column name="TEXT_" />
+        </property>
+        <property name="transitionname" type="string">
+            <column name="TRANSITIONNAME_" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+    </class>
+</hibernate-mapping>

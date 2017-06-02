@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IvInvmanage" table="IV_INVMANAGE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IvInvmanageId">
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="binid" type="string">
+                <column name="BINID" length="50" />
+            </key-property>
+            <key-property name="invtype" type="java.lang.Integer">
+                <column name="INVTYPE" precision="5" scale="0" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="UOM" length="50" />
+            </key-property>
+            <key-property name="invqty" type="big_decimal">
+                <column name="INVQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="totalamount" type="big_decimal">
+                <column name="TOTALAMOUNT" precision="25" scale="6" />
+            </key-property>
+            <key-property name="invdate" type="date">
+                <column name="INVDATE" length="7" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="lastinvqty" type="big_decimal">
+                <column name="LASTINVQTY" precision="10" scale="4" />
+            </key-property>
+            <key-property name="lasttotalamount" type="big_decimal">
+                <column name="LASTTOTALAMOUNT" precision="10" scale="4" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" length="2000" />
+            </key-property>
+            <key-property name="text1" type="string">
+                <column name="TEXT1" length="50" />
+            </key-property>
+            <key-property name="text2" type="string">
+                <column name="TEXT2" length="50" />
+            </key-property>
+            <key-property name="text3" type="string">
+                <column name="TEXT3" length="50" />
+            </key-property>
+            <key-property name="text4" type="string">
+                <column name="TEXT4" length="50" />
+            </key-property>
+            <key-property name="text5" type="string">
+                <column name="TEXT5" length="50" />
+            </key-property>
+            <key-property name="text6" type="string">
+                <column name="TEXT6" length="50" />
+            </key-property>
+            <key-property name="text7" type="string">
+                <column name="TEXT7" length="50" />
+            </key-property>
+            <key-property name="text8" type="string">
+                <column name="TEXT8" length="50" />
+            </key-property>
+            <key-property name="text9" type="string">
+                <column name="TEXT9" length="50" />
+            </key-property>
+            <key-property name="text10" type="string">
+                <column name="TEXT10" length="50" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="sn" type="string">
+                <column name="SN" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="thisinvqtyin" type="big_decimal">
+                <column name="THISINVQTYIN" precision="10" scale="4" />
+            </key-property>
+            <key-property name="thistotalamountin" type="big_decimal">
+                <column name="THISTOTALAMOUNTIN" precision="10" scale="4" />
+            </key-property>
+            <key-property name="thisinvqtyout" type="big_decimal">
+                <column name="THISINVQTYOUT" precision="10" scale="4" />
+            </key-property>
+            <key-property name="thistotalamountout" type="big_decimal">
+                <column name="THISTOTALAMOUNTOUT" precision="10" scale="4" />
+            </key-property>
+            <key-property name="freezed" type="java.lang.Byte">
+                <column name="FREEZED" precision="2" scale="0" />
+            </key-property>
+            <key-property name="latestInDate" type="date">
+                <column name="LATEST_IN_DATE" length="7" />
+            </key-property>
+            <key-property name="latestOutDate" type="date">
+                <column name="LATEST_OUT_DATE" length="7" />
+            </key-property>
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" length="10" />
+            </key-property>
+            <key-property name="freezedReason" type="string">
+                <column name="FREEZED_REASON" length="50" />
+            </key-property>
+            <key-property name="invfreezedid" type="string">
+                <column name="INVFREEZEDID" length="10" />
+            </key-property>
+            <key-property name="supplier" type="string">
+                <column name="SUPPLIER" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="partDescription" type="string">
+                <column name="PART_DESCRIPTION" />
+            </key-property>
+            <key-property name="partNumberType" type="string">
+                <column name="PART_NUMBER_TYPE" length="50" />
+            </key-property>
+            <key-property name="partSort2" type="string">
+                <column name="PART_SORT2" length="50" />
+            </key-property>
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="creatorname" type="string">
+                <column name="CREATORNAME" length="100" />
+            </key-property>
+            <key-property name="uomdesc" type="string">
+                <column name="UOMDESC" length="50" />
+            </key-property>
+            <key-property name="binname" type="string">
+                <column name="BINNAME" length="50" />
+            </key-property>
+            <key-property name="warehousename" type="string">
+                <column name="WAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="materialstate" type="java.lang.Long">
+                <column name="MATERIALSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="materialstatedesc" type="string">
+                <column name="MATERIALSTATEDESC" length="100" />
+            </key-property>
+            <key-property name="qualitystate" type="java.lang.Long">
+                <column name="QUALITYSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="qualitystatedesc" type="string">
+                <column name="QUALITYSTATEDESC" length="100" />
+            </key-property>
+            <key-property name="materialqty" type="big_decimal">
+                <column name="MATERIALQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="barcode" type="string">
+                <column name="BARCODE" />
+            </key-property>
+            <key-property name="qualitynum" type="string">
+                <column name="QUALITYNUM" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

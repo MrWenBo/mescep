@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jobshop&#178;&#250;&#198;&#183;&#205;&#226;&#208;&#173;&#194;&#202;" table="JOBSHOP_&#178;&#250;&#198;&#183;&#205;&#226;&#208;&#173;&#194;&#202;"
+    schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.Jobshop&#178;&#250;&#198;&#183;&#205;&#226;&#208;&#173;&#194;&#202;Id">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="deptname" type="string">
+                <column name="DEPTNAME" length="50" />
+            </key-property>
+            <key-property name="mm" type="string">
+                <column name="MM" length="7" />
+            </key-property>
+            <key-property name="c" type="big_decimal">
+                <column name="C" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

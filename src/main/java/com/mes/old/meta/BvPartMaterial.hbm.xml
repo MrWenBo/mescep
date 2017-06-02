@@ -1,0 +1,487 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BvPartMaterial" table="BV_PART_MATERIAL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BvPartMaterialId">
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="unitPrice" type="java.lang.Double">
+                <column name="UNIT_PRICE" precision="126" scale="0" />
+            </key-property>
+            <key-property name="managementCost" type="java.lang.Double">
+                <column name="MANAGEMENT_COST" precision="126" scale="0" />
+            </key-property>
+            <key-property name="unitSpace" type="java.lang.Double">
+                <column name="UNIT_SPACE" precision="126" scale="0" />
+            </key-property>
+            <key-property name="unitCost" type="java.lang.Double">
+                <column name="UNIT_COST" precision="126" scale="0" />
+            </key-property>
+            <key-property name="customerName" type="string">
+                <column name="CUSTOMER_NAME" />
+            </key-property>
+            <key-property name="isPhantom" type="java.lang.Long">
+                <column name="IS_PHANTOM" precision="10" scale="0" />
+            </key-property>
+            <key-property name="demandPartNumber" type="string">
+                <column name="DEMAND_PART_NUMBER" />
+            </key-property>
+            <key-property name="partDescription" type="string">
+                <column name="PART_DESCRIPTION" />
+            </key-property>
+            <key-property name="ignoreConsolidationInterval" type="java.lang.Long">
+                <column name="IGNORE_CONSOLIDATION_INTERVAL" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partBatchType" type="java.lang.Long">
+                <column name="PART_BATCH_TYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partBatchQuantity" type="big_decimal">
+                <column name="PART_BATCH_QUANTITY" precision="30" scale="0" />
+            </key-property>
+            <key-property name="partNumberAbcType" type="string">
+                <column name="PART_NUMBER_ABC_TYPE" length="10" />
+            </key-property>
+            <key-property name="partNumberType" type="string">
+                <column name="PART_NUMBER_TYPE" length="50" />
+            </key-property>
+            <key-property name="partQuantityShortTolerance" type="big_decimal">
+                <column name="PART_QUANTITY_SHORT_TOLERANCE" precision="30" scale="0" />
+            </key-property>
+            <key-property name="pqcToleranceIsPercent" type="string">
+                <column name="PQC_TOLERANCE_IS_PERCENT" length="10" />
+            </key-property>
+            <key-property name="productDept" type="string">
+                <column name="PRODUCT_DEPT" />
+            </key-property>
+            <key-property name="safetyStockBucketSpec" type="string">
+                <column name="SAFETY_STOCK_BUCKET_SPEC" />
+            </key-property>
+            <key-property name="safetyStockQuantity" type="big_decimal">
+                <column name="SAFETY_STOCK_QUANTITY" precision="30" scale="0" />
+            </key-property>
+            <key-property name="safetyStockPoLateTolerance" type="big_decimal">
+                <column name="SAFETY_STOCK_PO_LATE_TOLERANCE" precision="30" scale="0" />
+            </key-property>
+            <key-property name="sellable" type="java.lang.Long">
+                <column name="SELLABLE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="stockPart" type="java.lang.Long">
+                <column name="STOCK_PART" precision="10" scale="0" />
+            </key-property>
+            <key-property name="subcontractedP" type="java.lang.Long">
+                <column name="SUBCONTRACTED_P" precision="10" scale="0" />
+            </key-property>
+            <key-property name="alternatePartUsageDelay" type="big_decimal">
+                <column name="ALTERNATE_PART_USAGE_DELAY" precision="30" scale="0" />
+            </key-property>
+            <key-property name="surplusUsageLateTolerance" type="big_decimal">
+                <column name="SURPLUS_USAGE_LATE_TOLERANCE" precision="30" scale="0" />
+            </key-property>
+            <key-property name="poLatenessTolerance" type="big_decimal">
+                <column name="PO_LATENESS_TOLERANCE" precision="30" scale="0" />
+            </key-property>
+            <key-property name="poShortnessTolerance" type="big_decimal">
+                <column name="PO_SHORTNESS_TOLERANCE" precision="30" scale="0" />
+            </key-property>
+            <key-property name="mfgConsolidationInterval" type="big_decimal">
+                <column name="MFG_CONSOLIDATION_INTERVAL" precision="30" scale="0" />
+            </key-property>
+            <key-property name="allOrNothingInventory" type="java.lang.Long">
+                <column name="ALL_OR_NOTHING_INVENTORY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="allOrNothingCmo" type="java.lang.Long">
+                <column name="ALL_OR_NOTHING_CMO" precision="10" scale="0" />
+            </key-property>
+            <key-property name="allOrNothingSurplus" type="string">
+                <column name="ALL_OR_NOTHING_SURPLUS" length="10" />
+            </key-property>
+            <key-property name="allowMixedAlternateRoutings" type="java.lang.Long">
+                <column name="ALLOW_MIXED_ALTERNATE_ROUTINGS" precision="10" scale="0" />
+            </key-property>
+            <key-property name="alternateQuantityTolerance" type="big_decimal">
+                <column name="ALTERNATE_QUANTITY_TOLERANCE" precision="30" scale="0" />
+            </key-property>
+            <key-property name="supplyToTry" type="java.lang.Long">
+                <column name="SUPPLY_TO_TRY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="allowedMaxInventoryQuantity" type="big_decimal">
+                <column name="ALLOWED_MAX_INVENTORY_QUANTITY" precision="30" scale="0" />
+            </key-property>
+            <key-property name="isCriticalPart" type="java.lang.Long">
+                <column name="IS_CRITICAL_PART" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partConfigurationRule" type="java.lang.Long">
+                <column name="PART_CONFIGURATION_RULE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="manufacturedType" type="java.lang.Long">
+                <column name="MANUFACTURED_TYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="plannedManufacturingTime" type="java.lang.Long">
+                <column name="PLANNED_MANUFACTURING_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="leadTimeType" type="java.lang.Long">
+                <column name="LEAD_TIME_TYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="leadTime" type="java.lang.Long">
+                <column name="LEAD_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="mrpMethodType" type="java.lang.Long">
+                <column name="MRP_METHOD_TYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partTrackingType" type="java.lang.Long">
+                <column name="PART_TRACKING_TYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="manufacturedExpectation" type="big_decimal">
+                <column name="MANUFACTURED_EXPECTATION" precision="10" />
+            </key-property>
+            <key-property name="allowedMinInventoryQuantity" type="java.lang.Long">
+                <column name="ALLOWED_MIN_INVENTORY_QUANTITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partNotes" type="string">
+                <column name="PART_NOTES" length="2000" />
+            </key-property>
+            <key-property name="techCondition" type="string">
+                <column name="TECH_CONDITION" length="50" />
+            </key-property>
+            <key-property name="partSort2" type="string">
+                <column name="PART_SORT2" length="50" />
+            </key-property>
+            <key-property name="partstyle" type="string">
+                <column name="PARTSTYLE" length="100" />
+            </key-property>
+            <key-property name="effective" type="java.lang.Short">
+                <column name="EFFECTIVE" precision="3" scale="0" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="workcoefficient" type="big_decimal">
+                <column name="WORKCOEFFICIENT" precision="25" scale="6" />
+            </key-property>
+            <key-property name="versionid" type="string">
+                <column name="VERSIONID" length="50" />
+            </key-property>
+            <key-property name="changetime" type="date">
+                <column name="CHANGETIME" length="7" />
+            </key-property>
+            <key-property name="changer" type="string">
+                <column name="CHANGER" length="50" />
+            </key-property>
+            <key-property name="changereason" type="string">
+                <column name="CHANGEREASON" length="2000" />
+            </key-property>
+            <key-property name="changeorder" type="string">
+                <column name="CHANGEORDER" length="100" />
+            </key-property>
+            <key-property name="changestate" type="java.lang.Byte">
+                <column name="CHANGESTATE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="10" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="uom" type="string">
+                <column name="UOM" length="50" />
+            </key-property>
+            <key-property name="barcode" type="string">
+                <column name="BARCODE" length="50" />
+            </key-property>
+            <key-property name="toolchecklevel" type="java.lang.Byte">
+                <column name="TOOLCHECKLEVEL" precision="2" scale="0" />
+            </key-property>
+            <key-property name="dragsize" type="string">
+                <column name="DRAGSIZE" />
+            </key-property>
+            <key-property name="weight" type="string">
+                <column name="WEIGHT" />
+            </key-property>
+            <key-property name="supplystate" type="string">
+                <column name="SUPPLYSTATE" />
+            </key-property>
+            <key-property name="diameter" type="string">
+                <column name="DIAMETER" length="50" />
+            </key-property>
+            <key-property name="partLength" type="string">
+                <column name="PART_LENGTH" length="50" />
+            </key-property>
+            <key-property name="angle" type="string">
+                <column name="ANGLE" length="50" />
+            </key-property>
+            <key-property name="edgelength" type="string">
+                <column name="EDGELENGTH" length="50" />
+            </key-property>
+            <key-property name="edgenum" type="string">
+                <column name="EDGENUM" length="50" />
+            </key-property>
+            <key-property name="tineradius" type="string">
+                <column name="TINERADIUS" length="50" />
+            </key-property>
+            <key-property name="tineposition" type="string">
+                <column name="TINEPOSITION" length="50" />
+            </key-property>
+            <key-property name="usage" type="string">
+                <column name="USAGE" />
+            </key-property>
+            <key-property name="dispatchgrade" type="java.lang.Long">
+                <column name="DISPATCHGRADE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="prepairwork" type="java.lang.Double">
+                <column name="PREPAIRWORK" precision="126" scale="0" />
+            </key-property>
+            <key-property name="isImportantPart" type="java.lang.Long">
+                <column name="IS_IMPORTANT_PART" precision="10" scale="0" />
+            </key-property>
+            <key-property name="barDiameter" type="string">
+                <column name="BAR_DIAMETER" length="50" />
+            </key-property>
+            <key-property name="pitch" type="string">
+                <column name="PITCH" length="50" />
+            </key-property>
+            <key-property name="ltoolsNumber" type="string">
+                <column name="LTOOLS_NUMBER" length="50" />
+            </key-property>
+            <key-property name="edgeAngle" type="string">
+                <column name="EDGE_ANGLE" length="50" />
+            </key-property>
+            <key-property name="plangrade" type="java.lang.Long">
+                <column name="PLANGRADE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="ltoolsStyle" type="string">
+                <column name="LTOOLS_STYLE" length="50" />
+            </key-property>
+            <key-property name="cutDiameter" type="string">
+                <column name="CUT_DIAMETER" length="50" />
+            </key-property>
+            <key-property name="shankLength" type="string">
+                <column name="SHANK_LENGTH" length="50" />
+            </key-property>
+            <key-property name="invalidTime" type="java.lang.Long">
+                <column name="INVALID_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="checkupTime" type="java.lang.Long">
+                <column name="CHECKUP_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="maintenanceTime" type="java.lang.Long">
+                <column name="MAINTENANCE_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="needCustomcheck" type="java.lang.Byte">
+                <column name="NEED_CUSTOMCHECK" precision="2" scale="0" />
+            </key-property>
+            <key-property name="partnumberTypePdm" type="string">
+                <column name="PARTNUMBER_TYPE_PDM" length="50" />
+            </key-property>
+            <key-property name="ioPriority" type="java.lang.Long">
+                <column name="IO_PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="orderPointStockQuantity" type="java.lang.Long">
+                <column name="ORDER_POINT_STOCK_QUANTITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="checkTime" type="java.lang.Long">
+                <column name="CHECK_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="borrowTime" type="java.lang.Long">
+                <column name="BORROW_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="lifeTime" type="java.lang.Long">
+                <column name="LIFE_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="prepareLeadTime" type="java.lang.Long">
+                <column name="PREPARE_LEAD_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="isassembled" type="java.lang.Long">
+                <column name="ISASSEMBLED" precision="10" scale="0" />
+            </key-property>
+            <key-property name="BPartNumberOutUid" type="string">
+                <column name="B_PART_NUMBER_OUT_UID" />
+            </key-property>
+            <key-property name="productPhase" type="string">
+                <column name="PRODUCT_PHASE" />
+            </key-property>
+            <key-property name="seriesPartUid" type="string">
+                <column name="SERIES_PART_UID" />
+            </key-property>
+            <key-property name="realDrawingid" type="string">
+                <column name="REAL_DRAWINGID" />
+            </key-property>
+            <key-property name="mrpDept" type="string">
+                <column name="MRP_DEPT" length="50" />
+            </key-property>
+            <key-property name="techState" type="string">
+                <column name="TECH_STATE" length="50" />
+            </key-property>
+            <key-property name="isNeedJudge" type="string">
+                <column name="IS_NEED_JUDGE" length="50" />
+            </key-property>
+            <key-property name="judgeAdvanceTime" type="java.lang.Long">
+                <column name="JUDGE_ADVANCE_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="isNeedData" type="string">
+                <column name="IS_NEED_DATA" length="50" />
+            </key-property>
+            <key-property name="dataAdvanceTime" type="java.lang.Long">
+                <column name="DATA_ADVANCE_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="isNeedSort" type="string">
+                <column name="IS_NEED_SORT" length="50" />
+            </key-property>
+            <key-property name="sortAdvanceTime" type="java.lang.Long">
+                <column name="SORT_ADVANCE_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partNumberSort" type="string">
+                <column name="PART_NUMBER_SORT" length="50" />
+            </key-property>
+            <key-property name="partCriticalSort" type="string">
+                <column name="PART_CRITICAL_SORT" length="50" />
+            </key-property>
+            <key-property name="isNeedRepaire" type="string">
+                <column name="IS_NEED_REPAIRE" length="50" />
+            </key-property>
+            <key-property name="partCheckType" type="string">
+                <column name="PART_CHECK_TYPE" length="50" />
+            </key-property>
+            <key-property name="checkCycle" type="java.lang.Long">
+                <column name="CHECK_CYCLE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="supplyer" type="string">
+                <column name="SUPPLYER" />
+            </key-property>
+            <key-property name="deptnamedesc" type="string">
+                <column name="DEPTNAMEDESC" length="50" />
+            </key-property>
+            <key-property name="classname" type="string">
+                <column name="CLASSNAME" />
+            </key-property>
+            <key-property name="classnamedesc" type="string">
+                <column name="CLASSNAMEDESC" />
+            </key-property>
+            <key-property name="manufacturetypedesc" type="string">
+                <column name="MANUFACTURETYPEDESC" length="100" />
+            </key-property>
+            <key-property name="toolcheckleveldesc" type="string">
+                <column name="TOOLCHECKLEVELDESC" length="100" />
+            </key-property>
+            <key-property name="dispatchgradedesc" type="string">
+                <column name="DISPATCHGRADEDESC" length="100" />
+            </key-property>
+            <key-property name="bactchtypedesc" type="string">
+                <column name="BACTCHTYPEDESC" length="100" />
+            </key-property>
+            <key-property name="leadtimetypedesc" type="string">
+                <column name="LEADTIMETYPEDESC" length="100" />
+            </key-property>
+            <key-property name="uomdesc" type="string">
+                <column name="UOMDESC" length="50" />
+            </key-property>
+            <key-property name="creatordesc" type="string">
+                <column name="CREATORDESC" length="100" />
+            </key-property>
+            <key-property name="mrpmethodtypedesc" type="string">
+                <column name="MRPMETHODTYPEDESC" length="100" />
+            </key-property>
+            <key-property name="materialusn" type="string">
+                <column name="MATERIALUSN" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="sn" type="string">
+                <column name="SN" />
+            </key-property>
+            <key-property name="materialspecs" type="string">
+                <column name="MATERIALSPECS" />
+            </key-property>
+            <key-property name="materialqty" type="big_decimal">
+                <column name="MATERIALQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="qualitynum" type="string">
+                <column name="QUALITYNUM" />
+            </key-property>
+            <key-property name="stovenum" type="string">
+                <column name="STOVENUM" />
+            </key-property>
+            <key-property name="forgenum" type="string">
+                <column name="FORGENUM" />
+            </key-property>
+            <key-property name="materialsource" type="string">
+                <column name="MATERIALSOURCE" />
+            </key-property>
+            <key-property name="invdate" type="date">
+                <column name="INVDATE" length="7" />
+            </key-property>
+            <key-property name="invaliddate" type="date">
+                <column name="INVALIDDATE" length="7" />
+            </key-property>
+            <key-property name="productdate" type="date">
+                <column name="PRODUCTDATE" length="7" />
+            </key-property>
+            <key-property name="packageweight" type="big_decimal">
+                <column name="PACKAGEWEIGHT" precision="25" scale="6" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="50" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="materialstate" type="java.lang.Long">
+                <column name="MATERIALSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="completepercent" type="big_decimal">
+                <column name="COMPLETEPERCENT" precision="25" scale="0" />
+            </key-property>
+            <key-property name="qualitystate" type="java.lang.Long">
+                <column name="QUALITYSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="materiallife" type="big_decimal">
+                <column name="MATERIALLIFE" precision="25" scale="0" />
+            </key-property>
+            <key-property name="axisrepair" type="big_decimal">
+                <column name="AXISREPAIR" precision="25" scale="6" />
+            </key-property>
+            <key-property name="radialrepair" type="big_decimal">
+                <column name="RADIALREPAIR" precision="25" scale="6" />
+            </key-property>
+            <key-property name="partner" type="string">
+                <column name="PARTNER" length="50" />
+            </key-property>
+            <key-property name="radiusrepair" type="big_decimal">
+                <column name="RADIUSREPAIR" precision="25" scale="6" />
+            </key-property>
+            <key-property name="lengthrepair" type="big_decimal">
+                <column name="LENGTHREPAIR" precision="25" scale="6" />
+            </key-property>
+            <key-property name="cutteractlength" type="big_decimal">
+                <column name="CUTTERACTLENGTH" precision="25" scale="6" />
+            </key-property>
+            <key-property name="checkupDate" type="date">
+                <column name="CHECKUP_DATE" length="7" />
+            </key-property>
+            <key-property name="maintenanceDate" type="date">
+                <column name="MAINTENANCE_DATE" length="7" />
+            </key-property>
+            <key-property name="materialstatedesc" type="string">
+                <column name="MATERIALSTATEDESC" length="100" />
+            </key-property>
+            <key-property name="qualitystatedesc" type="string">
+                <column name="QUALITYSTATEDESC" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

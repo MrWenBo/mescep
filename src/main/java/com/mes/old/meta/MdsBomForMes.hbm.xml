@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MdsBomForMes" table="MDS_BOM_FOR_MES" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MdsBomForMesId">
+            <key-property name="parentItemCode" type="string">
+                <column name="PARENT_ITEM_CODE" length="50" />
+            </key-property>
+            <key-property name="itemCode" type="string">
+                <column name="ITEM_CODE" length="50" />
+            </key-property>
+            <key-property name="partQuantity" type="string">
+                <column name="PART_QUANTITY" />
+            </key-property>
+            <key-property name="ynInInv" type="java.lang.Character">
+                <column name="YN_IN_INV" length="0" />
+            </key-property>
+            <key-property name="itemType" type="java.lang.Character">
+                <column name="ITEM_TYPE" length="0" />
+            </key-property>
+            <key-property name="mainDeptName" type="java.lang.Character">
+                <column name="MAIN_DEPT_NAME" length="1" />
+            </key-property>
+            <key-property name="itemName" type="java.lang.Character">
+                <column name="ITEM_NAME" length="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

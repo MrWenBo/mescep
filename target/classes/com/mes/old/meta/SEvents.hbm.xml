@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.SEvents" table="S_EVENTS" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.SEventsId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" />
+            </key-property>
+            <key-property name="eventName" type="string">
+                <column name="EVENT_NAME" />
+            </key-property>
+            <key-property name="eventDesc" type="string">
+                <column name="EVENT_DESC" length="2000" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="eventSource" type="string">
+                <column name="EVENT_SOURCE" length="50" />
+            </key-property>
+            <key-property name="eventType" type="string">
+                <column name="EVENT_TYPE" length="50" />
+            </key-property>
+            <key-property name="relationEmployeeid" type="string">
+                <column name="RELATION_EMPLOYEEID" length="50" />
+            </key-property>
+            <key-property name="relationRoleid" type="string">
+                <column name="RELATION_ROLEID" length="50" />
+            </key-property>
+            <key-property name="relationDeptid" type="string">
+                <column name="RELATION_DEPTID" length="50" />
+            </key-property>
+            <key-property name="validDays" type="java.lang.Long">
+                <column name="VALID_DAYS" precision="10" scale="0" />
+            </key-property>
+            <key-property name="validDate" type="date">
+                <column name="VALID_DATE" length="7" />
+            </key-property>
+            <key-property name="eventObjectId" type="string">
+                <column name="EVENT_OBJECT_ID" />
+            </key-property>
+            <key-property name="eventState" type="string">
+                <column name="EVENT_STATE" length="50" />
+            </key-property>
+            <key-property name="relationUrl" type="string">
+                <column name="RELATION_URL" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

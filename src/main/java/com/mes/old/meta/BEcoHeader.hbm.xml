@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BEcoHeader" table="B_ECO_HEADER" schema="MES188" optimistic-lock="version">
+        <id name="changeuid" type="string">
+            <column name="CHANGEUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="changeid" type="string">
+            <column name="CHANGEID" />
+        </property>
+        <property name="ecotype" type="string">
+            <column name="ECOTYPE" length="50" />
+        </property>
+        <property name="fromrouting" type="string">
+            <column name="FROMROUTING" />
+        </property>
+        <property name="torouting" type="string">
+            <column name="TOROUTING" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="approver" type="string">
+            <column name="APPROVER" length="50" />
+        </property>
+        <property name="approvetime" type="date">
+            <column name="APPROVETIME" length="7" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="500" />
+        </property>
+        <property name="ecostate" type="string">
+            <column name="ECOSTATE" length="50" />
+        </property>
+        <property name="manhourstate" type="string">
+            <column name="MANHOURSTATE" length="50" />
+        </property>
+        <property name="validdate" type="date">
+            <column name="VALIDDATE" length="7" />
+        </property>
+        <property name="wipbatchs" type="string">
+            <column name="WIPBATCHS" length="1500" />
+        </property>
+        <property name="wipstate" type="string">
+            <column name="WIPSTATE" length="50" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" not-null="true" />
+        </property>
+        <property name="relateddept" type="string">
+            <column name="RELATEDDEPT" />
+        </property>
+        <property name="relateddeptname" type="string">
+            <column name="RELATEDDEPTNAME" />
+        </property>
+        <property name="isLongValidity" type="java.lang.Boolean">
+            <column name="IS_LONG_VALIDITY" precision="1" scale="0" />
+        </property>
+        <set name="TTaskEcos" table="T_TASK_ECO" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="CHANGEUID" length="10" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.TTaskEco" />
+        </set>
+    </class>
+</hibernate-mapping>

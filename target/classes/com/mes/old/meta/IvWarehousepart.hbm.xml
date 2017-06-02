@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IvWarehousepart" table="IV_WAREHOUSEPART" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IvWarehousepartId">
+            <key-property name="warehouseid" type="string">
+                <column name="WAREHOUSEID" length="50" />
+            </key-property>
+            <key-property name="warehousename" type="string">
+                <column name="WAREHOUSENAME" length="50" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="100" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" length="50" />
+            </key-property>
+            <key-property name="totalNum" type="big_decimal">
+                <column name="TOTAL_NUM" precision="10" scale="4" />
+            </key-property>
+            <key-property name="ableDataNum" type="big_decimal">
+                <column name="ABLE_DATA_NUM" precision="10" scale="4" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

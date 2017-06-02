@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MvQuality" table="MV_QUALITY" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MvQualityId">
+            <key-property name="deptno" type="string">
+                <column name="DEPTNO" length="50" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="splydate" type="date">
+                <column name="SPLYDATE" length="7" />
+            </key-property>
+            <key-property name="prtlotno" type="string">
+                <column name="PRTLOTNO" />
+            </key-property>
+            <key-property name="lotno" type="string">
+                <column name="LOTNO" />
+            </key-property>
+            <key-property name="chkoutqty" type="big_decimal">
+                <column name="CHKOUTQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="itemno" type="string">
+                <column name="ITEMNO" length="50" />
+            </key-property>
+            <key-property name="prtno" type="string">
+                <column name="PRTNO" />
+            </key-property>
+            <key-property name="workid1" type="string">
+                <column name="WORKID1" />
+            </key-property>
+            <key-property name="material" type="string">
+                <column name="MATERIAL" />
+            </key-property>
+            <key-property name="materialid" type="string">
+                <column name="MATERIALID" length="100" />
+            </key-property>
+            <key-property name="prntno" type="string">
+                <column name="PRNTNO" />
+            </key-property>
+            <key-property name="overcode" type="string">
+                <column name="OVERCODE" />
+            </key-property>
+            <key-property name="washer" type="string">
+                <column name="WASHER" length="50" />
+            </key-property>
+            <key-property name="washname" type="string">
+                <column name="WASHNAME" length="100" />
+            </key-property>
+            <key-property name="extdate" type="string">
+                <column name="EXTDATE" length="10" />
+            </key-property>
+            <key-property name="maintenancer" type="string">
+                <column name="MAINTENANCER" length="50" />
+            </key-property>
+            <key-property name="oilname" type="string">
+                <column name="OILNAME" length="100" />
+            </key-property>
+            <key-property name="extrckdate" type="string">
+                <column name="EXTRCKDATE" length="10" />
+            </key-property>
+            <key-property name="checkercode" type="string">
+                <column name="CHECKERCODE" length="100" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="100" />
+            </key-property>
+            <key-property name="chkname" type="string">
+                <column name="CHKNAME" length="100" />
+            </key-property>
+            <key-property name="customerchecker" type="string">
+                <column name="CUSTOMERCHECKER" length="50" />
+            </key-property>
+            <key-property name="armycheckqc" type="java.lang.Byte">
+                <column name="ARMYCHECKQC" precision="2" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

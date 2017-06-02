@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TScheduleParttask" table="T_SCHEDULE_PARTTASK" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TScheduleParttaskId">
+            <key-property name="scheduleuid" type="string">
+                <column name="SCHEDULEUID" />
+            </key-property>
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="TScheduleHeader" class="com.mes.old.TScheduleHeader" update="false" insert="false" fetch="select">
+            <column name="SCHEDULEUID" not-null="true" />
+        </many-to-one>
+        <property name="earlystart" type="date">
+            <column name="EARLYSTART" length="7" />
+        </property>
+        <property name="latefinish" type="date">
+            <column name="LATEFINISH" length="7" />
+        </property>
+        <property name="planstart" type="date">
+            <column name="PLANSTART" length="7" />
+        </property>
+        <property name="planfinish" type="date">
+            <column name="PLANFINISH" length="7" />
+        </property>
+        <property name="priority" type="java.lang.Long">
+            <column name="PRIORITY" precision="10" scale="0" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" />
+        </property>
+        <property name="psduration" type="big_decimal">
+            <column name="PSDURATION" precision="20" scale="0" />
+        </property>
+        <property name="remainwork" type="big_decimal">
+            <column name="REMAINWORK" precision="20" scale="0" />
+        </property>
+        <property name="remainCriticalWork" type="big_decimal">
+            <column name="REMAIN_CRITICAL_WORK" precision="20" scale="0" />
+        </property>
+        <property name="issuccess" type="java.lang.Long">
+            <column name="ISSUCCESS" precision="10" scale="0" />
+        </property>
+        <property name="locked" type="java.lang.Boolean">
+            <column name="LOCKED" precision="1" scale="0" />
+        </property>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER" length="50" />
+        </property>
+        <property name="batchnum" type="string">
+            <column name="BATCHNUM" length="555" />
+        </property>
+        <property name="taskstate" type="java.lang.Long">
+            <column name="TASKSTATE" precision="10" scale="0" />
+        </property>
+        <property name="planqty" type="big_decimal">
+            <column name="PLANQTY" precision="25" />
+        </property>
+        <property name="drawingid" type="string">
+            <column name="DRAWINGID" />
+        </property>
+        <property name="issplitted" type="java.lang.Boolean">
+            <column name="ISSPLITTED" precision="1" scale="0" />
+        </property>
+        <property name="slackfactor" type="big_decimal">
+            <column name="SLACKFACTOR" precision="10" />
+        </property>
+        <property name="partName" type="string">
+            <column name="PART_NAME" />
+        </property>
+        <property name="model" type="string">
+            <column name="MODEL" length="50" />
+        </property>
+        <property name="plangrade" type="java.lang.Long">
+            <column name="PLANGRADE" precision="10" scale="0" />
+        </property>
+        <property name="taskschedulestate" type="java.lang.Byte">
+            <column name="TASKSCHEDULESTATE" precision="2" scale="0" />
+        </property>
+        <property name="taskscheduletype" type="java.lang.Byte">
+            <column name="TASKSCHEDULETYPE" precision="2" scale="0" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" />
+        </property>
+        <property name="delaycost" type="java.lang.Long">
+            <column name="DELAYCOST" precision="10" scale="0" />
+        </property>
+        <property name="iscritical" type="java.lang.Byte">
+            <column name="ISCRITICAL" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#185;&#216;&#188;&#252;&#188;&#254;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

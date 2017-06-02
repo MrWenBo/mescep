@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4Deployprop" table="JBPM4_DEPLOYPROP" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4Deployment" class="com.mes.old.Jbpm4Deployment" fetch="select">
+            <column name="DEPLOYMENT_" scale="0" />
+        </many-to-one>
+        <property name="objname" type="string">
+            <column name="OBJNAME_" length="510" />
+        </property>
+        <property name="key" type="string">
+            <column name="KEY_" length="510" />
+        </property>
+        <property name="stringval" type="string">
+            <column name="STRINGVAL_" length="510" />
+        </property>
+        <property name="longval" type="big_decimal">
+            <column name="LONGVAL_" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

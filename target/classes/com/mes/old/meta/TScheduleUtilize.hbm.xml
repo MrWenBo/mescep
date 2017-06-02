@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TScheduleUtilize" table="T_SCHEDULE_UTILIZE" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TScheduleUtilizeId">
+            <key-property name="scheduleuid" type="string">
+                <column name="SCHEDULEUID" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="TScheduleHeader" class="com.mes.old.TScheduleHeader" update="false" insert="false" fetch="select">
+            <column name="SCHEDULEUID" not-null="true" />
+        </many-to-one>
+        <property name="resUtilize" type="big_decimal">
+            <column name="RES_UTILIZE" precision="10" scale="3" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="10" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="10" />
+        </property>
+        <property name="totalcapacitytime" type="big_decimal">
+            <column name="TOTALCAPACITYTIME" precision="10" />
+        </property>
+        <property name="totalfreetime" type="big_decimal">
+            <column name="TOTALFREETIME" precision="10" />
+        </property>
+        <property name="totalsetuptime" type="big_decimal">
+            <column name="TOTALSETUPTIME" precision="10" />
+        </property>
+        <property name="totalruntime" type="big_decimal">
+            <column name="TOTALRUNTIME" precision="10" />
+        </property>
+        <property name="workcentername" type="string">
+            <column name="WORKCENTERNAME" length="50" />
+        </property>
+        <property name="totallinkassignlag" type="big_decimal">
+            <column name="TOTALLINKASSIGNLAG" precision="20" />
+        </property>
+        <property name="workcenteruid" type="string">
+            <column name="WORKCENTERUID" length="50" />
+        </property>
+        <property name="resLoad" type="big_decimal">
+            <column name="RES_LOAD" precision="10" />
+        </property>
+        <property name="totalovertime" type="big_decimal">
+            <column name="TOTALOVERTIME" precision="10" />
+        </property>
+        <property name="segementNum" type="string">
+            <column name="SEGEMENT_NUM" length="50" />
+        </property>
+        <property name="totalwaittime" type="big_decimal">
+            <column name="TOTALWAITTIME" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

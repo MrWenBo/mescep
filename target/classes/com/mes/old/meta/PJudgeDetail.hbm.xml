@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.PJudgeDetail" table="P_JUDGE_DETAIL" schema="MES188" optimistic-lock="version">
+        <comment>&#198;&#192;&#201;&#243;&#181;&#165;&#207;&#234;&#199;&#233;</comment>
+        <composite-id name="id" class="com.mes.old.PJudgeDetailId">
+            <key-property name="judgeid" type="string">
+                <column name="JUDGEID" />
+            </key-property>
+            <key-property name="judgeseq" type="int">
+                <column name="JUDGESEQ" precision="6" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="PJudgeHeader" class="com.mes.old.PJudgeHeader" update="false" insert="false" fetch="select">
+            <column name="JUDGEID" not-null="true">
+                <comment>&#198;&#192;&#201;&#243;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </many-to-one>
+        <property name="partNumber" type="string">
+            <column name="PART_NUMBER">
+                <comment>&#198;&#192;&#201;&#243;&#185;&#164;&#190;&#223;&#206;&#239;&#193;&#207;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="requireNum" type="java.lang.Integer">
+            <column name="REQUIRE_NUM" precision="6" scale="0">
+                <comment>&#208;&#232;&#199;&#243;&#181;&#196;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="judgeNum" type="java.lang.Integer">
+            <column name="JUDGE_NUM" precision="6" scale="0">
+                <comment>&#210;&#209;&#190;&#173;&#205;&#234;&#179;&#201;&#198;&#192;&#201;&#243;&#181;&#196;&#202;&#253;&#193;&#191;</comment>
+            </column>
+        </property>
+        <property name="relationOrder" type="string">
+            <column name="RELATION_ORDER">
+                <comment>&#185;&#216;&#193;&#170;&#182;&#169;&#181;&#165;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="itemJudgeState" type="string">
+            <column name="ITEM_JUDGE_STATE" length="50">
+                <comment>&#198;&#192;&#201;&#243;&#181;&#165;&#215;&#180;&#204;&#172;</comment>
+            </column>
+        </property>
+        <property name="isFinishJudge" type="string">
+            <column name="IS_FINISH_JUDGE" length="50">
+                <comment>&#202;&#199;&#183;&#241;&#205;&#234;&#179;&#201;&#198;&#192;&#201;&#243;</comment>
+            </column>
+        </property>
+        <property name="finalTime" type="date">
+            <column name="FINAL_TIME" length="7">
+                <comment>&#198;&#192;&#201;&#243;&#207;&#238;&#198;&#192;&#201;&#243;&#198;&#218;&#207;&#222;</comment>
+            </column>
+        </property>
+        <property name="nextTime" type="date">
+            <column name="NEXT_TIME" length="7">
+                <comment>&#207;&#194;&#180;&#206;&#198;&#192;&#201;&#243;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="uinqueid" type="string">
+            <column name="UINQUEID" not-null="true" unique="true">
+                <comment>Hibernate&#202;&#185;&#211;&#195;&#181;&#196;&#206;&#168;&#210;&#187;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="totalqty" type="big_decimal">
+            <column name="TOTALQTY" precision="10" />
+        </property>
+    </class>
+</hibernate-mapping>

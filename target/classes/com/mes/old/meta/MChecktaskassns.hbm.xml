@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MChecktaskassns" table="M_CHECKTASKASSNS" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MChecktaskassnsId">
+            <key-property name="uniqueid" type="string">
+                <column name="UNIQUEID" />
+            </key-property>
+            <key-property name="checktaskuid" type="string">
+                <column name="CHECKTASKUID" />
+            </key-property>
+            <key-property name="checker" type="string">
+                <column name="CHECKER" length="50" />
+            </key-property>
+            <key-property name="creator" type="string">
+                <column name="CREATOR" length="50" />
+            </key-property>
+            <key-property name="createtime" type="date">
+                <column name="CREATETIME" length="7" />
+            </key-property>
+            <key-property name="checkassnstate" type="java.lang.Byte">
+                <column name="CHECKASSNSTATE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="assnstart" type="date">
+                <column name="ASSNSTART" length="7" />
+            </key-property>
+            <key-property name="assnfinish" type="date">
+                <column name="ASSNFINISH" length="7" />
+            </key-property>
+            <key-property name="assnqty" type="big_decimal">
+                <column name="ASSNQTY" precision="10" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="completeqty" type="big_decimal">
+                <column name="COMPLETEQTY" precision="10" />
+            </key-property>
+            <key-property name="ncProgramed" type="java.lang.Boolean">
+                <column name="NC_PROGRAMED" precision="1" scale="0" />
+            </key-property>
+        </composite-id>
+        <many-to-one name="MChecktasks" class="com.mes.old.MChecktasks" update="false" insert="false" fetch="select">
+            <column name="CHECKTASKUID" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

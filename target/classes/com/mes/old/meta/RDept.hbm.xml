@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RDept" table="R_DEPT" schema="MES188" optimistic-lock="version">
+        <comment>&#178;&#191;&#195;&#197;</comment>
+        <id name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="leaderid" type="string">
+            <column name="LEADERID" length="50">
+                <comment>&#184;&#186;&#212;&#240;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="deptname" type="string">
+            <column name="DEPTNAME" length="50">
+                <comment>&#178;&#187;&#195;&#197;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="contactid" type="string">
+            <column name="CONTACTID" length="50">
+                <comment>&#193;&#170;&#207;&#181;&#200;&#203;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="creatorid" type="string">
+            <column name="CREATORID" length="50">
+                <comment>&#180;&#180;&#189;&#168;&#200;&#203;</comment>
+            </column>
+        </property>
+        <property name="depttype" type="big_decimal">
+            <column name="DEPTTYPE" precision="22" scale="0">
+                <comment>&#178;&#191;&#195;&#197;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7">
+                <comment>&#189;&#168;&#193;&#162;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="superdeptid" type="string">
+            <column name="SUPERDEPTID" length="50">
+                <comment>&#201;&#207;&#188;&#182;&#178;&#191;&#195;&#197;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="50">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="schemaid" type="string">
+            <column name="SCHEMAID" length="50">
+                <comment>&#191;&#205;&#187;&#167;&#181;&#196;&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="customerDeptid" type="string">
+            <column name="CUSTOMER_DEPTID" length="50" />
+        </property>
+        <property name="RDeptOutUid" type="string">
+            <column name="R_DEPT_OUT_UID" />
+        </property>
+        <property name="deptLevel" type="string">
+            <column name="DEPT_LEVEL" />
+        </property>
+        <property name="deptTreeCode" type="string">
+            <column name="DEPT_TREE_CODE" />
+        </property>
+        <set name="REmployees" table="R_EMPLOYEE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEPTID" length="20" not-null="true">
+                    <comment>&#203;&#249;&#202;&#244;&#178;&#191;&#195;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.REmployee" />
+        </set>
+        <set name="KIndicatorBoards" table="K_INDICATOR_BOARD" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEPTID" length="32">
+                    <comment>&#203;&#249;&#202;&#244;&#178;&#191;&#195;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.KIndicatorBoard" />
+        </set>
+        <set name="BDeptEquipmentses" table="B_DEPT_EQUIPMENTS" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEPTID" length="50" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.BDeptEquipments" />
+        </set>
+        <set name="RResources" table="R_RESOURCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEPTID" not-null="true">
+                    <comment>&#178;&#191;&#195;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.RResource" />
+        </set>
+        <set name="TChanges" table="T_CHANGE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="DEPTID" length="10" not-null="true">
+                    <comment>&#178;&#191;&#195;&#197;&#177;&#224;&#186;&#197;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.TChange" />
+        </set>
+    </class>
+</hibernate-mapping>

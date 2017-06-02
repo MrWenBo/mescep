@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BColumnAspectDetail" table="B_COLUMN_ASPECT_DETAIL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BColumnAspectDetailId">
+            <key-property name="configid" type="long">
+                <column name="CONFIGID" precision="10" scale="0" />
+            </key-property>
+            <key-property name="columnname" type="string">
+                <column name="COLUMNNAME" length="50" />
+            </key-property>
+        </composite-id>
+        <property name="align" type="string">
+            <column name="ALIGN" length="50">
+                <comment>&#186;&#225;&#207;&#242;&#182;&#212;&#198;&#235;&#183;&#189;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="allowclick" type="java.lang.Byte">
+            <column name="ALLOWCLICK" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#214;&#167;&#179;&#214;&#202;&#243;&#177;&#234;&#181;&#165;&#187;&#247;&#178;&#217;&#215;&#247;</comment>
+            </column>
+        </property>
+        <property name="allowsort" type="java.lang.Byte">
+            <column name="ALLOWSORT" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#214;&#167;&#179;&#214;&#197;&#197;&#208;&#242;</comment>
+            </column>
+        </property>
+        <property name="lable" type="string">
+            <column name="LABLE" length="50">
+                <comment>&#193;&#208;&#177;&#234;&#204;&#226;</comment>
+            </column>
+        </property>
+        <property name="readonly" type="java.lang.Byte">
+            <column name="READONLY" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#214;&#187;&#182;&#193;</comment>
+            </column>
+        </property>
+        <property name="tag" type="string">
+            <column name="TAG" length="50">
+                <comment>&#215;&#212;&#182;&#168;&#210;&#229;&#208;&#197;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="tooltip" type="string">
+            <column name="TOOLTIP" length="50">
+                <comment>&#204;&#225;&#202;&#190;&#208;&#197;&#207;&#162;</comment>
+            </column>
+        </property>
+        <property name="valign" type="string">
+            <column name="VALIGN" length="50">
+                <comment>&#180;&#185;&#214;&#177;&#182;&#212;&#198;&#235;&#183;&#189;&#202;&#189;</comment>
+            </column>
+        </property>
+        <property name="visible" type="java.lang.Byte">
+            <column name="VISIBLE" precision="2" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#191;&#201;&#188;&#251;</comment>
+            </column>
+        </property>
+        <property name="width" type="string">
+            <column name="WIDTH" length="50">
+                <comment>&#191;&#237;&#182;&#200;</comment>
+            </column>
+        </property>
+    </class>
+</hibernate-mapping>

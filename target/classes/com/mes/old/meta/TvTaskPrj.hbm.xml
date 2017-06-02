@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvTaskPrj" table="TV_TASK_PRJ" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvTaskPrjId">
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="taskname" type="string">
+                <column name="TASKNAME" />
+            </key-property>
+            <key-property name="startendmark" type="java.lang.Long">
+                <column name="STARTENDMARK" precision="10" scale="0" />
+            </key-property>
+            <key-property name="taskstate" type="big_decimal">
+                <column name="TASKSTATE" precision="20" scale="6" />
+            </key-property>
+            <key-property name="model" type="string">
+                <column name="MODEL" />
+            </key-property>
+            <key-property name="batchnum" type="string">
+                <column name="BATCHNUM" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="latestart" type="date">
+                <column name="LATESTART" length="7" />
+            </key-property>
+            <key-property name="latefinish" type="date">
+                <column name="LATEFINISH" length="7" />
+            </key-property>
+            <key-property name="constrainttype" type="java.lang.Long">
+                <column name="CONSTRAINTTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="constraintdate" type="date">
+                <column name="CONSTRAINTDATE" length="7" />
+            </key-property>
+            <key-property name="planstart" type="date">
+                <column name="PLANSTART" length="7" />
+            </key-property>
+            <key-property name="planfinish" type="date">
+                <column name="PLANFINISH" length="7" />
+            </key-property>
+            <key-property name="planstate" type="java.lang.Long">
+                <column name="PLANSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="schedulestart" type="date">
+                <column name="SCHEDULESTART" length="7" />
+            </key-property>
+            <key-property name="schedulefinish" type="date">
+                <column name="SCHEDULEFINISH" length="7" />
+            </key-property>
+            <key-property name="actualstart" type="date">
+                <column name="ACTUALSTART" length="7" />
+            </key-property>
+            <key-property name="actualfinish" type="date">
+                <column name="ACTUALFINISH" length="7" />
+            </key-property>
+            <key-property name="earlystart" type="date">
+                <column name="EARLYSTART" length="7" />
+            </key-property>
+            <key-property name="earlyfinish" type="date">
+                <column name="EARLYFINISH" length="7" />
+            </key-property>
+            <key-property name="priority" type="java.lang.Long">
+                <column name="PRIORITY" precision="10" scale="0" />
+            </key-property>
+            <key-property name="tasktype" type="string">
+                <column name="TASKTYPE" length="50" />
+            </key-property>
+            <key-property name="taskwork" type="big_decimal">
+                <column name="TASKWORK" precision="25" scale="6" />
+            </key-property>
+            <key-property name="preoptime" type="big_decimal">
+                <column name="PREOPTIME" precision="25" scale="6" />
+            </key-property>
+            <key-property name="postoptime" type="big_decimal">
+                <column name="POSTOPTIME" precision="25" scale="6" />
+            </key-property>
+            <key-property name="runtime" type="big_decimal">
+                <column name="RUNTIME" precision="25" scale="6" />
+            </key-property>
+            <key-property name="estitaskwork" type="binary">
+                <column name="ESTITASKWORK" />
+            </key-property>
+            <key-property name="estipretime" type="string">
+                <column name="ESTIPRETIME" length="50" />
+            </key-property>
+            <key-property name="estiruntime" type="string">
+                <column name="ESTIRUNTIME" length="50" />
+            </key-property>
+            <key-property name="planqty" type="big_decimal">
+                <column name="PLANQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="completeqty" type="big_decimal">
+                <column name="COMPLETEQTY" precision="25" scale="6" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="mastershop" type="string">
+                <column name="MASTERSHOP" />
+            </key-property>
+            <key-property name="operationId" type="big_decimal">
+                <column name="OPERATION_ID" precision="10" />
+            </key-property>
+            <key-property name="operationIddesc" type="string">
+                <column name="OPERATION_IDDESC" />
+            </key-property>
+            <key-property name="parentuid" type="string">
+                <column name="PARENTUID" />
+            </key-property>
+            <key-property name="agreestate" type="java.lang.Byte">
+                <column name="AGREESTATE" precision="2" scale="0" />
+            </key-property>
+            <key-property name="locked" type="java.lang.Byte">
+                <column name="LOCKED" precision="2" scale="0" />
+            </key-property>
+            <key-property name="text1" type="string">
+                <column name="TEXT1" length="50" />
+            </key-property>
+            <key-property name="parttaskstate" type="big_decimal">
+                <column name="PARTTASKSTATE" precision="20" scale="6" />
+            </key-property>
+            <key-property name="partearlystart" type="date">
+                <column name="PARTEARLYSTART" length="7" />
+            </key-property>
+            <key-property name="partlatefinish" type="date">
+                <column name="PARTLATEFINISH" length="7" />
+            </key-property>
+            <key-property name="parttaskuid" type="string">
+                <column name="PARTTASKUID" />
+            </key-property>
+            <key-property name="partName" type="string">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="plangrade" type="java.lang.Long">
+                <column name="PLANGRADE" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

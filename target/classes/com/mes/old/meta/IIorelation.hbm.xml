@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.IIorelation" table="I_IORELATION" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.IIorelationId">
+            <key-property name="invioid" type="string">
+                <column name="INVIOID" />
+            </key-property>
+            <key-property name="seq" type="long">
+                <column name="SEQ" precision="10" scale="0" />
+            </key-property>
+            <key-property name="uinvioid" type="string">
+                <column name="UINVIOID" />
+            </key-property>
+            <key-property name="uinvioseq" type="long">
+                <column name="UINVIOSEQ" precision="10" scale="0" />
+            </key-property>
+        </composite-id>
+        <property name="uinvioqty" type="big_decimal">
+            <column name="UINVIOQTY" precision="25" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

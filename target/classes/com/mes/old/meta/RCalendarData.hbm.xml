@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.RCalendarData" table="R_CALENDAR_DATA" schema="MES188" optimistic-lock="version">
+        <comment>&#200;&#213;&#192;&#250;&#202;&#253;&#190;&#221;</comment>
+        <id name="cdUid" type="string">
+            <column name="CD_UID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="calUid" type="string">
+            <column name="CAL_UID" length="50">
+                <comment>&#200;&#213;&#192;&#250;&#177;&#224;&#186;&#197;</comment>
+            </column>
+        </property>
+        <property name="cdDayOrException" type="java.lang.Integer">
+            <column name="CD_DAY_OR_EXCEPTION" precision="5" scale="0">
+                <comment>&#185;&#164;&#215;&#247;&#200;&#213;</comment>
+            </column>
+        </property>
+        <property name="cdWorking" type="java.lang.Integer">
+            <column name="CD_WORKING" precision="5" scale="0">
+                <comment>&#202;&#199;&#183;&#241;&#185;&#164;&#215;&#247;</comment>
+            </column>
+        </property>
+        <property name="cdFromDate" type="date">
+            <column name="CD_FROM_DATE" length="7">
+                <comment>&#198;&#240;&#202;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdToDate" type="date">
+            <column name="CD_TO_DATE" length="7">
+                <comment>&#189;&#225;&#202;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdFromTime1" type="date">
+            <column name="CD_FROM_TIME1" length="7">
+                <comment>&#181;&#218;&#210;&#187;&#176;&#224;&#180;&#206;&#191;&#170;&#202;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdToTime1" type="date">
+            <column name="CD_TO_TIME1" length="7">
+                <comment>&#181;&#218;&#210;&#187;&#176;&#224;&#180;&#206;&#189;&#225;&#202;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdFromTime2" type="date">
+            <column name="CD_FROM_TIME2" length="7">
+                <comment>&#181;&#218;&#182;&#254;&#176;&#224;&#191;&#170;&#202;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdToTime2" type="date">
+            <column name="CD_TO_TIME2" length="7">
+                <comment>&#181;&#218;&#182;&#254;&#176;&#224;&#189;&#225;&#202;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdFromTime3" type="date">
+            <column name="CD_FROM_TIME3" length="7">
+                <comment>&#181;&#218;&#200;&#253;&#176;&#224;&#191;&#170;&#202;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdToTime3" type="date">
+            <column name="CD_TO_TIME3" length="7">
+                <comment>&#181;&#218;&#200;&#253;&#176;&#224;&#189;&#225;&#202;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdFromTime4" type="date">
+            <column name="CD_FROM_TIME4" length="7">
+                <comment>&#181;&#218;&#203;&#196;&#176;&#224;&#191;&#170;&#202;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdToTime4" type="date">
+            <column name="CD_TO_TIME4" length="7">
+                <comment>&#181;&#218;&#203;&#196;&#176;&#224;&#189;&#225;&#202;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdFromTime5" type="date">
+            <column name="CD_FROM_TIME5" length="7">
+                <comment>&#181;&#218;&#206;&#229;&#176;&#224;&#191;&#170;&#202;&#188;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="cdToTime5" type="date">
+            <column name="CD_TO_TIME5" length="7">
+                <comment>&#181;&#218;&#206;&#229;&#176;&#224;&#189;&#225;&#202;&#248;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="exceptionReason" type="string">
+            <column name="EXCEPTION_REASON" length="50">
+                <comment>&#192;&#253;&#205;&#226;&#212;&#173;&#210;&#242;</comment>
+            </column>
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="1000">
+                <comment>&#177;&#184;&#215;&#162;</comment>
+            </column>
+        </property>
+        <property name="resuid" type="string">
+            <column name="RESUID" length="20" />
+        </property>
+        <property name="cdFromTime6" type="date">
+            <column name="CD_FROM_TIME6" length="7" />
+        </property>
+        <property name="cdToTime6" type="date">
+            <column name="CD_TO_TIME6" length="7" />
+        </property>
+        <property name="cdFromTime7" type="date">
+            <column name="CD_FROM_TIME7" length="7" />
+        </property>
+        <property name="cdToTime7" type="date">
+            <column name="CD_TO_TIME7" length="7" />
+        </property>
+        <property name="cdFromTime8" type="date">
+            <column name="CD_FROM_TIME8" length="7" />
+        </property>
+        <property name="cdToTime8" type="date">
+            <column name="CD_TO_TIME8" length="7" />
+        </property>
+        <property name="RCalendarDataOutUid" type="string">
+            <column name="R_CALENDAR_DATA_OUT_UID" />
+        </property>
+        <property name="effective" type="java.lang.Boolean">
+            <column name="EFFECTIVE" precision="1" scale="0" />
+        </property>
+        <property name="invaliddate" type="date">
+            <column name="INVALIDDATE" length="7" />
+        </property>
+        <property name="exceptionType" type="string">
+            <column name="EXCEPTION_TYPE" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

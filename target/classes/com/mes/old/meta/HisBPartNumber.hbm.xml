@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.HisBPartNumber" table="HIS_B_PART_NUMBER" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.HisBPartNumberId">
+            <key-property name="partNumber" type="serializable">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="partName" type="serializable">
+                <column name="PART_NAME" />
+            </key-property>
+            <key-property name="unitPrice" type="serializable">
+                <column name="UNIT_PRICE" />
+            </key-property>
+            <key-property name="managementCost" type="serializable">
+                <column name="MANAGEMENT_COST" />
+            </key-property>
+            <key-property name="unitSpace" type="serializable">
+                <column name="UNIT_SPACE" />
+            </key-property>
+            <key-property name="unitCost" type="serializable">
+                <column name="UNIT_COST" />
+            </key-property>
+            <key-property name="customerName" type="serializable">
+                <column name="CUSTOMER_NAME" />
+            </key-property>
+            <key-property name="isPhantom" type="serializable">
+                <column name="IS_PHANTOM" />
+            </key-property>
+            <key-property name="demandPartNumber" type="serializable">
+                <column name="DEMAND_PART_NUMBER" />
+            </key-property>
+            <key-property name="partDescription" type="serializable">
+                <column name="PART_DESCRIPTION" />
+            </key-property>
+            <key-property name="ignoreConsolidationInterval" type="serializable">
+                <column name="IGNORE_CONSOLIDATION_INTERVAL" />
+            </key-property>
+            <key-property name="partBatchType" type="serializable">
+                <column name="PART_BATCH_TYPE" />
+            </key-property>
+            <key-property name="partBatchQuantity" type="serializable">
+                <column name="PART_BATCH_QUANTITY" />
+            </key-property>
+            <key-property name="partNumberAbcType" type="serializable">
+                <column name="PART_NUMBER_ABC_TYPE" />
+            </key-property>
+            <key-property name="partNumberType" type="serializable">
+                <column name="PART_NUMBER_TYPE" />
+            </key-property>
+            <key-property name="partQuantityShortTolerance" type="serializable">
+                <column name="PART_QUANTITY_SHORT_TOLERANCE" />
+            </key-property>
+            <key-property name="pqcToleranceIsPercent" type="serializable">
+                <column name="PQC_TOLERANCE_IS_PERCENT" />
+            </key-property>
+            <key-property name="productDept" type="serializable">
+                <column name="PRODUCT_DEPT" />
+            </key-property>
+            <key-property name="safetyStockBucketSpec" type="serializable">
+                <column name="SAFETY_STOCK_BUCKET_SPEC" />
+            </key-property>
+            <key-property name="safetyStockQuantity" type="serializable">
+                <column name="SAFETY_STOCK_QUANTITY" />
+            </key-property>
+            <key-property name="safetyStockPoLateTolerance" type="serializable">
+                <column name="SAFETY_STOCK_PO_LATE_TOLERANCE" />
+            </key-property>
+            <key-property name="sellable" type="serializable">
+                <column name="SELLABLE" />
+            </key-property>
+            <key-property name="stockPart" type="serializable">
+                <column name="STOCK_PART" />
+            </key-property>
+            <key-property name="subcontractedP" type="serializable">
+                <column name="SUBCONTRACTED_P" />
+            </key-property>
+            <key-property name="alternatePartUsageDelay" type="serializable">
+                <column name="ALTERNATE_PART_USAGE_DELAY" />
+            </key-property>
+            <key-property name="surplusUsageLateTolerance" type="serializable">
+                <column name="SURPLUS_USAGE_LATE_TOLERANCE" />
+            </key-property>
+            <key-property name="poLatenessTolerance" type="serializable">
+                <column name="PO_LATENESS_TOLERANCE" />
+            </key-property>
+            <key-property name="poShortnessTolerance" type="serializable">
+                <column name="PO_SHORTNESS_TOLERANCE" />
+            </key-property>
+            <key-property name="mfgConsolidationInterval" type="serializable">
+                <column name="MFG_CONSOLIDATION_INTERVAL" />
+            </key-property>
+            <key-property name="allOrNothingInventory" type="serializable">
+                <column name="ALL_OR_NOTHING_INVENTORY" />
+            </key-property>
+            <key-property name="allOrNothingCmo" type="serializable">
+                <column name="ALL_OR_NOTHING_CMO" />
+            </key-property>
+            <key-property name="allOrNothingSurplus" type="serializable">
+                <column name="ALL_OR_NOTHING_SURPLUS" />
+            </key-property>
+            <key-property name="allowMixedAlternateRoutings" type="serializable">
+                <column name="ALLOW_MIXED_ALTERNATE_ROUTINGS" />
+            </key-property>
+            <key-property name="alternateQuantityTolerance" type="serializable">
+                <column name="ALTERNATE_QUANTITY_TOLERANCE" />
+            </key-property>
+            <key-property name="supplyToTry" type="serializable">
+                <column name="SUPPLY_TO_TRY" />
+            </key-property>
+            <key-property name="allowedMaxInventoryQuantity" type="serializable">
+                <column name="ALLOWED_MAX_INVENTORY_QUANTITY" />
+            </key-property>
+            <key-property name="isCriticalPart" type="serializable">
+                <column name="IS_CRITICAL_PART" />
+            </key-property>
+            <key-property name="partConfigurationRule" type="serializable">
+                <column name="PART_CONFIGURATION_RULE" />
+            </key-property>
+            <key-property name="manufacturedType" type="serializable">
+                <column name="MANUFACTURED_TYPE" />
+            </key-property>
+            <key-property name="plannedManufacturingTime" type="serializable">
+                <column name="PLANNED_MANUFACTURING_TIME" />
+            </key-property>
+            <key-property name="leadTimeType" type="serializable">
+                <column name="LEAD_TIME_TYPE" />
+            </key-property>
+            <key-property name="leadTime" type="serializable">
+                <column name="LEAD_TIME" />
+            </key-property>
+            <key-property name="mrpMethodType" type="serializable">
+                <column name="MRP_METHOD_TYPE" />
+            </key-property>
+            <key-property name="partTrackingType" type="serializable">
+                <column name="PART_TRACKING_TYPE" />
+            </key-property>
+            <key-property name="manufacturedExpectation" type="serializable">
+                <column name="MANUFACTURED_EXPECTATION" />
+            </key-property>
+            <key-property name="allowedMinInventoryQuantity" type="serializable">
+                <column name="ALLOWED_MIN_INVENTORY_QUANTITY" />
+            </key-property>
+            <key-property name="partNotes" type="serializable">
+                <column name="PART_NOTES" />
+            </key-property>
+            <key-property name="techCondition" type="serializable">
+                <column name="TECH_CONDITION" />
+            </key-property>
+            <key-property name="partSort2" type="serializable">
+                <column name="PART_SORT2" />
+            </key-property>
+            <key-property name="partstyle" type="serializable">
+                <column name="PARTSTYLE" />
+            </key-property>
+            <key-property name="effective" type="serializable">
+                <column name="EFFECTIVE" />
+            </key-property>
+            <key-property name="drawingid" type="serializable">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="workcoefficient" type="serializable">
+                <column name="WORKCOEFFICIENT" />
+            </key-property>
+            <key-property name="versionid" type="serializable">
+                <column name="VERSIONID" />
+            </key-property>
+            <key-property name="changetime" type="serializable">
+                <column name="CHANGETIME" />
+            </key-property>
+            <key-property name="changer" type="serializable">
+                <column name="CHANGER" />
+            </key-property>
+            <key-property name="changereason" type="serializable">
+                <column name="CHANGEREASON" />
+            </key-property>
+            <key-property name="changeorder" type="serializable">
+                <column name="CHANGEORDER" />
+            </key-property>
+            <key-property name="changestate" type="serializable">
+                <column name="CHANGESTATE" />
+            </key-property>
+            <key-property name="creator" type="serializable">
+                <column name="CREATOR" />
+            </key-property>
+            <key-property name="createtime" type="serializable">
+                <column name="CREATETIME" />
+            </key-property>
+            <key-property name="uom" type="serializable">
+                <column name="UOM" />
+            </key-property>
+            <key-property name="barcode" type="serializable">
+                <column name="BARCODE" />
+            </key-property>
+            <key-property name="toolchecklevel" type="serializable">
+                <column name="TOOLCHECKLEVEL" />
+            </key-property>
+            <key-property name="dragsize" type="serializable">
+                <column name="DRAGSIZE" />
+            </key-property>
+            <key-property name="weight" type="serializable">
+                <column name="WEIGHT" />
+            </key-property>
+            <key-property name="supplystate" type="serializable">
+                <column name="SUPPLYSTATE" />
+            </key-property>
+            <key-property name="diameter" type="serializable">
+                <column name="DIAMETER" />
+            </key-property>
+            <key-property name="partLength" type="serializable">
+                <column name="PART_LENGTH" />
+            </key-property>
+            <key-property name="angle" type="serializable">
+                <column name="ANGLE" />
+            </key-property>
+            <key-property name="edgelength" type="serializable">
+                <column name="EDGELENGTH" />
+            </key-property>
+            <key-property name="edgenum" type="serializable">
+                <column name="EDGENUM" />
+            </key-property>
+            <key-property name="tineradius" type="serializable">
+                <column name="TINERADIUS" />
+            </key-property>
+            <key-property name="tineposition" type="serializable">
+                <column name="TINEPOSITION" />
+            </key-property>
+            <key-property name="usage" type="serializable">
+                <column name="USAGE" />
+            </key-property>
+            <key-property name="dispatchgrade" type="serializable">
+                <column name="DISPATCHGRADE" />
+            </key-property>
+            <key-property name="prepairwork" type="serializable">
+                <column name="PREPAIRWORK" />
+            </key-property>
+            <key-property name="isImportantPart" type="serializable">
+                <column name="IS_IMPORTANT_PART" />
+            </key-property>
+            <key-property name="barDiameter" type="serializable">
+                <column name="BAR_DIAMETER" />
+            </key-property>
+            <key-property name="pitch" type="serializable">
+                <column name="PITCH" />
+            </key-property>
+            <key-property name="ltoolsNumber" type="serializable">
+                <column name="LTOOLS_NUMBER" />
+            </key-property>
+            <key-property name="edgeAngle" type="serializable">
+                <column name="EDGE_ANGLE" />
+            </key-property>
+            <key-property name="plangrade" type="serializable">
+                <column name="PLANGRADE" />
+            </key-property>
+            <key-property name="ltoolsStyle" type="serializable">
+                <column name="LTOOLS_STYLE" />
+            </key-property>
+            <key-property name="cutDiameter" type="serializable">
+                <column name="CUT_DIAMETER" />
+            </key-property>
+            <key-property name="shankLength" type="serializable">
+                <column name="SHANK_LENGTH" />
+            </key-property>
+            <key-property name="invalidTime" type="serializable">
+                <column name="INVALID_TIME" />
+            </key-property>
+            <key-property name="checkupTime" type="serializable">
+                <column name="CHECKUP_TIME" />
+            </key-property>
+            <key-property name="maintenanceTime" type="serializable">
+                <column name="MAINTENANCE_TIME" />
+            </key-property>
+            <key-property name="needCustomcheck" type="serializable">
+                <column name="NEED_CUSTOMCHECK" />
+            </key-property>
+            <key-property name="partnumberTypePdm" type="serializable">
+                <column name="PARTNUMBER_TYPE_PDM" />
+            </key-property>
+            <key-property name="ioPriority" type="serializable">
+                <column name="IO_PRIORITY" />
+            </key-property>
+            <key-property name="orderPointStockQuantity" type="serializable">
+                <column name="ORDER_POINT_STOCK_QUANTITY" />
+            </key-property>
+            <key-property name="checkTime" type="serializable">
+                <column name="CHECK_TIME" />
+            </key-property>
+            <key-property name="borrowTime" type="serializable">
+                <column name="BORROW_TIME" />
+            </key-property>
+            <key-property name="lifeTime" type="serializable">
+                <column name="LIFE_TIME" />
+            </key-property>
+            <key-property name="prepareLeadTime" type="serializable">
+                <column name="PREPARE_LEAD_TIME" />
+            </key-property>
+            <key-property name="isassembled" type="serializable">
+                <column name="ISASSEMBLED" />
+            </key-property>
+            <key-property name="BPartNumberOutUid" type="serializable">
+                <column name="B_PART_NUMBER_OUT_UID" />
+            </key-property>
+            <key-property name="productPhase" type="serializable">
+                <column name="PRODUCT_PHASE" />
+            </key-property>
+            <key-property name="seriesPartUid" type="serializable">
+                <column name="SERIES_PART_UID" />
+            </key-property>
+            <key-property name="realDrawingid" type="serializable">
+                <column name="REAL_DRAWINGID" />
+            </key-property>
+            <key-property name="mrpDept" type="serializable">
+                <column name="MRP_DEPT" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

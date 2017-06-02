@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MChecktool" table="M_CHECKTOOL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.MChecktoolId">
+            <key-property name="tooluid" type="string">
+                <column name="TOOLUID" length="100" />
+            </key-property>
+            <key-property name="toolName" type="string">
+                <column name="TOOL_NAME" />
+            </key-property>
+            <key-property name="lbound" type="string">
+                <column name="LBOUND" />
+            </key-property>
+            <key-property name="ubound" type="string">
+                <column name="UBOUND" />
+            </key-property>
+            <key-property name="precision" type="string">
+                <column name="PRECISION" length="50" />
+            </key-property>
+            <key-property name="inaccuracy" type="string">
+                <column name="INACCURACY" length="50" />
+            </key-property>
+            <key-property name="toolid" type="string">
+                <column name="TOOLID" />
+            </key-property>
+            <key-property name="barcode" type="string">
+                <column name="BARCODE" />
+            </key-property>
+            <key-property name="lboundy" type="string">
+                <column name="LBOUNDY" />
+            </key-property>
+            <key-property name="uboundy" type="string">
+                <column name="UBOUNDY" />
+            </key-property>
+            <key-property name="lboundz" type="string">
+                <column name="LBOUNDZ" />
+            </key-property>
+            <key-property name="uboundz" type="string">
+                <column name="UBOUNDZ" />
+            </key-property>
+            <key-property name="classid" type="string">
+                <column name="CLASSID" />
+            </key-property>
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

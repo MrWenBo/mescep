@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jbpm4Task" table="JBPM4_TASK" schema="MES188" optimistic-lock="version">
+        <id name="dbid" type="big_decimal">
+            <column name="DBID_" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="jbpm4Swimlane" class="com.mes.old.Jbpm4Swimlane" fetch="select">
+            <column name="SWIMLANE_" scale="0" />
+        </many-to-one>
+        <many-to-one name="jbpm4Task" class="com.mes.old.Jbpm4Task" fetch="select">
+            <column name="SUPERTASK_" scale="0" />
+        </many-to-one>
+        <property name="class_" type="string">
+            <column name="CLASS_" length="2" not-null="true" />
+        </property>
+        <property name="dbversion" type="long">
+            <column name="DBVERSION_" precision="10" scale="0" not-null="true" />
+        </property>
+        <property name="name" type="string">
+            <column name="NAME_" length="510" />
+        </property>
+        <property name="descr" type="clob">
+            <column name="DESCR_" />
+        </property>
+        <property name="state" type="string">
+            <column name="STATE_" length="510" />
+        </property>
+        <property name="susphiststate" type="string">
+            <column name="SUSPHISTSTATE_" length="510" />
+        </property>
+        <property name="assignee" type="string">
+            <column name="ASSIGNEE_" length="510" />
+        </property>
+        <property name="form" type="string">
+            <column name="FORM_" length="510" />
+        </property>
+        <property name="priority" type="java.lang.Long">
+            <column name="PRIORITY_" precision="10" scale="0" />
+        </property>
+        <property name="create" type="serializable">
+            <column name="CREATE_" />
+        </property>
+        <property name="duedate" type="serializable">
+            <column name="DUEDATE_" />
+        </property>
+        <property name="progress" type="java.lang.Long">
+            <column name="PROGRESS_" precision="10" scale="0" />
+        </property>
+        <property name="signalling" type="java.lang.Boolean">
+            <column name="SIGNALLING_" precision="1" scale="0" />
+        </property>
+        <property name="executionId" type="string">
+            <column name="EXECUTION_ID_" length="510" />
+        </property>
+        <property name="activityName" type="string">
+            <column name="ACTIVITY_NAME_" length="510" />
+        </property>
+        <property name="hasvars" type="java.lang.Boolean">
+            <column name="HASVARS_" precision="1" scale="0" />
+        </property>
+        <property name="execution" type="big_decimal">
+            <column name="EXECUTION_" scale="0" />
+        </property>
+        <property name="procinst" type="big_decimal">
+            <column name="PROCINST_" scale="0" />
+        </property>
+        <property name="taskdefname" type="string">
+            <column name="TASKDEFNAME_" length="510" />
+        </property>
+        <set name="jbpm4Participations" table="JBPM4_PARTICIPATION" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASK_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.Jbpm4Participation" />
+        </set>
+        <set name="jbpm4Variables" table="JBPM4_VARIABLE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="TASK_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.Jbpm4Variable" />
+        </set>
+        <set name="jbpm4Tasks" table="JBPM4_TASK" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="SUPERTASK_" scale="0" />
+            </key>
+            <one-to-many class="com.mes.old.Jbpm4Task" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.BToolBom" table="B_TOOL_BOM" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.BToolBomId">
+            <key-property name="partNumber" type="string">
+                <column name="PART_NUMBER" />
+            </key-property>
+            <key-property name="childPartNumber" type="string">
+                <column name="CHILD_PART_NUMBER" />
+            </key-property>
+        </composite-id>
+        <property name="relationQty" type="big_decimal">
+            <column name="RELATION_QTY" precision="25" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

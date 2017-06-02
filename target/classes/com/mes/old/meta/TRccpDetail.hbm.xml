@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TRccpDetail" table="T_RCCP_DETAIL" schema="MES188" optimistic-lock="version">
+        <id name="uniqueid" type="string">
+            <column name="UNIQUEID" length="50" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="TRccpHeader" class="com.mes.old.TRccpHeader" fetch="select">
+            <column name="RCCP_UID" length="50" not-null="true" />
+        </many-to-one>
+        <property name="mastershopuid" type="string">
+            <column name="MASTERSHOPUID" length="50" />
+        </property>
+        <property name="deviceClassUid" type="string">
+            <column name="DEVICE_CLASS_UID" length="50" />
+        </property>
+        <property name="workcenteruid" type="string">
+            <column name="WORKCENTERUID" length="50" not-null="true" />
+        </property>
+        <property name="resUtilize" type="big_decimal">
+            <column name="RES_UTILIZE" precision="10" scale="3" />
+        </property>
+        <property name="resLoad" type="big_decimal">
+            <column name="RES_LOAD" precision="10" />
+        </property>
+        <property name="totalcapacitytime" type="big_decimal">
+            <column name="TOTALCAPACITYTIME" precision="10" />
+        </property>
+        <property name="totalsetuptime" type="big_decimal">
+            <column name="TOTALSETUPTIME" precision="10" />
+        </property>
+        <property name="totalruntime" type="big_decimal">
+            <column name="TOTALRUNTIME" precision="10" />
+        </property>
+        <property name="totalrequiretime" type="big_decimal">
+            <column name="TOTALREQUIRETIME" precision="10" />
+        </property>
+        <property name="segment" type="string">
+            <column name="SEGMENT" length="50" />
+        </property>
+        <property name="segmentType" type="string">
+            <column name="SEGMENT_TYPE" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

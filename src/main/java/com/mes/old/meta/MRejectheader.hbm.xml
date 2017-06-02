@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.MRejectheader" table="M_REJECTHEADER" schema="MES188">
+        <id name="rejectuid" type="string">
+            <column name="REJECTUID" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="string">
+            <column name="VERSION" length="50" />
+        </version>
+        <many-to-one name="MDefectjudgeheader" class="com.mes.old.MDefectjudgeheader" fetch="select">
+            <column name="DEFECTJUDGEUID" length="50" />
+        </many-to-one>
+        <property name="createtime" type="date">
+            <column name="CREATETIME" length="7" />
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="50" />
+        </property>
+        <property name="rejectid" type="string">
+            <column name="REJECTID" length="50" not-null="true" />
+        </property>
+        <property name="taskuid" type="string">
+            <column name="TASKUID" />
+        </property>
+        <property name="dutier" type="string">
+            <column name="DUTIER" length="50" />
+        </property>
+        <property name="rejectqty" type="big_decimal">
+            <column name="REJECTQTY" precision="20" scale="0" />
+        </property>
+        <property name="checkmanager" type="string">
+            <column name="CHECKMANAGER" length="50" />
+        </property>
+        <property name="dutydeptmanager" type="string">
+            <column name="DUTYDEPTMANAGER" length="50" />
+        </property>
+        <property name="wastehour" type="big_decimal">
+            <column name="WASTEHOUR" precision="20" scale="0" />
+        </property>
+        <property name="wastematerialmoney" type="big_decimal">
+            <column name="WASTEMATERIALMONEY" precision="20" scale="0" />
+        </property>
+        <property name="wasteworkmoney" type="big_decimal">
+            <column name="WASTEWORKMONEY" precision="20" scale="0" />
+        </property>
+        <property name="dutydeptid" type="string">
+            <column name="DUTYDEPTID" length="50" />
+        </property>
+        <property name="customerid" type="string">
+            <column name="CUSTOMERID" length="50" />
+        </property>
+        <property name="defectreason" type="string">
+            <column name="DEFECTREASON" length="2000" />
+        </property>
+        <property name="notes" type="string">
+            <column name="NOTES" length="2000" />
+        </property>
+        <property name="checker" type="string">
+            <column name="CHECKER" length="50" />
+        </property>
+        <property name="rejectstate" type="java.lang.Long">
+            <column name="REJECTSTATE" precision="10" scale="0" />
+        </property>
+        <property name="isinbulk" type="java.lang.Long">
+            <column name="ISINBULK" precision="10" scale="0" />
+        </property>
+        <property name="deptid" type="string">
+            <column name="DEPTID" length="50" />
+        </property>
+        <property name="attatchref" type="string">
+            <column name="ATTATCHREF" />
+        </property>
+        <property name="checktime" type="date">
+            <column name="CHECKTIME" length="7" />
+        </property>
+        <property name="segementmanager" type="string">
+            <column name="SEGEMENTMANAGER" length="50" />
+        </property>
+        <property name="checkerprint" type="string">
+            <column name="CHECKERPRINT" length="50" />
+        </property>
+        <property name="isineffect" type="java.lang.Long">
+            <column name="ISINEFFECT" precision="10" scale="0" />
+        </property>
+        <property name="approvestate" type="java.lang.Long">
+            <column name="APPROVESTATE" precision="10" scale="0" />
+        </property>
+        <property name="approveperson" type="string">
+            <column name="APPROVEPERSON" length="50" />
+        </property>
+        <property name="billnumber" type="string">
+            <column name="BILLNUMBER" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="materialusn" type="string">
+            <column name="MATERIALUSN" />
+        </property>
+        <property name="qtyappearance" type="big_decimal">
+            <column name="QTYAPPEARANCE" precision="20" />
+        </property>
+        <property name="qtydimension" type="big_decimal">
+            <column name="QTYDIMENSION" precision="20" />
+        </property>
+        <property name="text1" type="string">
+            <column name="TEXT1" length="50">
+                <comment>&#187;&#225;&#188;&#198;&#212;&#177;</comment>
+            </column>
+        </property>
+        <set name="MRejectdetails" table="M_REJECTDETAIL" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="REJECTUID" not-null="true" />
+            </key>
+            <one-to-many class="com.mes.old.MRejectdetail" />
+        </set>
+    </class>
+</hibernate-mapping>

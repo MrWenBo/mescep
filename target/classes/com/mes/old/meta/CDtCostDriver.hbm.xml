@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.CDtCostDriver" table="C_DT_COST_DRIVER" schema="MES188" optimistic-lock="version">
+        <comment>&#179;&#201;&#177;&#190;&#182;&#175;&#210;&#242;&#187;&#249;&#180;&#161;&#202;&#253;&#190;&#221;</comment>
+        <id name="costDriverId" type="string">
+            <column name="COST_DRIVER_ID" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="CCostCenter" class="com.mes.old.CCostCenter" fetch="select">
+            <column name="COST_CENTER_ID" length="100" />
+        </many-to-one>
+        <property name="costDriverName" type="string">
+            <column name="COST_DRIVER_NAME" length="100">
+                <comment>&#182;&#175;&#210;&#242;&#195;&#251;&#179;&#198;</comment>
+            </column>
+        </property>
+        <property name="costDriverType" type="java.lang.Long">
+            <column name="COST_DRIVER_TYPE" precision="10" scale="0">
+                <comment>&#182;&#175;&#210;&#242;&#192;&#224;&#208;&#205;</comment>
+            </column>
+        </property>
+        <property name="uom" type="string">
+            <column name="UOM" length="100">
+                <comment>&#188;&#198;&#193;&#191;&#181;&#165;&#206;&#187;</comment>
+            </column>
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7">
+                <comment>&#180;&#180;&#189;&#168;&#202;&#177;&#188;&#228;</comment>
+            </column>
+        </property>
+        <property name="creator" type="string">
+            <column name="CREATOR" length="100">
+                <comment>&#180;&#180;&#189;&#168;&#213;&#223;</comment>
+            </column>
+        </property>
+        <set name="CCostObjectAccounts" table="C_COST_OBJECT_ACCOUNT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_DRIVER_ID" length="100">
+                    <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CCostObjectAccount" />
+        </set>
+        <set name="CDtActivities" table="C_DT_ACTIVITY" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_DRIVER_ID" length="100">
+                    <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CDtActivity" />
+        </set>
+        <set name="CRtAllocateSteps" table="C_RT_ALLOCATE_STEP" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_DRIVER_ID" length="100" />
+            </key>
+            <one-to-many class="com.mes.old.CRtAllocateStep" />
+        </set>
+        <set name="CDtResources" table="C_DT_RESOURCE" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_DRIVER_ID" length="100">
+                    <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CDtResource" />
+        </set>
+        <set name="CDtResourceAccounts" table="C_DT_RESOURCE_ACCOUNT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_DRIVER_ID" length="100">
+                    <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CDtResourceAccount" />
+        </set>
+        <set name="CDtCostObjects" table="C_DT_COST_OBJECT" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_DRIVER_ID" length="100">
+                    <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CDtCostObject" />
+        </set>
+        <set name="CDtAllocateSteps" table="C_DT_ALLOCATE_STEP" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_DRIVER_ID" length="100" />
+            </key>
+            <one-to-many class="com.mes.old.CDtAllocateStep" />
+        </set>
+        <set name="CRtCostDrivers" table="C_RT_COST_DRIVER" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="COST_DRIVER_ID" length="100">
+                    <comment>&#182;&#175;&#210;&#242;&#180;&#250;&#194;&#235;</comment>
+                </column>
+            </key>
+            <one-to-many class="com.mes.old.CRtCostDriver" />
+        </set>
+    </class>
+</hibernate-mapping>

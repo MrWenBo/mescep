@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.Jobshop&#179;&#181;&#188;&#228;24&#208;&#161;&#202;&#177;&#196;&#218;&#178;&#187;&#186;&#207;&#184;&#241;&#198;&#183;"
+    table="JOBSHOP_&#179;&#181;&#188;&#228;24&#208;&#161;&#202;&#177;&#196;&#218;&#178;&#187;&#186;&#207;&#184;&#241;&#198;&#183;" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.Jobshop&#179;&#181;&#188;&#228;24&#208;&#161;&#202;&#177;&#196;&#218;&#178;&#187;&#186;&#207;&#184;&#241;&#198;&#183;Id">
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="bigclassname" type="string">
+                <column name="BIGCLASSNAME" />
+            </key-property>
+            <key-property name="classname" type="string">
+                <column name="CLASSNAME" />
+            </key-property>
+            <key-property name="drawingid" type="string">
+                <column name="DRAWINGID" />
+            </key-property>
+            <key-property name="waitproccount" type="big_decimal">
+                <column name="WAITPROCCOUNT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ncfgcount" type="big_decimal">
+                <column name="NCFGCOUNT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="nccccount" type="big_decimal">
+                <column name="NCCCCOUNT" precision="22" scale="0" />
+            </key-property>
+            <key-property name="ncbfcount" type="big_decimal">
+                <column name="NCBFCOUNT" precision="22" scale="0" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

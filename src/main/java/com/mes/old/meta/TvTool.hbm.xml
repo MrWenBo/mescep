@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-5-22 1:25:30 by Hibernate Tools 5.2.1.Final -->
+<hibernate-mapping>
+    <class name="com.mes.old.TvTool" table="TV_TOOL" schema="MES188" optimistic-lock="version">
+        <composite-id name="id" class="com.mes.old.TvToolId">
+            <key-property name="taskuid" type="string">
+                <column name="TASKUID" />
+            </key-property>
+            <key-property name="resuid" type="string">
+                <column name="RESUID" />
+            </key-property>
+            <key-property name="assntype" type="java.lang.Long">
+                <column name="ASSNTYPE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="resname" type="string">
+                <column name="RESNAME" />
+            </key-property>
+            <key-property name="deptid" type="string">
+                <column name="DEPTID" />
+            </key-property>
+            <key-property name="machineNumber" type="string">
+                <column name="MACHINE_NUMBER" />
+            </key-property>
+            <key-property name="toolname" type="string">
+                <column name="TOOLNAME" />
+            </key-property>
+            <key-property name="leadTime" type="java.lang.Long">
+                <column name="LEAD_TIME" precision="10" scale="0" />
+            </key-property>
+            <key-property name="partNumberType" type="string">
+                <column name="PART_NUMBER_TYPE" length="50" />
+            </key-property>
+            <key-property name="tooltype" type="string">
+                <column name="TOOLTYPE" />
+            </key-property>
+            <key-property name="partDescription" type="string">
+                <column name="PART_DESCRIPTION" />
+            </key-property>
+            <key-property name="taskwork" type="big_decimal">
+                <column name="TASKWORK" precision="22" scale="0" />
+            </key-property>
+            <key-property name="dispatchgrade" type="java.lang.Long">
+                <column name="DISPATCHGRADE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="dispatchgradedesc" type="string">
+                <column name="DISPATCHGRADEDESC" length="100" />
+            </key-property>
+            <key-property name="numOperators" type="big_decimal">
+                <column name="NUM_OPERATORS" precision="25" scale="6" />
+            </key-property>
+            <key-property name="plansatisfy" type="date">
+                <column name="PLANSATISFY" length="7" />
+            </key-property>
+            <key-property name="resinvqty" type="big_decimal">
+                <column name="RESINVQTY" precision="22" scale="0" />
+            </key-property>
+            <key-property name="toolchecklevel" type="java.lang.Byte">
+                <column name="TOOLCHECKLEVEL" precision="2" scale="0" />
+            </key-property>
+            <key-property name="toolcheckleveldesc" type="string">
+                <column name="TOOLCHECKLEVELDESC" length="100" />
+            </key-property>
+            <key-property name="uniqueid2" type="big_decimal">
+                <column name="UNIQUEID2" scale="0" />
+            </key-property>
+            <key-property name="employeeid" type="string">
+                <column name="EMPLOYEEID" length="50" />
+            </key-property>
+            <key-property name="assnunits" type="big_decimal">
+                <column name="ASSNUNITS" precision="25" scale="6" />
+            </key-property>
+            <key-property name="assnqty" type="big_decimal">
+                <column name="ASSNQTY" precision="25" scale="0" />
+            </key-property>
+            <key-property name="giveemployeename" type="string">
+                <column name="GIVEEMPLOYEENAME" length="100" />
+            </key-property>
+            <key-property name="assnstate" type="java.lang.Long">
+                <column name="ASSNSTATE" precision="10" scale="0" />
+            </key-property>
+            <key-property name="assnstatedesc" type="string">
+                <column name="ASSNSTATEDESC" length="100" />
+            </key-property>
+            <key-property name="notes" type="string">
+                <column name="NOTES" />
+            </key-property>
+            <key-property name="toolchecker" type="string">
+                <column name="TOOLCHECKER" />
+            </key-property>
+            <key-property name="toolcheckername" type="string">
+                <column name="TOOLCHECKERNAME" length="100" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
